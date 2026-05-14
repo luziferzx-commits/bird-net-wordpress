@@ -1529,12 +1529,13 @@ ${FORM_SHORTCODE}
 
   wp menu item add-post "Main Menu" $HOME_ID --title="หน้าแรก" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $SERVICES_ID --title="บริการของเรา" --path=/var/www/html --allow-root
-  wp menu item add-post "Main Menu" $PORTFOLIO_ID --title="ผลงาน + วิดีโอ" --path=/var/www/html --allow-root
+  wp menu item add-post "Main Menu" $PORTFOLIO_ID --title="ผลงานของเรา" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $ABOUT_ID --title="เกี่ยวกับเรา" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $CONTACT_ID --title="ติดต่อเรา" --path=/var/www/html --allow-root
 
   wp menu location assign "Main Menu" primary --path=/var/www/html --allow-root
   wp menu location assign "Main Menu" main --path=/var/www/html --allow-root 2>/dev/null || true
+  wp menu location assign "Main Menu" mobile_menu --path=/var/www/html --allow-root 2>/dev/null || true
 
   echo "=== Configuring Astra Theme ==="
   wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร ขอนแก่น เชียงใหม่ ชลบุรี | BIRDS GO AWAY" --path=/var/www/html --allow-root

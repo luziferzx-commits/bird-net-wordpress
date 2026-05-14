@@ -310,12 +310,32 @@ function birdnet_preload_assets() {
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
 
-// Add FAQ to main nav with short label
+// Add FAQ to main nav with short label (only primary menu, not mobile drawer duplicates)
 function birdnet_add_faq_to_menu($items, $args) {
-    if ($args->theme_location === 'primary-menu' || $args->theme_location === 'main-menu' || empty($args->theme_location)) {
+    if ($args->theme_location === 'primary' || $args->theme_location === 'primary-menu' || $args->theme_location === 'main-menu') {
         $faq_link = home_url('/faq/');
         $items .= '<li class="menu-item"><a href="' . $faq_link . '">FAQ</a></li>';
     }
     return $items;
 }
 add_filter('wp_nav_menu_items', 'birdnet_add_faq_to_menu', 10, 2);
+
+// Ensure logo displays on mobile — fallback to birdnet-assets if uploaded logo fails
+function birdnet_logo_fallback() {
+    $custom_logo_id = get_theme_mod('custom_logo');
+    if ($custom_logo_id) {
+        $logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
+        if (!$logo_url) {
+            $logo_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
+        }
+    } else {
+        $logo_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
+    }
+    echo '<style>
+    .custom-logo-link img.custom-logo[src=""],
+    .custom-logo-link img.custom-logo:not([src]) {
+        content: url(' . esc_url($logo_url) . ');
+    }
+    </style>';
+}
+add_action('wp_head', 'birdnet_logo_fallback');

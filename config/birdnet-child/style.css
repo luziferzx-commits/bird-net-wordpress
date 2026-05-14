@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      8.1.0
+ Version:      8.2.0
  Text Domain:  birdnet-child
 */
 
@@ -136,6 +136,30 @@ a:hover { color: var(--bn-orange-dark); }
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* Mobile logo fix */
+@media (max-width: 921px) {
+  .custom-logo {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+  .ast-site-identity .site-title {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+  }
+  .site-header .ast-site-identity {
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-logo {
+    max-height: 35px !important;
+  }
+  .ast-site-identity .site-title {
+    font-size: 0.7rem !important;
+  }
 }
 
 /* Navigation Links */
@@ -974,6 +998,17 @@ video {
 
   .wpcf7 { padding: 1.5rem; }
   .wp-block-column { padding: 1.2rem; }
+
+  /* Contact page mobile — single column */
+  .page-id-contact .wp-block-columns,
+  .page-template-default .wp-block-columns {
+    flex-direction: column !important;
+  }
+  .page-id-contact .wp-block-column[style*="flex-basis:50%"],
+  .page-template-default .wp-block-column[style*="flex-basis:50%"] {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
 
   .wp-block-column .wp-block-image img,
   .wp-block-column[style*="text-align:center"] .wp-block-image img {
