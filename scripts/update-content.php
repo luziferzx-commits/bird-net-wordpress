@@ -214,6 +214,89 @@ $home_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">การรับประกันงานติดตั้ง</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">เรามั่นใจในคุณภาพงาน — รับประกันทุกโปรเจกต์ หากนกกลับมาในระยะรับประกัน เข้าไปดูแลฟรี</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;padding:0 1rem;">
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border:2px solid #22c55e;">
+<div style="font-size:2.5rem;">&#x1F6E1;&#xFE0F;</div>
+<h4 style="color:#166534;margin:8px 0 4px;font-size:1rem;">รับประกันงานติดตั้ง</h4>
+<p style="font-size:2rem;font-weight:800;color:#22c55e;margin:0;">3 ปี</p>
+<p style="font-size:0.8rem;color:#555;margin:4px 0 0;">หลุด ขาด เสียหาย ซ่อมฟรี<br>ตลอดระยะรับประกัน</p>
+</div>
+<div style="background:#eff6ff;border-radius:12px;padding:1.5rem;text-align:center;border:2px solid #3b82f6;">
+<div style="font-size:2.5rem;">&#x1F527;</div>
+<h4 style="color:#1e40af;margin:8px 0 4px;font-size:1rem;">วัสดุไม่เป็นสนิม</h4>
+<p style="font-size:2rem;font-weight:800;color:#3b82f6;margin:0;">5+ ปี</p>
+<p style="font-size:0.8rem;color:#555;margin:4px 0 0;">สแตนเลส SUS304 + HDPE<br>ทนทานทุกสภาพอากาศ</p>
+</div>
+<div style="background:#fef9f0;border-radius:12px;padding:1.5rem;text-align:center;border:2px solid #E8792E;">
+<div style="font-size:2.5rem;">&#x1F426;</div>
+<h4 style="color:#9a3412;margin:8px 0 4px;font-size:1rem;">นกกลับมา?</h4>
+<p style="font-size:2rem;font-weight:800;color:#E8792E;margin:0;">ดูแลฟรี</p>
+<p style="font-size:0.8rem;color:#555;margin:4px 0 0;">เข้าตรวจสอบและแก้ไข<br>โดยไม่มีค่าใช้จ่าย</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">ก่อน vs หลังติดตั้ง</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ดูผลลัพธ์จริง — จากปัญหานกรบกวน สู่ความสะอาดเรียบร้อย</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:0 1rem;">
+<div style="text-align:center;">
+<div style="background:#fef2f2;border-radius:12px;padding:1rem;border:2px solid #ef4444;">
+<p style="font-size:1.5rem;margin:0 0 8px;">&#x274C;</p>
+<h4 style="color:#dc2626;margin:0 0 4px;font-size:0.95rem;">ก่อนติดตั้ง</h4>
+<p style="font-size:0.8rem;color:#555;margin:0;">ขี้นกเต็มระเบียง ราวกันตก<br>ส่งกลิ่นเหม็น เชื้อโรคสะสม<br>ทำลายทรัพย์สินและสีอาคาร</p>
+</div>
+</div>
+<div style="text-align:center;">
+<div style="background:#f0fdf4;border-radius:12px;padding:1rem;border:2px solid #22c55e;">
+<p style="font-size:1.5rem;margin:0 0 8px;">&#x2705;</p>
+<h4 style="color:#16a34a;margin:0 0 4px;font-size:0.95rem;">หลังติดตั้ง</h4>
+<p style="font-size:0.8rem;color:#555;margin:0;">สะอาดเรียบร้อย ไร้นก<br>ไม่มีขี้นก ไม่มีกลิ่น<br>ผ่านมา 3 ปี นกไม่กลับมาอีก</p>
+</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">&#x1F4F8; ส่งภาพหน้างาน ประเมินราคาฟรี!</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div style="max-width:600px;margin:0 auto;background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border-radius:16px;padding:2rem;text-align:center;border:2px solid #06C755;">
+<p style="font-size:1.1rem;color:#1B4D5C;margin:0 0 8px;font-weight:600;">แค่ถ่ายรูปส่งมา — รู้ราคาทันที!</p>
+<p style="font-size:0.9rem;color:#555;margin:0 0 16px;">ถ่ายรูปจุดที่นกเกาะ/ทำรัง ส่งให้เราทาง LINE<br>ทีมงานประเมินราคาให้ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
+<a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="display:inline-block;background:#06C755;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 12px rgba(6,199,85,0.3);">💬 ส่งภาพหน้างานทาง LINE</a>
+<p style="font-size:0.75rem;color:#888;margin:12px 0 0;">ตอบกลับภายใน 30 นาที ทุกวัน 08:00-20:00</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center wp-block-heading">บริการของเรา</h2>
 <!-- /wp:heading -->
 
