@@ -564,12 +564,12 @@ $services_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
-<p><strong>Square Mesh Durable Bird Control Netting</strong> — ตาข่าย HDPE คุณภาพสูง หนาแน่น แข็งแรง ทนต่อแรงกระแทก แรงดึง และสารเคมี</p>
+<p><strong>Square Mesh Durable Bird Control Netting</strong> — ตาข่าย HDPE คุณภาพสูง เกรดส่งออก หนาแน่น แข็งแรง ทนต่อแรงกระแทก แรงดึง และสารเคมี</p>
 
 <h4 class="wp-block-heading">สเปคสินค้า</h4>
 <ul>
-<li><strong>วัสดุ:</strong> HDPE 2500D/1 ply</li>
-<li><strong>สี:</strong> Transparent Black (UV Treatment)</li>
+<li><strong>วัสดุ:</strong> HDPE 2500D/1 ply (High-Density Polyethylene เกรดส่งออก)</li>
+<li><strong>สี:</strong> Transparent Black (UV-Stabilized Treatment ทนรังสียูวี)</li>
 <li><strong>ขนาดตา:</strong> 18 mm. x 18 mm. (Knitting net)</li>
 <li><strong>แรงดึงขาดจุดปม:</strong> 13 kg.</li>
 <li><strong>แรงดึงขาดเส้นด้าย:</strong> 7 kg.</li>
@@ -633,15 +633,15 @@ $services_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
-<p>หนามกันนกสแตนเลส ปลายแหลม ความแหลมของหนามช่วยทำให้ป้องกันนกได้ดียิ่งขึ้น</p>
+<p>หนามกันนกสแตนเลส <strong>เกรด SUS304 มาตรฐานส่งออก</strong> ปลายแหลม ความแหลมของหนามช่วยทำให้ป้องกันนกได้ดียิ่งขึ้น</p>
 
 <h4 class="wp-block-heading">สเปคสินค้า</h4>
 <ul>
-<li><strong>วัสดุ:</strong> Stainless Spring SUS304</li>
+<li><strong>วัสดุ:</strong> Stainless Steel Spring SUS304 (สแตนเลสเกรด 304 ไม่เป็นสนิมตลอดอายุการใช้งาน)</li>
 <li><strong>จำนวนหนาม:</strong> 90 ขาต่อ 1 เมตร</li>
 <li><strong>คุณสมบัติ:</strong> ปรับเปลี่ยนองศาปลายหนามตามพื้นที่ได้</li>
-<li><strong>ทนทาน:</strong> ทนแดด ทนฝน เหมาะกับสภาพอากาศเมืองไทย</li>
-<li><strong>อายุการใช้งาน:</strong> ยาวนาน ไม่เป็นสนิม</li>
+<li><strong>ทนทาน:</strong> ทนแดด ทนฝน ทนกรด-ด่าง เหมาะกับสภาพอากาศเมืองไทย</li>
+<li><strong>อายุการใช้งาน:</strong> ยาวนาน ไม่เป็นสนิมตลอดอายุการใช้งาน (Corrosion Resistant)</li>
 <li><strong>เหมาะกับ:</strong> ขอบหน้าต่าง ราวกันตก ป้ายอาคาร ชายคา งานภายนอกอาคาร</li>
 </ul>
 </div>
@@ -671,11 +671,12 @@ $services_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
-<p>เจลไล่นกสูตรพิเศษ ใช้สำหรับพื้นที่ที่ไม่สามารถติดตั้งตาข่ายหรือหนามกันนกได้</p>
+<p>เจลไล่นกสูตรพิเศษ <strong>Non-toxic & UV-resistant</strong> ใช้สำหรับพื้นที่ที่ไม่สามารถติดตั้งตาข่ายหรือหนามกันนกได้ เหมาะกับพื้นที่เน้นความสวยงาม</p>
 <ul>
-<li>ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์</li>
-<li>ใช้ได้กับทุกพื้นผิว</li>
-<li>ไม่ทิ้งคราบ ไม่เสียหาย</li>
+<li><strong>วัสดุ:</strong> Polycarbonate-based gel สูตรไม่มีสารพิษ (Non-toxic)</li>
+<li>ทนรังสียูวี (UV-Resistant) ไม่ละลายในแสงแดด</li>
+<li>ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว</li>
+<li>ไม่ทิ้งคราบ ไม่เสียหาย มองไม่เห็นจากภายนอก</li>
 <li>เหมาะกับ: ขอบระเบียง ราวกันตก ขอบหน้าต่าง พื้นที่แคบ</li>
 </ul>
 </div>
@@ -935,8 +936,49 @@ $about_content = '
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['about'] . '" alt="ทีมงาน Birds Go Away ติดตั้งตาข่ายกันนก" style="border-radius:12px;width:100%;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['about'] . '" alt="ทีมงาน Birds Go Away ติดตั้งตาข่ายกันนก พร้อมอุปกรณ์ Safety" style="border-radius:12px;width:100%;"/></figure>
 <!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">ทีมงานมืออาชีพ พร้อมอุปกรณ์ Safety ครบชุด</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ช่างทุกคนผ่านอบรมการทำงานบนที่สูง พร้อมอุปกรณ์ความปลอดภัยมาตรฐาน ลูกค้ากลุ่มโรงงานและอาคารสำนักงานวางใจได้</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['team'] . '" alt="ทีมช่างติดตั้งตาข่ายกันนก พร้อมชุดฟอร์มและอุปกรณ์ Safety" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
+<!-- /wp:image -->
+<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>ทีมช่างมืออาชีพ</strong><br>ชุดฟอร์มพร้อมอุปกรณ์ Safety ครบชุด</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['safety'] . '" alt="อุปกรณ์ Safety โรยตัว หมวกนิรภัย สายรัดนิรภัย ทีมงาน Birds Go Away" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
+<!-- /wp:image -->
+<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>อุปกรณ์ Safety มาตรฐาน</strong><br>หมวกนิรภัย สายรัด เชือกโรยตัว</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['work1'] . '" alt="ทีมงานกำลังติดตั้งตาข่ายกันนก บนอาคารสูง โรยตัว" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
+<!-- /wp:image -->
+<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>ปฏิบัติงานจริง</strong><br>โรยตัวติดตั้งตาข่ายอาคารสูง</p>
 </div>
 <!-- /wp:column -->
 </div>

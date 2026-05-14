@@ -228,8 +228,8 @@ function birdnet_custom_footer() {
                 <h4>BIRDS GO AWAY</h4>
                 <p>บริษัท รีเช็ค บิ้วดิ้ง จำกัด<br>
                 ทะเบียน 0405567000088<br>
-                75/59 ม.17 ต.ศิลา อ.เมือง<br>
-                จ.ขอนแก่น 40000</p>
+                <strong>สำนักงานใหญ่:</strong> 88/38 หมู่บ้าน Klever ซอย5<br>
+                ต.บ้านเป็ด อ.เมือง จ.ขอนแก่น 40000</p>
                 <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">ใบอนุญาตโรยตัว / กว. สภาวิศวกร / จป.หัวหน้างาน</p>
             </div>
             <div class="footer-col">
