@@ -450,21 +450,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(1) . '"></video><figcaption>ตัวอย่างการติดตั้ง #1</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(1) . '"></video><figcaption>ติดตั้งตาข่ายกันนก HDPE คอนโดสูง — ทีมโรยตัวมืออาชีพ พร้อมอุปกรณ์ Safety ครบชุด</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(2) . '"></video><figcaption>ตัวอย่างการติดตั้ง #2</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(2) . '"></video><figcaption>ติดตั้งหนามกันนกสแตนเลส SUS304 ราวระเบียง — กันนกเกาะ ไม่เป็นสนิม 5+ ปี</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(3) . '"></video><figcaption>ตัวอย่างการติดตั้ง #3</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(3) . '"></video><figcaption>ติดตั้งตาข่ายกันนกอาคารพาณิชย์ — ปิดช่องเปิดใต้หลังคา กันนกทำรัง 100%</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -476,21 +476,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(4) . '"></video><figcaption>ตัวอย่างการติดตั้ง #4</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(4) . '"></video><figcaption>ติดตั้งตาข่ายกันนกโรงงานอุตสาหกรรม — พื้นที่กว้าง ใช้รถกระเช้ายกสูง ทีมงานมืออาชีพ</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(5) . '"></video><figcaption>ตัวอย่างการติดตั้ง #5</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(5) . '"></video><figcaption>ติดตั้งเจลไล่นกบนคานเหล็ก — วัสดุใส ไม่ทำลายทัศนียภาพ เหมาะกับอาคารสวยงาม</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(6) . '"></video><figcaption>ตัวอย่างการติดตั้ง #6</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(6) . '"></video><figcaption>ติดตั้งแผงกันนกโซลาร์เซลล์ — ปกป้องแผงโซลาร์จากนกทำรัง ไม่กระทบประสิทธิภาพ</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -963,13 +963,21 @@ $portfolio_content .= '
 <p class="has-text-align-center">ดูคลิปขั้นตอนการทำงานจริง จากหน้างาน</p>
 <!-- /wp:paragraph -->';
 
+$video_captions = array(
+    1 => 'ติดตั้งตาข่ายกันนก HDPE คอนโดสูง — ทีมโรยตัวมืออาชีพ พร้อมอุปกรณ์ Safety ครบชุด',
+    2 => 'ติดตั้งหนามกันนกสแตนเลส SUS304 ราวระเบียง — กันนกเกาะ ไม่เป็นสนิม 5+ ปี',
+    3 => 'ติดตั้งตาข่ายกันนกอาคารพาณิชย์ — ปิดช่องเปิดใต้หลังคา กันนกทำรัง 100%',
+    4 => 'ติดตั้งตาข่ายกันนกโรงงานอุตสาหกรรม — พื้นที่กว้าง ใช้รถกระเช้ายกสูง ทีมงานมืออาชีพ',
+    5 => 'ติดตั้งเจลไล่นกบนคานเหล็ก — วัสดุใส ไม่ทำลายทัศนียภาพ เหมาะกับอาคารสวยงาม',
+    6 => 'ติดตั้งแผงกันนกโซลาร์เซลล์ — ปกป้องแผงโซลาร์จากนกทำรัง ไม่กระทบประสิทธิภาพ',
+);
 for ($i = 1; $i <= 6; $i++) {
     if ($i % 3 == 1) $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
     $portfolio_content .= '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid($i) . '"></video><figcaption>ผลงาน #' . $i . '</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid($i) . '"></video><figcaption>' . $video_captions[$i] . '</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->';
