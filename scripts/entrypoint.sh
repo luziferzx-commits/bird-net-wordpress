@@ -24,12 +24,9 @@ if [ -n "$PORT" ]; then
   export APACHE_PORT=$PORT
 fi
 
-# Run the original WordPress entrypoint to set up wp-config.php
-docker-entrypoint.sh apache2-foreground &
-WP_PID=$!
-
-# Run WordPress setup in background so healthcheck can pass immediately
+# Run WordPress setup in background (after Apache starts)
 (
+sleep 3
 echo "=== Waiting for WordPress files to be ready ==="
 until [ -f /var/www/html/wp-includes/version.php ]; do
   sleep 2
@@ -1534,5 +1531,5 @@ chown -R www-data:www-data /var/www/html/wp-content 2>/dev/null || true
 echo "=== WordPress is ready ==="
 ) &
 
-# Wait for Apache (main process)
-wait $WP_PID
+# Hand off to WordPress entrypoint (becomes PID 1 via exec)
+exec docker-entrypoint.sh "$@"
