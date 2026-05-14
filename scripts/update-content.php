@@ -908,9 +908,18 @@ $contact_content = '
 
 <h3 class="wp-block-heading">ส่งข้อความถึงเรา</h3>
 
-<!-- wp:shortcode -->
-[contact-form-7 title="แบบฟอร์มติดต่อ"]
-<!-- /wp:shortcode -->
+<!-- wp:html -->
+<form action="https://formsubmit.co/birdsgoaway.th@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
+<input type="hidden" name="_subject" value="ติดต่อจากเว็บไซต์ Birds Go Away">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://birdsgoaway.com/contact/?success=1">
+<input type="text" name="name" placeholder="ชื่อ-นามสกุล" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+<input type="email" name="email" placeholder="อีเมล" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+<input type="tel" name="phone" placeholder="เบอร์โทร" style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
+<textarea name="message" placeholder="รายละเอียด เช่น สถานที่ ประเภทอาคาร พื้นที่โดยประมาณ" rows="4" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;resize:vertical;"></textarea>
+<button type="submit" style="background:#E8792E;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.3s;">ส่งข้อความ</button>
+</form>
+<!-- /wp:html -->
 
 </div>
 <!-- /wp:column -->
