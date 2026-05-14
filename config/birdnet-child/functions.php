@@ -96,6 +96,11 @@ function birdnet_floating_buttons() {
             📞
         </a>
     </div>
+    <div class="birdnet-sticky-mobile">
+        <a href="/contact" class="sticky-cta-quote">ประเมินราคาฟรี</a>
+        <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="sticky-cta-line" target="_blank" rel="noopener">Line</a>
+        <a href="tel:<?php echo esc_attr($phone); ?>" class="sticky-cta-call">โทร</a>
+    </div>
     <?php
 }
 add_action('wp_footer', 'birdnet_floating_buttons');
