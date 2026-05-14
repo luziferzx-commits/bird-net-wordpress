@@ -71,10 +71,10 @@ function birdnet_floating_buttons() {
         border: 1px solid rgba(6, 199, 85, 0.3);
     }
     .birdnet-float-btn.phone {
-        background: rgba(212, 175, 55, 0.9);
+        background: #E8792E;
         backdrop-filter: blur(10px);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        color: #121212;
+        border: none;
+        color: #ffffff;
     }
     @media (max-width: 768px) {
         .birdnet-floating {
