@@ -14,6 +14,16 @@ if [ -f /etc/apache2/mods-enabled/mpm_event.load ]; then
   a2enmod mpm_prefork 2>/dev/null || true
 fi
 
+# Configure Apache to listen on $PORT (Railway assigns dynamic port)
+if [ -n "$PORT" ]; then
+  echo "Configuring Apache to listen on port $PORT"
+  sed -i "s/Listen 80/Listen $PORT/" /etc/apache2/ports.conf
+  sed -i "s/:80>/:$PORT>/" /etc/apache2/sites-available/000-default.conf
+  # Also update any port 443 references
+  sed -i "s/Listen 443/# Listen 443/" /etc/apache2/ports.conf
+  export APACHE_PORT=$PORT
+fi
+
 # Run the original WordPress entrypoint to set up wp-config.php
 docker-entrypoint.sh apache2-foreground &
 WP_PID=$!

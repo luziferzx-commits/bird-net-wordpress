@@ -67,7 +67,5 @@ COPY config/birdnet-child /tmp/birdnet-child
 COPY assets/images /tmp/birdnet-assets/images
 COPY assets/videos /tmp/birdnet-assets/videos
 
-EXPOSE 80
-
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["apache2-foreground"]
