@@ -1,0 +1,21 @@
+# WordPress
+wp-content/uploads/*
+!wp-content/uploads/.gitkeep
+
+# Environment
+.env
+.env.local
+
+# Docker
+db_data/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
