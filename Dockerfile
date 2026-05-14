@@ -62,6 +62,9 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Copy custom theme child
 COPY config/birdnet-child /tmp/birdnet-child
 
+# Copy assets (images from Facebook page)
+COPY assets/images /tmp/birdnet-assets/images
+
 EXPOSE 80
 
 ENTRYPOINT ["entrypoint.sh"]

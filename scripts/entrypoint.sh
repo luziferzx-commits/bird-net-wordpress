@@ -28,7 +28,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
   wp core install \
     --url="${PROTOCOL}://${SITE_URL}" \
-    --title="Bird Net Installation Services | บริการติดตั้งตาข่ายกันนก" \
+    --title="ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี by Birds Go Away" \
     --admin_user="${WP_ADMIN_USER:-admin}" \
     --admin_password="${WP_ADMIN_PASSWORD:-admin123}" \
     --admin_email="${WP_ADMIN_EMAIL:-admin@birdnet.local}" \
@@ -122,11 +122,11 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <div class="wp-block-column">
 
 <!-- wp:heading {"level":1} -->
-<h1>บริการติดตั้งตาข่ายกันนก<br>มืออาชีพ ครบวงจร</h1>
+<h1>BIRDS GO AWAY<br>บริการติดตั้งตาข่ายกันนก มืออาชีพ</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">ปกป้องอาคาร บ้านเรือน และโซลาร์เซลล์จากปัญหานก ด้วยโซลูชันที่ปลอดภัย ทนทาน และเป็นมิตรกับสิ่งแวดล้อม — รับประกันผลงานทุกชิ้น</p>
+<p class="has-medium-font-size">บริการติดตั้งตาข่ายกันนก ผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด<br>ปรึกษาฟรีโดยวิศวกรโยธาในพื้นที่ — รับประกันงานติดตั้ง 3 ปี</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -213,7 +213,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <h3>🔷 ตาข่าย HDPE กันนก</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>ตาข่ายไนล่อน HDPE คุณภาพสูง ทนแดด ทนฝน อายุการใช้งานยาวนาน เหมาะสำหรับอาคาร คอนโด โรงงาน และบ้านพักอาศัย</p>
+<p>ตาข่าย HDPE คุณภาพสูง อายุการใช้งานประมาณ 5-7 ปี แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -224,7 +224,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <h3>☀️ แผงกันนกโซลาร์เซลล์</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>ระบบคลิปยึดพิเศษ ไม่ต้องเจาะแผงโซลาร์ ป้องกันนกทำรังใต้แผง ไม่เป็นอันตรายต่อระบบไฟฟ้า</p>
+<p>แผงโซล่าเซลล์สะอาด ปลอดนก ยืดอายุการใช้งาน หมดปัญหานกเข้าไปทำรัง ใต้แผงสกปรก เสี่ยงสายไฟเสียหาย</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -241,7 +241,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <h3>🔺 หนามกันนก</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>หนามสแตนเลสกันนก ป้องกันนกเกาะบนราวระเบียง ป้ายไฟ ชายคา ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย</p>
+<p>หนามสแตนเลสกันนก ป้องกันนกเกาะ ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย ราคาประหยัด</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -252,7 +252,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <h3>💧 เจลไล่นก</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว ป้องกันนกเกาะได้อย่างมีประสิทธิภาพ</p>
+<p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -265,11 +265,50 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
-<h2 class="has-text-align-center">พร้อมแก้ปัญหานกให้คุณ</h2>
+<h2 class="has-text-align-center">พื้นที่ให้บริการ</h2>
 <!-- /wp:heading -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%">
+<!-- wp:heading {"level":3,"textAlign":"center"} -->
+<h3 class="has-text-align-center">📍 ขอนแก่น</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><a href="tel:0629964994">062-996-4994</a></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%">
+<!-- wp:heading {"level":3,"textAlign":"center"} -->
+<h3 class="has-text-align-center">📍 เชียงใหม่</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><a href="tel:0936415623">093-641-5623</a></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"33.33%"} -->
+<div class="wp-block-column" style="flex-basis:33.33%">
+<!-- wp:heading {"level":3,"textAlign":"center"} -->
+<h3 class="has-text-align-center">📍 ชลบุรี</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><a href="tel:0956292488">095-629-2488</a></p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+
+</div>
+<!-- /wp:columns -->
+
 <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">ติดต่อเราวันนี้เพื่อรับคำปรึกษาและใบเสนอราคาฟรี!</p>
+<p class="has-text-align-center has-medium-font-size">ปรึกษาฟรี! ติดต่อเราวันนี้เพื่อรับใบเสนอราคา</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
@@ -559,7 +598,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">Bird Net Installation Services — ผู้เชี่ยวชาญด้านการป้องกันนกแบบครบวงจร</p>
+<p class="has-text-align-center has-medium-font-size">BIRDS GO AWAY by บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนกแบบครบวงจร</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator -->
@@ -571,11 +610,11 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Bird Net Installation Services ก่อตั้งขึ้นจากความมุ่งมั่นในการแก้ปัญหานกรบกวนอย่างมืออาชีพและเป็นมิตรกับสิ่งแวดล้อม เราเชื่อว่าการป้องกันนกไม่จำเป็นต้องทำร้ายสัตว์ เราจึงเลือกใช้วิธีการที่ปลอดภัยและมีประสิทธิภาพ</p>
+<p>BIRDS GO AWAY ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co., Ltd.) ก่อตั้งขึ้นจากความมุ่งมั่นในการแก้ปัญหานกรบกวนอย่างมืออาชีพและเป็นมิตรกับสิ่งแวดล้อม ทีมช่างผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>ด้วยประสบการณ์หลายปีในวงการ เราได้ให้บริการลูกค้ามากมาย ตั้งแต่บ้านพักอาศัย คอนโดมิเนียม อาคารสำนักงาน โรงงาน ไปจนถึงวัดและอาคารอนุรักษ์ ทุกงานของเราผ่านการวางแผนอย่างรอบคอบและดำเนินการโดยทีมช่างมืออาชีพ</p>
+<p>เราให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ในพื้นที่ขอนแก่น เชียงใหม่ และชลบุรี พร้อมทีมช่างมืออาชีพที่พร้อมให้บริการทั่วประเทศ ทุกงานของเราผ่านการวางแผนอย่างรอบคอบ ปรึกษาฟรีโดยวิศวกรโยธาในพื้นที่ รับประกันงานติดตั้ง 3 ปี</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":2} -->
@@ -635,10 +674,10 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li>ทีมช่างผ่านการอบรมด้านความปลอดภัยในการทำงานบนที่สูง</li>
+<li>ทีมช่างผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate</li>
 <li>ใช้อุปกรณ์ PPE (Personal Protective Equipment) ครบชุด</li>
 <li>มีประกันอุบัติเหตุสำหรับพนักงานทุกคน</li>
-<li>ปฏิบัติตามมาตรฐาน OSHA (Occupational Safety and Health)</li>
+<li>วิศวกรคุมงานทุกโปรเจค</li>
 <li>ตรวจสอบพื้นที่ก่อนเริ่มงานทุกครั้ง</li>
 </ul>
 <!-- /wp:list -->
@@ -648,7 +687,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>ทีมงานของเราประกอบด้วยผู้เชี่ยวชาญที่มีประสบการณ์ ผ่านการอบรมทั้งด้านเทคนิคและความปลอดภัย พร้อมให้บริการด้วยความเป็นมืออาชีพและใส่ใจในทุกรายละเอียด</p>
+<p>ทีมงานของเราประกอบด้วยผู้เชี่ยวชาญที่ผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate พร้อมให้บริการด้วยความเป็นมืออาชีพ มีวิศวกรคุมงานทุกโปรเจค</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator -->
@@ -701,15 +740,19 @@ ${FORM_SHORTCODE}
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>📞 <strong>โทรศัพท์:</strong> <a href=\"tel:0800000000\">080-000-0000</a></p>
+<p>📞 <strong>ขอนแก่น:</strong> <a href=\"tel:0629964994\">062-996-4994</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>📱 <strong>Line:</strong> <a href=\"https://line.me/ti/p/~birdnet\" target=\"_blank\" rel=\"noreferrer noopener\">@birdnet</a></p>
+<p>📞 <strong>เชียงใหม่:</strong> <a href=\"tel:0936415623\">093-641-5623</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>📧 <strong>อีเมล:</strong> <a href=\"mailto:info@birdnet.co.th\">info@birdnet.co.th</a></p>
+<p>📞 <strong>ชลบุรี:</strong> <a href=\"tel:0956292488\">095-629-2488</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>📱 <strong>Line:</strong> <a href=\"https://line.me/ti/p/~oil_phanu\" target=\"_blank\" rel=\"noreferrer noopener\">oil_phanu</a> / <a href=\"https://line.me/ti/p/~th3-ta006-2\" target=\"_blank\" rel=\"noreferrer noopener\">th3-ta006-2</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -723,10 +766,10 @@ ${FORM_SHORTCODE}
 <!-- wp:buttons -->
 <div class=\"wp-block-buttons\">
 <!-- wp:button {\"backgroundColor\":\"vivid-green-cyan\"} -->
-<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"tel:0800000000\">📞 โทรเลย</a></div>
+<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"tel:0629964994\">📞 โทรเลย (ขอนแก่น)</a></div>
 <!-- /wp:button -->
 <!-- wp:button {\"backgroundColor\":\"vivid-green-cyan\"} -->
-<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"https://line.me/ti/p/~birdnet\" target=\"_blank\" rel=\"noreferrer noopener\">💬 แชท Line</a></div>
+<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"https://line.me/ti/p/~oil_phanu\" target=\"_blank\" rel=\"noreferrer noopener\">💬 แชท Line</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -736,7 +779,7 @@ ${FORM_SHORTCODE}
 <!-- /wp:heading -->
 
 <!-- wp:html -->
-<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496115.33099588484!2d100.35202039453124!3d13.724674500000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311d6032280d61f3%3A0x10100b25de24820!2sBangkok%2C%20Thailand!5e0!3m2!1sen!2sus!4v1234567890\" width=\"100%\" height=\"300\" style=\"border:0;border-radius:8px;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>
+<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3831.4!2d102.8!3d16.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3122789de0000001%3A0x1234567890abcdef!2sKhon%20Kaen%2C%20Thailand!5e0!3m2!1sen!2sth!4v1234567890\" width=\"100%\" height=\"300\" style=\"border:0;border-radius:8px;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>
 <!-- /wp:html -->
 
 </div>
@@ -762,7 +805,22 @@ ${FORM_SHORTCODE}
   wp menu location assign "Main Menu" main --path=/var/www/html --allow-root 2>/dev/null || true
 
   echo "=== Configuring Astra Theme ==="
-  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร" --path=/var/www/html --allow-root
+  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร | BIRDS GO AWAY" --path=/var/www/html --allow-root
+
+  echo "=== Importing Images ==="
+  if [ -d /tmp/birdnet-assets/images ]; then
+    for img in /tmp/birdnet-assets/images/*.jpg; do
+      if [ -f "$img" ]; then
+        wp media import "$img" --path=/var/www/html --allow-root 2>/dev/null || true
+      fi
+    done
+    echo "Images imported to media library"
+  fi
+
+  echo "=== Setting Default Contact Options ==="
+  wp option update birdnet_phone "0629964994" --path=/var/www/html --allow-root
+  wp option update birdnet_line_id "oil_phanu" --path=/var/www/html --allow-root
+  wp option update birdnet_email "admin@birdsgoaway.com" --path=/var/www/html --allow-root
 
   echo "=== Setup Complete ==="
   echo "Site URL: ${PROTOCOL}://${SITE_URL}"

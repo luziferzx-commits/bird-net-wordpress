@@ -15,8 +15,8 @@ add_action('wp_enqueue_scripts', 'birdnet_enqueue_styles');
 
 // Add Line Chat floating button
 function birdnet_floating_buttons() {
-    $line_id = get_option('birdnet_line_id', '@birdnet');
-    $phone = get_option('birdnet_phone', '0800000000');
+    $line_id = get_option('birdnet_line_id', 'oil_phanu');
+    $phone = get_option('birdnet_phone', '0629964994');
     ?>
     <style>
     .birdnet-floating {
@@ -96,9 +96,9 @@ function birdnet_settings_page() {
         echo '<div class="updated"><p>Settings saved!</p></div>';
     }
 
-    $phone = get_option('birdnet_phone', '0800000000');
-    $line_id = get_option('birdnet_line_id', '@birdnet');
-    $email = get_option('birdnet_email', 'info@birdnet.co.th');
+    $phone = get_option('birdnet_phone', '0629964994');
+    $line_id = get_option('birdnet_line_id', 'oil_phanu');
+    $email = get_option('birdnet_email', 'admin@birdsgoaway.com');
     ?>
     <div class="wrap">
         <h1>Bird Net Settings</h1>

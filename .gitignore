@@ -9,6 +9,9 @@ wp-content/uploads/*
 # Docker
 db_data/
 
+# Large video files (download separately)
+assets/videos/
+
 # OS files
 .DS_Store
 Thumbs.db
