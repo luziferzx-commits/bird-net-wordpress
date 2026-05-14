@@ -238,7 +238,9 @@ add_filter('upload_mimes', 'birdnet_webp_support');
 
 // Preload critical assets
 function birdnet_preload_assets() {
-    echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/project-p07-1.jpeg">' . "\n";
+    echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/fb-cover.webp">' . "\n";
+    echo '<link rel="icon" type="image/x-icon" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
+    echo '<link rel="apple-touch-icon" href="/wp-content/uploads/birdnet-assets/apple-touch-icon.png">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.google.com">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
 }

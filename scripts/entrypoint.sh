@@ -66,6 +66,7 @@ if [ -d /tmp/birdnet-assets/images ]; then
   echo "=== Copying image assets ==="
   cp -f /tmp/birdnet-assets/images/*.jpg "$ASSETS_DIR/" 2>/dev/null || true
   cp -f /tmp/birdnet-assets/images/*.jpeg "$ASSETS_DIR/" 2>/dev/null || true
+  cp -f /tmp/birdnet-assets/images/*.webp "$ASSETS_DIR/" 2>/dev/null || true
 fi
 if [ -d /tmp/birdnet-assets/videos ]; then
   echo "=== Copying video assets ==="

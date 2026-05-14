@@ -23,7 +23,7 @@ $assets_base = $site_url . '/wp-content/uploads/birdnet-assets';
 function img($num) {
     global $assets_base;
     $padded = str_pad($num, 2, '0', STR_PAD_LEFT);
-    return $assets_base . '/birdnet-' . $padded . '.jpg';
+    return $assets_base . '/birdnet-' . $padded . '.webp';
 }
 
 function vid($num) {
@@ -34,12 +34,12 @@ function vid($num) {
 
 function project_img($page, $num = 1) {
     global $assets_base;
-    return $assets_base . '/project-p' . str_pad($page, 2, '0', STR_PAD_LEFT) . '-' . $num . '.jpeg';
+    return $assets_base . '/project-p' . str_pad($page, 2, '0', STR_PAD_LEFT) . '-' . $num . '.webp';
 }
 
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
-    'hero'    => $assets_base . '/fb-cover.jpeg',
+    'hero'    => $assets_base . '/fb-cover.webp',
     'hdpe'    => img(2),
     'solar'   => img(3),
     'spikes'  => img(4),
@@ -610,6 +610,41 @@ $services_content = '
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">เปรียบเทียบบริการ</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">เลือกวิธีป้องกันนกที่เหมาะสมกับพื้นที่ของคุณ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="comparison-table" style="overflow-x:auto;margin:1.5rem 0;">
+<table style="width:100%;border-collapse:collapse;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+<thead>
+<tr style="background:#1B4D5C;color:#fff;">
+<th style="padding:14px 16px;text-align:left;font-weight:600;">คุณสมบัติ</th>
+<th style="padding:14px 16px;text-align:center;font-weight:600;">ตาข่าย HDPE</th>
+<th style="padding:14px 16px;text-align:center;font-weight:600;">หนามสแตนเลส</th>
+<th style="padding:14px 16px;text-align:center;font-weight:600;">เจลไล่นก</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#fff;"><td style="padding:12px 16px;border-bottom:1px solid #eee;font-weight:600;">พื้นที่เหมาะสม</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">ระเบียง, ช่องเปิดขนาดใหญ่, โรงงาน</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">ขอบหน้าต่าง, ราวกันตก, ชายคา</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">พื้นที่แคบ, ขอบระเบียง, ป้าย</td></tr>
+<tr style="background:#f9f9f9;"><td style="padding:12px 16px;border-bottom:1px solid #eee;font-weight:600;">อายุการใช้งาน</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">6-7 ปี</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">10+ ปี (ไม่เป็นสนิม)</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">1-2 ปี</td></tr>
+<tr style="background:#fff;"><td style="padding:12px 16px;border-bottom:1px solid #eee;font-weight:600;">ประสิทธิภาพ</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">★★★★★</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">★★★★☆</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">★★★☆☆</td></tr>
+<tr style="background:#f9f9f9;"><td style="padding:12px 16px;border-bottom:1px solid #eee;font-weight:600;">ราคา</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">ปานกลาง</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">ประหยัด</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">ประหยัดที่สุด</td></tr>
+<tr style="background:#fff;"><td style="padding:12px 16px;border-bottom:1px solid #eee;font-weight:600;">ปลอดภัยต่อนก</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">✓ ไม่ทำร้ายนก</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">✓ ไม่ทำร้ายนก</td><td style="padding:12px 16px;border-bottom:1px solid #eee;text-align:center;">✓ ไม่มีสารพิษ</td></tr>
+<tr style="background:#f9f9f9;"><td style="padding:12px 16px;font-weight:600;">รับประกัน</td><td style="padding:12px 16px;text-align:center;color:#E8792E;font-weight:700;">3 ปี</td><td style="padding:12px 16px;text-align:center;color:#E8792E;font-weight:700;">3 ปี</td><td style="padding:12px 16px;text-align:center;color:#E8792E;font-weight:700;">1 ปี</td></tr>
+</tbody>
+</table>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
 <!-- wp:paragraph {"align":"center","fontSize":"large"} -->
 <p class="has-text-align-center has-large-font-size"><strong>สนใจบริการ? ปรึกษาฟรี!</strong></p>
 <!-- /wp:paragraph -->
@@ -624,39 +659,44 @@ $services_content = '
 ';
 
 // ===== PORTFOLIO PAGE =====
-// Project list from company profile PDF (40+ real projects)
+// Project list from company profile PDF (40+ real projects) with categories
 $projects = array(
-    array('name' => 'อาคารสำนักงาน ป.ป.ช. ภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 7),
-    array('name' => 'อู่ราชนาวีมหิดลอดุลยเดช กรมอู่ทหารเรือ', 'location' => 'จังหวัดชลบุรี', 'page' => 9),
-    array('name' => 'หอพักชาย 7 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 10),
-    array('name' => 'หอพักชาย 8 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 11),
-    array('name' => 'หอพัก 21-23 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 12),
-    array('name' => 'วิทยาลัยสาธารณสุขสิรินธร อาคาร 10 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 13),
-    array('name' => 'โรงงาน DOS', 'location' => 'สาขาขอนแก่น', 'page' => 15),
-    array('name' => 'หอพักแพทย์ โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 16),
-    array('name' => 'อาคารสิริภักษ์ สำนักงานคลังจังหวัด', 'location' => 'จังหวัดขอนแก่น', 'page' => 18),
-    array('name' => 'หอพักพยาบาล โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 19),
-    array('name' => 'หอพักพยาบาล โรงพยาบาลสิรินธร', 'location' => 'จังหวัดขอนแก่น', 'page' => 20),
-    array('name' => 'หอพักแพทย์ มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 21),
-    array('name' => 'บ้านพักอธิการบดีอัยการภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 22),
-    array('name' => 'โกดัง บริษัทอินเวนทิโว คอสเมติก จำกัด', 'location' => 'จังหวัดมหาสารคาม', 'page' => 24),
-    array('name' => 'โกดังให้เช่า A6', 'location' => 'จังหวัดเชียงใหม่', 'page' => 25),
-    array('name' => 'ตั้งฮ่งหลี อาคารพาณิชย์ 4 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 27),
-    array('name' => 'โกดังสินค้า อำเภอสารภี', 'location' => 'จังหวัดเชียงใหม่', 'page' => 28),
-    array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29),
-    array('name' => 'หอพัก TRIPLE T RESIDENCE KKU', 'location' => 'จังหวัดขอนแก่น', 'page' => 30),
-    array('name' => 'หมู่บ้านสีวลี', 'location' => 'อำเภอเมืองขอนแก่น', 'page' => 33),
-    array('name' => 'คอนโดฉัตรเพชร โนนม่วง', 'location' => 'จังหวัดขอนแก่น', 'page' => 34),
-    array('name' => 'เมโทรคอนโด (METRO CONDO)', 'location' => 'จังหวัดขอนแก่น', 'page' => 35),
-    array('name' => 'หมู่บ้านเออเบินนารา แอร์พอร์ต-บายพาส', 'location' => 'จังหวัดขอนแก่น', 'page' => 36),
-    array('name' => 'หมู่บ้าน KLEVER TYME', 'location' => 'จังหวัดขอนแก่น', 'page' => 39),
-    array('name' => 'คอนโดมิเนียม X10 ศรีนครินทร์', 'location' => 'จังหวัดขอนแก่น', 'page' => 40),
-    array('name' => 'เดอะ เดสทินี เอ็กคลูซีพ คอนโดมิเนียม', 'location' => 'จังหวัดขอนแก่น', 'page' => 42),
-    array('name' => 'ชาลิสา คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 43),
-    array('name' => 'ESCENT CONDO', 'location' => 'จังหวัดขอนแก่น', 'page' => 45),
-    array('name' => 'เอพี บูเลอวาร์ด คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 46),
-    array('name' => 'เดอะ เบส ไฮท์ มิตรภาพ', 'location' => 'จังหวัดขอนแก่น', 'page' => 49),
-    array('name' => 'คอนโดกัลปพฤกษ์ เลควิว', 'location' => 'จังหวัดขอนแก่น', 'page' => 50),
+    // อาคารราชการ & สถาบัน
+    array('name' => 'อาคารสำนักงาน ป.ป.ช. ภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 7, 'cat' => 'อาคารราชการ'),
+    array('name' => 'อู่ราชนาวีมหิดลอดุลยเดช กรมอู่ทหารเรือ', 'location' => 'จังหวัดชลบุรี', 'page' => 9, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักชาย 7 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 10, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักชาย 8 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 11, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพัก 21-23 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 12, 'cat' => 'อาคารราชการ'),
+    array('name' => 'วิทยาลัยสาธารณสุขสิรินธร อาคาร 10 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 13, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักแพทย์ โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 16, 'cat' => 'อาคารราชการ'),
+    array('name' => 'อาคารสิริภักษ์ สำนักงานคลังจังหวัด', 'location' => 'จังหวัดขอนแก่น', 'page' => 18, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 19, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลสิรินธร', 'location' => 'จังหวัดขอนแก่น', 'page' => 20, 'cat' => 'อาคารราชการ'),
+    array('name' => 'หอพักแพทย์ มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 21, 'cat' => 'อาคารราชการ'),
+    // โรงงาน & โกดัง
+    array('name' => 'โรงงาน DOS', 'location' => 'สาขาขอนแก่น', 'page' => 15, 'cat' => 'โรงงาน'),
+    array('name' => 'โกดัง บริษัทอินเวนทิโว คอสเมติก จำกัด', 'location' => 'จังหวัดมหาสารคาม', 'page' => 24, 'cat' => 'โรงงาน'),
+    array('name' => 'โกดังให้เช่า A6', 'location' => 'จังหวัดเชียงใหม่', 'page' => 25, 'cat' => 'โรงงาน'),
+    array('name' => 'โกดังสินค้า อำเภอสารภี', 'location' => 'จังหวัดเชียงใหม่', 'page' => 28, 'cat' => 'โรงงาน'),
+    // คอนโด & หอพัก
+    array('name' => 'หอพัก TRIPLE T RESIDENCE KKU', 'location' => 'จังหวัดขอนแก่น', 'page' => 30, 'cat' => 'คอนโด'),
+    array('name' => 'คอนโดฉัตรเพชร โนนม่วง', 'location' => 'จังหวัดขอนแก่น', 'page' => 34, 'cat' => 'คอนโด'),
+    array('name' => 'เมโทรคอนโด (METRO CONDO)', 'location' => 'จังหวัดขอนแก่น', 'page' => 35, 'cat' => 'คอนโด'),
+    array('name' => 'คอนโดมิเนียม X10 ศรีนครินทร์', 'location' => 'จังหวัดขอนแก่น', 'page' => 40, 'cat' => 'คอนโด'),
+    array('name' => 'เดอะ เดสทินี เอ็กคลูซีพ คอนโดมิเนียม', 'location' => 'จังหวัดขอนแก่น', 'page' => 42, 'cat' => 'คอนโด'),
+    array('name' => 'ชาลิสา คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 43, 'cat' => 'คอนโด'),
+    array('name' => 'ESCENT CONDO', 'location' => 'จังหวัดขอนแก่น', 'page' => 45, 'cat' => 'คอนโด'),
+    array('name' => 'เอพี บูเลอวาร์ด คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 46, 'cat' => 'คอนโด'),
+    array('name' => 'เดอะ เบส ไฮท์ มิตรภาพ', 'location' => 'จังหวัดขอนแก่น', 'page' => 49, 'cat' => 'คอนโด'),
+    array('name' => 'คอนโดกัลปพฤกษ์ เลควิว', 'location' => 'จังหวัดขอนแก่น', 'page' => 50, 'cat' => 'คอนโด'),
+    // บ้านพักอาศัย
+    array('name' => 'บ้านพักอธิการบดีอัยการภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 22, 'cat' => 'บ้านพักอาศัย'),
+    array('name' => 'หมู่บ้านสีวลี', 'location' => 'อำเภอเมืองขอนแก่น', 'page' => 33, 'cat' => 'บ้านพักอาศัย'),
+    array('name' => 'หมู่บ้านเออเบินนารา แอร์พอร์ต-บายพาส', 'location' => 'จังหวัดขอนแก่น', 'page' => 36, 'cat' => 'บ้านพักอาศัย'),
+    array('name' => 'หมู่บ้าน KLEVER TYME', 'location' => 'จังหวัดขอนแก่น', 'page' => 39, 'cat' => 'บ้านพักอาศัย'),
+    // อาคารพาณิชย์ & คลินิก
+    array('name' => 'ตั้งฮ่งหลี อาคารพาณิชย์ 4 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 27, 'cat' => 'อาคารพาณิชย์'),
+    array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29, 'cat' => 'อาคารพาณิชย์'),
 );
 
 $portfolio_content = '
@@ -665,7 +705,7 @@ $portfolio_content = '
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">ผลงานติดตั้งตาข่ายกันนกจริงกว่า <strong>40+ โปรเจกต์</strong> ทั้งอาคารราชการ คอนโด โรงพยาบาล มหาวิทยาลัย โรงงาน และบ้านพักอาศัย</p>
+<p class="has-text-align-center has-medium-font-size">ผลงานติดตั้งตาข่ายกันนกจริงกว่า <strong>40+ โปรเจกต์</strong> ทั้งอาคารราชการ คอนโด โรงพยาบาล มหาวิทยาลัย โรงงาน และบ้านพักอาศัย<br>ให้บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
@@ -675,25 +715,41 @@ $portfolio_content = '
 // Projects with multiple photos (top featured projects)
 $multi_photo_pages = array(7, 9, 10, 13, 20, 22, 35, 45);
 
-// Generate portfolio grid with project names and photos
-$count = 0;
+// Group projects by category
+$categories = array();
 foreach ($projects as $project) {
-    $count++;
-    if ($count % 3 == 1) {
-        $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
+    $cat = isset($project['cat']) ? $project['cat'] : 'อื่นๆ';
+    if (!isset($categories[$cat])) {
+        $categories[$cat] = array();
     }
-    
-    // Build gallery HTML for projects with multiple photos
-    $has_multi = in_array($project['page'], $multi_photo_pages);
-    $gallery_html = '';
-    if ($has_multi) {
-        $gallery_html = '<div class="project-gallery" style="display:flex;gap:4px;margin-top:6px;">
+    $categories[$cat][] = $project;
+}
+
+// Generate portfolio grid grouped by category
+foreach ($categories as $cat_name => $cat_projects) {
+    $portfolio_content .= '
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">' . $cat_name . ' (' . count($cat_projects) . ' โปรเจกต์)</h3>
+<!-- /wp:heading -->';
+
+    $count = 0;
+    $total = count($cat_projects);
+    foreach ($cat_projects as $project) {
+        $count++;
+        if ($count % 3 == 1) {
+            $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
+        }
+        
+        $has_multi = in_array($project['page'], $multi_photo_pages);
+        $gallery_html = '';
+        if ($has_multi) {
+            $gallery_html = '<div class="project-gallery" style="display:flex;gap:4px;margin-top:6px;">
 <img src="' . project_img($project['page'], 2) . '" alt="' . $project['name'] . ' #2" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
 <img src="' . project_img($project['page'], 3) . '" alt="' . $project['name'] . ' #3" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
 </div>';
-    }
-    
-    $portfolio_content .= '
+        }
+        
+        $portfolio_content .= '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
@@ -704,15 +760,18 @@ foreach ($projects as $project) {
 <p style="color:#666;font-size:0.9em;">' . $project['location'] . '</p>
 </div>
 <!-- /wp:column -->';
-    if ($count % 3 == 0 || $count == count($projects)) {
-        if ($count == count($projects) && $count % 3 != 0) {
-            $remaining = 3 - ($count % 3);
-            for ($r = 0; $r < $remaining; $r++) {
-                $portfolio_content .= "\n<!-- wp:column -->\n<div class=\"wp-block-column\"></div>\n<!-- /wp:column -->";
+        if ($count % 3 == 0 || $count == $total) {
+            if ($count == $total && $count % 3 != 0) {
+                $remaining = 3 - ($count % 3);
+                for ($r = 0; $r < $remaining; $r++) {
+                    $portfolio_content .= "\n<!-- wp:column -->\n<div class=\"wp-block-column\"></div>\n<!-- /wp:column -->";
+                }
             }
+            $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
         }
-        $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
     }
+    
+    $portfolio_content .= "\n<!-- wp:separator {\"className\":\"is-style-wide\"} -->\n<hr class=\"wp-block-separator has-alpha-channel-opacity is-style-wide\"/>\n<!-- /wp:separator -->";
 }
 
 $portfolio_content .= '
@@ -894,9 +953,14 @@ $contact_content = '
 <a href="tel:0936415623"><strong>093-641-5623</strong></a> (เชียงใหม่)<br>
 <a href="tel:0956292488"><strong>095-629-2488</strong></a> (ชลบุรี)</p>
 
-<h4 class="wp-block-heading">💬 LINE</h4>
-<p><a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a><br>
-<a href="https://line.me/ti/p/~th3-ta006-2">th3-ta006-2</a></p>
+<h4 class="wp-block-heading">💬 LINE — แอดไลน์ส่งรูปหน้างานประเมินราคาฟรี</h4>
+<!-- wp:html -->
+<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin:0.5rem 0 1rem;">
+<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;">🟢 แอดไลน์: oil_phanu (ขอนแก่น)</a>
+<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;">🟢 แอดไลน์: th3-ta006-2</a>
+</div>
+<p style="font-size:0.85rem;color:#666;">สแกน QR หรือกดปุ่มด้านบนเพื่อแอดไลน์ ส่งรูปหน้างานประเมินราคาได้เลย!</p>
+<!-- /wp:html -->
 
 <h4 class="wp-block-heading">Facebook</h4>
 <p><a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener">ตาข่ายกันนก by Birds Go Away</a></p>
@@ -1046,6 +1110,104 @@ $faq_content = '
 <!-- /wp:buttons -->
 ';
 
+// ===== BLOG PAGE =====
+$blog_content = '
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">บทความ & ความรู้</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ความรู้เรื่องปัญหานกพิราบ วิธีป้องกัน และเคล็ดลับดูแลอาคาร</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">อันตรายจากขี้นกพิราบ — โรคที่คุณอาจไม่รู้</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>มูลนกพิราบไม่ใช่แค่ปัญหาความสกปรก แต่ยังเป็นแหล่งสะสมเชื้อโรคอันตรายหลายชนิด ได้แก่:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>โรคปอดอักเสบ (Cryptococcosis)</strong> — เชื้อราในมูลนกแห้ง เมื่อสูดดมเข้าปอดอาจทำให้ปอดอักเสบรุนแรง</li>
+<li><strong>โรคฮิสโตพลาสโมซิส (Histoplasmosis)</strong> — เชื้อราที่เจริญเติบโตในมูลนก สามารถแพร่กระจายในอากาศ</li>
+<li><strong>โรคซาลโมเนลลา (Salmonellosis)</strong> — เชื้อแบคทีเรียจากมูลนกปนเปื้อนอาหารและน้ำ</li>
+<li><strong>เห็บ ไร หมัด</strong> — ปรสิตที่อาศัยอยู่ในรังนกและมูลนก สามารถเข้าสู่ที่พักอาศัยได้</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>วิธีป้องกัน:</strong> ติดตั้งตาข่ายกันนก HDPE หรือหนามกันนกสแตนเลส เป็นวิธีที่ปลอดภัยและได้ผลถาวร ไม่ทำร้ายนก แต่ป้องกันไม่ให้นกเข้ามาทำรังในพื้นที่ หากคุณอยู่ในพื้นที่<strong>ขอนแก่น เชียงใหม่ ชลบุรี หรือภาคอีสาน</strong> สามารถติดต่อ BIRDS GO AWAY เพื่อขอคำปรึกษาฟรีได้เลย</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">วิธีไล่นกพิราบด้วยตัวเอง — ได้ผลจริงหรือ?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>หลายคนเคยลองวิธีไล่นกพิราบด้วยตัวเอง เช่น แขวนซีดี ใช้เสียงไล่ ติดสติกเกอร์ตานก แต่วิธีเหล่านี้ได้ผลแค่ชั่วคราว เพราะนกพิราบเป็นสัตว์ที่ปรับตัวได้เร็วมาก</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>วิธีที่ได้ผลถาวร:</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol>
+<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียง ช่องเปิด พื้นที่กว้าง อายุการใช้งาน 6-7 ปี</li>
+<li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
+<li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่แคบ ติดตั้งง่าย แต่ต้องเปลี่ยนทุก 1-2 ปี</li>
+<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผง</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>หากต้องการคำปรึกษาจากผู้เชี่ยวชาญ บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น</strong> <strong>เชียงใหม่</strong> <strong>ชลบุรี</strong> และ<strong>ทั่วภาคอีสาน</strong> โดย BIRDS GO AWAY ปรึกษาฟรี โทร 062-996-4994</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">ตาข่ายกันนก ราคาเท่าไหร่? คำนวณอย่างไร?</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ราคาติดตั้งตาข่ายกันนกขึ้นอยู่กับหลายปัจจัย:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li><strong>ขนาดพื้นที่</strong> — วัดเป็นตารางเมตร ยิ่งพื้นที่ใหญ่ ราคาต่อ ตร.ม. จะถูกลง</li>
+<li><strong>ความสูง</strong> — งานที่ต้องใช้รถกระเช้าหรือโรยตัว จะมีค่าใช้จ่ายเพิ่ม</li>
+<li><strong>ความซับซ้อน</strong> — พื้นที่โล่งจะง่ายกว่าพื้นที่มีสิ่งกีดขวาง ท่อ ราวตากผ้า</li>
+<li><strong>ประเภทวัสดุ</strong> — ตาข่าย HDPE, หนามสแตนเลส, เจล มีราคาต่างกัน</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>ประเมินราคาฟรี!</strong> ส่งรูปหน้างานทาง LINE: oil_phanu หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย ให้บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน</strong>ทั่วประเทศ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link" href="/contact">ขอประเมินราคาฟรี</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+';
+
 // ===== UPDATE PAGES =====
 $pages = array(
     'home'      => array('title' => 'หน้าแรก',      'content' => $home_content),
@@ -1054,6 +1216,7 @@ $pages = array(
     'about'     => array('title' => 'เกี่ยวกับเรา',  'content' => $about_content),
     'contact'   => array('title' => 'ติดต่อเรา',     'content' => $contact_content),
     'faq'       => array('title' => 'คำถามที่พบบ่อย', 'content' => $faq_content),
+    'blog'      => array('title' => 'บทความ',        'content' => $blog_content),
 );
 
 foreach ($pages as $slug => $page_data) {
@@ -1090,9 +1253,9 @@ echo "=== Configuring SEO ===\n";
 // SEO meta data for each page
 $seo_data = array(
     'home' => array(
-        'title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ | ขอนแก่น เชียงใหม่ ชลบุรี',
-        'desc'  => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ โดยทีมช่างมืออาชีพ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
-        'focus' => 'ตาข่ายกันนก',
+        'title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน โดยวิศวกรมืออาชีพ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
+        'focus' => 'ตาข่ายกันนก ขอนแก่น',
     ),
     'services' => array(
         'title' => 'บริการของเรา — ตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์ | BIRDS GO AWAY',
@@ -1118,6 +1281,11 @@ $seo_data = array(
         'title' => 'คำถามที่พบบ่อย FAQ — ตาข่ายกันนก ราคา วิธีติดตั้ง | BIRDS GO AWAY',
         'desc'  => 'รวมคำถามที่พบบ่อยเกี่ยวกับตาข่ายกันนก ราคาติดตั้ง ขั้นตอนการทำงาน อายุการใช้งาน รับประกัน พื้นที่ให้บริการ โดย BIRDS GO AWAY',
         'focus' => 'ตาข่ายกันนก คำถามที่พบบ่อย',
+    ),
+    'blog' => array(
+        'title' => 'บทความ — วิธีไล่นกพิราบ อันตรายจากขี้นก ตาข่ายกันนก ราคา | BIRDS GO AWAY',
+        'desc'  => 'บทความความรู้เรื่องปัญหานกพิราบ อันตรายจากขี้นก วิธีไล่นกด้วยตัวเอง ราคาตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน โดยผู้เชี่ยวชาญ BIRDS GO AWAY',
+        'focus' => 'วิธีไล่นกพิราบ ตาข่ายกันนก ขอนแก่น',
     ),
 );
 
