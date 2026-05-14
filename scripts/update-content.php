@@ -1150,6 +1150,10 @@ $contact_content = '
 <p class="has-text-align-center">ปรึกษาฟรี! ติดต่อเราวันนี้เพื่อรับใบเสนอราคา</p>
 <!-- /wp:paragraph -->
 
+<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size" style="color:#E8792E;font-weight:600;">🚀 ยินดีให้บริการด่วนในพื้นที่ขอนแก่นและจังหวัดใกล้เคียง — นัดประเมินหน้างานได้ภายใน 24 ชม.</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:html -->
 <div style="max-width:600px;margin:0 auto;padding:0 1rem;">
 
