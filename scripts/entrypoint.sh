@@ -47,6 +47,12 @@ if [ -d /tmp/birdnet-child ]; then
   chown -R www-data:www-data /var/www/html/wp-content/themes/birdnet-child
 fi
 
+# Clear WP Super Cache on every deploy to ensure fresh CSS/content
+echo "=== Clearing WP Super Cache ==="
+rm -rf /var/www/html/wp-content/cache/supercache/* 2>/dev/null || true
+rm -rf /var/www/html/wp-content/cache/wp-cache-* 2>/dev/null || true
+wp cache flush --path=/var/www/html --allow-root 2>/dev/null || true
+
 # Always install Astra parent theme if missing
 if [ ! -d /var/www/html/wp-content/themes/astra ]; then
   echo "=== Installing Astra parent theme ==="
