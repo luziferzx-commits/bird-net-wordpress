@@ -178,6 +178,8 @@ function birdnet_schema_jsonld() {
                 array('@type' => 'Question', 'name' => 'ค่าบริการติดตั้งเริ่มต้นเท่าไหร่?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ค่าบริการขึ้นอยู่กับพื้นที่และความยากง่าย เราให้บริการประเมินราคาฟรี โทร 062-996-4994')),
                 array('@type' => 'Question', 'name' => 'ให้บริการพื้นที่ไหนบ้าง?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ขอนแก่น เชียงใหม่ ชลบุรี และจังหวัดใกล้เคียง')),
                 array('@type' => 'Question', 'name' => 'มีรับประกันหลังติดตั้งไหม?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'มีรับประกันงานติดตั้ง 3 ปี หากพบปัญหา ทีมงานเข้าแก้ไขฟรี')),
+                array('@type' => 'Question', 'name' => 'ติดตั้งแล้วนกจะเจ็บไหม?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ไม่เจ็บ ทุกวิธีเป็นสันติวิธี 100% ไม่ทำร้ายและไม่ฆ่านก ปลอดภัยต่อนก คน และสัตว์เลี้ยง')),
+                array('@type' => 'Question', 'name' => 'ติดตั้งในกรุงเทพหรือต่างจังหวัดได้ไหม?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'บริการทั่วประเทศ มีสำนักงานที่ขอนแก่น เชียงใหม่ ชลบุรี ครอบคลุมภาคอีสาน ภาคเหนือ ภาคตะวันออก และกรุงเทพฯ')),
             ),
         ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         echo '<script type="application/ld+json">' . $faq_schema . '</script>' . "\n";
@@ -320,22 +322,22 @@ function birdnet_add_faq_to_menu($items, $args) {
 }
 add_filter('wp_nav_menu_items', 'birdnet_add_faq_to_menu', 10, 2);
 
-// Ensure logo displays on mobile — fallback to birdnet-assets if uploaded logo fails
+// Ensure logo displays — JS fallback for broken image (ephemeral Docker uploads)
 function birdnet_logo_fallback() {
-    $custom_logo_id = get_theme_mod('custom_logo');
-    if ($custom_logo_id) {
-        $logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-        if (!$logo_url) {
-            $logo_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
-        }
-    } else {
-        $logo_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
-    }
-    echo '<style>
-    .custom-logo-link img.custom-logo[src=""],
-    .custom-logo-link img.custom-logo:not([src]) {
-        content: url(' . esc_url($logo_url) . ');
-    }
-    </style>';
+    $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
+    echo '<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var logos = document.querySelectorAll(".custom-logo, .ast-site-identity img");
+        logos.forEach(function(img) {
+            img.onerror = function() {
+                this.onerror = null;
+                this.src = "' . esc_url($fallback_url) . '";
+            };
+            if (img.complete && img.naturalWidth === 0) {
+                img.src = "' . esc_url($fallback_url) . '";
+            }
+        });
+    });
+    </script>';
 }
 add_action('wp_head', 'birdnet_logo_fallback');

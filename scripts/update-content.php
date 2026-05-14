@@ -63,15 +63,15 @@ $home_content = '
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">จบปัญหานกพิราบถาวร<br>โดยวิศวกรมืออาชีพ</h1>
+<h1 class="wp-block-heading">แก้ปัญหานกพิราบถาวร<br>รับประกันงานติดตั้ง โดยผู้เชี่ยวชาญ</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">ทีมช่างผ่านการอบรมโรยตัว มีใบ Certificate วิศวกรคุมงานทุกไซต์ ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด</p>
+<p class="has-medium-font-size">ติดตั้งตาข่ายกันนก หนามสแตนเลส เจลไล่นก ครบวงจร — วิศวกรคุมงานทุกไซต์ ทีมช่างผ่านอบรมโรยตัวมีใบ Certificate</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size"><strong>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี | รับประกัน 3 ปี | ปรึกษาฟรี</strong></p>
+<p class="has-medium-font-size"><strong>ประเมินหน้างานฟรี | รับประกัน 3 ปี | บริการทั่วประเทศ</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
@@ -109,34 +109,41 @@ $home_content = '
 <p class="has-text-align-center">บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนก ครบวงจร</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns">
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">ปลอดภัย 100%</h3>
-<p>วัสดุคุณภาพสูง ไม่ทำร้ายนก ปลอดภัยต่อคนและสัตว์เลี้ยง ผ่านมาตรฐาน</p>
+<!-- wp:html -->
+<div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:0 1rem;">
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🔩 วัสดุสแตนเลส 304 ไม่เป็นสนิม</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">หนามกันนกผลิตจากสแตนเลส SUS304 ไม่เป็นสนิมตลอดอายุการใช้งาน ทนทานต่อทุกสภาพอากาศ ทั้งแดด ฝน ลม</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">ติดตั้งรวดเร็ว</h3>
-<p>ทีมช่างมืออาชีพ ดำเนินงานรวดเร็ว ไม่รบกวนการใช้ชีวิต มีวิศวกรคุมงาน</p>
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🦺 ทีมงานผ่านฝึกอบรมความปลอดภัย</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">ช่างทุกคนผ่านอบรมการทำงานบนที่สูง (Safety) มีใบรับรองโรยตัว SAFESIRI + วิศวกร กว. คุมงานทุกไซต์</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">รับประกัน 3 ปี</h3>
-<p>รับประกันคุณภาพงานติดตั้ง 3 ปี พร้อมบริการหลังการขาย ซ่อมแซมฟรี</p>
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">📋 ประเมินหน้างานฟรี ไม่มีค่าใช้จ่าย</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">วิศวกรเข้าสำรวจหน้างานฟรี วัดพื้นที่ วิเคราะห์ปัญหา เสนอราคาภายใน 1-2 วัน ไม่มีค่าใช้จ่ายแอบแฝง</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">ราคายุติธรรม</h3>
-<p>เสนอราคาฟรี ไม่มีค่าใช้จ่ายแอบแฝง คุ้มค่าทุกบาท ปรึกษาฟรีไม่มีค่าใช้จ่าย</p>
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🕊️ ไม่ทำร้ายนก — สันติวิธี 100%</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">วิธีป้องกันแบบสันติ ไม่ทำร้าย ไม่ฆ่านก เพียงกันไม่ให้นกเข้ามาในพื้นที่ ปลอดภัยต่อคนและสัตว์เลี้ยง</p>
 </div>
-<!-- /wp:column -->
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🛡️ รับประกัน 3 ปี พร้อมซ่อมฟรี</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">รับประกันคุณภาพงานติดตั้ง 3 ปี หากพบปัญหาทีมงานเข้าแก้ไขฟรี บริการหลังการขายตลอดอายุสัญญา</p>
 </div>
-<!-- /wp:columns -->
+
+<div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">⚡ ติดตั้งรวดเร็ว ไม่รบกวนการใช้ชีวิต</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">ทีมช่างมืออาชีพ งานระเบียงคอนโดเสร็จใน 2-4 ชม. งานโรงงานใหญ่เสร็จใน 1-3 วัน พร้อมทำความสะอาดหลังงาน</p>
+</div>
+
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -382,31 +389,39 @@ $home_content = '
 <p class="has-text-align-center">ขอบพระคุณลูกค้าทุกท่านที่ไว้วางใจ Birds Go Away</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns">
-<!-- wp:column -->
-<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
-<p style="font-style:italic;">"ทีมงานมืออาชีพมาก ติดตั้งเรียบร้อย สะอาด ตาข่ายแทบมองไม่เห็น แต่นกไม่มาอีกเลย รับประกันงานด้วย ประทับใจมากครับ"</p>
-<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณสมชาย</strong> | คอนโด X10 ศรีนครินทร์, ขอนแก่น</p>
-<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+<!-- wp:html -->
+<div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:0 1rem;">
+
+<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
+<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏢 คอนโดมิเนียม</p>
+<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ทีมงานมืออาชีพมาก ติดตั้งเรียบร้อย สะอาด ตาข่ายแทบมองไม่เห็น แต่นกไม่มาอีกเลย รับประกันงานด้วย ประทับใจมากครับ"</p>
+<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณสมชาย</strong> | คอนโด X10 ศรีนครินทร์, ขอนแก่น</p>
+<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column -->
-<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
-<p style="font-style:italic;">"ปัญหานกพิราบมานานหลายปี ลองหลายวิธีไม่ได้ผล พอติดตาข่ายกับ Birds Go Away จบเลย ราคาสมเหตุสมผล แนะนำเลยค่ะ"</p>
-<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณนิดา</strong> | หมู่บ้านสีวลี, ขอนแก่น</p>
-<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+
+<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
+<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏠 บ้านพักอาศัย</p>
+<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ปัญหานกพิราบมานานหลายปี ลองหลายวิธีไม่ได้ผล พอติดตาข่ายกับ Birds Go Away จบเลย ราคาสมเหตุสมผล แนะนำเลยค่ะ"</p>
+<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณนิดา</strong> | หมู่บ้านสีวลี, ขอนแก่น</p>
+<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column -->
-<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
-<p style="font-style:italic;">"ใช้บริการติดตั้งที่โกดังสินค้า พื้นที่กว้างมาก แต่ทีมจัดการได้เรียบร้อยภายใน 2 วัน มีวิศวกรมาคุมงานด้วย วางใจได้"</p>
-<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณวิชัย</strong> | โกดังสินค้า, เชียงใหม่</p>
-<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+
+<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
+<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏭 โรงงาน / โกดัง</p>
+<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ใช้บริการติดตั้งที่โกดังสินค้า พื้นที่กว้างมาก แต่ทีมจัดการได้เรียบร้อยภายใน 2 วัน มีวิศวกรมาคุมงานด้วย วางใจได้"</p>
+<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณวิชัย</strong> | โกดังสินค้า, เชียงใหม่</p>
+<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
 </div>
-<!-- /wp:column -->
+
+<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
+<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">⛽ ปั๊มน้ำมัน / โชว์รูม</p>
+<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"นกทำรังใต้หลังคาปั๊มจนสกปรก ลูกค้าร้องเรียนตลอด ติดตาข่ายแล้วสะอาดมาก ดูดีขึ้นเยอะ ขอบคุณทีมงานครับ"</p>
+<p style="color:#666;font-size:0.85em;margin:0;"><strong>— ผู้จัดการสาขา</strong> | ปั๊มน้ำมัน, ชลบุรี</p>
+<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
 </div>
-<!-- /wp:columns -->
+
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -998,7 +1013,7 @@ th3-ta006-2</a>
 
 <!-- wp:html -->
 <div style="width:100%;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.8!2d102.8195!3d16.4457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31228a9c6bffffff%3A0x0!2sKlever+Tyme+Srichan!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://maps.google.com/maps?q=88%2F38+%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99+Klever+%E0%B8%95%E0%B8%B3%E0%B8%9A%E0%B8%A5%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%94+%E0%B8%82%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99+40000&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <!-- /wp:html -->
 
@@ -1092,6 +1107,33 @@ $faq_content = '
 ✅ ใบประกอบวิชาชีพวิศวกร (กว.) จากสภาวิศวกร<br>
 ✅ ใบ จป. หัวหน้างาน (เจ้าหน้าที่ความปลอดภัย)<br>
 ✅ วิศวกรคุมงานทุกไซต์ + อุปกรณ์ความปลอดภัยครบชุด</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ติดตั้งแล้วนกจะเจ็บไหม?</strong></summary>
+<p>ไม่เจ็บครับ! ทุกวิธีที่เราใช้เป็น<strong>สันติวิธี 100%</strong> ไม่ทำร้ายและไม่ฆ่านก:<br>
+🕊️ <strong>ตาข่าย HDPE</strong> — กันไม่ให้นกเข้าพื้นที่ ไม่มีส่วนแหลมคม<br>
+🕊️ <strong>หนามสแตนเลส</strong> — ปลายมนทำให้นกไม่สามารถเกาะได้ แต่ไม่ทิ่มแทง<br>
+🕊️ <strong>เจลไล่นก</strong> — สารธรรมชาติ นกไม่ชอบสัมผัส จะบินหนีเอง<br>
+เราเน้นการป้องกัน ไม่ใช่การทำลาย ปลอดภัยทั้งต่อนก คน และสัตว์เลี้ยง</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>การรับประกันกี่ปี? ครอบคลุมอะไรบ้าง?</strong></summary>
+<p><strong>รับประกัน 3 ปี</strong> ครอบคลุม:<br>
+✅ ตาข่ายขาด หลุด หรือเสื่อมสภาพจากการใช้งานปกติ<br>
+✅ หนามหลุดหรือคลายตัว<br>
+✅ งานติดตั้งที่มีข้อบกพร่อง<br>
+ทีมงานเข้าแก้ไข<strong>ฟรี</strong>ตลอดระยะประกัน ไม่มีค่าใช้จ่ายเพิ่มเติม</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ติดตั้งในพื้นที่กรุงเทพฯ หรือต่างจังหวัดได้ไหม?</strong></summary>
+<p>เราให้บริการ<strong>ทั่วประเทศ</strong> โดยมีสำนักงาน 3 แห่ง:<br>
+📍 <strong>ขอนแก่น</strong> — ครอบคลุมภาคอีสาน (อุดรธานี มหาสารคาม นครราชสีมา สกลนคร ร้อยเอ็ด)<br>
+📍 <strong>เชียงใหม่</strong> — ครอบคลุมภาคเหนือ (ลำพูน ลำปาง เชียงราย)<br>
+📍 <strong>ชลบุรี</strong> — ครอบคลุมภาคตะวันออก ภาคกลาง กรุงเทพฯ และปริมณฑล<br>
+สำหรับพื้นที่อื่นๆ สามารถสอบถามได้เลย เรายินดีเดินทางไปทุกจังหวัดครับ</p>
 </details>
 </div>
 
