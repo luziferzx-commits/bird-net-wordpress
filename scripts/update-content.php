@@ -753,6 +753,39 @@ $about_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">ใบรับรองบริษัท</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">บริษัท รีเช็ค บิ้วดิ้ง จำกัด จดทะเบียนถูกต้องตามกฎหมาย พร้อมใบรับรองมาตรฐานความปลอดภัย</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%;">
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/cert-page-2.jpeg" alt="หนังสือรับรองบริษัท เลขทะเบียน 0405567000088" style="border-radius:12px;"/></figure>
+<!-- /wp:image -->
+<p style="text-align:center;font-size:0.9em;color:#666;"><strong>หนังสือรับรองจดทะเบียนบริษัท</strong><br>กรมพัฒนาธุรกิจการค้า</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%;">
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/cert-page-3.jpeg" alt="ใบรับรอง SAFESIRI โรยตัว, ใบ กว. สภาวิศวกร, ใบ จป." style="border-radius:12px;"/></figure>
+<!-- /wp:image -->
+<p style="text-align:center;font-size:0.9em;color:#666;"><strong>ใบรับรองโรยตัว SAFESIRI / ใบ กว. / ใบ จป.</strong><br>มาตรฐานความปลอดภัยครบถ้วน</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center wp-block-heading">พื้นที่ให้บริการ</h2>
 <!-- /wp:heading -->
 
