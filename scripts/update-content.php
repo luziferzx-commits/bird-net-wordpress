@@ -969,16 +969,16 @@ $contact_content = '
 <h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">📞 โทรศัพท์</h3>
 <div style="display:flex;flex-direction:column;gap:10px;">
 <a href="tel:0629964994" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e2e8f0;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<span style="font-size:1.2rem;">📱</span>
 <div><strong>062-996-4994</strong><br><span style="color:#888;font-size:0.75rem;">คุณออย — ขอนแก่น</span></div></a>
 <a href="tel:0889514924" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e2e8f0;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<span style="font-size:1.2rem;">📱</span>
 <div><strong>088-951-4924</strong><br><span style="color:#888;font-size:0.75rem;">คุณวีวี่</span></div></a>
 <a href="tel:0936415623" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e2e8f0;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<span style="font-size:1.2rem;">📱</span>
 <div><strong>093-641-5623</strong><br><span style="color:#888;font-size:0.75rem;">เชียงใหม่</span></div></a>
 <a href="tel:0956292488" style="display:flex;align-items:center;gap:8px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #e2e8f0;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<span style="font-size:1.2rem;">📱</span>
 <div><strong>095-629-2488</strong><br><span style="color:#888;font-size:0.75rem;">ชลบุรี</span></div></a>
 </div>
 </div>
@@ -987,11 +987,9 @@ $contact_content = '
 <h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">💬 LINE — ส่งรูปหน้างานประเมินราคาฟรี</h3>
 <div style="display:flex;gap:10px;flex-wrap:wrap;">
 <a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:10px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.85rem;flex:1;justify-content:center;min-width:140px;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.95 1.95 5.55 4.87 7.13-.19.66-.68 2.37-.78 2.73-.13.47.17.46.36.34.15-.1 2.37-1.61 3.33-2.26.73.1 1.47.16 2.22.16 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
-oil_phanu (ขอนแก่น)</a>
+💬 oil_phanu (ขอนแก่น)</a>
 <a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:10px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.85rem;flex:1;justify-content:center;min-width:140px;">
-<svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.95 1.95 5.55 4.87 7.13-.19.66-.68 2.37-.78 2.73-.13.47.17.46.36.34.15-.1 2.37-1.61 3.33-2.26.73.1 1.47.16 2.22.16 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
-th3-ta006-2</a>
+💬 th3-ta006-2</a>
 </div>
 </div>
 

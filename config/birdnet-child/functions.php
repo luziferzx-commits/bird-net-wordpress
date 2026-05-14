@@ -295,6 +295,24 @@ function birdnet_lazy_load_images($content) {
 }
 add_filter('the_content', 'birdnet_lazy_load_images', 99);
 
+// Allow iframe and SVG in post content (WordPress strips them by default)
+function birdnet_allow_iframes_svg($tags, $context) {
+    if ($context === 'post') {
+        $tags['iframe'] = array(
+            'src' => true, 'width' => true, 'height' => true,
+            'style' => true, 'allowfullscreen' => true, 'loading' => true,
+            'referrerpolicy' => true, 'frameborder' => true,
+        );
+        $tags['svg'] = array(
+            'width' => true, 'height' => true, 'viewbox' => true,
+            'fill' => true, 'xmlns' => true, 'class' => true,
+        );
+        $tags['path'] = array('d' => true, 'fill' => true);
+    }
+    return $tags;
+}
+add_filter('wp_kses_allowed_html', 'birdnet_allow_iframes_svg', 10, 2);
+
 // Add WebP support for uploads
 function birdnet_webp_support($mimes) {
     $mimes['webp'] = 'image/webp';

@@ -1525,6 +1525,7 @@ ${FORM_SHORTCODE}
   wp option update page_on_front $HOME_ID --path=/var/www/html --allow-root
 
   echo "=== Creating Navigation Menu ==="
+  wp menu delete "Main Menu" --path=/var/www/html --allow-root 2>/dev/null || true
   wp menu create "Main Menu" --path=/var/www/html --allow-root
 
   wp menu item add-post "Main Menu" $HOME_ID --title="หน้าแรก" --path=/var/www/html --allow-root
