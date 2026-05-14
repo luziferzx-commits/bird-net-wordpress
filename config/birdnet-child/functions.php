@@ -332,6 +332,21 @@ add_action('wp_head', 'birdnet_preload_assets', 1);
 
 // FAQ removed from nav — causes overflow on desktop. Accessible via /faq/ URL and footer link.
 
+// Force all nav menus (including mobile hamburger) to use "Main Menu" instead of page fallback
+function birdnet_fix_mobile_menu($args) {
+    if (empty($args['menu']) && empty($args['theme_location'])) {
+        $args['menu'] = 'Main Menu';
+    }
+    if (!empty($args['theme_location']) && $args['theme_location'] !== 'primary') {
+        $menu_locations = get_nav_menu_locations();
+        if (empty($menu_locations[$args['theme_location']])) {
+            $args['menu'] = 'Main Menu';
+        }
+    }
+    return $args;
+}
+add_filter('wp_nav_menu_args', 'birdnet_fix_mobile_menu');
+
 // Ensure logo displays — JS fallback for broken image (ephemeral Docker uploads)
 function birdnet_logo_fallback() {
     $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
