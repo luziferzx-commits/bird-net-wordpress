@@ -450,21 +450,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(1) . '"></video><figcaption>ติดตั้งตาข่ายกันนก HDPE คอนโดสูง — ทีมโรยตัวมืออาชีพ พร้อมอุปกรณ์ Safety ครบชุด</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(1) . '"></video><figcaption>เบื่อไหม? ขี้นกเต็มระเบียงคอนโด ล้างเท่าไหร่ก็ไม่หมด... เราช่วยได้! ติดตั้งตาข่าย HDPE เกรดส่งออก กลมกลืนกับตัวอาคาร นกหายขาด 100% 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(2) . '"></video><figcaption>ติดตั้งหนามกันนกสแตนเลส SUS304 ราวระเบียง — กันนกเกาะ ไม่เป็นสนิม 5+ ปี</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(2) . '"></video><figcaption>นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(3) . '"></video><figcaption>ติดตั้งตาข่ายกันนกอาคารพาณิชย์ — ปิดช่องเปิดใต้หลังคา กันนกทำรัง 100%</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(3) . '"></video><figcaption>นกทำรังใต้หลังคาร้าน ขี้นกหล่นใส่สินค้า? ดูคลิปนี้! ปิดช่องเปิดด้วยตาข่ายกันนก แข็งแรง ทนทาน กันนกเข้า 100% รับประกันงาน 3 ปี 📞 โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -476,21 +476,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(4) . '"></video><figcaption>ติดตั้งตาข่ายกันนกโรงงานอุตสาหกรรม — พื้นที่กว้าง ใช้รถกระเช้ายกสูง ทีมงานมืออาชีพ</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(4) . '"></video><figcaption>ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(5) . '"></video><figcaption>ติดตั้งเจลไล่นกบนคานเหล็ก — วัสดุใส ไม่ทำลายทัศนียภาพ เหมาะกับอาคารสวยงาม</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(5) . '"></video><figcaption>อาคารสวยแต่นกเกาะเต็ม? เจลไล่นกคือคำตอบ! วัสดุใสมองไม่เห็น ไม่ทำลายทัศนียภาพ นกไม่กล้าเกาะอีกเลย ผ่านมา 3 ปียังใช้ได้ดี 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(6) . '"></video><figcaption>ติดตั้งแผงกันนกโซลาร์เซลล์ — ปกป้องแผงโซลาร์จากนกทำรัง ไม่กระทบประสิทธิภาพ</figcaption></figure>
+<figure class="wp-block-video"><video controls src="' . vid(6) . '"></video><figcaption>นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -964,12 +964,12 @@ $portfolio_content .= '
 <!-- /wp:paragraph -->';
 
 $video_captions = array(
-    1 => 'ติดตั้งตาข่ายกันนก HDPE คอนโดสูง — ทีมโรยตัวมืออาชีพ พร้อมอุปกรณ์ Safety ครบชุด',
-    2 => 'ติดตั้งหนามกันนกสแตนเลส SUS304 ราวระเบียง — กันนกเกาะ ไม่เป็นสนิม 5+ ปี',
-    3 => 'ติดตั้งตาข่ายกันนกอาคารพาณิชย์ — ปิดช่องเปิดใต้หลังคา กันนกทำรัง 100%',
-    4 => 'ติดตั้งตาข่ายกันนกโรงงานอุตสาหกรรม — พื้นที่กว้าง ใช้รถกระเช้ายกสูง ทีมงานมืออาชีพ',
-    5 => 'ติดตั้งเจลไล่นกบนคานเหล็ก — วัสดุใส ไม่ทำลายทัศนียภาพ เหมาะกับอาคารสวยงาม',
-    6 => 'ติดตั้งแผงกันนกโซลาร์เซลล์ — ปกป้องแผงโซลาร์จากนกทำรัง ไม่กระทบประสิทธิภาพ',
+    1 => 'เบื่อไหม? ขี้นกเต็มระเบียงคอนโด ล้างเท่าไหร่ก็ไม่หมด... เราช่วยได้! ติดตั้งตาข่าย HDPE เกรดส่งออก กลมกลืนกับตัวอาคาร นกหายขาด 100% 📞 ประเมินฟรี โทร 062-996-4994',
+    2 => 'นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu',
+    3 => 'นกทำรังใต้หลังคาร้าน ขี้นกหล่นใส่สินค้า? ดูคลิปนี้! ปิดช่องเปิดด้วยตาข่ายกันนก แข็งแรง ทนทาน กันนกเข้า 100% รับประกันงาน 3 ปี 📞 โทร 062-996-4994',
+    4 => 'ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu',
+    5 => 'อาคารสวยแต่นกเกาะเต็ม? เจลไล่นกคือคำตอบ! วัสดุใสมองไม่เห็น ไม่ทำลายทัศนียภาพ นกไม่กล้าเกาะอีกเลย ผ่านมา 3 ปียังใช้ได้ดี 📞 ประเมินฟรี โทร 062-996-4994',
+    6 => 'นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu',
 );
 for ($i = 1; $i <= 6; $i++) {
     if ($i % 3 == 1) $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
