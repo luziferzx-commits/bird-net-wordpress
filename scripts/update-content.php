@@ -806,4 +806,126 @@ if ($home_page) {
     echo "Set home page as front page\n";
 }
 
+// ===== SEO CONFIGURATION (Yoast SEO) =====
+echo "=== Configuring SEO ===\n";
+
+// SEO meta data for each page
+$seo_data = array(
+    'home' => array(
+        'title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ | ขอนแก่น เชียงใหม่ ชลบุรี',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ โดยทีมช่างมืออาชีพ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
+        'focus' => 'ตาข่ายกันนก',
+    ),
+    'services' => array(
+        'title' => 'บริการของเรา — ตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์ | BIRDS GO AWAY',
+        'desc'  => 'บริการติดตั้งตาข่าย HDPE กันนก แผงกันนกโซลาร์เซลล์ หนามกันนกสแตนเลส เจลไล่นก ครบวงจร ราคายุติธรรม มีวิศวกรคุมงาน รับประกัน 3 ปี',
+        'focus' => 'บริการติดตั้งตาข่ายกันนก',
+    ),
+    'portfolio' => array(
+        'title' => 'ผลงานของเรา — ตัวอย่างงานติดตั้งตาข่ายกันนก | BIRDS GO AWAY',
+        'desc'  => 'ดูตัวอย่างผลงานการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก พร้อมวิดีโอจากหน้างานจริง โดย BIRDS GO AWAY ขอนแก่น เชียงใหม่ ชลบุรี',
+        'focus' => 'ผลงานติดตั้งตาข่ายกันนก',
+    ),
+    'about' => array(
+        'title' => 'เกี่ยวกับเรา — บริษัท รีเช็ค บิ้วดิ้ง จำกัด | BIRDS GO AWAY',
+        'desc'  => 'บริษัท รีเช็ค บิ้วดิ้ง จำกัด ผู้ให้บริการติดตั้งตาข่ายกันนก ทีมช่างผ่านอบรมโรยตัว มี Certificate วิศวกรคุมงาน ให้บริการ ขอนแก่น เชียงใหม่ ชลบุรี',
+        'focus' => 'บริษัทติดตั้งตาข่ายกันนก',
+    ),
+    'contact' => array(
+        'title' => 'ติดต่อเรา — ปรึกษาฟรี ขอใบเสนอราคาตาข่ายกันนก | BIRDS GO AWAY',
+        'desc'  => 'ติดต่อ BIRDS GO AWAY ปรึกษาฟรีเรื่องตาข่ายกันนก โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) 095-629-2488 (ชลบุรี) LINE: oil_phanu',
+        'focus' => 'ติดต่อตาข่ายกันนก',
+    ),
+);
+
+foreach ($seo_data as $slug => $seo) {
+    $page = get_page_by_path($slug);
+    if (!$page) continue;
+    $pid = $page->ID;
+
+    // Yoast SEO meta
+    update_post_meta($pid, '_yoast_wpseo_title', $seo['title']);
+    update_post_meta($pid, '_yoast_wpseo_metadesc', $seo['desc']);
+    update_post_meta($pid, '_yoast_wpseo_focuskw', $seo['focus']);
+
+    // Open Graph
+    update_post_meta($pid, '_yoast_wpseo_opengraph-title', $seo['title']);
+    update_post_meta($pid, '_yoast_wpseo_opengraph-description', $seo['desc']);
+    update_post_meta($pid, '_yoast_wpseo_opengraph-image', img(12));
+
+    // Twitter Card
+    update_post_meta($pid, '_yoast_wpseo_twitter-title', $seo['title']);
+    update_post_meta($pid, '_yoast_wpseo_twitter-description', $seo['desc']);
+
+    echo "SEO configured for: {$seo['title']}\n";
+}
+
+// Yoast global settings
+update_option('wpseo_titles', array_merge(
+    (array) get_option('wpseo_titles', array()),
+    array(
+        'company_name' => 'BIRDS GO AWAY — ตาข่ายกันนก',
+        'company_or_person' => 'company',
+        'company_logo' => '',
+        'website_name' => 'BIRDS GO AWAY — ตาข่ายกันนก',
+        'separator' => 'sc-pipe',
+        'title-home-wpseo' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ',
+        'metadesc-home-wpseo' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
+        'open_graph_frontpage_title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ',
+        'open_graph_frontpage_desc' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี',
+        'open_graph_frontpage_image' => img(12),
+    )
+));
+
+// Yoast social settings
+update_option('wpseo_social', array_merge(
+    (array) get_option('wpseo_social', array()),
+    array(
+        'og_default_image' => img(12),
+        'og_frontpage_title' => 'BIRDS GO AWAY — ตาข่ายกันนก',
+        'og_frontpage_desc' => 'บริการติดตั้งตาข่ายกันนก มืออาชีพ ครบวงจร',
+        'facebook_site' => 'https://www.facebook.com/people/%E0%B8%95%E0%B8%B2%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%81-%E0%B8%82%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99-%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-by-Birds-Go-Away/61554258339668/',
+        'opengraph' => true,
+        'twitter' => true,
+        'twitter_card_type' => 'summary_large_image',
+    )
+));
+
+// Yoast XML Sitemap settings
+update_option('wpseo', array_merge(
+    (array) get_option('wpseo', array()),
+    array(
+        'enable_xml_sitemap' => true,
+        'enable_text_link_counter' => true,
+    )
+));
+
+// Flush rewrite rules for sitemap
+flush_rewrite_rules();
+echo "Sitemap enabled at: {$site_url}/sitemap_index.xml\n";
+
+// Add schema.org LocalBusiness structured data via custom meta
+$home_page = get_page_by_path('home');
+if ($home_page) {
+    $schema = json_encode(array(
+        '@context' => 'https://schema.org',
+        '@type' => 'LocalBusiness',
+        'name' => 'BIRDS GO AWAY — ตาข่ายกันนก',
+        'description' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์',
+        'url' => $site_url,
+        'telephone' => ['+66629964994', '+66936415623', '+66956292488'],
+        'address' => array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => '88/38',
+            'addressLocality' => 'Khon Kaen',
+            'addressCountry' => 'TH',
+        ),
+        'areaServed' => ['ขอนแก่น', 'เชียงใหม่', 'ชลบุรี'],
+        'priceRange' => '$$',
+        'openingHours' => 'Mo-Sa 08:00-18:00',
+    ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    update_post_meta($home_page->ID, '_schema_json_ld', $schema);
+}
+
+echo "SEO configuration complete!\n";
 echo "Content update complete!\n";

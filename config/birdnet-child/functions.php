@@ -141,13 +141,16 @@ function birdnet_settings_page() {
     <?php
 }
 
-// Add SEO meta description
-function birdnet_meta_description() {
+// Output schema.org JSON-LD on front page
+function birdnet_schema_jsonld() {
     if (is_front_page()) {
-        echo '<meta name="description" content="บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร ราคาเป็นธรรม รับประกันผลงาน">' . "\n";
+        $schema = get_post_meta(get_the_ID(), '_schema_json_ld', true);
+        if ($schema) {
+            echo '<script type="application/ld+json">' . $schema . '</script>' . "\n";
+        }
     }
 }
-add_action('wp_head', 'birdnet_meta_description', 1);
+add_action('wp_head', 'birdnet_schema_jsonld', 1);
 
 // Disable WordPress emoji for performance
 function birdnet_disable_emojis() {
