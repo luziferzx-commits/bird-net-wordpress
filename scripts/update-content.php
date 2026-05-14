@@ -67,7 +67,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . img(12) . '" alt="ติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:16px;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . img(12) . '" alt="ติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:6px;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -132,7 +132,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(14) . '" alt="ตาข่าย HDPE กันนก" style="border-radius:12px;height:200px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . img(14) . '" alt="ตาข่าย HDPE กันนก" style="border-radius:6px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">🔷 ตาข่าย HDPE กันนก</h3>
 <p>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี เหมาะสำหรับทุกพื้นที่</p>
@@ -141,7 +141,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(24) . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;height:200px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . img(24) . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:6px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">☀️ แผงกันนกโซลาร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
@@ -150,7 +150,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(26) . '" alt="หนามกันนก สแตนเลส" style="border-radius:12px;height:200px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . img(26) . '" alt="หนามกันนก สแตนเลส" style="border-radius:6px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">🔺 หนามกันนก</h3>
 <p>หนามสแตนเลสกันนก ป้องกันนกเกาะ ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย ราคาประหยัด เหมาะกับขอบหน้าต่าง ราวกันตก</p>
@@ -159,7 +159,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(27) . '" alt="เจลไล่นก" style="border-radius:12px;height:200px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . img(27) . '" alt="เจลไล่นก" style="border-radius:6px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">💧 เจลไล่นก</h3>
 <p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว ไม่ทิ้งคราบ</p>
