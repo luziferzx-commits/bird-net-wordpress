@@ -941,4 +941,63 @@ if ($home_page) {
 }
 
 echo "SEO configuration complete!\n";
+
+// ===== UPLOAD LOGO AND SET AS CUSTOM LOGO =====
+echo "\n=== Setting up logo ===\n";
+
+$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-white.jpg';
+if (file_exists($logo_file)) {
+    // Check if logo already uploaded
+    $existing_logo = get_posts(array(
+        'post_type' => 'attachment',
+        'meta_key' => '_birdnet_logo_type',
+        'meta_value' => 'main',
+        'posts_per_page' => 1,
+    ));
+
+    if (empty($existing_logo)) {
+        // Upload logo to media library
+        require_once ABSPATH . 'wp-admin/includes/image.php';
+        require_once ABSPATH . 'wp-admin/includes/file.php';
+        require_once ABSPATH . 'wp-admin/includes/media.php';
+
+        $upload_dir = wp_upload_dir();
+        $logo_dest = $upload_dir['path'] . '/birds-go-away-logo.jpg';
+        copy($logo_file, $logo_dest);
+
+        $attachment = array(
+            'post_mime_type' => 'image/jpeg',
+            'post_title'     => 'Birds Go Away Logo',
+            'post_content'   => '',
+            'post_status'    => 'inherit',
+            'guid'           => $upload_dir['url'] . '/birds-go-away-logo.jpg',
+        );
+
+        $attach_id = wp_insert_attachment($attachment, $logo_dest);
+        $attach_data = wp_generate_attachment_metadata($attach_id, $logo_dest);
+        wp_update_attachment_metadata($attach_id, $attach_data);
+        update_post_meta($attach_id, '_birdnet_logo_type', 'main');
+
+        // Set as custom logo
+        set_theme_mod('custom_logo', $attach_id);
+        echo "Logo uploaded and set as custom logo (ID: $attach_id)\n";
+    } else {
+        $attach_id = $existing_logo[0]->ID;
+        set_theme_mod('custom_logo', $attach_id);
+        echo "Logo already uploaded (ID: $attach_id), custom logo updated\n";
+    }
+
+    // Astra-specific: set logo width
+    $astra_settings = get_option('astra-settings', array());
+    $astra_settings['ast-header-responsive-logo-width'] = array(
+        'desktop' => 180,
+        'tablet'  => 150,
+        'mobile'  => 130,
+    );
+    update_option('astra-settings', $astra_settings);
+    echo "Astra logo width configured\n";
+} else {
+    echo "Logo file not found at: $logo_file\n";
+}
+
 echo "Content update complete!\n";
