@@ -32,22 +32,22 @@ function vid($num) {
     return $assets_base . '/reel-' . $padded . '.mp4';
 }
 
-// High-quality Unsplash placeholder images for premium look
+// Real project images from assets (replaces stock photos)
 $unsplash = array(
-    'hero'    => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format',
-    'hdpe'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
-    'solar'   => 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80&auto=format',
-    'spikes'  => 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&auto=format',
-    'gel'     => 'https://images.unsplash.com/photo-1581093458791-9d42e3c11e45?w=800&q=80&auto=format',
-    'team'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
-    'safety'  => 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&auto=format',
-    'work1'   => 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format',
-    'work2'   => 'https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&q=80&auto=format',
-    'work3'   => 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80&auto=format',
-    'work4'   => 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&auto=format',
-    'work5'   => 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format',
-    'work6'   => 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=600&q=80&auto=format',
-    'about'   => 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=800&q=80&auto=format',
+    'hero'    => img(1),
+    'hdpe'    => img(2),
+    'solar'   => img(3),
+    'spikes'  => img(4),
+    'gel'     => img(5),
+    'team'    => img(6),
+    'safety'  => img(7),
+    'work1'   => img(8),
+    'work2'   => img(9),
+    'work3'   => img(10),
+    'work4'   => img(11),
+    'work5'   => img(12),
+    'work6'   => img(13),
+    'about'   => img(14),
 );
 
 // ===== HOME PAGE =====
@@ -58,24 +58,24 @@ $home_content = '
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">BIRDS GO AWAY<br>บริการติดตั้งตาข่ายกันนก มืออาชีพ</h1>
+<h1 class="wp-block-heading">จบปัญหานกพิราบถาวร<br>โดยวิศวกรมืออาชีพ</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">กำจัดปัญหานกพิราบรบกวนอย่างถาวร ด้วยทีมช่างมืออาชีพผ่านการอบรมโรยตัว มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด</p>
+<p class="has-medium-font-size">ทีมช่างผ่านการอบรมโรยตัว มีใบ Certificate วิศวกรคุมงานทุกไซต์ ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size"><strong>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี | รับประกันงานติดตั้ง 3 ปี | ปรึกษาฟรีโดยวิศวกรโยธา</strong></p>
+<p class="has-medium-font-size"><strong>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี | รับประกัน 3 ปี | ปรึกษาฟรี</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="tel:0629964994">โทรปรึกษาฟรี 062-996-4994</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan","className":"hero-cta-primary"} -->
+<div class="wp-block-button hero-cta-primary"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ประเมินราคาฟรี</a></div>
 <!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="/services">ดูบริการทั้งหมด</a></div>
+<!-- wp:button {"className":"is-style-outline hero-cta-secondary"} -->
+<div class="wp-block-button is-style-outline hero-cta-secondary"><a class="wp-block-button__link" href="https://line.me/ti/p/~oil_phanu">ปรึกษาเราทาง Line</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -85,7 +85,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['hero'] . '" alt="ติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:12px;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . img(1) . '" alt="ผลงานติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:16px;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -246,22 +246,22 @@ $home_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work1'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
+<figure class="wp-block-image"><img src="' . img(15) . '" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work2'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
+<figure class="wp-block-image"><img src="' . img(16) . '" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work3'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
+<figure class="wp-block-image"><img src="' . img(17) . '" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work4'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
+<figure class="wp-block-image"><img src="' . img(18) . '" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work5'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
+<figure class="wp-block-image"><img src="' . img(19) . '" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work6'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
+<figure class="wp-block-image"><img src="' . img(20) . '" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
 <!-- /wp:image -->
 </figure>
 <!-- /wp:gallery -->
@@ -590,11 +590,11 @@ $portfolio_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">';
 
-// Use Unsplash placeholders for portfolio gallery
+// Use real project images for portfolio gallery
 $portfolio_images = array(
-    $unsplash['work1'], $unsplash['work2'], $unsplash['work3'],
-    $unsplash['work4'], $unsplash['work5'], $unsplash['work6'],
-    $unsplash['hdpe'], $unsplash['solar'], $unsplash['about'],
+    img(15), img(16), img(17),
+    img(18), img(19), img(20),
+    img(21), img(22), img(23),
 );
 $count = 0;
 foreach ($portfolio_images as $img_url) {
