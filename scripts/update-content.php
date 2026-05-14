@@ -32,6 +32,11 @@ function vid($num) {
     return $assets_base . '/reel-' . $padded . '.mp4';
 }
 
+function project_img($page, $num = 1) {
+    global $assets_base;
+    return $assets_base . '/project-p' . str_pad($page, 2, '0', STR_PAD_LEFT) . '-' . $num . '.jpeg';
+}
+
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
     'hero'    => img(1),
@@ -246,22 +251,22 @@ $home_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(15) . '" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(7) . '" alt="อาคารสำนักงาน ป.ป.ช. ภาค4"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(16) . '" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(10) . '" alt="หอพักชาย มหาวิทยาลัยขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(17) . '" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(13) . '" alt="วิทยาลัยสาธารณสุขสิรินธร"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(18) . '" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(20) . '" alt="หอพักพยาบาล โรงพยาบาลสิรินธร"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(19) . '" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(35) . '" alt="เมโทรคอนโด (METRO CONDO)"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(20) . '" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(45) . '" alt="ESCENT CONDO"/></figure>
 <!-- /wp:image -->
 </figure>
 <!-- /wp:gallery -->
@@ -427,20 +432,25 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">ตาข่าย HDPE กันนก</h2>
+<h2 class="wp-block-heading">ตาข่าย HDPE กันนก (Bird Netting HDPE)</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns">
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
-<p>ตาข่าย HDPE (High Density Polyethylene) คุณภาพสูง เป็นวิธีที่มีประสิทธิภาพสูงสุดในการป้องกันนกเข้าพื้นที่</p>
+<p><strong>Square Mesh Durable Bird Control Netting</strong> — ตาข่าย HDPE คุณภาพสูง หนาแน่น แข็งแรง ทนต่อแรงกระแทก แรงดึง และสารเคมี</p>
+
+<h4 class="wp-block-heading">สเปคสินค้า</h4>
 <ul>
-<li>อายุการใช้งานประมาณ 5-7 ปี</li>
-<li>แข็งแรง ทนทานต่อแรงดึง แรงกระแทก</li>
-<li>ทนต่อรังสี UV และสารเคมี</li>
-<li>มองไม่เห็นจากภายนอก สบายตา</li>
-<li>เหมาะกับ: ระเบียงคอนโด, โรงงาน, อาคารสำนักงาน, บ้านพักอาศัย</li>
+<li><strong>วัสดุ:</strong> HDPE 2500D/1 ply</li>
+<li><strong>สี:</strong> Transparent Black (UV Treatment)</li>
+<li><strong>ขนาดตา:</strong> 18 mm. x 18 mm. (Knitting net)</li>
+<li><strong>แรงดึงขาดจุดปม:</strong> 13 kg.</li>
+<li><strong>แรงดึงขาดเส้นด้าย:</strong> 7 kg.</li>
+<li><strong>ขนาดม้วน:</strong> 6 m. (กว้าง) x 50 m. (ยาว)</li>
+<li><strong>อายุการใช้งาน:</strong> 6-7 ปี</li>
+<li><strong>การใช้งาน:</strong> อาคาร คอนโด โรงงาน โครงการต่างๆ</li>
 </ul>
 </div>
 <!-- /wp:column -->
@@ -504,12 +514,16 @@ $services_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
-<p>หนามสแตนเลสกันนก เป็นอุปกรณ์ป้องกันนกเกาะที่นิยมใช้มากที่สุด ติดตั้งง่าย ราคาประหยัด</p>
+<p>หนามกันนกสแตนเลส ปลายแหลม ความแหลมของหนามช่วยทำให้ป้องกันนกได้ดียิ่งขึ้น</p>
+
+<h4 class="wp-block-heading">สเปคสินค้า</h4>
 <ul>
-<li>สแตนเลสเกรดพรีเมียม ทนทานสูง</li>
-<li>ทนต่อทุกสภาพอากาศ ไม่เป็นสนิม</li>
-<li>ติดตั้งง่าย รวดเร็ว</li>
-<li>เหมาะกับ: ขอบหน้าต่าง ราวกันตก ป้ายอาคาร ชายคา</li>
+<li><strong>วัสดุ:</strong> Stainless Spring SUS304</li>
+<li><strong>จำนวนหนาม:</strong> 90 ขาต่อ 1 เมตร</li>
+<li><strong>คุณสมบัติ:</strong> ปรับเปลี่ยนองศาปลายหนามตามพื้นที่ได้</li>
+<li><strong>ทนทาน:</strong> ทนแดด ทนฝน เหมาะกับสภาพอากาศเมืองไทย</li>
+<li><strong>อายุการใช้งาน:</strong> ยาวนาน ไม่เป็นสนิม</li>
+<li><strong>เหมาะกับ:</strong> ขอบหน้าต่าง ราวกันตก ป้ายอาคาร ชายคา งานภายนอกอาคาร</li>
 </ul>
 </div>
 <!-- /wp:column -->
@@ -578,36 +592,83 @@ $services_content = '
 ';
 
 // ===== PORTFOLIO PAGE =====
+// Project list from company profile PDF (40+ real projects)
+$projects = array(
+    array('name' => 'อาคารสำนักงาน ป.ป.ช. ภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 7),
+    array('name' => 'อู่ราชนาวีมหิดลอดุลยเดช กรมอู่ทหารเรือ', 'location' => 'จังหวัดชลบุรี', 'page' => 9),
+    array('name' => 'หอพักชาย 7 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 10),
+    array('name' => 'หอพักชาย 8 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 11),
+    array('name' => 'หอพัก 21-23 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 12),
+    array('name' => 'วิทยาลัยสาธารณสุขสิรินธร อาคาร 10 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 13),
+    array('name' => 'โรงงาน DOS', 'location' => 'สาขาขอนแก่น', 'page' => 15),
+    array('name' => 'หอพักแพทย์ โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 16),
+    array('name' => 'อาคารสิริภักษ์ สำนักงานคลังจังหวัด', 'location' => 'จังหวัดขอนแก่น', 'page' => 18),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 19),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลสิรินธร', 'location' => 'จังหวัดขอนแก่น', 'page' => 20),
+    array('name' => 'หอพักแพทย์ มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 21),
+    array('name' => 'บ้านพักอธิการบดีอัยการภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 22),
+    array('name' => 'โกดัง บริษัทอินเวนทิโว คอสเมติก จำกัด', 'location' => 'จังหวัดมหาสารคาม', 'page' => 24),
+    array('name' => 'โกดังให้เช่า A6', 'location' => 'จังหวัดเชียงใหม่', 'page' => 25),
+    array('name' => 'ตั้งฮ่งหลี อาคารพาณิชย์ 4 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 27),
+    array('name' => 'โกดังสินค้า อำเภอสารภี', 'location' => 'จังหวัดเชียงใหม่', 'page' => 28),
+    array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29),
+    array('name' => 'หอพัก TRIPLE T RESIDENCE KKU', 'location' => 'จังหวัดขอนแก่น', 'page' => 30),
+    array('name' => 'หมู่บ้านสีวลี', 'location' => 'อำเภอเมืองขอนแก่น', 'page' => 33),
+    array('name' => 'คอนโดฉัตรเพชร โนนม่วง', 'location' => 'จังหวัดขอนแก่น', 'page' => 34),
+    array('name' => 'เมโทรคอนโด (METRO CONDO)', 'location' => 'จังหวัดขอนแก่น', 'page' => 35),
+    array('name' => 'หมู่บ้านเออเบินนารา แอร์พอร์ต-บายพาส', 'location' => 'จังหวัดขอนแก่น', 'page' => 36),
+    array('name' => 'หมู่บ้าน KLEVER TYME', 'location' => 'จังหวัดขอนแก่น', 'page' => 39),
+    array('name' => 'คอนโดมิเนียม X10 ศรีนครินทร์', 'location' => 'จังหวัดขอนแก่น', 'page' => 40),
+    array('name' => 'เดอะ เดสทินี เอ็กคลูซีพ คอนโดมิเนียม', 'location' => 'จังหวัดขอนแก่น', 'page' => 42),
+    array('name' => 'ชาลิสา คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 43),
+    array('name' => 'ESCENT CONDO', 'location' => 'จังหวัดขอนแก่น', 'page' => 45),
+    array('name' => 'เอพี บูเลอวาร์ด คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 46),
+    array('name' => 'เดอะ เบส ไฮท์ มิตรภาพ', 'location' => 'จังหวัดขอนแก่น', 'page' => 49),
+    array('name' => 'คอนโดกัลปพฤกษ์ เลควิว', 'location' => 'จังหวัดขอนแก่น', 'page' => 50),
+);
+
 $portfolio_content = '
 <!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center wp-block-heading">ผลงานของเรา</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">ตัวอย่างผลงานการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ จากทีม Birds Go Away</p>
+<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
+<p class="has-text-align-center has-medium-font-size">ผลงานติดตั้งตาข่ายกันนกจริงกว่า <strong>40+ โปรเจกต์</strong> ทั้งอาคารราชการ คอนโด โรงพยาบาล มหาวิทยาลัย โรงงาน และบ้านพักอาศัย</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
-<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">';
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->';
 
-// Use real project images for portfolio gallery
-$portfolio_images = array(
-    img(15), img(16), img(17),
-    img(18), img(19), img(20),
-    img(21), img(22), img(23),
-);
+// Generate portfolio grid with project names and photos
 $count = 0;
-foreach ($portfolio_images as $img_url) {
+foreach ($projects as $project) {
     $count++;
+    if ($count % 3 == 1) {
+        $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
+    }
     $portfolio_content .= '
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $img_url . '" alt="ผลงาน Birds Go Away #' . $count . '"/></figure>
-<!-- /wp:image -->';
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $project['name'] . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;"/></figure>
+<!-- /wp:image -->
+<h4 class="wp-block-heading">' . $project['name'] . '</h4>
+<p style="color:#666;font-size:0.9em;">' . $project['location'] . '</p>
+</div>
+<!-- /wp:column -->';
+    if ($count % 3 == 0 || $count == count($projects)) {
+        if ($count == count($projects) && $count % 3 != 0) {
+            $remaining = 3 - ($count % 3);
+            for ($r = 0; $r < $remaining; $r++) {
+                $portfolio_content .= "\n<!-- wp:column -->\n<div class=\"wp-block-column\"></div>\n<!-- /wp:column -->";
+            }
+        }
+        $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
+    }
 }
 
 $portfolio_content .= '
-</figure>
-<!-- /wp:gallery -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -621,7 +682,7 @@ $portfolio_content .= '
 <p class="has-text-align-center">ดูคลิปขั้นตอนการทำงานจริง จากหน้างาน</p>
 <!-- /wp:paragraph -->';
 
-for ($i = 1; $i <= 10; $i++) {
+for ($i = 1; $i <= 6; $i++) {
     if ($i % 3 == 1) $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
     $portfolio_content .= '
 <!-- wp:column -->
@@ -631,7 +692,7 @@ for ($i = 1; $i <= 10; $i++) {
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->';
-    if ($i % 3 == 0 || $i == 10) $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
+    if ($i % 3 == 0) $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
 }
 
 $portfolio_content .= '
@@ -655,16 +716,22 @@ $about_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%;">
-<p><strong>บริษัท รีเช็ค บิ้วดิ้ง จำกัด</strong> ดำเนินธุรกิจภายใต้แบรนด์ <strong>BIRDS GO AWAY</strong> ให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ครบวงจร</p>
-<p>ทีมช่างของเราผ่านการอบรมโรยตัวภาคทฤษฎีและปฏิบัติ มีใบ Certificate มีมาตรฐาน มีวิศวกรคุมงานทุกไซต์งาน</p>
+<p><strong>บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co.,Ltd.)</strong> ดำเนินธุรกิจภายใต้แบรนด์ <strong>BIRDS GO AWAY</strong> ให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ครบวงจร</p>
 
-<h3 class="wp-block-heading">มาตรฐานความปลอดภัย</h3>
+<h3 class="wp-block-heading">ข้อมูลบริษัท</h3>
 <ul>
-<li>ผ่านการอบรมโรยตัว ภาคทฤษฎี-ปฏิบัติ</li>
-<li>มีใบ Certificate รับรอง</li>
-<li>วิศวกรโยธาคุมงานทุกไซต์</li>
+<li>จดทะเบียนเป็นนิติบุคคล ตามประมวลกฎหมายแพ่งและพาณิชย์ ถูกต้องตามกฎหมาย</li>
+<li><strong>เลขทะเบียน:</strong> 0405567000088</li>
+<li><strong>ที่อยู่:</strong> 88/38 หมู่บ้าน Klever ซอย5 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000</li>
+</ul>
+
+<h3 class="wp-block-heading">ใบรับรองและมาตรฐาน</h3>
+<ul>
+<li>ผ่านการอบรมโรยตัวที่สูง ทั้งภาคทฤษฎี-ปฏิบัติ (Rappelling for Working Certificate)</li>
+<li>มีใบประกอบวิชาชีพวิศวกรควบคุม (กว.) จากสภาวิศวกร</li>
+<li>ผ่านการอบรมหลักสูตรเจ้าหน้าที่ความปลอดภัยในการทำงานระดับหัวหน้างาน</li>
+<li>วิศวกรคุมงานทุกไซต์</li>
 <li>ใช้อุปกรณ์ความปลอดภัยครบชุด</li>
-<li>ประกันอุบัติเหตุสำหรับทีมงาน</li>
 </ul>
 </div>
 <!-- /wp:column -->
@@ -738,11 +805,12 @@ $contact_content = '
 
 <h3 class="wp-block-heading">ช่องทางติดต่อ</h3>
 
-<p><strong>ที่อยู่:</strong> 88/38 ขอนแก่น</p>
+<p><strong>ที่อยู่:</strong> 88/38 หมู่บ้าน Klever ซอย5 ตำบลบ้านเป็ด อำเภอเมือง จังหวัดขอนแก่น 40000</p>
 <p><strong>อีเมล:</strong> <a href="mailto:admin@birdsgoaway.com">admin@birdsgoaway.com</a></p>
 
 <h4 class="wp-block-heading">โทรศัพท์</h4>
-<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> (ขอนแก่น)<br>
+<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> (คุณออย - ขอนแก่น)<br>
+<a href="tel:0889514924"><strong>088-951-4924</strong></a> (คุณวีวี่)<br>
 <a href="tel:0936415623"><strong>093-641-5623</strong></a> (เชียงใหม่)<br>
 <a href="tel:0956292488"><strong>095-629-2488</strong></a> (ชลบุรี)</p>
 
