@@ -983,26 +983,6 @@ th3-ta006-2</a>
 
 </div>
 <!-- /wp:column -->
-<!-- wp:column {"width":"50%"} -->
-<div class="wp-block-column" style="flex-basis:50%;">
-
-<h3 class="wp-block-heading">ส่งข้อความถึงเรา</h3>
-
-<!-- wp:html -->
-<form action="https://formsubmit.co/birdsgoaway.th@gmail.com" method="POST" style="display:flex;flex-direction:column;gap:1rem;">
-<input type="hidden" name="_subject" value="ติดต่อจากเว็บไซต์ Birds Go Away">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://birdsgoaway.com/contact/?success=1">
-<input type="text" name="name" placeholder="ชื่อ-นามสกุล" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
-<input type="email" name="email" placeholder="อีเมล" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
-<input type="tel" name="phone" placeholder="เบอร์โทร" style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;">
-<textarea name="message" placeholder="รายละเอียด เช่น สถานที่ ประเภทอาคาร พื้นที่โดยประมาณ" rows="4" required style="padding:12px 16px;border:1px solid #ddd;border-radius:8px;font-size:0.95rem;resize:vertical;"></textarea>
-<button type="submit" style="background:#E8792E;color:#fff;border:none;padding:14px 32px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.3s;">ส่งข้อความ</button>
-</form>
-<!-- /wp:html -->
-
-</div>
-<!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 
@@ -1016,7 +996,7 @@ th3-ta006-2</a>
 
 <!-- wp:html -->
 <div style="width:100%;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.2!2d102.82!3d16.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z4Lir4Lih4Li54LmI4Lia4LmJ4Liy4LiZIEtsZXZlciDguILguK3guJnguYHguIHguYjguJk!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3826.8!2d102.8195!3d16.4457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31228a9c6bffffff%3A0x0!2sKlever+Tyme+Srichan!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <!-- /wp:html -->
 
