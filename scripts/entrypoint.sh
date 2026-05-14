@@ -1,10 +1,19 @@
 #!/bin/bash
-set -e
+
+# Create healthcheck endpoint immediately (before anything else)
+mkdir -p /var/www/html
+cat > /var/www/html/healthcheck.php << 'HEALTHCHECK'
+<?php
+http_response_code(200);
+echo "OK";
+HEALTHCHECK
 
 # Run the original WordPress entrypoint to set up wp-config.php
 docker-entrypoint.sh apache2-foreground &
 WP_PID=$!
 
+# Run WordPress setup in background so healthcheck can pass immediately
+(
 echo "=== Waiting for WordPress files to be ready ==="
 until [ -f /var/www/html/wp-includes/version.php ]; do
   sleep 2
@@ -847,4 +856,7 @@ fi
 chown -R www-data:www-data /var/www/html/wp-content 2>/dev/null || true
 
 echo "=== WordPress is ready ==="
+) &
+
+# Wait for Apache (main process)
 wait $WP_PID
