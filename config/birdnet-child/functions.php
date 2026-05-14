@@ -348,7 +348,7 @@ remove_action('wp_head', 'wp_site_icon', 99);
 function birdnet_preload_assets() {
     echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/fb-cover.webp">' . "\n";
     echo '<link rel="icon" type="image/x-icon" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
-    echo '<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
+    echo '<link rel="icon" type="image/x-icon" sizes="32x32" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
     echo '<link rel="apple-touch-icon" href="/wp-content/uploads/birdnet-assets/apple-touch-icon.png">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.google.com">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
