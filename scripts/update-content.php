@@ -67,7 +67,7 @@ $home_content = '
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">ติดตั้งตาข่ายกันนก หนามสแตนเลส เจลไล่นก ครบวงจร — วิศวกรคุมงานทุกไซต์ ทีมช่างผ่านอบรมโรยตัวมีใบ Certificate</p>
+<p class="has-medium-font-size">รับติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ทั่วประเทศ — หนามสแตนเลส เจลไล่นก ครบวงจร วิศวกรคุมงานทุกไซต์ ทีมช่างผ่านอบรมโรยตัวมีใบ Certificate</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
@@ -106,7 +106,7 @@ $home_content = '
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนก ครบวงจร</p>
+<p class="has-text-align-center">บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนก ครบวงจร | วิธีไล่นกพิราบถาวร ภาคอีสาน ทั่วประเทศ</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
@@ -549,7 +549,7 @@ $services_content = '
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">เรามีบริการป้องกันนก 4 รูปแบบ ครบวงจร พร้อมรับประกัน</p>
+<p class="has-text-align-center">รับติดตั้งตาข่ายกันนก ขอนแก่น อุดรธานี นครราชสีมา เชียงใหม่ ชลบุรี — บริการป้องกันนก 4 รูปแบบ ครบวงจร พร้อมรับประกัน</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->

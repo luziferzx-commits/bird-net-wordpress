@@ -117,9 +117,9 @@ function birdnet_floating_buttons() {
         </a>
     </div>
     <div class="birdnet-sticky-mobile">
-        <a href="/contact" class="sticky-cta-quote">ประเมินราคาฟรี</a>
-        <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="sticky-cta-line" target="_blank" rel="noopener">Line</a>
-        <a href="tel:<?php echo esc_attr($phone); ?>" class="sticky-cta-call">โทร</a>
+        <a href="tel:<?php echo esc_attr($phone); ?>" class="sticky-cta-call">📞 โทรเลย</a>
+        <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="sticky-cta-line" target="_blank" rel="noopener">💬 Line</a>
+        <a href="/contact" class="sticky-cta-quote">📋 ประเมินฟรี</a>
     </div>
     <?php
 }
@@ -239,6 +239,11 @@ function birdnet_custom_footer() {
                 <strong>เชียงใหม่:</strong> 093-641-5623<br>
                 <strong>ชลบุรี:</strong> 095-629-2488</p>
                 <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
+                <div style="margin-top:12px;display:flex;gap:10px;">
+                    <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;font-size:1.2rem;" aria-label="Facebook" title="Facebook">📘</a>
+                    <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="color:#06C755;text-decoration:none;font-size:1.2rem;" aria-label="LINE" title="LINE">💬</a>
+                    <a href="tel:062-996-4994" style="color:#E8792E;text-decoration:none;font-size:1.2rem;" aria-label="โทรศัพท์" title="โทรเลย">📞</a>
+                </div>
                 <p>เวลาทำการ: จ-ส 08:00-18:00</p>
             </div>
             <div class="footer-col">
