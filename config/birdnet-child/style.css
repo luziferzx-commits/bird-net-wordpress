@@ -524,17 +524,23 @@ video {
 }
 
 .wp-block-video {
+  border-radius: var(--bn-radius);
+}
+
+.wp-block-video video {
   max-height: 280px;
-  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
   border-radius: var(--bn-radius);
 }
 
 .wp-block-video figcaption {
-  font-size: 0.75rem;
-  color: var(--bn-text-subtle);
-  font-weight: 300;
-  margin-top: 0.6rem;
-  letter-spacing: 0.03em;
+  font-size: 0.85rem;
+  color: var(--bn-text-muted);
+  font-weight: 400;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
 
 /* ===== Lists ===== */
