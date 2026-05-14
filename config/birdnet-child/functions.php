@@ -244,12 +244,4 @@ function birdnet_preload_assets() {
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
 
-// Add FAQ page to menu via filter
-function birdnet_add_faq_to_menu($items, $args) {
-    if ($args->theme_location == 'primary' || $args->theme_location == '') {
-        $faq_link = '<li class="menu-item"><a href="/faq/">คำถามที่พบบ่อย</a></li>';
-        $items .= $faq_link;
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'birdnet_add_faq_to_menu', 10, 2);
+// FAQ page accessible via /faq/ but not added to main nav to avoid crowding
