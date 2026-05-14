@@ -955,11 +955,15 @@ $contact_content = '
 
 <h4 class="wp-block-heading">💬 LINE — แอดไลน์ส่งรูปหน้างานประเมินราคาฟรี</h4>
 <!-- wp:html -->
-<div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin:0.5rem 0 1rem;">
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;">🟢 แอดไลน์: oil_phanu (ขอนแก่น)</a>
-<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:12px 20px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;">🟢 แอดไลน์: th3-ta006-2</a>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0.5rem 0 1rem;">
+<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:8px 14px;border-radius:6px;font-weight:500;text-decoration:none;font-size:0.8rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.95 1.95 5.55 4.87 7.13-.19.66-.68 2.37-.78 2.73-.13.47.17.46.36.34.15-.1 2.37-1.61 3.33-2.26.73.1 1.47.16 2.22.16 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+oil_phanu (ขอนแก่น)</a>
+<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:8px 14px;border-radius:6px;font-weight:500;text-decoration:none;font-size:0.8rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.95 1.95 5.55 4.87 7.13-.19.66-.68 2.37-.78 2.73-.13.47.17.46.36.34.15-.1 2.37-1.61 3.33-2.26.73.1 1.47.16 2.22.16 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+th3-ta006-2</a>
 </div>
-<p style="font-size:0.85rem;color:#666;">สแกน QR หรือกดปุ่มด้านบนเพื่อแอดไลน์ ส่งรูปหน้างานประเมินราคาได้เลย!</p>
+<p style="font-size:0.8rem;color:#888;margin-top:4px;">กดปุ่มด้านบนเพื่อแอดไลน์ ส่งรูปหน้างานประเมินราคาได้เลย</p>
 <!-- /wp:html -->
 
 <h4 class="wp-block-heading">Facebook</h4>
