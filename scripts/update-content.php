@@ -858,11 +858,8 @@ $about_content = '
 <!-- /wp:column -->
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%;">
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['about'] . '" alt="ทีมงาน Birds Go Away"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['safety'] . '" alt="มาตรฐานความปลอดภัย Birds Go Away"/></figure>
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['about'] . '" alt="ทีมงาน Birds Go Away ติดตั้งตาข่ายกันนก" style="border-radius:12px;width:100%;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
