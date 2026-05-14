@@ -32,6 +32,24 @@ function vid($num) {
     return $assets_base . '/reel-' . $padded . '.mp4';
 }
 
+// High-quality Unsplash placeholder images for premium look
+$unsplash = array(
+    'hero'    => 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=80&auto=format',
+    'hdpe'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
+    'solar'   => 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80&auto=format',
+    'spikes'  => 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&auto=format',
+    'gel'     => 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80&auto=format',
+    'team'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
+    'safety'  => 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&auto=format',
+    'work1'   => 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format',
+    'work2'   => 'https://images.unsplash.com/photo-1486718448742-163732cd1544?w=600&q=80&auto=format',
+    'work3'   => 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80&auto=format',
+    'work4'   => 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&auto=format',
+    'work5'   => 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format',
+    'work6'   => 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=600&q=80&auto=format',
+    'about'   => 'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=800&q=80&auto=format',
+);
+
 // ===== HOME PAGE =====
 $home_content = '
 <!-- wp:columns -->
@@ -67,7 +85,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . img(12) . '" alt="ติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:6px;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['hero'] . '" alt="ติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:12px;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -90,25 +108,25 @@ $home_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"25%"} -->
 <div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">🛡️ ปลอดภัย 100%</h3>
+<h3 class="wp-block-heading">ปลอดภัย 100%</h3>
 <p>วัสดุคุณภาพสูง ไม่ทำร้ายนก ปลอดภัยต่อคนและสัตว์เลี้ยง ผ่านมาตรฐาน</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"25%"} -->
 <div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">⚡ ติดตั้งรวดเร็ว</h3>
+<h3 class="wp-block-heading">ติดตั้งรวดเร็ว</h3>
 <p>ทีมช่างมืออาชีพ ดำเนินงานรวดเร็ว ไม่รบกวนการใช้ชีวิต มีวิศวกรคุมงาน</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"25%"} -->
 <div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">✅ รับประกัน 3 ปี</h3>
+<h3 class="wp-block-heading">รับประกัน 3 ปี</h3>
 <p>รับประกันคุณภาพงานติดตั้ง 3 ปี พร้อมบริการหลังการขาย ซ่อมแซมฟรี</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"25%"} -->
 <div class="wp-block-column" style="flex-basis:25%;text-align:center;">
-<h3 class="wp-block-heading">💰 ราคายุติธรรม</h3>
+<h3 class="wp-block-heading">ราคายุติธรรม</h3>
 <p>เสนอราคาฟรี ไม่มีค่าใช้จ่ายแอบแฝง คุ้มค่าทุกบาท ปรึกษาฟรีไม่มีค่าใช้จ่าย</p>
 </div>
 <!-- /wp:column -->
@@ -132,36 +150,36 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(14) . '" alt="ตาข่าย HDPE กันนก" style="border-radius:6px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก" style="border-radius:12px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
-<h3 class="wp-block-heading">🔷 ตาข่าย HDPE กันนก</h3>
+<h3 class="wp-block-heading">ตาข่าย HDPE กันนก</h3>
 <p>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี เหมาะสำหรับทุกพื้นที่</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(24) . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:6px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
-<h3 class="wp-block-heading">☀️ แผงกันนกโซลาร์เซลล์</h3>
+<h3 class="wp-block-heading">แผงกันนกโซลาร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(26) . '" alt="หนามกันนก สแตนเลส" style="border-radius:6px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส" style="border-radius:12px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
-<h3 class="wp-block-heading">🔺 หนามกันนก</h3>
+<h3 class="wp-block-heading">หนามกันนก</h3>
 <p>หนามสแตนเลสกันนก ป้องกันนกเกาะ ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย ราคาประหยัด เหมาะกับขอบหน้าต่าง ราวกันตก</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . img(27) . '" alt="เจลไล่นก" style="border-radius:6px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก" style="border-radius:12px;object-fit:cover;"/></figure>
 <!-- /wp:image -->
-<h3 class="wp-block-heading">💧 เจลไล่นก</h3>
+<h3 class="wp-block-heading">เจลไล่นก</h3>
 <p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว ไม่ทิ้งคราบ</p>
 </div>
 <!-- /wp:column -->
@@ -228,31 +246,22 @@ $home_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(12) . '" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work1'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(13) . '" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work2'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(14) . '" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work3'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(15) . '" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work4'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(16) . '" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work5'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(17) . '" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(18) . '" alt="ผลงานติดตั้งตาข่ายกันนก 07"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(19) . '" alt="ผลงานติดตั้งตาข่ายกันนก 08"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(20) . '" alt="ผลงานติดตั้งตาข่ายกันนก 09"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work6'] . '" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
 <!-- /wp:image -->
 </figure>
 <!-- /wp:gallery -->
@@ -367,22 +376,22 @@ $home_content = '
 <!-- wp:columns -->
 <div class="wp-block-columns">
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 ขอนแก่น</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ขอนแก่น</h3>
 <p><a href="tel:0629964994"><strong>062-996-4994</strong></a></p>
 <p>LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 เชียงใหม่</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">เชียงใหม่</h3>
 <p><a href="tel:0936415623"><strong>093-641-5623</strong></a></p>
 <p>LINE: <a href="https://line.me/ti/p/~th3-ta006-2">th3-ta006-2</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 ชลบุรี</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ชลบุรี</h3>
 <p><a href="tel:0956292488"><strong>095-629-2488</strong></a></p>
 <p>LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
 </div>
@@ -418,7 +427,7 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">🔷 ตาข่าย HDPE กันนก</h2>
+<h2 class="wp-block-heading">ตาข่าย HDPE กันนก</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -438,10 +447,10 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(13) . '" alt="ตาข่าย HDPE กันนก"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(15) . '" alt="ตาข่ายกันนก ติดตั้งระเบียง"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work1'] . '" alt="ตาข่ายกันนก ติดตั้งระเบียง"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -453,7 +462,7 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">☀️ แผงกันนกโซลาร์เซลล์</h2>
+<h2 class="wp-block-heading">แผงกันนกโซลาร์เซลล์</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -473,10 +482,10 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(25) . '" alt="แผงกันนกโซลาร์เซลล์"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(28) . '" alt="ระบบคลิปกันนกโซลาร์"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work2'] . '" alt="ระบบคลิปกันนกโซลาร์"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -488,7 +497,7 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">🔺 หนามกันนก</h2>
+<h2 class="wp-block-heading">หนามกันนก</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -507,10 +516,10 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(30) . '" alt="หนามกันนก สแตนเลส"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(31) . '" alt="หนามกันนก ติดตั้ง"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work3'] . '" alt="หนามกันนก ติดตั้ง"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -522,7 +531,7 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">💧 เจลไล่นก</h2>
+<h2 class="wp-block-heading">เจลไล่นก</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -541,10 +550,10 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(32) . '" alt="เจลไล่นก"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(33) . '" alt="เจลไล่นก ใช้งาน"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['work4'] . '" alt="เจลไล่นก ใช้งาน"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -581,14 +590,18 @@ $portfolio_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">';
 
-// Only use clear images (skip blurry thumbnails 1, 3-11)
-$clear_images = array(2, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33);
+// Use Unsplash placeholders for portfolio gallery
+$portfolio_images = array(
+    $unsplash['work1'], $unsplash['work2'], $unsplash['work3'],
+    $unsplash['work4'], $unsplash['work5'], $unsplash['work6'],
+    $unsplash['hdpe'], $unsplash['solar'], $unsplash['about'],
+);
 $count = 0;
-foreach ($clear_images as $i) {
+foreach ($portfolio_images as $img_url) {
     $count++;
     $portfolio_content .= '
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img($i) . '" alt="ผลงาน Birds Go Away #' . $count . '"/></figure>
+<figure class="wp-block-image"><img src="' . $img_url . '" alt="ผลงาน Birds Go Away #' . $count . '"/></figure>
 <!-- /wp:image -->';
 }
 
@@ -658,10 +671,10 @@ $about_content = '
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(2) . '" alt="ทีมงาน Birds Go Away"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['about'] . '" alt="ทีมงาน Birds Go Away"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . img(21) . '" alt="มาตรฐานความปลอดภัย Birds Go Away"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['safety'] . '" alt="มาตรฐานความปลอดภัย Birds Go Away"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -679,20 +692,20 @@ $about_content = '
 <!-- wp:columns -->
 <div class="wp-block-columns">
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 ขอนแก่น</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ขอนแก่น</h3>
 <p><a href="tel:0629964994"><strong>062-996-4994</strong></a><br>LINE: oil_phanu</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 เชียงใหม่</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">เชียงใหม่</h3>
 <p><a href="tel:0936415623"><strong>093-641-5623</strong></a><br>LINE: th3-ta006-2</p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;border:2px solid #e2e8f0;">
-<h3 class="wp-block-heading">📍 ชลบุรี</h3>
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ชลบุรี</h3>
 <p><a href="tel:0956292488"><strong>095-629-2488</strong></a><br>LINE: oil_phanu</p>
 </div>
 <!-- /wp:column -->
@@ -725,10 +738,10 @@ $contact_content = '
 
 <h3 class="wp-block-heading">ช่องทางติดต่อ</h3>
 
-<p>📍 <strong>ที่อยู่:</strong> 88/38 ขอนแก่น</p>
-<p>📧 <strong>อีเมล:</strong> <a href="mailto:admin@birdsgoaway.com">admin@birdsgoaway.com</a></p>
+<p><strong>ที่อยู่:</strong> 88/38 ขอนแก่น</p>
+<p><strong>อีเมล:</strong> <a href="mailto:admin@birdsgoaway.com">admin@birdsgoaway.com</a></p>
 
-<h4 class="wp-block-heading">📞 โทรศัพท์</h4>
+<h4 class="wp-block-heading">โทรศัพท์</h4>
 <p><a href="tel:0629964994"><strong>062-996-4994</strong></a> (ขอนแก่น)<br>
 <a href="tel:0936415623"><strong>093-641-5623</strong></a> (เชียงใหม่)<br>
 <a href="tel:0956292488"><strong>095-629-2488</strong></a> (ชลบุรี)</p>
@@ -737,7 +750,7 @@ $contact_content = '
 <p><a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a><br>
 <a href="https://line.me/ti/p/~th3-ta006-2">th3-ta006-2</a></p>
 
-<h4 class="wp-block-heading">🌐 Facebook</h4>
+<h4 class="wp-block-heading">Facebook</h4>
 <p><a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener">ตาข่ายกันนก by Birds Go Away</a></p>
 
 </div>

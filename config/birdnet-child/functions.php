@@ -8,8 +8,12 @@ function birdnet_enqueue_styles() {
     wp_enqueue_style('astra-parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('birdnet-child-style', get_stylesheet_directory_uri() . '/style.css', array('astra-parent-style'), wp_get_theme()->get('Version'));
     
-    // Google Fonts - Prompt + Noto Sans Thai
-    wp_enqueue_style('google-fonts-prompt', 'https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap', array(), null);
+    // Google Fonts - Playfair Display + Prompt + Inter
+    wp_enqueue_style('google-fonts-luxury', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Prompt:wght@200;300;400;500;600&family=Inter:wght@300;400;500;600&display=swap', array(), null);
+    
+    // AOS - Animate on Scroll library
+    wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.4/dist/aos.css', array(), '2.3.4');
+    wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.4/dist/aos.js', array(), '2.3.4', true);
 }
 add_action('wp_enqueue_scripts', 'birdnet_enqueue_styles');
 
@@ -62,10 +66,15 @@ function birdnet_floating_buttons() {
         color: #fff;
     }
     .birdnet-float-btn.line {
-        background-color: #06C755;
+        background: rgba(6, 199, 85, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(6, 199, 85, 0.3);
     }
     .birdnet-float-btn.phone {
-        background-color: #1e40af;
+        background: rgba(212, 175, 55, 0.9);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        color: #121212;
     }
     @media (max-width: 768px) {
         .birdnet-floating {
@@ -151,6 +160,18 @@ function birdnet_schema_jsonld() {
     }
 }
 add_action('wp_head', 'birdnet_schema_jsonld', 1);
+
+// Initialize AOS (Animate on Scroll)
+function birdnet_aos_init() {
+    echo '<script>document.addEventListener("DOMContentLoaded", function() { if (typeof AOS !== "undefined") { AOS.init({ duration: 800, easing: "ease-out-cubic", once: true, offset: 80 }); } });</script>' . "\n";
+}
+add_action('wp_footer', 'birdnet_aos_init', 99);
+
+// Hide page title on all pages (not just front)
+function birdnet_hide_all_page_titles() {
+    echo '<style>.entry-header, .page-header, article > header, .ast-archive-description { display: none !important; }</style>';
+}
+add_action('wp_head', 'birdnet_hide_all_page_titles');
 
 // Disable WordPress emoji for performance
 function birdnet_disable_emojis() {
