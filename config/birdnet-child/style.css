@@ -1201,13 +1201,6 @@ video {
   border-radius: 12px;
 }
 
-/* ===== Contact phone grid responsive ===== */
-@media (max-width: 544px) {
-  .entry-content div[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 /* ===== Print Styles ===== */
 @media print {
   .birdnet-floating, .site-header, .site-footer { display: none !important; }

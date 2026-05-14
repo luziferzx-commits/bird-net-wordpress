@@ -967,25 +967,25 @@ $contact_content = '
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;">
 <h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">โทรศัพท์</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-<a href="tel:0629964994" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
-<strong style="font-size:1rem;color:#E8792E;">062-996-4994</strong><br><span style="color:#888;font-size:0.8rem;">คุณออย — ขอนแก่น</span></a>
-<a href="tel:0889514924" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
-<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong><br><span style="color:#888;font-size:0.8rem;">คุณวีวี่</span></a>
-<a href="tel:0936415623" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
-<strong style="font-size:1rem;color:#E8792E;">093-641-5623</strong><br><span style="color:#888;font-size:0.8rem;">เชียงใหม่</span></a>
-<a href="tel:0956292488" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:14px 16px;border-radius:10px;border:1px solid #e2e8f0;text-align:center;">
-<strong style="font-size:1rem;color:#E8792E;">095-629-2488</strong><br><span style="color:#888;font-size:0.8rem;">ชลบุรี</span></a>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<a href="tel:0629964994" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
+<strong style="font-size:1rem;color:#E8792E;">062-996-4994</strong> <span style="color:#888;font-size:0.8rem;">— คุณออย (ขอนแก่น)</span></a>
+<a href="tel:0889514924" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
+<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong> <span style="color:#888;font-size:0.8rem;">— คุณวีวี่</span></a>
+<a href="tel:0936415623" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
+<strong style="font-size:1rem;color:#E8792E;">093-641-5623</strong> <span style="color:#888;font-size:0.8rem;">— เชียงใหม่</span></a>
+<a href="tel:0956292488" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
+<strong style="font-size:1rem;color:#E8792E;">095-629-2488</strong> <span style="color:#888;font-size:0.8rem;">— ชลบุรี</span></a>
 </div>
 </div>
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;">
-<h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">💬 LINE — ส่งรูปหน้างานประเมินราคาฟรี</h3>
-<div style="display:flex;gap:10px;flex-wrap:wrap;">
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:10px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.85rem;flex:1;justify-content:center;min-width:140px;">
-💬 oil_phanu (ขอนแก่น)</a>
-<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#06C755;color:#fff;padding:10px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.85rem;flex:1;justify-content:center;min-width:140px;">
-💬 th3-ta006-2</a>
+<h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">LINE — ส่งรูปหน้างานประเมินราคาฟรี</h3>
+<div style="display:flex;flex-direction:column;gap:8px;">
+<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:block;background:#06C755;color:#fff;padding:12px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;text-align:center;">
+oil_phanu (ขอนแก่น)</a>
+<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:block;background:#06C755;color:#fff;padding:12px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;text-align:center;">
+th3-ta006-2</a>
 </div>
 </div>
 
