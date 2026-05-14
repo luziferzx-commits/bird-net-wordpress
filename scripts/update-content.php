@@ -497,9 +497,6 @@ $services_content = '
 <!-- wp:image -->
 <figure class="wp-block-image"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก"/></figure>
 <!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work1'] . '" alt="ตาข่ายกันนก ติดตั้งระเบียง"/></figure>
-<!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 </div>
@@ -531,9 +528,6 @@ $services_content = '
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
 <figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work2'] . '" alt="ระบบคลิปกันนกโซลาร์"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
