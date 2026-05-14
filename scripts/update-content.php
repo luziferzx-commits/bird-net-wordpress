@@ -39,7 +39,7 @@ function project_img($page, $num = 1) {
 
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
-    'hero'    => $assets_base . '/project-p07-1.jpeg',
+    'hero'    => $assets_base . '/fb-cover.jpeg',
     'hdpe'    => img(2),
     'solar'   => img(3),
     'spikes'  => img(4),
