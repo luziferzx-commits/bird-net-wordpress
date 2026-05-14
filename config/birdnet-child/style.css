@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      6.0.0
+ Version:      6.1.0
  Text Domain:  birdnet-child
 */
 
@@ -118,6 +118,24 @@ a:hover { color: var(--bn-orange-dark); }
   font-size: 1.1rem !important;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* Custom Logo */
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.custom-logo {
+  max-height: 55px !important;
+  width: auto !important;
+  object-fit: contain;
+}
+
+.ast-site-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Navigation Links */
