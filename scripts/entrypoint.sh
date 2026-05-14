@@ -1548,6 +1548,15 @@ ${FORM_SHORTCODE}
   wp option update birdnet_line_id "oil_phanu" --path=/var/www/html --allow-root
   wp option update birdnet_email "admin@birdsgoaway.com" --path=/var/www/html --allow-root
 
+  echo "=== Setting Favicon ==="
+  if [ -f "$ASSETS_DIR/favicon.ico" ]; then
+    FAVICON_ID=$(wp media import "$ASSETS_DIR/favicon.ico" --title="Birds Go Away Favicon" --porcelain --path=/var/www/html --allow-root 2>/dev/null || true)
+    if [ -n "$FAVICON_ID" ] && [ "$FAVICON_ID" -gt 0 ] 2>/dev/null; then
+      wp option update site_icon "$FAVICON_ID" --path=/var/www/html --allow-root 2>/dev/null || true
+      echo "Favicon set (attachment ID: $FAVICON_ID)"
+    fi
+  fi
+
   echo "=== Setup Complete ==="
   echo "Site URL: ${PROTOCOL}://${SITE_URL}"
   echo "Admin URL: ${PROTOCOL}://${SITE_URL}/wp-admin"
@@ -1558,6 +1567,19 @@ else
   if [ "$SITE_URL" != "localhost:8080" ]; then
     wp option update siteurl "https://${SITE_URL}" --path=/var/www/html --allow-root 2>/dev/null || true
     wp option update home "https://${SITE_URL}" --path=/var/www/html --allow-root 2>/dev/null || true
+  fi
+
+  # Set favicon if not already set
+  CURRENT_ICON=$(wp option get site_icon --path=/var/www/html --allow-root 2>/dev/null || echo "0")
+  if [ "$CURRENT_ICON" = "0" ] || [ -z "$CURRENT_ICON" ]; then
+    if [ -f "$ASSETS_DIR/favicon.ico" ]; then
+      echo "=== Setting Favicon ==="
+      FAVICON_ID=$(wp media import "$ASSETS_DIR/favicon.ico" --title="Birds Go Away Favicon" --porcelain --path=/var/www/html --allow-root 2>/dev/null || true)
+      if [ -n "$FAVICON_ID" ] && [ "$FAVICON_ID" -gt 0 ] 2>/dev/null; then
+        wp option update site_icon "$FAVICON_ID" --path=/var/www/html --allow-root 2>/dev/null || true
+        echo "Favicon set (attachment ID: $FAVICON_ID)"
+      fi
+    fi
   fi
 
   # Update page content with proper images/videos via PHP

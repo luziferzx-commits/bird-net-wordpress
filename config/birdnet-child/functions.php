@@ -341,15 +341,29 @@ function birdnet_webp_support($mimes) {
 }
 add_filter('upload_mimes', 'birdnet_webp_support');
 
-// Preload critical assets
+// Remove WordPress default site icon (globe icon)
+remove_action('wp_head', 'wp_site_icon', 99);
+
+// Preload critical assets + custom favicon
 function birdnet_preload_assets() {
     echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/fb-cover.webp">' . "\n";
     echo '<link rel="icon" type="image/x-icon" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
+    echo '<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/birdnet-assets/favicon.ico">' . "\n";
     echo '<link rel="apple-touch-icon" href="/wp-content/uploads/birdnet-assets/apple-touch-icon.png">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.google.com">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
+
+// Also set site_icon option via WordPress customizer to prevent default globe
+function birdnet_force_favicon() {
+    if (!get_option('site_icon')) {
+        // Upload favicon to media library if not already set
+        $favicon_path = '/wp-content/uploads/birdnet-assets/favicon.ico';
+        echo '<link rel="shortcut icon" href="' . $favicon_path . '">' . "\n";
+    }
+}
+add_action('wp_head', 'birdnet_force_favicon', 2);
 
 // FAQ removed from nav — causes overflow on desktop. Accessible via /faq/ URL and footer link.
 
