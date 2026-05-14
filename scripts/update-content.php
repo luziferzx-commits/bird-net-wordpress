@@ -40,10 +40,10 @@ function project_img($page, $num = 1) {
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
-    'hdpe'    => img(2),
-    'solar'   => img(3),
-    'spikes'  => img(4),
-    'gel'     => img(5),
+    'hdpe'    => project_img(10),
+    'solar'   => project_img(14),
+    'spikes'  => project_img(18),
+    'gel'     => project_img(29),
     'team'    => img(6),
     'safety'  => img(7),
     'work1'   => img(8),
@@ -155,7 +155,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก" style="border-radius:12px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">ตาข่าย HDPE กันนก</h3>
 <p>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี เหมาะสำหรับทุกพื้นที่</p>
@@ -164,7 +164,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">แผงกันนกโซลาร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
@@ -173,7 +173,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส" style="border-radius:12px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">หนามกันนก</h3>
 <p>หนามสแตนเลสกันนก ป้องกันนกเกาะ ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย ราคาประหยัด เหมาะกับขอบหน้าต่าง ราวกันตก</p>
@@ -182,7 +182,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก" style="border-radius:12px;object-fit:cover;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <h3 class="wp-block-heading">เจลไล่นก</h3>
 <p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว ไม่ทิ้งคราบ</p>
@@ -495,7 +495,7 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -527,7 +527,7 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
