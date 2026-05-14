@@ -350,7 +350,7 @@ function birdnet_preload_assets() {
     echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/fb-cover.webp">' . "\n";
     echo '<link rel="icon" type="image/x-icon" href="' . esc_url($favicon_url) . '">' . "\n";
     echo '<link rel="shortcut icon" href="' . esc_url($favicon_url) . '">' . "\n";
-    echo '<link rel="apple-touch-icon" href="' . esc_url($favicon_url) . '">' . "\n";
+    echo '<link rel="apple-touch-icon" href="' . esc_url(get_stylesheet_directory_uri() . '/apple-touch-icon.png') . '">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.google.com">' . "\n";
     echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
 }
