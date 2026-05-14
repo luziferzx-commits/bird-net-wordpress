@@ -312,15 +312,7 @@ function birdnet_preload_assets() {
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
 
-// Add FAQ to main nav with short label (only primary menu, not mobile drawer duplicates)
-function birdnet_add_faq_to_menu($items, $args) {
-    if ($args->theme_location === 'primary' || $args->theme_location === 'primary-menu' || $args->theme_location === 'main-menu') {
-        $faq_link = home_url('/faq/');
-        $items .= '<li class="menu-item"><a href="' . $faq_link . '">FAQ</a></li>';
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'birdnet_add_faq_to_menu', 10, 2);
+// FAQ removed from nav — causes overflow on desktop. Accessible via /faq/ URL and footer link.
 
 // Ensure logo displays — JS fallback for broken image (ephemeral Docker uploads)
 function birdnet_logo_fallback() {
