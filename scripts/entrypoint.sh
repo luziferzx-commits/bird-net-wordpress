@@ -40,6 +40,19 @@ until php -r "new mysqli('$DB_HOST', '$DB_USER', '$DB_PASS', '$DB_NAME');" 2>/de
 done
 echo "Database connected!"
 
+# Always copy child theme (container is ephemeral, but DB remembers theme choice)
+if [ -d /tmp/birdnet-child ]; then
+  echo "=== Copying child theme ==="
+  cp -r /tmp/birdnet-child /var/www/html/wp-content/themes/birdnet-child
+  chown -R www-data:www-data /var/www/html/wp-content/themes/birdnet-child
+fi
+
+# Always install Astra parent theme if missing
+if [ ! -d /var/www/html/wp-content/themes/astra ]; then
+  echo "=== Installing Astra parent theme ==="
+  wp theme install astra --path=/var/www/html --allow-root 2>/dev/null || true
+fi
+
 # Check if WordPress is already installed
 if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
   echo "=== Installing WordPress Core ==="
