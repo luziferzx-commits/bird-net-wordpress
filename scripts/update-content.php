@@ -15,6 +15,8 @@ if (!file_exists($wp_load)) {
 require_once $wp_load;
 
 $site_url = get_site_url();
+// Force HTTPS for asset URLs (Cloudflare handles SSL)
+$site_url = str_replace('http://', 'https://', $site_url);
 $assets_base = $site_url . '/wp-content/uploads/birdnet-assets';
 
 // Helper functions
