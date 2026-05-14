@@ -31,8 +31,8 @@ RUN { \
     echo 'max_input_time=300'; \
 } > /usr/local/etc/php/conf.d/custom.ini
 
-# Enable Apache mod_rewrite and mod_headers
-RUN a2enmod rewrite headers expires
+# Fix MPM conflict and enable Apache modules
+RUN a2dismod mpm_event 2>/dev/null; a2enmod mpm_prefork 2>/dev/null; a2enmod rewrite headers expires
 
 # Apache optimization
 RUN { \

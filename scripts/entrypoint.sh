@@ -8,6 +8,12 @@ http_response_code(200);
 echo "OK";
 HEALTHCHECK
 
+# Fix MPM conflict - disable mpm_event if mpm_prefork is loaded (WordPress default)
+if [ -f /etc/apache2/mods-enabled/mpm_event.load ]; then
+  a2dismod mpm_event 2>/dev/null || true
+  a2enmod mpm_prefork 2>/dev/null || true
+fi
+
 # Run the original WordPress entrypoint to set up wp-config.php
 docker-entrypoint.sh apache2-foreground &
 WP_PID=$!
