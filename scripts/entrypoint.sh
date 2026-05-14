@@ -11,10 +11,15 @@ until [ -f /var/www/html/wp-includes/version.php ]; do
 done
 
 echo "=== Waiting for database connection ==="
-until wp db check --path=/var/www/html --allow-root 2>/dev/null; do
+DB_HOST="${WORDPRESS_DB_HOST:-db}"
+DB_USER="${WORDPRESS_DB_USER:-wordpress}"
+DB_PASS="${WORDPRESS_DB_PASSWORD:-wordpress}"
+DB_NAME="${WORDPRESS_DB_NAME:-wordpress}"
+until php -r "new mysqli('$DB_HOST', '$DB_USER', '$DB_PASS', '$DB_NAME');" 2>/dev/null; do
   echo "Waiting for database..."
   sleep 3
 done
+echo "Database connected!"
 
 # Check if WordPress is already installed
 if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
@@ -56,12 +61,15 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
   fi
 
   echo "=== Installing Plugins ==="
-  wp plugin install elementor --activate --path=/var/www/html --allow-root
-  wp plugin install contact-form-7 --activate --path=/var/www/html --allow-root
-  wp plugin install wordpress-seo --activate --path=/var/www/html --allow-root
-  wp plugin install wordfence --activate --path=/var/www/html --allow-root
-  wp plugin install wp-super-cache --activate --path=/var/www/html --allow-root
-  wp plugin install addon-starter-templates --activate --path=/var/www/html --allow-root || true
+  wp plugin install elementor --version=3.25.10 --activate --path=/var/www/html --allow-root 2>/dev/null || \
+    wp plugin install elementor --activate --path=/var/www/html --allow-root 2>/dev/null || \
+    echo "Warning: Elementor installation skipped (compatibility issue)"
+  wp plugin install contact-form-7 --activate --path=/var/www/html --allow-root || true
+  wp plugin install wordpress-seo --version=24.9 --activate --path=/var/www/html --allow-root 2>/dev/null || \
+    echo "Warning: Yoast SEO installation skipped (compatibility issue)"
+  wp plugin install wordfence --activate --path=/var/www/html --allow-root || true
+  wp plugin install wp-super-cache --activate --path=/var/www/html --allow-root || true
+  wp plugin install addon-starter-templates --activate --path=/var/www/html --allow-root 2>/dev/null || true
 
   echo "=== Configuring Permalinks ==="
   wp rewrite structure '/%postname%/' --path=/var/www/html --allow-root
