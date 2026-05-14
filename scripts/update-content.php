@@ -948,10 +948,22 @@ $contact_content = '
 <p><strong>อีเมล:</strong> <a href="mailto:admin@birdsgoaway.com">admin@birdsgoaway.com</a></p>
 
 <h4 class="wp-block-heading">โทรศัพท์</h4>
-<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> (คุณออย - ขอนแก่น)<br>
-<a href="tel:0889514924"><strong>088-951-4924</strong></a> (คุณวีวี่)<br>
-<a href="tel:0936415623"><strong>093-641-5623</strong></a> (เชียงใหม่)<br>
-<a href="tel:0956292488"><strong>095-629-2488</strong></a> (ชลบุรี)</p>
+<!-- wp:html -->
+<div style="display:flex;flex-direction:column;gap:6px;margin:0.5rem 0 1rem;">
+<a href="tel:0629964994" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<strong>062-996-4994</strong> <span style="color:#666;font-size:0.8rem;">(คุณออย — ขอนแก่น)</span></a>
+<a href="tel:0889514924" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<strong>088-951-4924</strong> <span style="color:#666;font-size:0.8rem;">(คุณวีวี่)</span></a>
+<a href="tel:0936415623" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<strong>093-641-5623</strong> <span style="color:#666;font-size:0.8rem;">(เชียงใหม่)</span></a>
+<a href="tel:0956292488" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#1B4D5C;font-size:0.9rem;">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="#E8792E"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+<strong>095-629-2488</strong> <span style="color:#666;font-size:0.8rem;">(ชลบุรี)</span></a>
+</div>
+<!-- /wp:html -->
 
 <h4 class="wp-block-heading">💬 LINE — แอดไลน์ส่งรูปหน้างานประเมินราคาฟรี</h4>
 <!-- wp:html -->
