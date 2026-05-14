@@ -48,33 +48,36 @@ function birdnet_floating_buttons() {
         gap: 10px;
     }
     .birdnet-float-btn {
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
+        width: auto;
+        height: 48px;
+        border-radius: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 6px;
+        padding: 0 16px;
         color: #fff;
         text-decoration: none;
-        font-size: 24px;
+        font-size: 14px;
+        font-weight: 600;
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .birdnet-float-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 0 6px 16px rgba(0,0,0,0.3);
         color: #fff;
     }
     .birdnet-float-btn.line {
-        background: rgba(6, 199, 85, 0.9);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(6, 199, 85, 0.3);
+        background: #06C755;
     }
     .birdnet-float-btn.phone {
         background: #E8792E;
-        backdrop-filter: blur(10px);
-        border: none;
-        color: #ffffff;
+    }
+    .birdnet-float-btn svg {
+        width: 22px;
+        height: 22px;
+        fill: currentColor;
     }
     @media (max-width: 768px) {
         .birdnet-floating {
@@ -82,18 +85,20 @@ function birdnet_floating_buttons() {
             right: 15px;
         }
         .birdnet-float-btn {
-            width: 48px;
-            height: 48px;
-            font-size: 20px;
+            height: 44px;
+            padding: 0 14px;
+            font-size: 13px;
         }
     }
     </style>
     <div class="birdnet-floating">
         <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="birdnet-float-btn line" target="_blank" rel="noopener" aria-label="Line Chat" title="แชท Line">
-            💬
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 2.95 1.95 5.55 4.87 7.13-.19.66-.68 2.37-.78 2.73-.13.47.17.46.36.34.15-.1 2.37-1.61 3.33-2.26.73.1 1.47.16 2.22.16 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+            LINE
         </a>
         <a href="tel:<?php echo esc_attr($phone); ?>" class="birdnet-float-btn phone" aria-label="โทรศัพท์" title="โทรเลย">
-            📞
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.01-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            โทรเลย
         </a>
     </div>
     <div class="birdnet-sticky-mobile">
