@@ -202,6 +202,65 @@ function birdnet_aos_init() {
 }
 add_action('wp_footer', 'birdnet_aos_init', 99);
 
+// Custom Footer Content
+function birdnet_custom_footer() {
+    ?>
+    <div class="birdnet-footer-content">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>BIRDS GO AWAY</h4>
+                <p>บริษัท รีเช็ค บิ้วดิ้ง จำกัด<br>
+                ทะเบียน 0405567000088<br>
+                75/59 ม.17 ต.ศิลา อ.เมือง<br>
+                จ.ขอนแก่น 40000</p>
+                <p style="margin-top:8px;font-size:0.75rem;opacity:0.6;">ใบอนุญาตโรยตัว / กว. สภาวิศวกร / จป.หัวหน้างาน</p>
+            </div>
+            <div class="footer-col">
+                <h4>ติดต่อเรา</h4>
+                <p><strong>ขอนแก่น:</strong> 062-996-4994<br>
+                <strong>วีวี่:</strong> 088-951-4924<br>
+                <strong>เชียงใหม่:</strong> 093-641-5623<br>
+                <strong>ชลบุรี:</strong> 095-629-2488</p>
+                <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
+                <p>เวลาทำการ: จ-ส 08:00-18:00</p>
+            </div>
+            <div class="footer-col">
+                <h4>เมนู</h4>
+                <ul>
+                    <li><a href="/">หน้าแรก</a></li>
+                    <li><a href="/services">บริการของเรา</a></li>
+                    <li><a href="/portfolio">ผลงาน</a></li>
+                    <li><a href="/about">เกี่ยวกับเรา</a></li>
+                    <li><a href="/contact">ติดต่อเรา</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/blog">บทความ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>บริการของเรา</h4>
+                <ul>
+                    <li>ตาข่ายกันนก HDPE</li>
+                    <li>หนามกันนก สแตนเลส</li>
+                    <li>เจลไล่นก</li>
+                    <li>แผงกันนกโซลาร์เซลล์</li>
+                </ul>
+                <p style="margin-top:12px;"><strong>พื้นที่ให้บริการ:</strong><br>ขอนแก่น, เชียงใหม่, ชลบุรี, ภาคอีสาน ทั่วประเทศ</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BIRDS GO AWAY — บริษัท รีเช็ค บิ้วดิ้ง จำกัด | บริการติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน</p>
+        </div>
+    </div>
+    <?php
+}
+add_action('astra_footer_before', 'birdnet_custom_footer');
+
+// Hide default Astra footer copyright
+function birdnet_hide_default_footer() {
+    echo '<style>.ast-small-footer, .site-footer .ast-footer-copyright, .ast-footer-overlay { display: none !important; }</style>';
+}
+add_action('wp_head', 'birdnet_hide_default_footer');
+
 // Hide page title on all pages (not just front)
 function birdnet_hide_all_page_titles() {
     echo '<style>.entry-header, .page-header, article > header, .ast-archive-description { display: none !important; }</style>';

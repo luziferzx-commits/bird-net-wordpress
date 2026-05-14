@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      8.0.0
+ Version:      8.1.0
  Text Domain:  birdnet-child
 */
 
@@ -669,22 +669,96 @@ video {
 .site-footer {
   background: var(--bn-teal) !important;
   color: rgba(255, 255, 255, 0.8) !important;
-  padding: 3rem 0 !important;
+  padding: 0 !important;
   border-top: none;
+}
+
+.birdnet-footer-content {
+  background: var(--bn-teal);
+  color: rgba(255,255,255,0.85);
+  padding: 3rem 2rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.birdnet-footer-content h4 {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--bn-orange);
+  display: inline-block;
+}
+
+.birdnet-footer-content p,
+.birdnet-footer-content li {
+  font-size: 0.85rem !important;
+  color: rgba(255,255,255,0.75) !important;
+  line-height: 1.6;
+}
+
+.birdnet-footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.birdnet-footer-content ul li {
+  margin-bottom: 6px;
+}
+
+.birdnet-footer-content a {
+  color: var(--bn-orange-light) !important;
+  text-decoration: none;
+}
+
+.birdnet-footer-content a:hover {
+  color: var(--bn-orange) !important;
+  text-decoration: underline;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.75rem !important;
+  color: rgba(255,255,255,0.5) !important;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .site-footer * {
   font-family: var(--font-body) !important;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .site-footer a { color: var(--bn-orange-light) !important; }
 .site-footer a:hover { color: var(--bn-orange) !important; }
 
 .site-footer .ast-footer-copyright {
-  color: var(--bn-text-subtle) !important;
-  font-size: 0.72rem;
+  display: none !important;
 }
 
 /* ===== Scroll to Top ===== */
