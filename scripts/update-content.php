@@ -39,7 +39,7 @@ function project_img($page, $num = 1) {
 
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
-    'hero'    => img(1),
+    'hero'    => $assets_base . '/project-p07-1.jpeg',
     'hdpe'    => img(2),
     'solar'   => img(3),
     'spikes'  => img(4),
@@ -90,7 +90,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . img(1) . '" alt="ผลงานติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:16px;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['hero'] . '" alt="ผลงานติดตั้งตาข่ายกันนก Birds Go Away" style="border-radius:16px;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -375,6 +375,44 @@ $home_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">รีวิวจากลูกค้า</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ขอบพระคุณลูกค้าทุกท่านที่ไว้วางใจ Birds Go Away</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
+<p style="font-style:italic;">"ทีมงานมืออาชีพมาก ติดตั้งเรียบร้อย สะอาด ตาข่ายแทบมองไม่เห็น แต่นกไม่มาอีกเลย รับประกันงานด้วย ประทับใจมากครับ"</p>
+<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณสมชาย</strong> | คอนโด X10 ศรีนครินทร์, ขอนแก่น</p>
+<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
+<p style="font-style:italic;">"ปัญหานกพิราบมานานหลายปี ลองหลายวิธีไม่ได้ผล พอติดตาข่ายกับ Birds Go Away จบเลย ราคาสมเหตุสมผล แนะนำเลยค่ะ"</p>
+<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณนิดา</strong> | หมู่บ้านสีวลี, ขอนแก่น</p>
+<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column testimonial-card" style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid var(--bn-orange,#E8792E);">
+<p style="font-style:italic;">"ใช้บริการติดตั้งที่โกดังสินค้า พื้นที่กว้างมาก แต่ทีมจัดการได้เรียบร้อยภายใน 2 วัน มีวิศวกรมาคุมงานด้วย วางใจได้"</p>
+<p style="color:#666;font-size:0.9em;margin-top:0.5rem;"><strong>— คุณวิชัย</strong> | โกดังสินค้า, เชียงใหม่</p>
+<p style="color:#E8792E;">⭐⭐⭐⭐⭐</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center wp-block-heading">พื้นที่ให้บริการ</h2>
 <!-- /wp:heading -->
 
@@ -640,6 +678,9 @@ $portfolio_content = '
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->';
 
+// Projects with multiple photos (top featured projects)
+$multi_photo_pages = array(7, 9, 10, 13, 20, 22, 35, 45);
+
 // Generate portfolio grid with project names and photos
 $count = 0;
 foreach ($projects as $project) {
@@ -647,12 +688,24 @@ foreach ($projects as $project) {
     if ($count % 3 == 1) {
         $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
     }
+    
+    // Build gallery HTML for projects with multiple photos
+    $has_multi = in_array($project['page'], $multi_photo_pages);
+    $gallery_html = '';
+    if ($has_multi) {
+        $gallery_html = '<div class="project-gallery" style="display:flex;gap:4px;margin-top:6px;">
+<img src="' . project_img($project['page'], 2) . '" alt="' . $project['name'] . ' #2" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
+<img src="' . project_img($project['page'], 3) . '" alt="' . $project['name'] . ' #3" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
+</div>';
+    }
+    
     $portfolio_content .= '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $project['name'] . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $project['name'] . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
+' . $gallery_html . '
 <h4 class="wp-block-heading">' . $project['name'] . '</h4>
 <p style="color:#666;font-size:0.9em;">' . $project['location'] . '</p>
 </div>
@@ -875,12 +928,119 @@ $contact_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
+<h3 class="has-text-align-center wp-block-heading">แผนที่สำนักงาน</h3>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div style="width:100%;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.08);">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.2!2d102.82!3d16.46!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z4Lir4Lih4Li54LmI4Lia4LmJ4Liy4LiZIEtsZXZlciDguILguK3guJnguYHguIHguYjguJk!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":3} -->
 <h3 class="has-text-align-center wp-block-heading">เปิดให้บริการ</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">จันทร์ - เสาร์: 08:00 - 18:00 น.<br>อาทิตย์: นัดหมายล่วงหน้า</p>
 <!-- /wp:paragraph -->
+';
+
+// ===== FAQ PAGE =====
+$faq_content = '
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">คำถามที่พบบ่อย (FAQ)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">รวมคำตอบสำหรับคำถามที่ลูกค้าสอบถามบ่อยที่สุด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<div class="faq-section">
+<details class="faq-item" open>
+<summary><strong>ตาข่ายกันนก HDPE มีอายุการใช้งานกี่ปี?</strong></summary>
+<p>ตาข่าย HDPE ที่เราใช้มีอายุการใช้งาน <strong>6-7 ปี</strong> ผ่านการ UV Treatment ทนแดด ทนฝน เหมาะกับสภาพอากาศเมืองไทย พร้อมรับประกัน 3 ปี</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ค่าบริการติดตั้งเริ่มต้นเท่าไหร่?</strong></summary>
+<p>ค่าบริการขึ้นอยู่กับพื้นที่และความยากง่ายของงาน เราให้บริการ<strong>ประเมินราคาฟรี</strong> โดยวิศวกรจะไปสำรวจหน้างานและเสนอราคาให้ภายใน 1-2 วัน สามารถติดต่อสอบถามได้ที่ 062-996-4994</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ขั้นตอนการทำงานเป็นอย่างไร?</strong></summary>
+<div class="work-process">
+<p><strong>ขั้นตอนที่ 1:</strong> สำรวจหน้างาน — วิศวกรไปดูพื้นที่จริง ประเมินปัญหาและวัดขนาด</p>
+<p><strong>ขั้นตอนที่ 2:</strong> เสนอราคา — จัดทำใบเสนอราคาพร้อมแบบแปลน ภายใน 1-2 วัน</p>
+<p><strong>ขั้นตอนที่ 3:</strong> นัดวันติดตั้ง — ตกลงราคาแล้วนัดวันทำงาน ทีมพร้อมอุปกรณ์ครบชุด</p>
+<p><strong>ขั้นตอนที่ 4:</strong> ติดตั้ง — ทีมช่างพร้อมวิศวกรคุมงาน ใช้อุปกรณ์ความปลอดภัยครบ</p>
+<p><strong>ขั้นตอนที่ 5:</strong> ตรวจรับงาน — ลูกค้าตรวจงานก่อนรับมอบ พร้อมรับประกันผลงาน</p>
+</div>
+</details>
+
+<details class="faq-item">
+<summary><strong>ให้บริการพื้นที่ไหนบ้าง?</strong></summary>
+<p>เราให้บริการหลัก 3 ภูมิภาค:<br>
+🟠 <strong>ขอนแก่น</strong> และจังหวัดใกล้เคียงในภาคอีสาน<br>
+🟠 <strong>เชียงใหม่</strong> และจังหวัดภาคเหนือ<br>
+🟠 <strong>ชลบุรี</strong> และจังหวัดภาคตะวันออก<br>
+สำหรับพื้นที่อื่นๆ สามารถสอบถามได้เลยครับ</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ติดตั้งตาข่ายกันนกแล้วจะทำให้อาคารดูไม่สวยไหม?</strong></summary>
+<p>ตาข่าย HDPE ที่เราใช้เป็นสี <strong>Transparent Black (โปร่งแสง)</strong> เมื่อติดตั้งแล้วแทบมองไม่เห็นจากระยะไกล ไม่ทำให้อาคารดูเสียทัศนียภาพ เหมาะกับทุกรูปแบบอาคาร</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>ตาข่ายทนต่อสภาพอากาศได้ดีแค่ไหน?</strong></summary>
+<p>ตาข่าย HDPE 2500D/1ply ของเรามี:<br>
+• แรงดึงขาดจุดปม: <strong>13 kg</strong><br>
+• แรงดึงขาดเส้นด้าย: <strong>7 kg</strong><br>
+• ผ่าน UV Treatment ทนแดดจัด<br>
+• ไม่เปื่อยยุ่ยจากฝน<br>
+เหมาะกับสภาพอากาศร้อนชื้นของไทย</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>หนามกันนกสแตนเลสต่างจากหนามพลาสติกอย่างไร?</strong></summary>
+<p>หนามสแตนเลส SUS304 ของเรา:<br>
+• <strong>90 ขาต่อ 1 เมตร</strong> — ถี่กว่าหนามทั่วไป<br>
+• ไม่เป็นสนิม ทนทานตลอดอายุการใช้งาน<br>
+• ปรับองศาปลายหนามได้ตามพื้นที่<br>
+• ทนแดด ทนฝน ไม่เสื่อมสภาพเร็วเหมือนพลาสติก</p>
+</details>
+
+<details class="faq-item">
+<summary><strong>มีใบรับรองหรือมาตรฐานอะไรบ้าง?</strong></summary>
+<p>บริษัทเรามี:<br>
+✅ จดทะเบียนนิติบุคคลถูกต้อง (เลขทะเบียน 0405567000088)<br>
+✅ ใบรับรองโรยตัว SAFESIRI (Rappelling for Working Certificate)<br>
+✅ ใบประกอบวิชาชีพวิศวกร (กว.) จากสภาวิศวกร<br>
+✅ ใบ จป. หัวหน้างาน (เจ้าหน้าที่ความปลอดภัย)<br>
+✅ วิศวกรคุมงานทุกไซต์ + อุปกรณ์ความปลอดภัยครบชุด</p>
+</details>
+</div>
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">สอบถามเพิ่มเติม</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 ';
 
 // ===== UPDATE PAGES =====
@@ -890,6 +1050,7 @@ $pages = array(
     'portfolio' => array('title' => 'ผลงานของเรา',  'content' => $portfolio_content),
     'about'     => array('title' => 'เกี่ยวกับเรา',  'content' => $about_content),
     'contact'   => array('title' => 'ติดต่อเรา',     'content' => $contact_content),
+    'faq'       => array('title' => 'คำถามที่พบบ่อย', 'content' => $faq_content),
 );
 
 foreach ($pages as $slug => $page_data) {
@@ -949,6 +1110,11 @@ $seo_data = array(
         'title' => 'ติดต่อเรา — ปรึกษาฟรี ขอใบเสนอราคาตาข่ายกันนก | BIRDS GO AWAY',
         'desc'  => 'ติดต่อ BIRDS GO AWAY ปรึกษาฟรีเรื่องตาข่ายกันนก โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) 095-629-2488 (ชลบุรี) LINE: oil_phanu',
         'focus' => 'ติดต่อตาข่ายกันนก',
+    ),
+    'faq' => array(
+        'title' => 'คำถามที่พบบ่อย FAQ — ตาข่ายกันนก ราคา วิธีติดตั้ง | BIRDS GO AWAY',
+        'desc'  => 'รวมคำถามที่พบบ่อยเกี่ยวกับตาข่ายกันนก ราคาติดตั้ง ขั้นตอนการทำงาน อายุการใช้งาน รับประกัน พื้นที่ให้บริการ โดย BIRDS GO AWAY',
+        'focus' => 'ตาข่ายกันนก คำถามที่พบบ่อย',
     ),
 );
 

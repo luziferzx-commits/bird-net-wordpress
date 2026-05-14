@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      6.3.0
+ Version:      7.0.0
  Text Domain:  birdnet-child
 */
 
@@ -999,6 +999,97 @@ video {
 .entry-content ul li {
   margin-bottom: 0.4rem;
   line-height: 1.6;
+}
+
+/* ===== FAQ Section ===== */
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-item summary {
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid transparent;
+  transition: background 0.2s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::before {
+  content: "▶";
+  font-size: 0.7em;
+  color: var(--bn-orange);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.faq-item[open] summary {
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.faq-item p,
+.faq-item .work-process {
+  padding: 1rem 1.5rem;
+  margin: 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+.faq-item .work-process p {
+  padding: 0.3rem 0;
+}
+
+/* ===== Testimonial Cards ===== */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Project Gallery Mini ===== */
+.project-gallery {
+  margin-top: 6px;
+}
+
+.project-gallery img {
+  transition: transform 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Google Map ===== */
+.wp-block-html iframe {
+  border-radius: 12px;
 }
 
 /* ===== Print Styles ===== */

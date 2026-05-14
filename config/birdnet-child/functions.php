@@ -163,6 +163,20 @@ function birdnet_schema_jsonld() {
             echo '<script type="application/ld+json">' . $schema . '</script>' . "\n";
         }
     }
+    // FAQ Schema on FAQ page
+    if (is_page('faq')) {
+        $faq_schema = json_encode(array(
+            '@context' => 'https://schema.org',
+            '@type' => 'FAQPage',
+            'mainEntity' => array(
+                array('@type' => 'Question', 'name' => 'ตาข่ายกันนก HDPE มีอายุการใช้งานกี่ปี?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ตาข่าย HDPE มีอายุการใช้งาน 6-7 ปี ผ่านการ UV Treatment ทนแดด ทนฝน พร้อมรับประกัน 3 ปี')),
+                array('@type' => 'Question', 'name' => 'ค่าบริการติดตั้งเริ่มต้นเท่าไหร่?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ค่าบริการขึ้นอยู่กับพื้นที่และความยากง่าย เราให้บริการประเมินราคาฟรี โทร 062-996-4994')),
+                array('@type' => 'Question', 'name' => 'ให้บริการพื้นที่ไหนบ้าง?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'ขอนแก่น เชียงใหม่ ชลบุรี และจังหวัดใกล้เคียง')),
+                array('@type' => 'Question', 'name' => 'มีรับประกันหลังติดตั้งไหม?', 'acceptedAnswer' => array('@type' => 'Answer', 'text' => 'มีรับประกันงานติดตั้ง 3 ปี หากพบปัญหา ทีมงานเข้าแก้ไขฟรี')),
+            ),
+        ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        echo '<script type="application/ld+json">' . $faq_schema . '</script>' . "\n";
+    }
 }
 add_action('wp_head', 'birdnet_schema_jsonld', 1);
 
@@ -206,3 +220,36 @@ remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_shortlink_wp_head');
+
+// Enable native lazy loading for all images
+function birdnet_lazy_load_images($content) {
+    if (is_admin()) return $content;
+    $content = preg_replace('/<img((?!loading=)[^>]*)>/i', '<img$1 loading="lazy">', $content);
+    return $content;
+}
+add_filter('the_content', 'birdnet_lazy_load_images', 99);
+
+// Add WebP support for uploads
+function birdnet_webp_support($mimes) {
+    $mimes['webp'] = 'image/webp';
+    return $mimes;
+}
+add_filter('upload_mimes', 'birdnet_webp_support');
+
+// Preload critical assets
+function birdnet_preload_assets() {
+    echo '<link rel="preload" as="image" href="/wp-content/uploads/birdnet-assets/project-p07-1.jpeg">' . "\n";
+    echo '<link rel="dns-prefetch" href="//www.google.com">' . "\n";
+    echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
+}
+add_action('wp_head', 'birdnet_preload_assets', 1);
+
+// Add FAQ page to menu via filter
+function birdnet_add_faq_to_menu($items, $args) {
+    if ($args->theme_location == 'primary' || $args->theme_location == '') {
+        $faq_link = '<li class="menu-item"><a href="/faq/">คำถามที่พบบ่อย</a></li>';
+        $items .= $faq_link;
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'birdnet_add_faq_to_menu', 10, 2);
