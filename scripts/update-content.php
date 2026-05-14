@@ -38,7 +38,7 @@ $unsplash = array(
     'hdpe'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
     'solar'   => 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80&auto=format',
     'spikes'  => 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80&auto=format',
-    'gel'     => 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80&auto=format',
+    'gel'     => 'https://images.unsplash.com/photo-1581093458791-9d42e3c11e45?w=800&q=80&auto=format',
     'team'    => 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format',
     'safety'  => 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&auto=format',
     'work1'   => 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80&auto=format',
