@@ -3,6 +3,21 @@
  * Bird Net - Astra Child Theme Functions
  */
 
+// Allow display/flex CSS properties in wp_kses inline styles
+function birdnet_allow_css_properties($styles) {
+    $styles[] = 'display';
+    $styles[] = 'flex-direction';
+    $styles[] = 'gap';
+    $styles[] = 'flex-shrink';
+    $styles[] = 'flex';
+    $styles[] = 'justify-content';
+    $styles[] = 'align-items';
+    $styles[] = 'flex-wrap';
+    $styles[] = 'grid-template-columns';
+    return $styles;
+}
+add_filter('safe_style_css', 'birdnet_allow_css_properties');
+
 // Enqueue parent and child theme styles
 function birdnet_enqueue_styles() {
     wp_enqueue_style('astra-parent-style', get_template_directory_uri() . '/style.css');
