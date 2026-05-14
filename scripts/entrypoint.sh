@@ -53,6 +53,20 @@ if [ ! -d /var/www/html/wp-content/themes/astra ]; then
   wp theme install astra --path=/var/www/html --allow-root 2>/dev/null || true
 fi
 
+# Always copy media assets (container is ephemeral, uploads dir is lost on redeploy)
+ASSETS_DIR="/var/www/html/wp-content/uploads/birdnet-assets"
+mkdir -p "$ASSETS_DIR"
+if [ -d /tmp/birdnet-assets/images ]; then
+  echo "=== Copying image assets ==="
+  cp -f /tmp/birdnet-assets/images/*.jpg "$ASSETS_DIR/" 2>/dev/null || true
+fi
+if [ -d /tmp/birdnet-assets/videos ]; then
+  echo "=== Copying video assets ==="
+  cp -f /tmp/birdnet-assets/videos/*.mp4 "$ASSETS_DIR/" 2>/dev/null || true
+fi
+chown -R www-data:www-data "$ASSETS_DIR"
+echo "Assets copied to $ASSETS_DIR"
+
 # Check if WordPress is already installed
 if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
   echo "=== Installing WordPress Core ==="
@@ -1533,6 +1547,10 @@ else
     wp option update siteurl "https://${SITE_URL}" --path=/var/www/html --allow-root 2>/dev/null || true
     wp option update home "https://${SITE_URL}" --path=/var/www/html --allow-root 2>/dev/null || true
   fi
+
+  # Update page content with proper images/videos via PHP
+  echo "=== Updating page content ==="
+  php /tmp/update-content.php 2>/dev/null || echo "Content update had errors, continuing..."
 fi
 
 # Ensure proper permissions

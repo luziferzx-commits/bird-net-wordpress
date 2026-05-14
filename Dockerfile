@@ -56,8 +56,9 @@ RUN { \
 } > /etc/apache2/conf-available/optimization.conf \
     && a2enconf optimization
 
-# Copy startup script
+# Copy scripts
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY scripts/update-content.php /tmp/update-content.php
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Copy custom theme child

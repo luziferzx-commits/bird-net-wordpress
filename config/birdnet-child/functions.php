@@ -8,10 +8,25 @@ function birdnet_enqueue_styles() {
     wp_enqueue_style('astra-parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('birdnet-child-style', get_stylesheet_directory_uri() . '/style.css', array('astra-parent-style'), wp_get_theme()->get('Version'));
     
-    // Google Fonts
-    wp_enqueue_style('google-fonts-noto-thai', 'https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap', array(), null);
+    // Google Fonts - Prompt + Noto Sans Thai
+    wp_enqueue_style('google-fonts-prompt', 'https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap', array(), null);
 }
 add_action('wp_enqueue_scripts', 'birdnet_enqueue_styles');
+
+// Hide page title on front page
+function birdnet_hide_front_page_title() {
+    if (is_front_page()) {
+        echo '<style>.entry-header, .page-header, article > header { display: none !important; }</style>';
+    }
+}
+add_action('wp_head', 'birdnet_hide_front_page_title');
+
+// Add preconnect for faster font loading
+function birdnet_preconnect_fonts() {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+}
+add_action('wp_head', 'birdnet_preconnect_fonts', 0);
 
 // Add Line Chat floating button
 function birdnet_floating_buttons() {
