@@ -145,6 +145,70 @@ $home_content = '
 </div>
 <!-- /wp:html -->
 
+<!-- wp:html -->
+<div style="max-width:700px;margin:2rem auto;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;padding:0 1rem;">
+<div style="text-align:center;flex:1;min-width:140px;">
+<div style="font-size:2.5rem;margin-bottom:4px;">&#x1F6E1;&#xFE0F;</div>
+<p style="font-weight:700;color:#1B4D5C;margin:0;font-size:0.95rem;">รับประกัน 3 ปี</p>
+<p style="color:#666;font-size:0.78rem;margin:2px 0 0;">ซ่อมฟรีตลอดสัญญา</p>
+</div>
+<div style="text-align:center;flex:1;min-width:140px;">
+<div style="font-size:2.5rem;margin-bottom:4px;">&#x1F9BA;</div>
+<p style="font-weight:700;color:#1B4D5C;margin:0;font-size:0.95rem;">Safety Certified</p>
+<p style="color:#666;font-size:0.78rem;margin:2px 0 0;">ใบรับรองโรยตัว SAFESIRI</p>
+</div>
+<div style="text-align:center;flex:1;min-width:140px;">
+<div style="font-size:2.5rem;margin-bottom:4px;">&#x1F4CB;</div>
+<p style="font-weight:700;color:#1B4D5C;margin:0;font-size:0.95rem;">ประเมินฟรี</p>
+<p style="color:#666;font-size:0.78rem;margin:2px 0 0;">ไม่มีค่าใช้จ่ายแอบแฝง</p>
+</div>
+<div style="text-align:center;flex:1;min-width:140px;">
+<div style="font-size:2.5rem;margin-bottom:4px;">&#x1F3D7;&#xFE0F;</div>
+<p style="font-weight:700;color:#1B4D5C;margin:0;font-size:0.95rem;">วิศวกร กว.</p>
+<p style="color:#666;font-size:0.78rem;margin:2px 0 0;">สภาวิศวกรคุมงานทุกไซต์</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">เลือกอุปกรณ์แบบไหนที่เหมาะกับคุณ?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ปัญหาแต่ละแบบใช้วิธีแก้ต่างกัน — ให้เราช่วยแนะนำ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;padding:0 1rem;">
+
+<div style="background:#fff8f3;border-radius:12px;padding:1.2rem;border:2px solid #E8792E;text-align:center;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F426;</div>
+<h4 style="color:#E8792E;margin:0 0 6px;font-size:1rem;">นกเกาะราวกันตก / ขอบหน้าต่าง</h4>
+<p style="margin:0 0 8px;font-size:0.85rem;color:#555;">แนะนำ: <strong>หนามกันนกสแตนเลส</strong></p>
+<p style="margin:0;font-size:0.78rem;color:#888;">ติดตั้งง่าย ราคาประหยัด ทนทานตลอดอายุการใช้งาน</p>
+</div>
+
+<div style="background:#f3f9ff;border-radius:12px;padding:1.2rem;border:2px solid #1B4D5C;text-align:center;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F3E2;</div>
+<h4 style="color:#1B4D5C;margin:0 0 6px;font-size:1rem;">นกทำรังใต้หลังคา / ระเบียง</h4>
+<p style="margin:0 0 8px;font-size:0.85rem;color:#555;">แนะนำ: <strong>ตาข่าย HDPE</strong></p>
+<p style="margin:0;font-size:0.78rem;color:#888;">ครอบคลุมพื้นที่กว้าง มองแทบไม่เห็น อายุ 5-7 ปี</p>
+</div>
+
+<div style="background:#f9fff3;border-radius:12px;padding:1.2rem;border:2px solid #06C755;text-align:center;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2728;</div>
+<h4 style="color:#06C755;margin:0 0 6px;font-size:1rem;">พื้นที่เน้นความสวยงาม</h4>
+<p style="margin:0 0 8px;font-size:0.85rem;color:#555;">แนะนำ: <strong>เจลไล่นก</strong></p>
+<p style="margin:0;font-size:0.78rem;color:#888;">ไม่เห็นจากภายนอก ไม่ทำลายทัศนียภาพ ปลอดภัย 100%</p>
+</div>
+
+</div>
+<!-- /wp:html -->
+
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
@@ -258,22 +322,22 @@ $home_content = '
 <!-- wp:gallery {"columns":3,"linkTo":"none"} -->
 <figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(7) . '" alt="อาคารสำนักงาน ป.ป.ช. ภาค4"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(7) . '" alt="ติดตั้งตาข่ายกันนก อาคารสำนักงาน ป.ป.ช. ภาค4 ขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(10) . '" alt="หอพักชาย มหาวิทยาลัยขอนแก่น"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(10) . '" alt="ติดตั้งตาข่ายกันนก หอพักชาย มหาวิทยาลัยขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(13) . '" alt="วิทยาลัยสาธารณสุขสิรินธร"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(13) . '" alt="ติดตั้งตาข่ายกันนก วิทยาลัยสาธารณสุขสิรินธร ขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(20) . '" alt="หอพักพยาบาล โรงพยาบาลสิรินธร"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(20) . '" alt="ติดตั้งตาข่ายกันนก หอพักพยาบาล โรงพยาบาลสิรินธร ขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(35) . '" alt="เมโทรคอนโด (METRO CONDO)"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(35) . '" alt="ติดตั้งตาข่ายกันนก เมโทรคอนโด ขอนแก่น"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . project_img(45) . '" alt="ESCENT CONDO"/></figure>
+<figure class="wp-block-image"><img src="' . project_img(45) . '" alt="ติดตั้งตาข่ายกันนก ESCENT CONDO ขอนแก่น"/></figure>
 <!-- /wp:image -->
 </figure>
 <!-- /wp:gallery -->
@@ -374,6 +438,14 @@ $home_content = '
 <div class="faq-item">
 <h4>มีรับประกันหลังติดตั้งไหม?</h4>
 <p>มีรับประกันงานติดตั้ง 3 ปี หากพบปัญหา ทีมงานเข้าแก้ไขฟรีตามเงื่อนไขการรับประกัน</p>
+</div>
+<div class="faq-item">
+<h4>ติดตั้งแล้วนกจะเจ็บไหม?</h4>
+<p>ไม่เจ็บครับ วิธีของเราเป็นแบบสันติวิธี 100% — เพียงกันไม่ให้นกเข้ามาในพื้นที่ ไม่ทำร้าย ไม่ฆ่า ปลอดภัยต่อนก คน และสัตว์เลี้ยง</p>
+</div>
+<div class="faq-item">
+<h4>รับติดตั้งพื้นที่ไหนบ้าง?</h4>
+<p>ยินดีให้บริการทั่วประเทศ โดยเฉพาะภาคอีสาน: ขอนแก่น อุดรธานี นครราชสีมา มหาสารคาม / เชียงใหม่ / ชลบุรี และปริมณฑล สำนักงานใหญ่อยู่ที่ขอนแก่น</p>
 </div>
 <!-- /wp:html -->
 
@@ -677,41 +749,41 @@ $services_content = '
 // Project list from company profile PDF (40+ real projects) with categories
 $projects = array(
     // อาคารราชการ & สถาบัน
-    array('name' => 'อาคารสำนักงาน ป.ป.ช. ภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 7, 'cat' => 'อาคารราชการ'),
-    array('name' => 'อู่ราชนาวีมหิดลอดุลยเดช กรมอู่ทหารเรือ', 'location' => 'จังหวัดชลบุรี', 'page' => 9, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักชาย 7 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 10, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักชาย 8 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 11, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพัก 21-23 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 12, 'cat' => 'อาคารราชการ'),
-    array('name' => 'วิทยาลัยสาธารณสุขสิรินธร อาคาร 10 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 13, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักแพทย์ โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 16, 'cat' => 'อาคารราชการ'),
-    array('name' => 'อาคารสิริภักษ์ สำนักงานคลังจังหวัด', 'location' => 'จังหวัดขอนแก่น', 'page' => 18, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักพยาบาล โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 19, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักพยาบาล โรงพยาบาลสิรินธร', 'location' => 'จังหวัดขอนแก่น', 'page' => 20, 'cat' => 'อาคารราชการ'),
-    array('name' => 'หอพักแพทย์ มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 21, 'cat' => 'อาคารราชการ'),
+    array('name' => 'อาคารสำนักงาน ป.ป.ช. ภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 7, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่าย HDPE ป้องกันนกพิราบ อาคารราชการ 5 ชั้น แก้ปัญหาขี้นกตามระเบียง'),
+    array('name' => 'อู่ราชนาวีมหิดลอดุลยเดช กรมอู่ทหารเรือ', 'location' => 'จังหวัดชลบุรี', 'page' => 9, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนกอาคารทหาร พื้นที่กว้าง ทีมโรยตัวพร้อมอุปกรณ์ Safety ครบ'),
+    array('name' => 'หอพักชาย 7 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 10, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่าย HDPE ระเบียงหอพัก 6 ชั้น จบปัญหานกทำรังถาวร'),
+    array('name' => 'หอพักชาย 8 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 11, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนก ระเบียง+ช่องแสง ป้องกันนกเข้าอาคาร'),
+    array('name' => 'หอพัก 21-23 มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 12, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนก 3 อาคาร พื้นที่รวมกว่า 300 ตร.ม.'),
+    array('name' => 'วิทยาลัยสาธารณสุขสิรินธร อาคาร 10 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 13, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนก อาคารสูง 10 ชั้น ทีมโรยตัวมืออาชีพ'),
+    array('name' => 'หอพักแพทย์ โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 16, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่าย HDPE ระเบียงหอพักแพทย์ แก้ปัญหาขี้นก+สุขอนามัย'),
+    array('name' => 'อาคารสิริภักษ์ สำนักงานคลังจังหวัด', 'location' => 'จังหวัดขอนแก่น', 'page' => 18, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งหนามกันนกสแตนเลส 304 ขอบหน้าต่างอาคารราชการ'),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 19, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนกระเบียง ป้องกันนกทำรังในพื้นที่สุขอนามัย'),
+    array('name' => 'หอพักพยาบาล โรงพยาบาลสิรินธร', 'location' => 'จังหวัดขอนแก่น', 'page' => 20, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่าย HDPE ครอบคลุมทั้งอาคาร จบปัญหา 100%'),
+    array('name' => 'หอพักแพทย์ มหาวิทยาลัยขอนแก่น', 'location' => 'จังหวัดขอนแก่น', 'page' => 21, 'cat' => 'อาคารราชการ', 'desc' => 'ติดตั้งตาข่ายกันนกระเบียง+ช่องแสง อาคารสูง วิศวกรคุมงาน'),
     // โรงงาน & โกดัง
-    array('name' => 'โรงงาน DOS', 'location' => 'สาขาขอนแก่น', 'page' => 15, 'cat' => 'โรงงาน'),
-    array('name' => 'โกดัง บริษัทอินเวนทิโว คอสเมติก จำกัด', 'location' => 'จังหวัดมหาสารคาม', 'page' => 24, 'cat' => 'โรงงาน'),
-    array('name' => 'โกดังให้เช่า A6', 'location' => 'จังหวัดเชียงใหม่', 'page' => 25, 'cat' => 'โรงงาน'),
-    array('name' => 'โกดังสินค้า อำเภอสารภี', 'location' => 'จังหวัดเชียงใหม่', 'page' => 28, 'cat' => 'โรงงาน'),
+    array('name' => 'โรงงาน DOS', 'location' => 'สาขาขอนแก่น', 'page' => 15, 'cat' => 'โรงงาน', 'desc' => 'ติดตั้งตาข่ายกันนกโรงงานอุตสาหกรรม พื้นที่กว้าง หลังคาสูง'),
+    array('name' => 'โกดัง บริษัทอินเวนทิโว คอสเมติก จำกัด', 'location' => 'จังหวัดมหาสารคาม', 'page' => 24, 'cat' => 'โรงงาน', 'desc' => 'ติดตั้งตาข่ายกันนกโกดังเก็บสินค้า ป้องกันมูลนกปนเปื้อนผลิตภัณฑ์'),
+    array('name' => 'โกดังให้เช่า A6', 'location' => 'จังหวัดเชียงใหม่', 'page' => 25, 'cat' => 'โรงงาน', 'desc' => 'ติดตั้งตาข่ายกันนก โกดังให้เช่า ป้องกันนกทำรังใต้หลังคา'),
+    array('name' => 'โกดังสินค้า อำเภอสารภี', 'location' => 'จังหวัดเชียงใหม่', 'page' => 28, 'cat' => 'โรงงาน', 'desc' => 'ติดตั้งตาข่ายกันนก โกดังสินค้า พื้นที่กว้าง เสร็จใน 2 วัน'),
     // คอนโด & หอพัก
-    array('name' => 'หอพัก TRIPLE T RESIDENCE KKU', 'location' => 'จังหวัดขอนแก่น', 'page' => 30, 'cat' => 'คอนโด'),
-    array('name' => 'คอนโดฉัตรเพชร โนนม่วง', 'location' => 'จังหวัดขอนแก่น', 'page' => 34, 'cat' => 'คอนโด'),
-    array('name' => 'เมโทรคอนโด (METRO CONDO)', 'location' => 'จังหวัดขอนแก่น', 'page' => 35, 'cat' => 'คอนโด'),
-    array('name' => 'คอนโดมิเนียม X10 ศรีนครินทร์', 'location' => 'จังหวัดขอนแก่น', 'page' => 40, 'cat' => 'คอนโด'),
-    array('name' => 'เดอะ เดสทินี เอ็กคลูซีพ คอนโดมิเนียม', 'location' => 'จังหวัดขอนแก่น', 'page' => 42, 'cat' => 'คอนโด'),
-    array('name' => 'ชาลิสา คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 43, 'cat' => 'คอนโด'),
-    array('name' => 'ESCENT CONDO', 'location' => 'จังหวัดขอนแก่น', 'page' => 45, 'cat' => 'คอนโด'),
-    array('name' => 'เอพี บูเลอวาร์ด คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 46, 'cat' => 'คอนโด'),
-    array('name' => 'เดอะ เบส ไฮท์ มิตรภาพ', 'location' => 'จังหวัดขอนแก่น', 'page' => 49, 'cat' => 'คอนโด'),
-    array('name' => 'คอนโดกัลปพฤกษ์ เลควิว', 'location' => 'จังหวัดขอนแก่น', 'page' => 50, 'cat' => 'คอนโด'),
+    array('name' => 'หอพัก TRIPLE T RESIDENCE KKU', 'location' => 'จังหวัดขอนแก่น', 'page' => 30, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่าย HDPE ระเบียงหอพักนักศึกษา หลายห้อง'),
+    array('name' => 'คอนโดฉัตรเพชร โนนม่วง', 'location' => 'จังหวัดขอนแก่น', 'page' => 34, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนกระเบียงคอนโด แทบมองไม่เห็น สวยเรียบร้อย'),
+    array('name' => 'เมโทรคอนโด (METRO CONDO)', 'location' => 'จังหวัดขอนแก่น', 'page' => 35, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนกคอนโด ป้องกันนกเข้าระเบียง+ห้องนอน'),
+    array('name' => 'คอนโดมิเนียม X10 ศรีนครินทร์', 'location' => 'จังหวัดขอนแก่น', 'page' => 40, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่าย HDPE ระเบียงคอนโดหรู เสร็จใน 3 ชม.'),
+    array('name' => 'เดอะ เดสทินี เอ็กคลูซีพ คอนโดมิเนียม', 'location' => 'จังหวัดขอนแก่น', 'page' => 42, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนกคอนโดหรู งานละเอียดเรียบร้อย'),
+    array('name' => 'ชาลิสา คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 43, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนก ระเบียงคอนโด มองจากภายนอกแทบไม่เห็น'),
+    array('name' => 'ESCENT CONDO', 'location' => 'จังหวัดขอนแก่น', 'page' => 45, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่าย HDPE คอนโดสูง ทีมโรยตัวมืออาชีพ'),
+    array('name' => 'เอพี บูเลอวาร์ด คอนโด', 'location' => 'จังหวัดขอนแก่น', 'page' => 46, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนกระเบียงคอนโด จบปัญหานกพิราบ 100%'),
+    array('name' => 'เดอะ เบส ไฮท์ มิตรภาพ', 'location' => 'จังหวัดขอนแก่น', 'page' => 49, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนก คอนโดสูง ถ.มิตรภาพ งานเสร็จเรียบร้อย'),
+    array('name' => 'คอนโดกัลปพฤกษ์ เลควิว', 'location' => 'จังหวัดขอนแก่น', 'page' => 50, 'cat' => 'คอนโด', 'desc' => 'ติดตั้งตาข่ายกันนก ระเบียงวิวทะเลสาบ ไม่บังวิว'),
     // บ้านพักอาศัย
-    array('name' => 'บ้านพักอธิการบดีอัยการภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 22, 'cat' => 'บ้านพักอาศัย'),
-    array('name' => 'หมู่บ้านสีวลี', 'location' => 'อำเภอเมืองขอนแก่น', 'page' => 33, 'cat' => 'บ้านพักอาศัย'),
-    array('name' => 'หมู่บ้านเออเบินนารา แอร์พอร์ต-บายพาส', 'location' => 'จังหวัดขอนแก่น', 'page' => 36, 'cat' => 'บ้านพักอาศัย'),
-    array('name' => 'หมู่บ้าน KLEVER TYME', 'location' => 'จังหวัดขอนแก่น', 'page' => 39, 'cat' => 'บ้านพักอาศัย'),
+    array('name' => 'บ้านพักอธิการบดีอัยการภาค4', 'location' => 'จังหวัดขอนแก่น', 'page' => 22, 'cat' => 'บ้านพักอาศัย', 'desc' => 'ติดตั้งตาข่ายกันนก บ้านพักผู้บริหาร ใต้หลังคา+ชายคา'),
+    array('name' => 'หมู่บ้านสีวลี', 'location' => 'อำเภอเมืองขอนแก่น', 'page' => 33, 'cat' => 'บ้านพักอาศัย', 'desc' => 'ติดตั้งตาข่ายกันนก บ้านจัดสรร แก้ปัญหานกทำรังใต้หลังคา'),
+    array('name' => 'หมู่บ้านเออเบินนารา แอร์พอร์ต-บายพาส', 'location' => 'จังหวัดขอนแก่น', 'page' => 36, 'cat' => 'บ้านพักอาศัย', 'desc' => 'ติดตั้งตาข่ายกันนก บ้านพักอาศัย ป้องกันนกเข้าพื้นที่ซักล้าง'),
+    array('name' => 'หมู่บ้าน KLEVER TYME', 'location' => 'จังหวัดขอนแก่น', 'page' => 39, 'cat' => 'บ้านพักอาศัย', 'desc' => 'ติดตั้งตาข่ายกันนก หมู่บ้านจัดสรร ป้องกันนกเข้าชายคา'),
     // อาคารพาณิชย์ & คลินิก
-    array('name' => 'ตั้งฮ่งหลี อาคารพาณิชย์ 4 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 27, 'cat' => 'อาคารพาณิชย์'),
-    array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29, 'cat' => 'อาคารพาณิชย์'),
+    array('name' => 'ตั้งฮ่งหลี อาคารพาณิชย์ 4 ชั้น', 'location' => 'จังหวัดขอนแก่น', 'page' => 27, 'cat' => 'อาคารพาณิชย์', 'desc' => 'ติดตั้งตาข่ายกันนก อาคารพาณิชย์ 4 ชั้น กันนกทำรังหน้าร้าน'),
+    array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29, 'cat' => 'อาคารพาณิชย์', 'desc' => 'ติดตั้งตาข่ายกันนก คลินิก ป้องกันมูลนกในพื้นที่สุขอนามัย'),
 );
 
 $portfolio_content = '
@@ -764,15 +836,19 @@ foreach ($categories as $cat_name => $cat_projects) {
 </div>';
         }
         
+        $alt_text = isset($project['desc']) ? 'ติดตั้งตาข่ายกันนก ' . $project['name'] . ' ' . $project['location'] : $project['name'];
+        $desc_html = isset($project['desc']) ? '<p style="color:#555;font-size:0.82em;margin:4px 0 0;line-height:1.4;">' . $project['desc'] . '</p>' : '';
+        
         $portfolio_content .= '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $project['name'] . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $alt_text . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 ' . $gallery_html . '
 <h4 class="wp-block-heading">' . $project['name'] . '</h4>
-<p style="color:#666;font-size:0.9em;">' . $project['location'] . '</p>
+<p style="color:#666;font-size:0.9em;margin:0;">' . $project['location'] . '</p>
+' . $desc_html . '
 </div>
 <!-- /wp:column -->';
         if ($count % 3 == 0 || $count == $total) {
