@@ -128,28 +128,81 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
     FORM_SHORTCODE='[contact-form-7 title="แบบฟอร์มติดต่อ"]'
   fi
 
+  echo "=== Importing Media Files ==="
+  SITE_URL_FOR_MEDIA="${PROTOCOL}://${SITE_URL}"
+
+  # Import all images and store their URLs
+  declare -A IMG_URLS
+  if [ -d /tmp/birdnet-assets/images ]; then
+    for img in /tmp/birdnet-assets/images/birdnet-*.jpg; do
+      if [ -f "$img" ] && [ $(wc -c < "$img") -gt 1000 ]; then
+        BASENAME=$(basename "$img" .jpg)
+        ATTACHMENT_ID=$(wp media import "$img" --title="Birds Go Away - ${BASENAME}" --path=/var/www/html --allow-root --porcelain 2>/dev/null || echo "")
+        if [ -n "$ATTACHMENT_ID" ]; then
+          IMG_URL=$(wp post get "$ATTACHMENT_ID" --field=guid --path=/var/www/html --allow-root 2>/dev/null || echo "")
+          if [ -n "$IMG_URL" ]; then
+            IMG_URLS["$BASENAME"]="$IMG_URL"
+          fi
+        fi
+      fi
+    done
+    echo "Imported ${#IMG_URLS[@]} images"
+  fi
+
+  # Import videos
+  declare -A VID_URLS
+  if [ -d /tmp/birdnet-assets/videos ]; then
+    for vid in /tmp/birdnet-assets/videos/reel-*.mp4; do
+      if [ -f "$vid" ]; then
+        BASENAME=$(basename "$vid" .mp4)
+        ATTACHMENT_ID=$(wp media import "$vid" --title="Birds Go Away - ${BASENAME}" --path=/var/www/html --allow-root --porcelain 2>/dev/null || echo "")
+        if [ -n "$ATTACHMENT_ID" ]; then
+          VID_URL=$(wp post get "$ATTACHMENT_ID" --field=guid --path=/var/www/html --allow-root 2>/dev/null || echo "")
+          if [ -n "$VID_URL" ]; then
+            VID_URLS["$BASENAME"]="$VID_URL"
+          fi
+        fi
+      fi
+    done
+    echo "Imported ${#VID_URLS[@]} videos"
+  fi
+
+  # Helper: get image URL with fallback
+  get_img() {
+    local key="$1"
+    echo "${IMG_URLS[$key]:-${SITE_URL_FOR_MEDIA}/wp-content/uploads/birdnet-assets/${key}.jpg}"
+  }
+  get_vid() {
+    local key="$1"
+    echo "${VID_URLS[$key]:-${SITE_URL_FOR_MEDIA}/wp-content/uploads/birdnet-assets/${key}.mp4}"
+  }
+
   echo "=== Creating Pages ==="
 
   # Home Page
   HOME_ID=$(wp post create --post_type=page --post_title='หน้าแรก' --post_status=publish --post_name='home' --path=/var/www/html --allow-root --porcelain --post_content='
 <!-- wp:columns -->
-<div class="wp-block-columns">
+<div class="wp-block-columns hero-section">
 
 <!-- wp:column -->
-<div class="wp-block-column">
+<div class="wp-block-column" style="background:transparent !important;border:none !important;">
 
 <!-- wp:heading {"level":1} -->
 <h1>BIRDS GO AWAY<br>บริการติดตั้งตาข่ายกันนก มืออาชีพ</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">บริการติดตั้งตาข่ายกันนก ผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด<br>ปรึกษาฟรีโดยวิศวกรโยธาในพื้นที่ — รับประกันงานติดตั้ง 3 ปี</p>
+<p class="has-medium-font-size">กำจัดปัญหานกพิราบรบกวนอย่างถาวร ด้วยทีมช่างมืออาชีพผ่านการอบรมโรยตัว มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size"><strong>ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี | รับประกันงานติดตั้ง 3 ปี | ปรึกษาฟรีโดยวิศวกรโยธา</strong></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-cyan-blue"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background" href="/contact">ขอใบเสนอราคาฟรี</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="tel:0629964994">โทรปรึกษาฟรี 062-996-4994</a></div>
 <!-- /wp:button -->
 <!-- wp:button {"className":"is-style-outline"} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="/services">ดูบริการทั้งหมด</a></div>
@@ -163,175 +216,337 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 </div>
 <!-- /wp:columns -->
 
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
 <!-- wp:heading {"textAlign":"center","level":2} -->
-<h2 class="has-text-align-center">ทำไมต้องเลือกเรา?</h2>
+<h2 class="has-text-align-center">ปัญหานกพิราบ ที่คุณกำลังเผชิญ</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">นกพิราบสร้างปัญหามากมายให้กับบ้าน คอนโด และอาคารของคุณ ไม่ว่าจะเป็น...</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>มูลนกสกปรก</h3>
+<p>มูลนกพิราบสร้างความสกปรกบนพื้นระเบียง ราวตากผ้า เครื่องปรับอากาศ ทำให้เกิดคราบสกปรกและกลิ่นเหม็น</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>เชื้อโรคและไรนก</h3>
+<p>มูลนกเป็นแหล่งสะสมเชื้อโรค แบคทีเรีย เชื้อรา และไรนก ซึ่งเป็นอันตรายต่อสุขภาพของคนในครอบครัว</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>เสียงรบกวน</h3>
+<p>นกพิราบส่งเสียงร้องรบกวนตั้งแต่เช้ามืด ทำให้นอนไม่หลับ สร้างความรำคาญต่อผู้อยู่อาศัย</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>ความเสียหายต่ออาคาร</h3>
+<p>กรดในมูลนกกัดกร่อนสี ปูน โลหะ ทำให้อาคารเสื่อมสภาพเร็ว เสียค่าซ่อมแซมสูง</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ทำไมต้องเลือก BIRDS GO AWAY?</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">🛡️ ปลอดภัย 100%</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">วัสดุคุณภาพสูง ไม่ทำร้ายนก ปลอดภัยต่อคนและสัตว์เลี้ยง</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>ผ่านการอบรมโรยตัว</h3>
+<p>ทีมช่างผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate รับรองมาตรฐาน ทำงานบนที่สูงอย่างปลอดภัย</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">⚡ ติดตั้งรวดเร็ว</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">ทีมช่างมืออาชีพ ดำเนินงานรวดเร็ว ไม่รบกวนการใช้ชีวิต</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>วิศวกรคุมงาน</h3>
+<p>ทุกโปรเจคมีวิศวกรโยธาคุมงาน วางแผนอย่างรอบคอบ ปรึกษาฟรีโดยวิศวกรในพื้นที่</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">✅ รับประกันผลงาน</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">รับประกันคุณภาพงานติดตั้ง พร้อมบริการหลังการขาย</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>รับประกัน 3 ปี</h3>
+<p>รับประกันงานติดตั้งนานถึง 3 ปี ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี แข็งแรงทนทาน</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">💰 ราคายุติธรรม</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">เสนอราคาฟรี ไม่มีค่าใช้จ่ายแอบแฝง คุ้มค่าทุกบาท</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>เสนอราคาฟรี</h3>
+<p>เสนอราคาฟรี ไม่มีค่าใช้จ่ายแอบแฝง ราคายุติธรรม คุ้มค่าทุกบาท พร้อมบริการหลังการขาย</p>
 </div>
 <!-- /wp:column -->
-
 </div>
 <!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center">บริการของเรา</h2>
 <!-- /wp:heading -->
 
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">เราให้บริการป้องกันนกครบวงจร ด้วยทีมช่างมืออาชีพและวัสดุคุณภาพสูง</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>🔷 ตาข่าย HDPE กันนก</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>ตาข่าย HDPE คุณภาพสูง อายุการใช้งานประมาณ 5-7 ปี แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>ตาข่าย HDPE กันนก</h3>
+<p>ตาข่ายไนล่อน HDPE คุณภาพสูง แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี อายุการใช้งานประมาณ 5-7 ปี ติดตั้งแบบไร้รอยต่อ มองแล้วสบายตา กลมกลืนกับอาคาร</p>
+<p><a href="/services">รายละเอียดเพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>☀️ แผงกันนกโซลาร์เซลล์</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>แผงโซล่าเซลล์สะอาด ปลอดนก ยืดอายุการใช้งาน หมดปัญหานกเข้าไปทำรัง ใต้แผงสกปรก เสี่ยงสายไฟเสียหาย</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>หนามกันนก</h3>
+<p>เหล็กแหลมกันนก Bird Spikes ฐานสแตนเลส รุ่นพิเศษ 3 แถวแบบหนามไขว้ ป้องกันนกพิราบเกาะ ติดตั้งขอบบัว หน้าต่าง ดาดฟ้า ป้องกันขับถ่ายมูลลงพื้นด้านล่าง</p>
+<p><a href="/services">รายละเอียดเพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
-
 </div>
 <!-- /wp:columns -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>🔺 หนามกันนก</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>หนามสแตนเลสกันนก ป้องกันนกเกาะ ทนทานต่อทุกสภาพอากาศ ติดตั้งง่าย ราคาประหยัด</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>แผงกันนกโซลาร์เซลล์</h3>
+<p>ระบบป้องกันนกสำหรับแผงโซลาร์เซลล์โดยเฉพาะ ใช้ระบบคลิปยึดพิเศษ ไม่ต้องเจาะแผง ไม่เสียการรับประกัน ป้องกันนกทำรังใต้แผง ยืดอายุการใช้งาน</p>
+<p><a href="/services">รายละเอียดเพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>💧 เจลไล่นก</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>เจลไล่นก</h3>
+<p>เจลไล่นกสูตรพิเศษ ไม่มีสารพิษ ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว เหมาะสำหรับพื้นที่ที่ต้องการความสวยงาม ไม่ทิ้งรอย มองไม่เห็น</p>
+<p><a href="/services">รายละเอียดเพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
-
 </div>
 <!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ขั้นตอนการทำงาน</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">เราดำเนินงานอย่างเป็นระบบ ตั้งแต่ต้นจนจบ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>1. สำรวจหน้างาน</h3>
+<p>วิศวกรโยธาเข้าสำรวจพื้นที่จริง ประเมินสภาพปัญหา วัดพื้นที่ วิเคราะห์ลักษณะนิสัยของนก เพื่อเลือกวิธีที่เหมาะสมที่สุด</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>2. เสนอราคา</h3>
+<p>จัดทำใบเสนอราคาอย่างละเอียด ระบุวัสดุ ราคา ระยะเวลาชัดเจน ไม่มีค่าใช้จ่ายแอบแฝง ปรึกษาฟรีไม่มีค่าใช้จ่าย</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>3. ดำเนินการติดตั้ง</h3>
+<p>ทีมช่างมืออาชีพติดตั้งด้วยอุปกรณ์ครบครัน ทำงานรวดเร็ว เรียบร้อย สะอาด พร้อมล้างทำความสะอาดพื้นที่ให้ฟรี</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"25%"} -->
+<div class="wp-block-column" style="flex-basis:25%;text-align:center;">
+<h3>4. ส่งมอบงาน</h3>
+<p>ตรวจสอบคุณภาพงาน ส่งมอบพร้อมใบรับประกัน 3 ปี มีบริการหลังการขาย ซ่อมแซมฟรีตามเงื่อนไข</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ตัวอย่างผลงานล่าสุด</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ขอบพระคุณลูกค้าทุกท่านที่ไว้ใจ Birds Go Away ใช้บริการ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_12" alt="ผลงานติดตั้งตาข่ายกันนก Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_13" alt="ผลงานติดตั้งตาข่ายกันนก คอนโด"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_14" alt="ผลงานติดตั้งตาข่ายกันนก ระเบียง"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_15" alt="ผลงานติดตั้งตาข่ายกันนก อาคาร"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_16" alt="ผลงานติดตั้งตาข่ายกันนก บ้าน"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_17" alt="ผลงานติดตั้งตาข่ายกันนก สำนักงาน"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link" href="/portfolio">ดูผลงานทั้งหมด →</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">วิดีโอผลงานการติดตั้ง</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ดูคลิปขั้นตอนการทำงานจริงจากหน้างาน</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_01"></video><figcaption>ตัวอย่างการติดตั้งตาข่ายกันนก #1</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_02"></video><figcaption>ตัวอย่างการติดตั้งตาข่ายกันนก #2</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_03"></video><figcaption>ตัวอย่างการติดตั้งตาข่ายกันนก #3</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">คำถามที่พบบ่อย (FAQ)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div class="faq-item">
+<h4>ตาข่ายกันนก HDPE มีอายุการใช้งานกี่ปี?</h4>
+<p>ตาข่าย HDPE ของเรามีอายุการใช้งานประมาณ 5-7 ปี ขึ้นอยู่กับสภาพแวดล้อม เช่น แสงแดด ลม ฝน ตาข่ายทนต่อรังสี UV แข็งแรง ทนทานต่อแรงดึง แรงกระแทก และสารเคมี</p>
+</div>
+<div class="faq-item">
+<h4>ตาข่ายกันนก ติดตั้งแล้วมองเห็นจากภายนอกไหม?</h4>
+<p>ตาข่ายกันนกที่เราใช้เป็นสีดำ เส้นเล็ก ทึบแสง ไม่สะท้อนแสง เมื่อติดตั้งเสร็จแล้วจะกลมกลืนกับอาคาร มองจากภายนอกแทบมองไม่เห็นตาข่าย ให้ความรู้สึกสบายตา</p>
+</div>
+<div class="faq-item">
+<h4>ติดตั้งตาข่ายกันนกใช้เวลานานแค่ไหน?</h4>
+<p>ขึ้นอยู่กับขนาดพื้นที่ โดยทั่วไปสำหรับระเบียงคอนโดใช้เวลาประมาณ 1-2 ชั่วโมง สำหรับพื้นที่ขนาดใหญ่ เช่น โรงงาน หรือตึกสูง อาจใช้เวลา 1-3 วัน</p>
+</div>
+<div class="faq-item">
+<h4>มีบริการล้างทำความสะอาดหลังติดตั้งไหม?</h4>
+<p>มีครับ! หลังติดตั้งเสร็จ ทีมงาน Birds Go Away จะเก็บรังนก มูลนก ล้างทำความสะอาดให้ลูกค้าฟรี ช่วยประหยัดค่าใช้จ่ายค่าทำความสะอาด</p>
+</div>
+<div class="faq-item">
+<h4>รับประกันงานติดตั้งกี่ปี?</h4>
+<p>เรารับประกันงานติดตั้งนานถึง 3 ปี หากตาข่ายหลุด หลวม หรือเสียหายจากการติดตั้ง เราจะเข้าซ่อมแซมให้ฟรีตามเงื่อนไข</p>
+</div>
+<div class="faq-item">
+<h4>ติดตั้งในคอนโดสูงได้ไหม?</h4>
+<p>ได้ครับ! ทีมช่างของเราผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate รับรองมาตรฐาน พร้อมอุปกรณ์ PPE ครบครัน ติดตั้งได้ทุกชั้น ทุกความสูง</p>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center">พื้นที่ให้บริการ</h2>
 <!-- /wp:heading -->
 
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">พร้อมให้บริการใน 3 จังหวัดหลัก และพื้นที่ใกล้เคียง</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">📍 ขอนแก่น</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><a href="tel:0629964994">062-996-4994</a></p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:33.33%;text-align:center;">
+<h3>ขอนแก่น</h3>
+<p style="font-size:1.3rem;font-weight:700;color:#f97316;"><a href="tel:0629964994" style="color:#f97316;">062-996-4994</a></p>
+<p>สำนักงานใหญ่<br>88/38 ขอนแก่น</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">📍 เชียงใหม่</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><a href="tel:0936415623">093-641-5623</a></p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:33.33%;text-align:center;">
+<h3>เชียงใหม่</h3>
+<p style="font-size:1.3rem;font-weight:700;color:#f97316;"><a href="tel:0936415623" style="color:#f97316;">093-641-5623</a></p>
+<p>สาขาเชียงใหม่<br>พร้อมให้บริการทั่วภาคเหนือ</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column {"width":"33.33%"} -->
-<div class="wp-block-column" style="flex-basis:33.33%">
-<!-- wp:heading {"level":3,"textAlign":"center"} -->
-<h3 class="has-text-align-center">📍 ชลบุรี</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><a href="tel:0956292488">095-629-2488</a></p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="flex-basis:33.33%;text-align:center;">
+<h3>ชลบุรี</h3>
+<p style="font-size:1.3rem;font-weight:700;color:#f97316;"><a href="tel:0956292488" style="color:#f97316;">095-629-2488</a></p>
+<p>สาขาชลบุรี<br>พร้อมให้บริการภาคตะวันออก</p>
 </div>
 <!-- /wp:column -->
-
 </div>
 <!-- /wp:columns -->
 
-<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">ปรึกษาฟรี! ติดต่อเราวันนี้เพื่อรับใบเสนอราคา</p>
-<!-- /wp:paragraph -->
+<!-- wp:html -->
+<div class="guarantee-badge">รับประกันงานติดตั้งนานถึง 3 ปี | ปรึกษาฟรี ไม่มีค่าใช้จ่าย</div>
+<!-- /wp:html -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-cyan-blue","fontSize":"medium"} -->
-<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background" href="/contact">ติดต่อเราเลย</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan","fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ติดต่อเราเลย — ขอใบเสนอราคาฟรี</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -339,24 +554,35 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
   # Services Page
   SERVICES_ID=$(wp post create --post_type=page --post_title='บริการของเรา' --post_status=publish --post_name='services' --path=/var/www/html --allow-root --porcelain --post_content='
-<!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center">บริการของเรา</h1>
+<!-- wp:columns -->
+<div class="wp-block-columns hero-section">
+<!-- wp:column -->
+<div class="wp-block-column" style="background:transparent !important;border:none !important;">
+<!-- wp:heading {"level":1} -->
+<h1>บริการป้องกันนกครบวงจร</h1>
 <!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">เราให้บริการป้องกันนกครบวงจร ด้วยทีมช่างมืออาชีพและวัสดุคุณภาพสูง</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">เราให้บริการป้องกันนก 4 รูปแบบ เลือกได้ตามสภาพพื้นที่ ด้วยทีมช่างมืออาชีพผ่านการอบรมโรยตัว มีใบ Certificate วิศวกรคุมงานทุกโปรเจค</p>
 <!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>🔷 ตาข่าย HDPE กันนก (HDPE Bird Netting)</h2>
+<h2>1. ตาข่าย HDPE กันนก (HDPE Bird Netting)</h2>
 <!-- /wp:heading -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"60%"} -->
+<div class="wp-block-column" style="flex-basis:60%">
 <!-- wp:paragraph -->
-<p>ตาข่ายไนล่อน HDPE (High-Density Polyethylene) เป็นวิธีป้องกันนกที่มีประสิทธิภาพสูงสุด เหมาะสำหรับพื้นที่ขนาดใหญ่</p>
+<p>ตาข่ายไนล่อน HDPE (High-Density Polyethylene) เป็นวิธีป้องกันนกที่มีประสิทธิภาพสูงสุดและเป็นที่นิยมมากที่สุด เหมาะสำหรับพื้นที่ขนาดใหญ่ ทั้งระเบียงคอนโด บ้านพัก อาคารพาณิชย์ โรงงาน และโกดัง</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -365,10 +591,12 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li><strong>ทนทานสูง</strong> — วัสดุ HDPE ทนแดด ทนฝน ไม่ผุกร่อน อายุการใช้งาน 5-10 ปี</li>
-<li><strong>ไม่ทำร้ายนก</strong> — ออกแบบมาเพื่อป้องกัน ไม่ใช่ทำอันตราย</li>
-<li><strong>มองไม่ชัดจากระยะไกล</strong> — ไม่ทำลายทัศนียภาพของอาคาร</li>
-<li><strong>หลากหลายขนาดช่องตาข่าย</strong> — เลือกได้ตามชนิดของนก</li>
+<li><strong>ทนทานสูง</strong> — วัสดุ HDPE ทนแดด ทนฝน ไม่ผุกร่อน อายุการใช้งาน 5-7 ปี (ตาข่ายคุณภาพสูง ใช้ได้ถึง 10 ปี)</li>
+<li><strong>ไม่ทำร้ายนก</strong> — ออกแบบมาเพื่อป้องกัน ไม่ใช่ทำอันตราย ไม่มีเงี่ยงหรือส่วนแหลมคม</li>
+<li><strong>มองไม่ชัดจากระยะไกล</strong> — ตาข่ายสีดำ เส้นเล็ก ทึบแสง ไม่สะท้อนแสง กลมกลืนกับอาคาร</li>
+<li><strong>หลากหลายขนาดช่องตาข่าย</strong> — เลือกได้ตามชนิดของนก ช่องเล็ก 2 ซม. สำหรับนกกระจอก ช่องใหญ่ 5 ซม. สำหรับนกพิราบ</li>
+<li><strong>กันแมลง กันใบไม้</strong> — ป้องกันแมลงวัน แมลงสาบ รวมถึงใบไม้ร่วง</li>
+<li><strong>ทนแรงลม</strong> — ตาข่ายมีความยืดหยุ่น ไม่ขาดง่ายจากแรงลม</li>
 </ul>
 <!-- /wp:list -->
 
@@ -378,36 +606,121 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li>อาคารสำนักงาน / คอนโดมิเนียม</li>
-<li>โรงงาน / โกดังสินค้า</li>
-<li>บ้านพักอาศัย / ทาวน์เฮาส์</li>
+<li>ระเบียงคอนโดมิเนียม / อพาร์ทเมนต์</li>
+<li>อาคารสำนักงาน / อาคารพาณิชย์</li>
+<li>โรงงาน / โกดังสินค้า / คลังสินค้า</li>
+<li>บ้านพักอาศัย / ทาวน์เฮาส์ / บ้านเดี่ยว</li>
 <li>วัด / โบสถ์ / อาคารอนุรักษ์</li>
-<li>ศูนย์การค้า / ร้านอาหาร</li>
+<li>ศูนย์การค้า / ร้านอาหาร / โรงแรม</li>
+<li>โรงพยาบาล / คลินิก</li>
+<li>สนามบิน / สถานีรถไฟ</li>
 </ul>
 <!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_1" alt="ตาข่าย HDPE กันนก - ผลงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_3" alt="ตาข่ายกันนก ติดตั้งระเบียงคอนโด"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_5" alt="ตาข่ายกันนก HDPE คุณภาพสูง"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>☀️ แผงกันนกโซลาร์เซลล์ (Solar Panel Bird Guard)</h2>
+<h2>2. หนามกันนก (Bird Spikes)</h2>
 <!-- /wp:heading -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"60%"} -->
+<div class="wp-block-column" style="flex-basis:60%">
 <!-- wp:paragraph -->
-<p>ระบบป้องกันนกสำหรับแผงโซลาร์เซลล์โดยเฉพาะ ใช้ระบบคลิปยึดพิเศษ <strong>ไม่ต้องเจาะแผง ไม่เป็นอันตรายต่อระบบไฟฟ้า</strong></p>
+<p>เหล็กแหลมกันนก Bird Spikes ฐานสแตนเลส รุ่นพิเศษ 3 แถวแบบหนามไขว้ ป้องกันนกพิราบเกาะ ไม่ว่าจะบริเวณขอบบัว หน้าต่าง ดาดฟ้า ท่อแอร์ ราวระเบียง ป้องกันการขับถ่ายมูลลงพื้นด้านล่าง ติดตั้งง่าย ราคาประหยัด</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
-<h3>ทำไมต้องติดแผงกันนกโซลาร์?</h3>
+<h3>คุณสมบัติเด่น:</h3>
 <!-- /wp:heading -->
 
 <!-- wp:list -->
 <ul>
-<li>นกทำรังใต้แผงโซลาร์ ทำให้เกิดความเสียหายต่อสายไฟ</li>
-<li>มูลนกสะสมทำให้ประสิทธิภาพแผงลดลง 20-30%</li>
-<li>เสียงนกรบกวน โดยเฉพาะช่วงเช้า</li>
-<li>ป้องกันปัญหาไฟฟ้าลัดวงจรจากรังนก</li>
+<li><strong>วัสดุสแตนเลส 304</strong> — ทนสนิม ทนทานทุกสภาพอากาศ อายุการใช้งาน 10+ ปี</li>
+<li><strong>ฐาน UV Polycarbonate</strong> — ไม่เปราะแตกจากแสงแดด</li>
+<li><strong>รุ่น 3 แถว หนามไขว้</strong> — ป้องกันนกได้ทุกทิศทาง ไม่ว่านกจะลงจอดจากมุมไหน</li>
+<li><strong>ไม่ทำร้ายนก</strong> — ออกแบบให้นกไม่สามารถเกาะได้ แต่ไม่ทำอันตราย</li>
+<li><strong>ติดตั้งง่าย</strong> — ใช้กาวซิลิโคนหรือสกรูยึด ติดแน่น ทนทาน</li>
+<li><strong>มองไม่ชัดจากระยะไกล</strong> — ไม่กระทบทัศนียภาพของอาคาร</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>เหมาะสำหรับ:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li>ราวระเบียง / ราวกันตก / ราวบันได</li>
+<li>ชายคา / หลังคา / สันหลังคา</li>
+<li>ป้ายไฟ / ป้ายโฆษณา / ตัวอักษร</li>
+<li>ขอบหน้าต่าง / กันสาด / ขอบบัว</li>
+<li>ท่อแอร์ / รางน้ำ / ราวตากผ้า</li>
+<li>กล้องวงจรปิด / ไฟส่องสว่าง</li>
+</ul>
+<!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_7" alt="หนามกันนก สแตนเลส Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_9" alt="หนามกันนก ติดตั้งขอบหน้าต่าง"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":2} -->
+<h2>3. แผงกันนกโซลาร์เซลล์ (Solar Panel Bird Guard)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"60%"} -->
+<div class="wp-block-column" style="flex-basis:60%">
+<!-- wp:paragraph -->
+<p>ระบบป้องกันนกสำหรับแผงโซลาร์เซลล์โดยเฉพาะ ใช้ระบบคลิปยึดพิเศษ <strong>ไม่ต้องเจาะแผง ไม่เสียการรับประกัน ไม่เป็นอันตรายต่อระบบไฟฟ้า</strong> ป้องกันนกทำรังใต้แผงโซลาร์ ยืดอายุการใช้งาน</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>ปัญหาที่พบ:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li>นกทำรังใต้แผงโซลาร์ ทำให้เกิดความเสียหายต่อสายไฟ เสี่ยงไฟฟ้าลัดวงจร</li>
+<li>มูลนกสะสมบนแผง ทำให้ประสิทธิภาพการผลิตไฟฟ้าลดลง 20-30%</li>
+<li>รังนกอุดตันรางน้ำ ทำให้น้ำรั่วซึมเข้าบ้าน</li>
+<li>เสียงนกรบกวน โดยเฉพาะช่วงเช้ามืด</li>
+<li>ค่าซ่อมแซมระบบไฟฟ้าสูง หากปล่อยทิ้งไว้</li>
 </ul>
 <!-- /wp:list -->
 
@@ -417,23 +730,42 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li><strong>ไม่เจาะแผงโซลาร์</strong> — ไม่ทำให้เสียการรับประกัน</li>
+<li><strong>ไม่เจาะแผงโซลาร์</strong> — ไม่ทำให้เสียการรับประกันแผงโซลาร์</li>
 <li><strong>ติดตั้งง่าย รวดเร็ว</strong> — ใช้เวลาเพียง 1-2 วัน</li>
-<li><strong>วัสดุสแตนเลส 304</strong> — ทนสนิม ทนทานทุกสภาพอากาศ</li>
-<li><strong>ถอดล้างทำความสะอาดได้</strong> — สะดวกในการบำรุงรักษา</li>
+<li><strong>วัสดุสแตนเลส 304 + ตะแกรงสแตนเลส</strong> — ทนสนิม ทนทานทุกสภาพอากาศ</li>
+<li><strong>ถอดล้างทำความสะอาดได้</strong> — สะดวกในการบำรุงรักษาแผงโซลาร์</li>
+<li><strong>ไม่บังแสง</strong> — ไม่ลดประสิทธิภาพการผลิตไฟฟ้า</li>
 </ul>
 <!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_4" alt="แผงกันนกโซลาร์เซลล์ Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_6" alt="ระบบคลิปกันนกโซลาร์เซลล์"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>🔺 หนามกันนก (Bird Spikes)</h2>
+<h2>4. เจลไล่นก (Bird Repellent Gel)</h2>
 <!-- /wp:heading -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"60%"} -->
+<div class="wp-block-column" style="flex-basis:60%">
 <!-- wp:paragraph -->
-<p>หนามกันนกสแตนเลสคุณภาพสูง เป็นวิธีป้องกันนกเกาะที่ได้ผลดีเยี่ยม เหมาะสำหรับราวระเบียง ชายคา ป้ายไฟ และขอบหน้าต่าง</p>
+<p>เจลไล่นกสูตรพิเศษ เป็นวิธีป้องกันนกแบบไม่ทำร้าย ใช้ได้กับทุกพื้นผิว เหมาะสำหรับพื้นที่ที่ไม่สามารถติดตั้งตาข่ายหรือหนามได้ หรือพื้นที่ที่ต้องการความสวยงามสูง</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -442,51 +774,12 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li><strong>วัสดุสแตนเลส 304</strong> — ทนสนิม ทนทานทุกสภาพอากาศ อายุการใช้งานยาวนาน</li>
-<li><strong>ฐาน UV Polycarbonate</strong> — ไม่เปราะแตกจากแสงแดด</li>
-<li><strong>ไม่ทำร้ายนก</strong> — ออกแบบให้นกไม่สามารถเกาะได้ แต่ไม่ทำอันตราย</li>
-<li><strong>ติดตั้งง่าย</strong> — ใช้กาวซิลิโคนหรือสกรูยึด</li>
-<li><strong>มองไม่ชัดจากระยะไกล</strong> — ไม่กระทบทัศนียภาพ</li>
-</ul>
-<!-- /wp:list -->
-
-<!-- wp:heading {"level":3} -->
-<h3>เหมาะสำหรับ:</h3>
-<!-- /wp:heading -->
-
-<!-- wp:list -->
-<ul>
-<li>ราวระเบียง / ราวกันตก</li>
-<li>ชายคา / หลังคา</li>
-<li>ป้ายไฟ / ป้ายโฆษณา</li>
-<li>ขอบหน้าต่าง / กันสาด</li>
-<li>ท่อแอร์ / รางน้ำ</li>
-</ul>
-<!-- /wp:list -->
-
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-<!-- /wp:separator -->
-
-<!-- wp:heading {"level":2} -->
-<h2>💧 เจลไล่นก (Bird Repellent Gel)</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>เจลไล่นกสูตรพิเศษ เป็นวิธีป้องกันนกแบบไม่ทำร้าย ใช้ได้กับทุกพื้นผิว เหมาะสำหรับพื้นที่ที่ไม่สามารถติดตั้งตาข่ายหรือหนามได้</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":3} -->
-<h3>คุณสมบัติเด่น:</h3>
-<!-- /wp:heading -->
-
-<!-- wp:list -->
-<ul>
-<li><strong>ไม่มีสารพิษ</strong> — ปลอดภัยต่อคน สัตว์เลี้ยง และนก</li>
-<li><strong>มองไม่เห็น</strong> — เจลใสไม่ทิ้งคราบ ไม่กระทบความสวยงาม</li>
-<li><strong>ใช้ได้ทุกพื้นผิว</strong> — โลหะ คอนกรีต ไม้ พลาสติก กระเบื้อง</li>
+<li><strong>ไม่มีสารพิษ</strong> — ปลอดภัยต่อคน สัตว์เลี้ยง และนก 100%</li>
+<li><strong>มองไม่เห็น</strong> — เจลใสไม่ทิ้งคราบ ไม่กระทบความสวยงามของอาคาร</li>
+<li><strong>ใช้ได้ทุกพื้นผิว</strong> — โลหะ คอนกรีต ไม้ พลาสติก กระเบื้อง อิฐ</li>
 <li><strong>ทนทานต่อสภาพอากาศ</strong> — ทนฝน ทนแดด ใช้ได้นาน 6-12 เดือน</li>
-<li><strong>ทำงานด้วยประสาทสัมผัส</strong> — นกไม่ชอบความรู้สึกเหนียวที่เท้า</li>
+<li><strong>ทำงานด้วยประสาทสัมผัส</strong> — นกไม่ชอบความรู้สึกเหนียวที่เท้า จึงบินหนี</li>
+<li><strong>ไม่ต้องเจาะ ไม่ต้องยึด</strong> — ทาบนพื้นผิวได้เลย ติดตั้งง่ายที่สุด</li>
 </ul>
 <!-- /wp:list -->
 
@@ -496,26 +789,87 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
 <!-- wp:list -->
 <ul>
-<li>ขอบหน้าต่าง / กรอบประตู</li>
+<li>ขอบหน้าต่าง / กรอบประตู / ขอบบัว</li>
 <li>ราวระเบียงที่ไม่ต้องการติดหนาม</li>
-<li>ป้ายไฟ / ตัวอักษรป้าย</li>
+<li>ป้ายไฟ / ตัวอักษรป้าย / ป้ายโฆษณา</li>
 <li>อาคารอนุรักษ์ที่ห้ามเจาะหรือดัดแปลง</li>
-<li>พื้นที่ที่ต้องการความสวยงาม</li>
+<li>โบสถ์ / วัด / อาคารประวัติศาสตร์</li>
+<li>พื้นที่ที่ต้องการความสวยงามสูง</li>
 </ul>
 <!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_8" alt="เจลไล่นก Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_10" alt="เจลไล่นก ใช้ได้ทุกพื้นผิว"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
-<h2 class="has-text-align-center">สนใจบริการ? ติดต่อเราเลย!</h2>
+<h2 class="has-text-align-center">เปรียบเทียบบริการ</h2>
 <!-- /wp:heading -->
+
+<!-- wp:html -->
+<table class="service-comparison" style="width:100%;border-collapse:collapse;text-align:center;">
+<thead>
+<tr style="background:#1a56db;color:white;">
+<th style="padding:12px;border:1px solid #e2e8f0;">คุณสมบัติ</th>
+<th style="padding:12px;border:1px solid #e2e8f0;">ตาข่าย HDPE</th>
+<th style="padding:12px;border:1px solid #e2e8f0;">หนามกันนก</th>
+<th style="padding:12px;border:1px solid #e2e8f0;">แผงกันนกโซลาร์</th>
+<th style="padding:12px;border:1px solid #e2e8f0;">เจลไล่นก</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">อายุการใช้งาน</td><td style="padding:10px;border:1px solid #e2e8f0;">5-7 ปี</td><td style="padding:10px;border:1px solid #e2e8f0;">10+ ปี</td><td style="padding:10px;border:1px solid #e2e8f0;">10+ ปี</td><td style="padding:10px;border:1px solid #e2e8f0;">6-12 เดือน</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">ประสิทธิภาพ</td><td style="padding:10px;border:1px solid #e2e8f0;">สูงมาก</td><td style="padding:10px;border:1px solid #e2e8f0;">สูง</td><td style="padding:10px;border:1px solid #e2e8f0;">สูงมาก</td><td style="padding:10px;border:1px solid #e2e8f0;">ปานกลาง</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">ความสวยงาม</td><td style="padding:10px;border:1px solid #e2e8f0;">ดี</td><td style="padding:10px;border:1px solid #e2e8f0;">ดี</td><td style="padding:10px;border:1px solid #e2e8f0;">ดี</td><td style="padding:10px;border:1px solid #e2e8f0;">ดีมาก</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">เหมาะกับพื้นที่</td><td style="padding:10px;border:1px solid #e2e8f0;">พื้นที่กว้าง</td><td style="padding:10px;border:1px solid #e2e8f0;">ขอบ/ราว</td><td style="padding:10px;border:1px solid #e2e8f0;">โซลาร์เซลล์</td><td style="padding:10px;border:1px solid #e2e8f0;">ทุกพื้นผิว</td></tr>
+<tr><td style="padding:10px;border:1px solid #e2e8f0;font-weight:600;">ปลอดภัยต่อนก</td><td style="padding:10px;border:1px solid #e2e8f0;">ปลอดภัย</td><td style="padding:10px;border:1px solid #e2e8f0;">ปลอดภัย</td><td style="padding:10px;border:1px solid #e2e8f0;">ปลอดภัย</td><td style="padding:10px;border:1px solid #e2e8f0;">ปลอดภัย</td></tr>
+</tbody>
+</table>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ตัวอย่างผลงานจากลูกค้าจริง</h2>
+<!-- /wp:heading -->
+
+<!-- wp:gallery {"columns":4,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-4 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_11" alt="ผลงาน Birds Go Away 01"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_12" alt="ผลงาน Birds Go Away 02"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_13" alt="ผลงาน Birds Go Away 03"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_14" alt="ผลงาน Birds Go Away 04"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-cyan-blue","fontSize":"medium"} -->
-<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background" href="/contact">ขอใบเสนอราคาฟรี</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan","fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ขอใบเสนอราคาฟรี — โทร 062-996-4994</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -528,81 +882,252 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">ตัวอย่างผลงานการติดตั้งจากลูกค้าจริง — ก่อนและหลังการติดตั้ง</p>
+<p class="has-text-align-center has-medium-font-size">ขอบพระคุณลูกค้าทุกท่านที่ไว้ใจ Birds Go Away — ตัวอย่างผลงานจากลูกค้าจริง</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="guarantee-badge">ผลงานติดตั้งจากลูกค้าจริง ทั่วประเทศ | D Condo ขอนแก่น | บ้านพัก | คอนโด | โรงงาน</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"level":2} -->
+<h2>รูปภาพผลงาน — ตาข่ายกันนก HDPE</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ผลงานติดตั้งตาข่ายกันนก HDPE สำหรับระเบียงคอนโด บ้านพักอาศัย อาคารพาณิชย์ และโรงงาน ติดตั้งแบบไร้รอยต่อ มองแล้วสบายตา กลมกลืนกับอาคาร</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_12" alt="ผลงานติดตั้งตาข่ายกันนก 01"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_13" alt="ผลงานติดตั้งตาข่ายกันนก 02"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_14" alt="ผลงานติดตั้งตาข่ายกันนก 03"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_15" alt="ผลงานติดตั้งตาข่ายกันนก 04"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_16" alt="ผลงานติดตั้งตาข่ายกันนก 05"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_17" alt="ผลงานติดตั้งตาข่ายกันนก 06"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_18" alt="ผลงานติดตั้งตาข่ายกันนก 07"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_19" alt="ผลงานติดตั้งตาข่ายกันนก 08"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_20" alt="ผลงานติดตั้งตาข่ายกันนก 09"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
 
 <!-- wp:separator -->
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>ตาข่าย HDPE กันนก</h2>
+<h2>รูปภาพผลงาน — ก่อนและหลัง</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>ผลงานติดตั้งตาข่ายกันนก HDPE สำหรับอาคารพาณิชย์และบ้านพักอาศัย</p>
+<p>เปรียบเทียบก่อนและหลังการติดตั้ง — หมดปัญหานกพิราบรบกวน พื้นที่สะอาด ปลอดภัย</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"backgroundColor":"light-gray","textColor":"dark-gray"} -->
-<p class="has-dark-gray-color has-light-gray-background-color has-text-color has-background"><em>📷 เพิ่มรูปภาพผลงานได้ผ่าน WordPress Admin → Media → Add New จากนั้นแก้ไขหน้านี้เพื่อเพิ่มรูปภาพ</em></p>
-<!-- /wp:paragraph -->
+<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_21" alt="ผลงานก่อนหลังติดตั้ง 01"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_22" alt="ผลงานก่อนหลังติดตั้ง 02"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_23" alt="ผลงานก่อนหลังติดตั้ง 03"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_24" alt="ผลงานก่อนหลังติดตั้ง 04"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_25" alt="ผลงานก่อนหลังติดตั้ง 05"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_26" alt="ผลงานก่อนหลังติดตั้ง 06"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
 
 <!-- wp:separator -->
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>แผงกันนกโซลาร์เซลล์</h2>
+<h2>รูปภาพเพิ่มเติม</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p>ผลงานติดตั้งแผงกันนกสำหรับระบบโซลาร์เซลล์ ด้วยระบบคลิปไม่เจาะแผง</p>
-<!-- /wp:paragraph -->
+<!-- wp:gallery {"columns":4,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-4 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_27" alt="ผลงาน Birds Go Away 11"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_28" alt="ผลงาน Birds Go Away 12"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_29" alt="ผลงาน Birds Go Away 13"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_30" alt="ผลงาน Birds Go Away 14"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_31" alt="ผลงาน Birds Go Away 15"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_32" alt="ผลงาน Birds Go Away 16"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_33" alt="ผลงาน Birds Go Away 17"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_02" alt="ผลงาน Birds Go Away 18"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
 
-<!-- wp:paragraph {"backgroundColor":"light-gray","textColor":"dark-gray"} -->
-<p class="has-dark-gray-color has-light-gray-background-color has-text-color has-background"><em>📷 เพิ่มรูปภาพผลงานได้ผ่าน WordPress Admin → Media → Add New จากนั้นแก้ไขหน้านี้เพื่อเพิ่มรูปภาพ</em></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>หนามกันนก</h2>
+<h2>วิดีโอผลงานการติดตั้ง</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>ผลงานติดตั้งหนามกันนกสแตนเลสสำหรับอาคารและบ้านพักอาศัย</p>
+<p>ดูคลิปขั้นตอนการทำงานจริงจากหน้างาน — ทีมช่างมืออาชีพ อุปกรณ์ครบครัน</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"backgroundColor":"light-gray","textColor":"dark-gray"} -->
-<p class="has-dark-gray-color has-light-gray-background-color has-text-color has-background"><em>📷 เพิ่มรูปภาพผลงานได้ผ่าน WordPress Admin → Media → Add New จากนั้นแก้ไขหน้านี้เพื่อเพิ่มรูปภาพ</em></p>
-<!-- /wp:paragraph -->
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_01"></video><figcaption>คลิปติดตั้ง #1</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_02"></video><figcaption>คลิปติดตั้ง #2</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_03"></video><figcaption>คลิปติดตั้ง #3</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_04"></video><figcaption>คลิปติดตั้ง #4</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_05"></video><figcaption>คลิปติดตั้ง #5</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_06"></video><figcaption>คลิปติดตั้ง #6</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_07"></video><figcaption>คลิปติดตั้ง #7</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_08"></video><figcaption>คลิปติดตั้ง #8</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_09"></video><figcaption>คลิปติดตั้ง #9</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column">
+<!-- wp:video -->
+<figure class="wp-block-video"><video controls src="PLACEHOLDER_VID_10"></video><figcaption>คลิปติดตั้ง #10</figcaption></figure>
+<!-- /wp:video -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:heading {"level":2} -->
-<h2>เจลไล่นก</h2>
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ติดตามเราบน Facebook</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p>ผลงานการใช้เจลไล่นกสำหรับพื้นที่ที่ต้องการความสวยงาม</p>
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ติดตามผลงานล่าสุด เคล็ดลับ และข่าวสารจาก Birds Go Away<br><a href="https://www.facebook.com/people/%E0%B8%95%E0%B8%B2%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%99%E0%B8%81-%E0%B8%82%E0%B8%AD%E0%B8%99%E0%B9%81%E0%B8%81%E0%B9%88%E0%B8%99-%E0%B9%80%E0%B8%8A%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88-%E0%B8%8A%E0%B8%A5%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-by-Birds-Go-Away/61554258339668/" target="_blank">ตาข่ายกันนก by Birds Go Away — 3,000+ Followers</a></p>
 <!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"backgroundColor":"light-gray","textColor":"dark-gray"} -->
-<p class="has-dark-gray-color has-light-gray-background-color has-text-color has-background"><em>📷 เพิ่มรูปภาพผลงานได้ผ่าน WordPress Admin → Media → Add New จากนั้นแก้ไขหน้านี้เพื่อเพิ่มรูปภาพ</em></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-<!-- /wp:separator -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-cyan-blue"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background" href="/contact">สนใจบริการ? ติดต่อเราเลย</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">สนใจบริการ? ติดต่อเราเลย — ขอใบเสนอราคาฟรี</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -610,111 +1135,219 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
   # About Us Page
   ABOUT_ID=$(wp post create --post_type=page --post_title='เกี่ยวกับเรา' --post_status=publish --post_name='about' --path=/var/www/html --allow-root --porcelain --post_content='
-<!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center">เกี่ยวกับเรา</h1>
+<!-- wp:columns -->
+<div class="wp-block-columns hero-section">
+<!-- wp:column -->
+<div class="wp-block-column" style="background:transparent !important;border:none !important;">
+<!-- wp:heading {"level":1} -->
+<h1>เกี่ยวกับ BIRDS GO AWAY</h1>
 <!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">BIRDS GO AWAY by บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนกแบบครบวงจร</p>
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co., Ltd.) — ผู้เชี่ยวชาญด้านการป้องกันนกแบบครบวงจร</p>
 <!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"60%"} -->
+<div class="wp-block-column" style="flex-basis:60%">
 <!-- wp:heading {"level":2} -->
 <h2>เรื่องราวของเรา</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>BIRDS GO AWAY ภายใต้ บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co., Ltd.) ก่อตั้งขึ้นจากความมุ่งมั่นในการแก้ปัญหานกรบกวนอย่างมืออาชีพและเป็นมิตรกับสิ่งแวดล้อม ทีมช่างผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate มีมาตรฐาน วิศวกรคุมงาน</p>
+<p>BIRDS GO AWAY ภายใต้ <strong>บริษัท รีเช็ค บิ้วดิ้ง จำกัด</strong> (Recheck Building Co., Ltd.) ก่อตั้งขึ้นจากความมุ่งมั่นในการแก้ปัญหานกรบกวนอย่างมืออาชีพและเป็นมิตรกับสิ่งแวดล้อม</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>เราให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ในพื้นที่ขอนแก่น เชียงใหม่ และชลบุรี พร้อมทีมช่างมืออาชีพที่พร้อมให้บริการทั่วประเทศ ทุกงานของเราผ่านการวางแผนอย่างรอบคอบ ปรึกษาฟรีโดยวิศวกรโยธาในพื้นที่ รับประกันงานติดตั้ง 3 ปี</p>
+<p>เราเข้าใจปัญหาที่เจ้าของบ้านและเจ้าของอาคารต้องเผชิญ — มูลนกสกปรก เสียงรบกวน ไรนก เชื้อโรค ความเสียหายต่ออาคาร ทุกวันนับพันครอบครัวต้องทนทุกข์กับปัญหาเหล่านี้ เราจึงรวมทีมวิศวกรและช่างมืออาชีพที่มีประสบการณ์จริง สร้าง BIRDS GO AWAY ขึ้นมาเพื่อแก้ปัญหานี้อย่างถาวร</p>
 <!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":2} -->
-<h2>วิสัยทัศน์</h2>
-<!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>เป็นผู้นำด้านบริการป้องกันนกที่ปลอดภัย มีประสิทธิภาพ และเป็นมิตรกับสิ่งแวดล้อม ด้วยมาตรฐานสากล</p>
+<p>ทีมช่างของเราผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate รับรองมาตรฐาน ทุกโปรเจคมีวิศวกรคุมงาน วางแผนอย่างรอบคอบ ปรึกษาฟรีโดยวิศวกรโยธาในพื้นที่</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:heading {"level":2} -->
-<h2>ค่านิยมหลัก</h2>
+<!-- wp:paragraph -->
+<p>เราให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ครอบคลุมพื้นที่ <strong>ขอนแก่น เชียงใหม่ และชลบุรี</strong> พร้อมขยายบริการทั่วประเทศ</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_1" alt="ทีมงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_2" alt="การทำงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ทำไมต้องเลือก BIRDS GO AWAY?</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>🌿 เป็นมิตรกับสิ่งแวดล้อม</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>ใช้วิธีการที่ไม่ทำร้ายนกและสัตว์ เลือกวัสดุที่ปลอดภัยและยั่งยืน</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>ผ่านการอบรมโรยตัว</h3>
+<p>ทีมช่างทุกคนผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate รับรองมาตรฐาน สามารถทำงานบนที่สูงอย่างปลอดภัย</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>⭐ คุณภาพเป็นเลิศ</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>ใช้วัสดุคุณภาพสูง ติดตั้งโดยทีมช่างที่ผ่านการอบรม รับประกันทุกงาน</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>วิศวกรคุมงาน</h3>
+<p>ทุกโปรเจคมีวิศวกรโยธาคุมงาน วางแผนอย่างรอบคอบ ปรึกษาฟรีโดยวิศวกรในพื้นที่ ไม่มีค่าใช้จ่าย</p>
 </div>
 <!-- /wp:column -->
-
 <!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:heading {"level":3} -->
-<h3>🤝 ซื่อสัตย์โปร่งใส</h3>
-<!-- /wp:heading -->
-<!-- wp:paragraph -->
-<p>เสนอราคาตรงไปตรงมา ไม่มีค่าใช้จ่ายแอบแฝง ให้คำปรึกษาอย่างจริงใจ</p>
-<!-- /wp:paragraph -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>รับประกัน 3 ปี</h3>
+<p>รับประกันงานติดตั้งนานถึง 3 ปี ตาข่าย HDPE คุณภาพสูง อายุการใช้งาน 5-7 ปี แข็งแรงทนทาน</p>
 </div>
 <!-- /wp:column -->
-
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>ราคาตรงไปตรงมา</h3>
+<p>เสนอราคาฟรี ไม่มีค่าใช้จ่ายแอบแฝง ราคายุติธรรม คุ้มค่าทุกบาท ไม่เก็บเพิ่มทีหลัง</p>
+</div>
+<!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 
-<!-- wp:heading {"level":2} -->
-<h2>มาตรฐานความปลอดภัย</h2>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">มาตรฐานความปลอดภัย</h2>
 <!-- /wp:heading -->
 
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%">
 <!-- wp:list -->
 <ul>
 <li>ทีมช่างผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate</li>
 <li>ใช้อุปกรณ์ PPE (Personal Protective Equipment) ครบชุด</li>
 <li>มีประกันอุบัติเหตุสำหรับพนักงานทุกคน</li>
-<li>วิศวกรคุมงานทุกโปรเจค</li>
-<li>ตรวจสอบพื้นที่ก่อนเริ่มงานทุกครั้ง</li>
+<li>วิศวกรโยธาคุมงานทุกโปรเจค</li>
+<li>ตรวจสอบและสำรวจพื้นที่ก่อนเริ่มงานทุกครั้ง</li>
+<li>ใช้อุปกรณ์ป้องกันการตกจากที่สูงตามมาตรฐาน</li>
+<li>มีแผนปฏิบัติการฉุกเฉินสำหรับทุกโปรเจค</li>
 </ul>
 <!-- /wp:list -->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_3" alt="มาตรฐานความปลอดภัย Birds Go Away"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:heading {"level":2} -->
-<h2>ทีมงานของเรา</h2>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">บริการครบวงจร 4 รูปแบบ</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
-<p>ทีมงานของเราประกอบด้วยผู้เชี่ยวชาญที่ผ่านการอบรมโรยตัวภาคทฤษฎี-ปฏิบัติ มีใบ Certificate พร้อมให้บริการด้วยความเป็นมืออาชีพ มีวิศวกรคุมงานทุกโปรเจค</p>
-<!-- /wp:paragraph -->
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>ตาข่าย HDPE กันนก</h3>
+<p>ตาข่ายกันนกคุณภาพสูง ทนทาน 5-7 ปี ติดตั้งได้ทุกพื้นที่</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>หนามกันนก</h3>
+<p>หนามสแตนเลส 304 รุ่น 3 แถวไขว้ ป้องกันนกเกาะทุกทิศทาง</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>แผงกันนกโซลาร์</h3>
+<p>ระบบคลิปไม่เจาะแผง ไม่เสียการรับประกัน ป้องกันนกทำรัง</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;">
+<h3>เจลไล่นก</h3>
+<p>เจลใสไร้สารพิษ ปลอดภัย ใช้ได้ทุกพื้นผิว มองไม่เห็น</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
 
-<!-- wp:separator -->
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ตัวอย่างผลงานของเรา</h2>
+<!-- /wp:heading -->
+
+<!-- wp:gallery {"columns":4,"linkTo":"none"} -->
+<figure class="wp-block-gallery has-nested-images columns-4 is-cropped">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_15" alt="ผลงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_16" alt="ผลงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_17" alt="ผลงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_18" alt="ผลงาน Birds Go Away"/></figure>
+<!-- /wp:image -->
+</figure>
+<!-- /wp:gallery -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center">ข้อมูลบริษัท</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<table style="width:100%;border-collapse:collapse;margin:0 auto;max-width:700px;">
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;width:40%;">ชื่อบริษัท</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co., Ltd.)</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">แบรนด์</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">BIRDS GO AWAY</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ตาข่ายกันนก, หนามกันนก, เจลไล่นก, แผงกันนกโซลาร์เซลล์</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">พื้นที่ให้บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ขอนแก่น, เชียงใหม่, ชลบุรี (และพื้นที่ใกล้เคียง)</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">ที่อยู่</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">88/38, ขอนแก่น, ประเทศไทย</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">โทรศัพท์</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">062-996-4994 / 093-641-5623 / 095-629-2488</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">LINE</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">oil_phanu / th3-ta006-2</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">อีเมล</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">admin@birdsgoaway.com</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">Facebook</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ตาข่ายกันนก by Birds Go Away (3,000+ Followers)</td></tr>
+</table>
+<!-- /wp:html -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-cyan-blue"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-vivid-cyan-blue-background-color has-background" href="/contact">ติดต่อเรา</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan","fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ติดต่อเรา — ขอใบเสนอราคาฟรี</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -806,6 +1439,43 @@ ${FORM_SHORTCODE}
 <!-- /wp:columns -->
 ")
 
+  echo "=== Replacing Placeholder Media URLs ==="
+  # Replace placeholder image URLs in page content
+  for PAGE_ID in $HOME_ID $SERVICES_ID $PORTFOLIO_ID $ABOUT_ID; do
+    if [ -n "$PAGE_ID" ]; then
+      CONTENT=$(wp post get "$PAGE_ID" --field=post_content --path=/var/www/html --allow-root 2>/dev/null || echo "")
+      if [ -n "$CONTENT" ]; then
+        MODIFIED=false
+        for NUM in $(seq -w 1 33); do
+          KEY="birdnet-${NUM}"
+          URL="${IMG_URLS[$KEY]:-}"
+          if [ -n "$URL" ]; then
+            NEW_CONTENT=$(echo "$CONTENT" | sed "s|PLACEHOLDER_IMG_${NUM#0}|${URL}|g")
+            if [ "$NEW_CONTENT" != "$CONTENT" ]; then
+              CONTENT="$NEW_CONTENT"
+              MODIFIED=true
+            fi
+          fi
+        done
+        for NUM in $(seq -w 1 10); do
+          KEY="reel-${NUM}"
+          URL="${VID_URLS[$KEY]:-}"
+          if [ -n "$URL" ]; then
+            NEW_CONTENT=$(echo "$CONTENT" | sed "s|PLACEHOLDER_VID_${NUM#0}|${URL}|g")
+            if [ "$NEW_CONTENT" != "$CONTENT" ]; then
+              CONTENT="$NEW_CONTENT"
+              MODIFIED=true
+            fi
+          fi
+        done
+        if [ "$MODIFIED" = true ]; then
+          wp post update "$PAGE_ID" --post_content="$CONTENT" --path=/var/www/html --allow-root 2>/dev/null || true
+          echo "Updated media URLs for page $PAGE_ID"
+        fi
+      fi
+    fi
+  done
+
   echo "=== Setting Home Page ==="
   wp option update page_on_front $HOME_ID --path=/var/www/html --allow-root
 
@@ -814,7 +1484,7 @@ ${FORM_SHORTCODE}
 
   wp menu item add-post "Main Menu" $HOME_ID --title="หน้าแรก" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $SERVICES_ID --title="บริการของเรา" --path=/var/www/html --allow-root
-  wp menu item add-post "Main Menu" $PORTFOLIO_ID --title="ผลงานของเรา" --path=/var/www/html --allow-root
+  wp menu item add-post "Main Menu" $PORTFOLIO_ID --title="ผลงาน + วิดีโอ" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $ABOUT_ID --title="เกี่ยวกับเรา" --path=/var/www/html --allow-root
   wp menu item add-post "Main Menu" $CONTACT_ID --title="ติดต่อเรา" --path=/var/www/html --allow-root
 
@@ -822,17 +1492,7 @@ ${FORM_SHORTCODE}
   wp menu location assign "Main Menu" main --path=/var/www/html --allow-root 2>/dev/null || true
 
   echo "=== Configuring Astra Theme ==="
-  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร | BIRDS GO AWAY" --path=/var/www/html --allow-root
-
-  echo "=== Importing Images ==="
-  if [ -d /tmp/birdnet-assets/images ]; then
-    for img in /tmp/birdnet-assets/images/*.jpg; do
-      if [ -f "$img" ]; then
-        wp media import "$img" --path=/var/www/html --allow-root 2>/dev/null || true
-      fi
-    done
-    echo "Images imported to media library"
-  fi
+  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร ขอนแก่น เชียงใหม่ ชลบุรี | BIRDS GO AWAY" --path=/var/www/html --allow-root
 
   echo "=== Setting Default Contact Options ==="
   wp option update birdnet_phone "0629964994" --path=/var/www/html --allow-root

@@ -24,9 +24,9 @@ RUN { \
     echo 'opcache.max_accelerated_files=4000'; \
     echo 'opcache.revalidate_freq=2'; \
     echo 'opcache.fast_shutdown=1'; \
-    echo 'upload_max_filesize=64M'; \
-    echo 'post_max_size=64M'; \
-    echo 'memory_limit=256M'; \
+    echo 'upload_max_filesize=128M'; \
+    echo 'post_max_size=128M'; \
+    echo 'memory_limit=512M'; \
     echo 'max_execution_time=300'; \
     echo 'max_input_time=300'; \
 } > /usr/local/etc/php/conf.d/custom.ini
@@ -43,6 +43,7 @@ RUN { \
     echo '  ExpiresByType image/gif "access plus 1 year"'; \
     echo '  ExpiresByType image/png "access plus 1 year"'; \
     echo '  ExpiresByType image/webp "access plus 1 year"'; \
+    echo '  ExpiresByType video/mp4 "access plus 1 year"'; \
     echo '  ExpiresByType text/css "access plus 1 month"'; \
     echo '  ExpiresByType application/javascript "access plus 1 month"'; \
     echo '  ExpiresByType application/x-javascript "access plus 1 month"'; \
@@ -62,8 +63,9 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 # Copy custom theme child
 COPY config/birdnet-child /tmp/birdnet-child
 
-# Copy assets (images from Facebook page)
+# Copy assets (images and videos from Facebook page)
 COPY assets/images /tmp/birdnet-assets/images
+COPY assets/videos /tmp/birdnet-assets/videos
 
 EXPOSE 80
 
