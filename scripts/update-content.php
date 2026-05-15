@@ -560,21 +560,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(1) . '"></video><figcaption>เบื่อไหม? ขี้นกเต็มระเบียงคอนโด ล้างเท่าไหร่ก็ไม่หมด... เราช่วยได้! ติดตั้งตาข่าย HDPE เกรดส่งออก กลมกลืนกับตัวอาคาร นกหายขาด 100% 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(1) . '"></video><figcaption>เบื่อไหม? ขี้นกเต็มระเบียงคอนโด ล้างเท่าไหร่ก็ไม่หมด... เราช่วยได้! ติดตั้งตาข่าย HDPE เกรดส่งออก กลมกลืนกับตัวอาคาร นกหายขาด 100% 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(2) . '"></video><figcaption>นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(2) . '"></video><figcaption>นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(3) . '"></video><figcaption>นกทำรังใต้หลังคาร้าน ขี้นกหล่นใส่สินค้า? ดูคลิปนี้! ปิดช่องเปิดด้วยตาข่ายกันนก แข็งแรง ทนทาน กันนกเข้า 100% รับประกันงาน 3 ปี 📞 โทร 062-996-4994</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(3) . '"></video><figcaption>นกทำรังใต้หลังคาร้าน ขี้นกหล่นใส่สินค้า? ดูคลิปนี้! ปิดช่องเปิดด้วยตาข่ายกันนก แข็งแรง ทนทาน กันนกเข้า 100% รับประกันงาน 3 ปี 📞 โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -586,21 +586,21 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(4) . '"></video><figcaption>ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(4) . '"></video><figcaption>ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(5) . '"></video><figcaption>อาคารสวยแต่นกเกาะเต็ม? เจลไล่นกคือคำตอบ! วัสดุใสมองไม่เห็น ไม่ทำลายทัศนียภาพ นกไม่กล้าเกาะอีกเลย ผ่านมา 3 ปียังใช้ได้ดี 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(5) . '"></video><figcaption>อาคารสวยแต่นกเกาะเต็ม? เจลไล่นกคือคำตอบ! วัสดุใสมองไม่เห็น ไม่ทำลายทัศนียภาพ นกไม่กล้าเกาะอีกเลย ผ่านมา 3 ปียังใช้ได้ดี 📞 ประเมินฟรี โทร 062-996-4994</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid(6) . '"></video><figcaption>นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(6) . '"></video><figcaption>นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -1121,7 +1121,7 @@ for ($i = 1; $i <= 6; $i++) {
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls src="' . vid($i) . '"></video><figcaption>' . $video_captions[$i] . '</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid($i) . '"></video><figcaption>' . $video_captions[$i] . '</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->';
