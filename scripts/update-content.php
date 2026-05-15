@@ -688,6 +688,33 @@ $home_content = '
 </div>
 <!-- /wp:html -->
 
+<!-- wp:heading {"textAlign":"center","level":3} -->
+<h3 class="has-text-align-center wp-block-heading">💬 รีวิวภาพจริงจากลูกค้า</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">กว่า 300 หลังในขอนแก่น – เชียงใหม่ ดูรีวิวภาพจริงจากลูกค้าได้ในอัลบั้มรีวิวของเพจเรา</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:900px;margin:0 auto;padding:0 1rem;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+<img src="' . $assets_base . '/review-team-promo.webp" alt="รวมรีวิวจากผู้ใช้จริง Birds Go Away กว่า 300 หลัง ขอนแก่น เชียงใหม่" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+<img src="' . $assets_base . '/review-line-chat.webp" alt="รีวิวแชท LINE จากลูกค้าจริง ประทับใจมาก ช่างทำดีงเนียน สวยมาก" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
+<img src="' . $assets_base . '/review-line-chat2.webp" alt="รีวิวแชท LINE จากลูกค้าจริง บ้านเพื่อนก็จะทำด้วย ช่างทุกคนน่ารักมาก" style="width:100%;height:auto;" loading="lazy">
+</div>
+</div>
+<div style="text-align:center;margin-top:1rem;">
+<a href="https://www.facebook.com/birdsgoaway" target="_blank" rel="noopener" style="display:inline-block;background:#E8792E;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:0.95rem;box-shadow:0 4px 12px rgba(232,121,46,0.3);">📸 ดูรีวิวทั้งหมดบนเพจ Facebook →</a>
+</div>
+</div>
+<!-- /wp:html -->
+
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
