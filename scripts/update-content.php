@@ -1009,6 +1009,13 @@ $services_content = '
 <p><a href="/service-solar/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดแผงกันนกโซลาร์ เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%;">
+<!-- wp:image -->
+<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์"/></figure>
+<!-- /wp:image -->
+</div>
+<!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 
