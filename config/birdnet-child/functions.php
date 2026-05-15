@@ -148,6 +148,27 @@ function birdnet_floating_buttons() {
 }
 add_action('wp_footer', 'birdnet_floating_buttons');
 
+// Testimonial carousel JavaScript (injected via wp_footer because WP strips <script> from post content)
+function birdnet_testimonial_carousel_js() {
+    if (!is_front_page()) return;
+    ?>
+    <script>
+    (function(){
+        var track=document.querySelector(".testimonial-track");
+        if(!track) return;
+        var idx=0,slides=document.querySelectorAll(".testimonial-slide"),total=slides.length;
+        var dotsC=document.querySelector(".testimonial-dots");
+        if(!dotsC) return;
+        for(var i=0;i<total;i++){var d=document.createElement("span");d.className="t-dot";d.setAttribute("data-i",i);d.style.cssText="width:10px;height:10px;border-radius:50%;background:"+(i===0?"#E8792E":"#ddd")+";cursor:pointer;transition:background 0.3s;";d.onclick=function(){idx=parseInt(this.getAttribute("data-i"));go()};dotsC.appendChild(d)}
+        function go(){track.style.transform="translateX(-"+idx*100+"%)";var dots=dotsC.querySelectorAll(".t-dot");for(var j=0;j<dots.length;j++)dots[j].style.background=j===idx?"#E8792E":"#ddd"}
+        window.moveTestimonial=function(dir){idx=(idx+dir+total)%total;go()};
+        setInterval(function(){idx=(idx+1)%total;go()},5000);
+    })();
+    </script>
+    <?php
+}
+add_action('wp_footer', 'birdnet_testimonial_carousel_js');
+
 // Custom admin settings for contact info
 function birdnet_admin_settings() {
     add_options_page(

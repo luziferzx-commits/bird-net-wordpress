@@ -803,16 +803,7 @@ $home_content = '
 </div>
 <div class="testimonial-dots" style="display:flex;justify-content:center;gap:8px;margin-top:12px;"></div>
 </div>
-<script>
-(function(){
-var idx=0,track=document.querySelector(".testimonial-track"),slides=document.querySelectorAll(".testimonial-slide"),total=slides.length;
-var dotsC=document.querySelector(".testimonial-dots");
-for(var i=0;i<total;i++){var d=document.createElement("span");d.className="t-dot";d.setAttribute("data-i",i);d.style.cssText="width:10px;height:10px;border-radius:50%;background:"+(i===0?"#E8792E":"#ddd")+";cursor:pointer;transition:background 0.3s;";d.onclick=function(){idx=parseInt(this.getAttribute("data-i"));go()};dotsC.appendChild(d)}
-function go(){track.style.transform="translateX(-"+idx*100+"%)";var dots=dotsC.querySelectorAll(".t-dot");for(var j=0;j<dots.length;j++)dots[j].style.background=j===idx?"#E8792E":"#ddd"}
-window.moveTestimonial=function(dir){idx=(idx+dir+total)%total;go()};
-setInterval(function(){idx=(idx+1)%total;go()},5000);
-})();
-</script>
+
 <!-- /wp:html -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
