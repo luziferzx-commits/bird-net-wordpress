@@ -592,14 +592,26 @@ button[type="submit"]:hover {
 }
 
 /* Hero image */
+.entry-content > .wp-block-columns:first-of-type {
+  overflow: hidden;
+}
+.entry-content > .wp-block-columns:first-of-type .wp-block-column {
+  overflow: hidden;
+  min-width: 0;
+}
+.entry-content > .wp-block-columns:first-of-type .wp-block-image {
+  max-width: 100%;
+  overflow: hidden;
+}
 .entry-content > .wp-block-columns:first-of-type .wp-block-image img {
   border-radius: 16px !important;
   max-height: 400px !important;
-  width: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 auto;
   display: block;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12) !important;
-  object-fit: cover;
+  object-fit: contain;
   border: none;
 }
 

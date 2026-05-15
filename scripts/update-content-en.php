@@ -100,7 +100,7 @@ $en_home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['hero'] . '" alt="Bird net installation by Birds Go Away" style="border-radius:16px;"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['hero'] . '" alt="Bird net installation by Birds Go Away" style="border-radius:16px;width:100%;max-width:100%;height:auto;object-fit:contain;"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
