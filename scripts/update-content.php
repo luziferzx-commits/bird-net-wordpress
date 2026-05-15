@@ -1231,7 +1231,7 @@ $portfolio_content .= '
 // Page 0: Cover
 $portfolio_content .= '
 <div class="fb-page fb-cover" data-density="hard">
-  <img src="' . $assets_base . '/logo-dark.webp" alt="Birds Go Away Logo" style="width:120px;height:auto;margin:0 auto 12px;display:block;">
+  <img src="' . $assets_base . '/logo-dark.webp" alt="Birds Go Away Logo" style="width:120px;height:auto;margin:0 auto 12px;display:block;mix-blend-mode:screen;">
   <div class="fb-cover-logo">BIRDS GO AWAY</div>
   <div class="fb-cover-divider"></div>
   <h2>E-Brochure ผลงานของเรา</h2>
