@@ -385,19 +385,19 @@ $home_content = '
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . $assets_base . '/new-netting-condo.jpg" alt="ผลงานติดตั้งตาข่ายกันนก HDPE ระเบียงคอนโด ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-netting-condo.jpg?v=setA" alt="ผลงานติดตั้งตาข่ายกันนก HDPE ระเบียงคอนโด ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ติดตั้งตาข่าย HDPE — คอนโด</p>
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . $assets_base . '/new-spikes-building.jpg" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง อาคารราชการ" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-spikes-building.jpg?v=setA" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง อาคารราชการ" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามสแตนเลส — ราวระเบียง</p>
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . $assets_base . '/new-netting-commercial.jpg" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-netting-commercial.jpg?v=setA" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p>
 </div>
