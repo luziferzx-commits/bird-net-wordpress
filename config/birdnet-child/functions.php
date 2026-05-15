@@ -594,7 +594,7 @@ function birdnet_custom_footer() {
             <div class="footer-col">
                 <h4><?php echo $is_en ? 'Contact Us' : 'ติดต่อเรา'; ?></h4>
                 <p><strong><?php echo $is_en ? 'Khon Kaen:' : 'ขอนแก่น:'; ?></strong> 062-996-4994<br>
-                <strong><?php echo $is_en ? 'Wiwi (Quotation):' : 'วีวี่ (ฝ่ายประเมินราคา):'; ?></strong> 088-951-4924<br>
+                <strong><?php echo $is_en ? 'Wiwi (Central):' : 'วีวี่ (ส่วนกลาง):'; ?></strong> 088-951-4924<br>
                 <strong><?php echo $is_en ? 'Chiang Mai:' : 'เชียงใหม่:'; ?></strong> 093-641-5623<br>
                 <strong><?php echo $is_en ? 'Chonburi:' : 'ชลบุรี:'; ?></strong> 095-629-2488</p>
                 <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
