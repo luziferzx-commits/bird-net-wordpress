@@ -916,3 +916,21 @@ function birdnet_remove_logo_srcset($sources, $size_array, $image_src) {
     return $sources;
 }
 add_filter('wp_calculate_image_srcset', 'birdnet_remove_logo_srcset', 10, 3);
+
+// Set --topbar-height CSS variable for sticky header offset
+function birdnet_topbar_height_js() {
+    echo '<script>
+    (function() {
+        function setTopbarHeight() {
+            var tb = document.querySelector(".birdnet-top-bar");
+            if (tb) {
+                document.documentElement.style.setProperty("--topbar-height", tb.offsetHeight + "px");
+            }
+        }
+        document.addEventListener("DOMContentLoaded", setTopbarHeight);
+        window.addEventListener("resize", setTopbarHeight);
+        window.addEventListener("load", setTopbarHeight);
+    })();
+    </script>';
+}
+add_action('wp_head', 'birdnet_topbar_height_js');
