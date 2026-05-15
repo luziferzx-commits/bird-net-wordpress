@@ -97,6 +97,21 @@ $home_content = '
 </div>
 <!-- /wp:columns -->
 
+<!-- wp:html -->
+<div style="background:#f8f9fa;padding:1.5rem 1rem;text-align:center;">
+<p style="font-size:0.8rem;color:#888;margin:0 0 12px;text-transform:uppercase;letter-spacing:2px;font-weight:600;">องค์กรที่ไว้วางใจเรา</p>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px 32px;max-width:900px;margin:0 auto;">
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">🏛️ สำนักงาน ป.ป.ช. ภาค 4</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">🎓 มหาวิทยาลัยขอนแก่น</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">🏥 วิทยาลัยสาธารณสุขสิรินธร</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">🏥 โรงพยาบาลสิรินธร</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">⚓ กรมอู่ทหารเรือ</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;white-space:nowrap;">🏢 เมโทรคอนโด ขอนแก่น</span>
+</div>
+<p style="font-size:0.75rem;color:#aaa;margin:10px 0 0;">ผลงานกว่า 31+ โปรเจกต์ ทั้งภาครัฐและเอกชน</p>
+</div>
+<!-- /wp:html -->
+
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
@@ -1214,7 +1229,7 @@ $contact_content = '
 <a href="tel:0629964994" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
 <strong style="font-size:1rem;color:#E8792E;">062-996-4994</strong> <span style="color:#888;font-size:0.8rem;">— คุณออย (ขอนแก่น)</span></a>
 <a href="tel:0889514924" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
-<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong> <span style="color:#888;font-size:0.8rem;">— คุณวีวี่</span></a>
+<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong> <span style="color:#888;font-size:0.8rem;">— คุณวีวี่ (ฝ่ายประเมินราคา)</span></a>
 <a href="tel:0936415623" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
 <strong style="font-size:1rem;color:#E8792E;">093-641-5623</strong> <span style="color:#888;font-size:0.8rem;">— เชียงใหม่</span></a>
 <a href="tel:0956292488" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
@@ -1263,7 +1278,7 @@ th3-ta006-2</a>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">จันทร์ - เสาร์: 08:00 - 18:00 น.<br>อาทิตย์: นัดหมายล่วงหน้า</p>
+<p class="has-text-align-center">สำนักงาน: จันทร์ - เสาร์ 08:00 - 17:00 น.<br>ปรึกษาฟรี (LINE/โทร): ทุกวัน 08:00 - 20:00 น.</p>
 <!-- /wp:paragraph -->
 ';
 
@@ -1846,7 +1861,7 @@ if ($home_page) {
         ),
         'areaServed' => ['ขอนแก่น', 'เชียงใหม่', 'ชลบุรี'],
         'priceRange' => '$$',
-        'openingHours' => 'Mo-Sa 08:00-18:00',
+        'openingHours' => ['Mo-Sa 08:00-17:00'],
     ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     update_post_meta($home_page->ID, '_schema_json_ld', $schema);
 }

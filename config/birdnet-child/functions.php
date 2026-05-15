@@ -235,7 +235,7 @@ function birdnet_custom_footer() {
             <div class="footer-col">
                 <h4>ติดต่อเรา</h4>
                 <p><strong>ขอนแก่น:</strong> 062-996-4994<br>
-                <strong>วีวี่:</strong> 088-951-4924<br>
+                <strong>วีวี่ (ฝ่ายประเมินราคา):</strong> 088-951-4924<br>
                 <strong>เชียงใหม่:</strong> 093-641-5623<br>
                 <strong>ชลบุรี:</strong> 095-629-2488</p>
                 <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
@@ -244,7 +244,7 @@ function birdnet_custom_footer() {
                     <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="color:#06C755;text-decoration:none;font-size:1.2rem;" aria-label="LINE" title="LINE">💬</a>
                     <a href="tel:062-996-4994" style="color:#E8792E;text-decoration:none;font-size:1.2rem;" aria-label="โทรศัพท์" title="โทรเลย">📞</a>
                 </div>
-                <p>เวลาทำการ: จ-ส 08:00-18:00</p>
+                <p>สำนักงาน: จ-ส 08:00-17:00<br>ปรึกษาฟรี (LINE/โทร): ทุกวัน 08:00-20:00</p>
             </div>
             <div class="footer-col">
                 <h4>เมนู</h4>
