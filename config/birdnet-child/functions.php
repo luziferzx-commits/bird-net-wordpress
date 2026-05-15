@@ -270,6 +270,13 @@ function birdnet_custom_footer() {
                 <p style="margin-top:8px;color:#E8792E;font-weight:600;">🚀 บริการด่วนในพื้นที่ขอนแก่นและจังหวัดใกล้เคียง — นัดประเมินหน้างานได้ภายใน 24 ชม.</p>
             </div>
         </div>
+        <div style="background:linear-gradient(135deg,#E8792E,#d4631a);padding:1.2rem;border-radius:12px;text-align:center;margin:1.5rem 0;">
+            <p style="margin:0 0 8px;font-size:1.2rem;font-weight:700;color:white;">🚀 ประเมินฟรีภายใน 24 ชม. — กดเลย</p>
+            <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+                <a href="tel:0629964994" style="background:white;color:#E8792E;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;">📞 โทรเลย 062-996-4994</a>
+                <a href="https://line.me/ti/p/~oil_phanu" style="background:#06C755;color:white;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;">💬 แอดไลน์ประเมินราคา</a>
+            </div>
+        </div>
         <div class="footer-bottom">
             <p>&copy; 2026 BIRDS GO AWAY — บริษัท รีเช็ค บิ้วดิ้ง จำกัด | บริการติดตั้งตาข่ายกันนก ขอนแก่น อุดรธานี นครราชสีมา เชียงใหม่ ชลบุรี ภาคอีสาน ทั่วประเทศ</p>
         </div>
@@ -355,6 +362,22 @@ function birdnet_preload_assets() {
     echo '<link rel="dns-prefetch" href="//www.googletagmanager.com">' . "\n";
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
+
+// SEO: Fallback meta description if Yoast is not active
+function birdnet_fallback_meta_description() {
+    if (defined('WPSEO_VERSION')) return;
+    $desc = '';
+    if (is_front_page()) {
+        $desc = 'บริการติดตั้งตาข่ายกันนก หนามกันนก มาตรฐานอุตสาหกรรม แก้ปัญหานกพิราบถาวร รับประกันงาน 3 ปี ประเมินหน้างานฟรีทั่วขอนแก่นและภาคอีสาน โทร 062-996-4994';
+    } elseif (is_page()) {
+        $desc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
+        if (!$desc) $desc = wp_trim_words(get_the_excerpt(), 25, '...');
+    }
+    if ($desc) {
+        echo '<meta name="description" content="' . esc_attr($desc) . '">' . "\n";
+    }
+}
+add_action('wp_head', 'birdnet_fallback_meta_description', 2);
 
 // FAQ removed from nav — causes overflow on desktop. Accessible via /faq/ URL and footer link.
 

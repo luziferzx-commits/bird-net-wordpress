@@ -619,7 +619,7 @@ $home_content = '
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ติดต่อเราเลย</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">🚀 ประเมินฟรีภายใน 24 ชม. — กดเลย</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -634,6 +634,13 @@ $services_content = '
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">รับติดตั้งตาข่ายกันนก ขอนแก่น อุดรธานี นครราชสีมา เชียงใหม่ ชลบุรี — บริการป้องกันนก 4 รูปแบบ ครบวงจร พร้อมรับประกัน</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:600px;margin:1.5rem auto;background:linear-gradient(135deg,#1B4D5C,#2a6a7c);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;color:white;">
+<p style="margin:0;font-size:1.3rem;font-weight:700;">💰 ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</p>
+<p style="margin:6px 0 0;font-size:0.95rem;opacity:0.9;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี — ไม่มีค่าใช้จ่าย</p>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -1368,80 +1375,29 @@ $blog_content = '
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
 
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">อันตรายจากขี้นกพิราบ — โรคที่คุณอาจไม่รู้</h3>
-<!-- /wp:heading -->
+<!-- wp:html -->
+<div style="max-width:800px;margin:0 auto;">
 
-<!-- wp:paragraph -->
-<p>มูลนกพิราบไม่ใช่แค่ปัญหาความสกปรก แต่ยังเป็นแหล่งสะสมเชื้อโรคอันตรายหลายชนิด ได้แก่:</p>
-<!-- /wp:paragraph -->
+<div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border-left:4px solid #E8792E;">
+<h3 style="margin:0 0 8px;"><a href="/danger-of-pigeon-droppings/" style="color:#1B4D5C;text-decoration:none;">อันตรายจากขี้นกพิราบ — โรคที่คุณอาจไม่รู้</a></h3>
+<p style="margin:0;color:#555;font-size:0.95rem;">มูลนกพิราบไม่ใช่แค่ปัญหาความสกปรก แต่ยังเป็นแหล่งสะสมเชื้อโรคอันตราย ปอดอักเสบ ซาลโมเนลลา เห็บไร...</p>
+<a href="/danger-of-pigeon-droppings/" style="color:#E8792E;font-weight:600;font-size:0.9rem;">อ่านต่อ →</a>
+</div>
 
-<!-- wp:list -->
-<ul>
-<li><strong>โรคปอดอักเสบ (Cryptococcosis)</strong> — เชื้อราในมูลนกแห้ง เมื่อสูดดมเข้าปอดอาจทำให้ปอดอักเสบรุนแรง</li>
-<li><strong>โรคฮิสโตพลาสโมซิส (Histoplasmosis)</strong> — เชื้อราที่เจริญเติบโตในมูลนก สามารถแพร่กระจายในอากาศ</li>
-<li><strong>โรคซาลโมเนลลา (Salmonellosis)</strong> — เชื้อแบคทีเรียจากมูลนกปนเปื้อนอาหารและน้ำ</li>
-<li><strong>เห็บ ไร หมัด</strong> — ปรสิตที่อาศัยอยู่ในรังนกและมูลนก สามารถเข้าสู่ที่พักอาศัยได้</li>
-</ul>
-<!-- /wp:list -->
+<div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border-left:4px solid #E8792E;">
+<h3 style="margin:0 0 8px;"><a href="/how-to-get-rid-of-pigeons/" style="color:#1B4D5C;text-decoration:none;">วิธีไล่นกพิราบด้วยตัวเอง — ได้ผลจริงหรือ?</a></h3>
+<p style="margin:0;color:#555;font-size:0.95rem;">เปรียบเทียบ 4 วิธีป้องกันนก ตาข่าย HDPE หนามสแตนเลส เจลไล่นก แผงกันนกโซลาร์ วิธีไหนได้ผลถาวร?</p>
+<a href="/how-to-get-rid-of-pigeons/" style="color:#E8792E;font-weight:600;font-size:0.9rem;">อ่านต่อ →</a>
+</div>
 
-<!-- wp:paragraph -->
-<p><strong>วิธีป้องกัน:</strong> ติดตั้งตาข่ายกันนก HDPE หรือหนามกันนกสแตนเลส เป็นวิธีที่ปลอดภัยและได้ผลถาวร ไม่ทำร้ายนก แต่ป้องกันไม่ให้นกเข้ามาทำรังในพื้นที่ หากคุณอยู่ในพื้นที่<strong>ขอนแก่น เชียงใหม่ ชลบุรี หรือภาคอีสาน</strong> สามารถติดต่อ BIRDS GO AWAY เพื่อขอคำปรึกษาฟรีได้เลย</p>
-<!-- /wp:paragraph -->
+<div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;border-left:4px solid #E8792E;">
+<h3 style="margin:0 0 8px;"><a href="/bird-net-pricing-guide/" style="color:#1B4D5C;text-decoration:none;">ตาข่ายกันนก ราคาเท่าไหร่? คำนวณอย่างไร?</a></h3>
+<p style="margin:0;color:#555;font-size:0.95rem;">ราคาตาข่ายกันนก เริ่มต้น 350 บาท/ตร.ม. ขึ้นอยู่กับขนาดพื้นที่ ความสูง วัสดุ ส่งรูปประเมินฟรี</p>
+<a href="/bird-net-pricing-guide/" style="color:#E8792E;font-weight:600;font-size:0.9rem;">อ่านต่อ →</a>
+</div>
 
-<!-- wp:separator {"className":"is-style-wide"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-<!-- /wp:separator -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">วิธีไล่นกพิราบด้วยตัวเอง — ได้ผลจริงหรือ?</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>หลายคนเคยลองวิธีไล่นกพิราบด้วยตัวเอง เช่น แขวนซีดี ใช้เสียงไล่ ติดสติกเกอร์ตานก แต่วิธีเหล่านี้ได้ผลแค่ชั่วคราว เพราะนกพิราบเป็นสัตว์ที่ปรับตัวได้เร็วมาก</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p><strong>วิธีที่ได้ผลถาวร:</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list {"ordered":true} -->
-<ol>
-<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียง ช่องเปิด พื้นที่กว้าง อายุการใช้งาน 6-7 ปี</li>
-<li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
-<li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่แคบ ติดตั้งง่าย แต่ต้องเปลี่ยนทุก 1-2 ปี</li>
-<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผง</li>
-</ol>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>หากต้องการคำปรึกษาจากผู้เชี่ยวชาญ บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น</strong> <strong>เชียงใหม่</strong> <strong>ชลบุรี</strong> และ<strong>ทั่วภาคอีสาน</strong> โดย BIRDS GO AWAY ปรึกษาฟรี โทร 062-996-4994</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:separator {"className":"is-style-wide"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-<!-- /wp:separator -->
-
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">ตาข่ายกันนก ราคาเท่าไหร่? คำนวณอย่างไร?</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>ราคาติดตั้งตาข่ายกันนกขึ้นอยู่กับหลายปัจจัย:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:list -->
-<ul>
-<li><strong>ขนาดพื้นที่</strong> — วัดเป็นตารางเมตร ยิ่งพื้นที่ใหญ่ ราคาต่อ ตร.ม. จะถูกลง</li>
-<li><strong>ความสูง</strong> — งานที่ต้องใช้รถกระเช้าหรือโรยตัว จะมีค่าใช้จ่ายเพิ่ม</li>
-<li><strong>ความซับซ้อน</strong> — พื้นที่โล่งจะง่ายกว่าพื้นที่มีสิ่งกีดขวาง ท่อ ราวตากผ้า</li>
-<li><strong>ประเภทวัสดุ</strong> — ตาข่าย HDPE, หนามสแตนเลส, เจล มีราคาต่างกัน</li>
-</ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p><strong>ประเมินราคาฟรี!</strong> ส่งรูปหน้างานทาง LINE: oil_phanu หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย ให้บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน</strong>ทั่วประเทศ</p>
-<!-- /wp:paragraph -->
+</div>
+<!-- /wp:html -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
@@ -1452,15 +1408,216 @@ $blog_content = '
 <!-- /wp:buttons -->
 ';
 
+// ===== LANDING PAGES PER PROVINCE =====
+$khonkaen_content = '
+<!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ขอนแก่น — บริการติดตั้งมืออาชีพ</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก ขอนแก่น โดยทีมช่างมืออาชีพ วิศวกร กว. คุมงานทุกไซต์ รับประกัน 3 ปี นัดสำรวจหน้างานได้ภายใน 24 ชม.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:700px;margin:2rem auto;text-align:center;">
+<h2 style="color:#1B4D5C;">ทำไมลูกค้าขอนแก่นเลือกเรา?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🚀 เข้าถึงเร็ว</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">สำนักงานใหญ่อยู่ขอนแก่น นัดสำรวจได้ภายใน 24 ชม.</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+</div>
+</div>
+
+<h3 style="color:#1B4D5C;">พื้นที่ให้บริการในขอนแก่น</h3>
+<p style="color:#555;">เมืองขอนแก่น, บ้านเป็ด, ศิลา, สำราญ, บ้านค้อ, เมืองเก่า, พระลับ, ท่าพระ และจังหวัดใกล้เคียง: อุดรธานี, มหาสารคาม, นครราชสีมา, กาฬสินธุ์, ร้อยเอ็ด</p>
+
+<h3 style="color:#1B4D5C;">ผลงานในขอนแก่น</h3>
+<p style="color:#555;">ติดตั้งตาข่ายกันนกให้คอนโด X10 ศรีนครินทร์, หมู่บ้านสีวลี, โรงงานในนิคมอุตสาหกรรม, ปั๊มน้ำมัน และอาคารพาณิชย์ทั่วขอนแก่น รวม 32+ โปรเจกต์</p>
+
+<div style="margin:2rem 0;">
+<a href="tel:0629964994" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 062-996-4994</a>
+<p style="margin-top:8px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;">💬 แอดไลน์ oil_phanu</a></p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$chiangmai_content = '
+<!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก เชียงใหม่ — บริการติดตั้งมืออาชีพ</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก เชียงใหม่ โดยทีมช่างมืออาชีพ ผ่านอบรม Safety ครบ รับประกัน 3 ปี</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:700px;margin:2rem auto;text-align:center;">
+<h2 style="color:#1B4D5C;">บริการตาข่ายกันนก เชียงใหม่</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🏗️ ทีมช่างประจำเชียงใหม่</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ทีมงานประจำพื้นที่เชียงใหม่ พร้อมเข้างานทันที</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+</div>
+</div>
+
+<h3 style="color:#1B4D5C;">พื้นที่ให้บริการในเชียงใหม่</h3>
+<p style="color:#555;">เมืองเชียงใหม่, หางดง, สันทราย, สันกำแพง, แม่ริม, ดอยสะเก็ด, สารภี และจังหวัดใกล้เคียง: ลำพูน, ลำปาง, เชียงราย</p>
+
+<div style="margin:2rem 0;">
+<a href="tel:0936415623" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 093-641-5623</a>
+<p style="margin-top:8px;"><a href="https://line.me/ti/p/~th3-ta006-2" style="color:#06C755;font-weight:600;">💬 แอดไลน์ th3-ta006-2</a></p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$chonburi_content = '
+<!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ชลบุรี — บริการติดตั้งมืออาชีพ</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก ชลบุรี พัทยา ศรีราชา โดยทีมช่างมืออาชีพ รับประกัน 3 ปี</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:700px;margin:2rem auto;text-align:center;">
+<h2 style="color:#1B4D5C;">บริการตาข่ายกันนก ชลบุรี</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🏗️ ครอบคลุม EEC</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ชลบุรี พัทยา ศรีราชา บางแสน แหลมฉบัง ระยอง</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+</div>
+<div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
+<h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+</div>
+</div>
+
+<h3 style="color:#1B4D5C;">พื้นที่ให้บริการในชลบุรี</h3>
+<p style="color:#555;">เมืองชลบุรี, พัทยา, ศรีราชา, บางแสน, แหลมฉบัง, บ่อวิน, สัตหีบ และจังหวัดใกล้เคียง: ระยอง, ฉะเชิงเทรา, ปราจีนบุรี</p>
+
+<div style="margin:2rem 0;">
+<a href="tel:0956292488" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 095-629-2488</a>
+<p style="margin-top:8px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;">💬 แอดไลน์ oil_phanu</a></p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+// ===== SEPARATE BLOG POSTS =====
+$blog_posts = array(
+    'danger-of-pigeon-droppings' => array(
+        'title'   => 'อันตรายจากขี้นกพิราบ — โรคที่คุณอาจไม่รู้',
+        'content' => '<!-- wp:paragraph -->
+<p>มูลนกพิราบไม่ใช่แค่ปัญหาความสกปรก แต่ยังเป็นแหล่งสะสมเชื้อโรคอันตรายหลายชนิด ได้แก่:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li><strong>โรคปอดอักเสบ (Cryptococcosis)</strong> — เชื้อราในมูลนกแห้ง เมื่อสูดดมเข้าปอดอาจทำให้ปอดอักเสบรุนแรง</li>
+<li><strong>โรคฮิสโตพลาสโมซิส (Histoplasmosis)</strong> — เชื้อราที่เจริญเติบโตในมูลนก สามารถแพร่กระจายในอากาศ</li>
+<li><strong>โรคซาลโมเนลลา (Salmonellosis)</strong> — เชื้อแบคทีเรียจากมูลนกปนเปื้อนอาหารและน้ำ</li>
+<li><strong>เห็บ ไร หมัด</strong> — ปรสิตที่อาศัยอยู่ในรังนกและมูลนก สามารถเข้าสู่ที่พักอาศัยได้</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>วิธีป้องกัน:</strong> ติดตั้งตาข่ายกันนก HDPE หรือหนามกันนกสแตนเลส เป็นวิธีที่ปลอดภัยและได้ผลถาวร ไม่ทำร้ายนก แต่ป้องกันไม่ให้นกเข้ามาทำรังในพื้นที่ หากคุณอยู่ในพื้นที่<strong>ขอนแก่น เชียงใหม่ ชลบุรี หรือภาคอีสาน</strong> สามารถติดต่อ BIRDS GO AWAY เพื่อขอคำปรึกษาฟรีได้เลย โทร 062-996-4994</p>
+<!-- /wp:paragraph -->',
+    ),
+    'how-to-get-rid-of-pigeons' => array(
+        'title'   => 'วิธีไล่นกพิราบด้วยตัวเอง — ได้ผลจริงหรือ?',
+        'content' => '<!-- wp:paragraph -->
+<p>หลายคนเคยลองวิธีไล่นกพิราบด้วยตัวเอง เช่น แขวนซีดี ใช้เสียงไล่ ติดสติกเกอร์ตานก แต่วิธีเหล่านี้ได้ผลแค่ชั่วคราว เพราะนกพิราบเป็นสัตว์ที่ปรับตัวได้เร็วมาก</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>วิธีที่ได้ผลถาวร:</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:list {"ordered":true} -->
+<ol>
+<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียง ช่องเปิด พื้นที่กว้าง อายุการใช้งาน 6-7 ปี เริ่มต้น 350 บาท/ตร.ม.</li>
+<li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
+<li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่แคบ ติดตั้งง่าย แต่ต้องเปลี่ยนทุก 1-2 ปี</li>
+<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผง</li>
+</ol>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>หากต้องการคำปรึกษาจากผู้เชี่ยวชาญ บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น</strong> <strong>เชียงใหม่</strong> <strong>ชลบุรี</strong> และ<strong>ทั่วภาคอีสาน</strong> โดย BIRDS GO AWAY ปรึกษาฟรี โทร 062-996-4994</p>
+<!-- /wp:paragraph -->',
+    ),
+    'bird-net-pricing-guide' => array(
+        'title'   => 'ตาข่ายกันนก ราคาเท่าไหร่? คำนวณอย่างไร?',
+        'content' => '<!-- wp:paragraph -->
+<p>ราคาติดตั้งตาข่ายกันนกขึ้นอยู่กับหลายปัจจัย:</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul>
+<li><strong>ขนาดพื้นที่</strong> — วัดเป็นตารางเมตร ยิ่งพื้นที่ใหญ่ ราคาต่อ ตร.ม. จะถูกลง</li>
+<li><strong>ความสูง</strong> — งานที่ต้องใช้รถกระเช้าหรือโรยตัว จะมีค่าใช้จ่ายเพิ่ม</li>
+<li><strong>ความซับซ้อน</strong> — พื้นที่โล่งจะง่ายกว่าพื้นที่มีสิ่งกีดขวาง ท่อ ราวตากผ้า</li>
+<li><strong>ประเภทวัสดุ</strong> — ตาข่าย HDPE, หนามสแตนเลส, เจล มีราคาต่างกัน</li>
+</ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p><strong>ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</strong> (ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี) ส่งรูปหน้างานทาง LINE: oil_phanu หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย</p>
+<!-- /wp:paragraph -->',
+    ),
+);
+
+// Create blog posts as separate WordPress posts
+echo "=== Creating Blog Posts ===\n";
+foreach ($blog_posts as $slug => $post_data) {
+    $existing = get_page_by_path($slug, OBJECT, 'post');
+    if ($existing) {
+        wp_update_post(array(
+            'ID' => $existing->ID,
+            'post_content' => $post_data['content'],
+        ));
+        echo "Updated post: {$post_data['title']} (ID: {$existing->ID})\n";
+    } else {
+        $id = wp_insert_post(array(
+            'post_title'   => $post_data['title'],
+            'post_name'    => $slug,
+            'post_content' => $post_data['content'],
+            'post_status'  => 'publish',
+            'post_type'    => 'post',
+        ));
+        echo "Created post: {$post_data['title']} (ID: {$id})\n";
+    }
+}
+
 // ===== UPDATE PAGES =====
 $pages = array(
-    'home'      => array('title' => 'หน้าแรก',      'content' => $home_content),
-    'services'  => array('title' => 'บริการของเรา',  'content' => $services_content),
-    'portfolio' => array('title' => 'ผลงานของเรา',  'content' => $portfolio_content),
-    'about'     => array('title' => 'เกี่ยวกับเรา',  'content' => $about_content),
-    'contact'   => array('title' => 'ติดต่อเรา',     'content' => $contact_content),
-    'faq'       => array('title' => 'คำถามที่พบบ่อย', 'content' => $faq_content),
-    'blog'      => array('title' => 'บทความ',        'content' => $blog_content),
+    'home'       => array('title' => 'หน้าแรก',      'content' => $home_content),
+    'services'   => array('title' => 'บริการของเรา',  'content' => $services_content),
+    'portfolio'  => array('title' => 'ผลงานของเรา',  'content' => $portfolio_content),
+    'about'      => array('title' => 'เกี่ยวกับเรา',  'content' => $about_content),
+    'contact'    => array('title' => 'ติดต่อเรา',     'content' => $contact_content),
+    'faq'        => array('title' => 'คำถามที่พบบ่อย', 'content' => $faq_content),
+    'blog'       => array('title' => 'บทความ',        'content' => $blog_content),
+    'khon-kaen'  => array('title' => 'ตาข่ายกันนก ขอนแก่น', 'content' => $khonkaen_content),
+    'chiang-mai' => array('title' => 'ตาข่ายกันนก เชียงใหม่', 'content' => $chiangmai_content),
+    'chonburi'   => array('title' => 'ตาข่ายกันนก ชลบุรี', 'content' => $chonburi_content),
 );
 
 foreach ($pages as $slug => $page_data) {
@@ -1497,39 +1654,54 @@ echo "=== Configuring SEO ===\n";
 // SEO meta data for each page
 $seo_data = array(
     'home' => array(
-        'title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน',
-        'desc'  => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน โดยวิศวกรมืออาชีพ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
+        'title' => 'ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี | Birds Go Away',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก หนามกันนก มาตรฐานอุตสาหกรรม แก้ปัญหานกพิราบถาวร รับประกันงาน 3 ปี ประเมินหน้างานฟรีทั่วขอนแก่นและภาคอีสาน โทร 062-996-4994',
         'focus' => 'ตาข่ายกันนก ขอนแก่น',
     ),
     'services' => array(
-        'title' => 'บริการของเรา — ตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์ | BIRDS GO AWAY',
-        'desc'  => 'บริการติดตั้งตาข่าย HDPE กันนก แผงกันนกโซลาร์เซลล์ หนามกันนกสแตนเลส เจลไล่นก ครบวงจร ราคายุติธรรม มีวิศวกรคุมงาน รับประกัน 3 ปี',
+        'title' => 'บริการติดตั้งตาข่ายกันนก ครบวงจร | Birds Go Away',
+        'desc'  => 'ตาข่าย HDPE หนามสแตนเลส เจลไล่นก แผงกันนกโซลาร์ ติดตั้งโดยวิศวกร รับประกัน 3 ปี ราคาเริ่มต้น 350 บาท/ตร.ม. ประเมินฟรี โทร 062-996-4994',
         'focus' => 'บริการติดตั้งตาข่ายกันนก',
     ),
     'portfolio' => array(
-        'title' => 'ผลงานของเรา — ตัวอย่างงานติดตั้งตาข่ายกันนก | BIRDS GO AWAY',
-        'desc'  => 'ดูตัวอย่างผลงานการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก พร้อมวิดีโอจากหน้างานจริง โดย BIRDS GO AWAY ขอนแก่น เชียงใหม่ ชลบุรี',
+        'title' => 'ผลงานติดตั้งตาข่ายกันนก 32+ โปรเจกต์ | Birds Go Away',
+        'desc'  => 'ดูผลงานจริงการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก พร้อมวิดีโอจากหน้างาน คอนโด โรงงาน ปั๊มน้ำมัน วัด ขอนแก่น เชียงใหม่ ชลบุรี',
         'focus' => 'ผลงานติดตั้งตาข่ายกันนก',
     ),
     'about' => array(
-        'title' => 'เกี่ยวกับเรา — บริษัท รีเช็ค บิ้วดิ้ง จำกัด | BIRDS GO AWAY',
-        'desc'  => 'บริษัท รีเช็ค บิ้วดิ้ง จำกัด ผู้ให้บริการติดตั้งตาข่ายกันนก ทีมช่างผ่านอบรมโรยตัว มี Certificate วิศวกรคุมงาน ให้บริการ ขอนแก่น เชียงใหม่ ชลบุรี',
+        'title' => 'เกี่ยวกับเรา บริษัท รีเช็ค บิ้วดิ้ง | Birds Go Away',
+        'desc'  => 'บริษัท รีเช็ค บิ้วดิ้ง จำกัด ผู้เชี่ยวชาญติดตั้งตาข่ายกันนก ทีมช่างผ่านอบรมโรยตัว มี Certificate วิศวกร กว. คุมงาน ให้บริการขอนแก่น เชียงใหม่ ชลบุรี',
         'focus' => 'บริษัทติดตั้งตาข่ายกันนก',
     ),
     'contact' => array(
-        'title' => 'ติดต่อเรา — ปรึกษาฟรี ขอใบเสนอราคาตาข่ายกันนก | BIRDS GO AWAY',
-        'desc'  => 'ติดต่อ BIRDS GO AWAY ปรึกษาฟรีเรื่องตาข่ายกันนก โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) 095-629-2488 (ชลบุรี) LINE: oil_phanu',
+        'title' => 'ติดต่อเรา ปรึกษาฟรี ประเมินราคา | Birds Go Away',
+        'desc'  => 'ติดต่อ Birds Go Away ปรึกษาฟรี ประเมินหน้างานภายใน 24 ชม. โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) LINE: oil_phanu',
         'focus' => 'ติดต่อตาข่ายกันนก',
     ),
     'faq' => array(
-        'title' => 'คำถามที่พบบ่อย FAQ — ตาข่ายกันนก ราคา วิธีติดตั้ง | BIRDS GO AWAY',
-        'desc'  => 'รวมคำถามที่พบบ่อยเกี่ยวกับตาข่ายกันนก ราคาติดตั้ง ขั้นตอนการทำงาน อายุการใช้งาน รับประกัน พื้นที่ให้บริการ โดย BIRDS GO AWAY',
+        'title' => 'คำถามที่พบบ่อย ตาข่ายกันนก ราคา | Birds Go Away',
+        'desc'  => 'รวมคำถามที่พบบ่อยเกี่ยวกับตาข่ายกันนก ราคาเริ่มต้น ขั้นตอนติดตั้ง อายุการใช้งาน การรับประกัน พื้นที่ให้บริการทั่วประเทศ',
         'focus' => 'ตาข่ายกันนก คำถามที่พบบ่อย',
     ),
     'blog' => array(
-        'title' => 'บทความ — วิธีไล่นกพิราบ อันตรายจากขี้นก ตาข่ายกันนก ราคา | BIRDS GO AWAY',
-        'desc'  => 'บทความความรู้เรื่องปัญหานกพิราบ อันตรายจากขี้นก วิธีไล่นกด้วยตัวเอง ราคาตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน โดยผู้เชี่ยวชาญ BIRDS GO AWAY',
+        'title' => 'บทความ วิธีไล่นกพิราบถาวร | Birds Go Away',
+        'desc'  => 'ความรู้เรื่องปัญหานกพิราบ อันตรายจากขี้นก วิธีไล่นกที่ได้ผลจริง ราคาตาข่ายกันนก เปรียบเทียบวิธีป้องกันนกแต่ละแบบ โดยผู้เชี่ยวชาญ',
         'focus' => 'วิธีไล่นกพิราบ ตาข่ายกันนก ขอนแก่น',
+    ),
+    'khon-kaen' => array(
+        'title' => 'ตาข่ายกันนก ขอนแก่น รับประกัน 3 ปี | Birds Go Away',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก ขอนแก่น โดยทีมช่างมืออาชีพ วิศวกรคุมงาน รับประกัน 3 ปี ประเมินหน้างานฟรี นัดสำรวจภายใน 24 ชม. โทร 062-996-4994',
+        'focus' => 'ตาข่ายกันนก ขอนแก่น',
+    ),
+    'chiang-mai' => array(
+        'title' => 'ตาข่ายกันนก เชียงใหม่ รับประกัน 3 ปี | Birds Go Away',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก เชียงใหม่ หนามกันนก เจลไล่นก โดยทีมช่างมืออาชีพ รับประกัน 3 ปี ประเมินหน้างานฟรี โทร 093-641-5623',
+        'focus' => 'ตาข่ายกันนก เชียงใหม่',
+    ),
+    'chonburi' => array(
+        'title' => 'ตาข่ายกันนก ชลบุรี รับประกัน 3 ปี | Birds Go Away',
+        'desc'  => 'บริการติดตั้งตาข่ายกันนก ชลบุรี พัทยา ศรีราชา โดยทีมช่างมืออาชีพ รับประกัน 3 ปี ประเมินหน้างานฟรี โทร 095-629-2488',
+        'focus' => 'ตาข่ายกันนก ชลบุรี',
     ),
 );
 
@@ -1555,6 +1727,37 @@ foreach ($seo_data as $slug => $seo) {
     echo "SEO configured for: {$seo['title']}\n";
 }
 
+// SEO for blog posts
+$blog_seo = array(
+    'danger-of-pigeon-droppings' => array(
+        'title' => 'อันตรายจากขี้นกพิราบ โรคที่ไม่รู้ | Birds Go Away',
+        'desc'  => 'มูลนกพิราบมีเชื้อโรคอันตราย ปอดอักเสบ ซาลโมเนลลา เห็บไร วิธีป้องกันถาวรด้วยตาข่ายกันนก HDPE หนามสแตนเลส รับประกัน 3 ปี',
+        'focus' => 'อันตรายจากขี้นกพิราบ',
+    ),
+    'how-to-get-rid-of-pigeons' => array(
+        'title' => 'วิธีไล่นกพิราบ ได้ผลจริงถาวร | Birds Go Away',
+        'desc'  => 'เปรียบเทียบวิธีไล่นกพิราบ ตาข่าย HDPE หนามสแตนเลส เจลไล่นก แผงกันนกโซลาร์ วิธีไหนได้ผลถาวร ราคาเริ่มต้น 350 บาท/ตร.ม.',
+        'focus' => 'วิธีไล่นกพิราบ',
+    ),
+    'bird-net-pricing-guide' => array(
+        'title' => 'ตาข่ายกันนก ราคาเท่าไหร่ คำนวณอย่างไร | Birds Go Away',
+        'desc'  => 'ราคาตาข่ายกันนก เริ่มต้น 350 บาท/ตร.ม. ขึ้นอยู่กับขนาดพื้นที่ ความสูง วัสดุ ส่งรูปประเมินฟรี โทร 062-996-4994',
+        'focus' => 'ตาข่ายกันนก ราคา',
+    ),
+);
+
+foreach ($blog_seo as $slug => $seo) {
+    $post = get_page_by_path($slug, OBJECT, 'post');
+    if (!$post) continue;
+    $pid = $post->ID;
+    update_post_meta($pid, '_yoast_wpseo_title', $seo['title']);
+    update_post_meta($pid, '_yoast_wpseo_metadesc', $seo['desc']);
+    update_post_meta($pid, '_yoast_wpseo_focuskw', $seo['focus']);
+    update_post_meta($pid, '_yoast_wpseo_opengraph-title', $seo['title']);
+    update_post_meta($pid, '_yoast_wpseo_opengraph-description', $seo['desc']);
+    echo "SEO configured for post: {$seo['title']}\n";
+}
+
 // Yoast global settings
 update_option('wpseo_titles', array_merge(
     (array) get_option('wpseo_titles', array()),
@@ -1564,8 +1767,8 @@ update_option('wpseo_titles', array_merge(
         'company_logo' => '',
         'website_name' => 'BIRDS GO AWAY — ตาข่ายกันนก',
         'separator' => 'sc-pipe',
-        'title-home-wpseo' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ',
-        'metadesc-home-wpseo' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี โทร 062-996-4994',
+        'title-home-wpseo' => 'ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี | Birds Go Away',
+        'metadesc-home-wpseo' => 'บริการติดตั้งตาข่ายกันนก หนามกันนก มาตรฐานอุตสาหกรรม แก้ปัญหานกพิราบถาวร รับประกันงาน 3 ปี ประเมินหน้างานฟรี โทร 062-996-4994',
         'open_graph_frontpage_title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ',
         'open_graph_frontpage_desc' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี',
         'open_graph_frontpage_image' => img(12),

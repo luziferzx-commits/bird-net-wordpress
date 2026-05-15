@@ -1554,6 +1554,13 @@ ${FORM_SHORTCODE}
   echo "=== Configuring Astra Theme ==="
   wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร ขอนแก่น เชียงใหม่ ชลบุรี | BIRDS GO AWAY" --path=/var/www/html --allow-root
 
+  # Disable Astra above/below header sections (fix double navigation)
+  echo "=== Fixing Double Navigation ==="
+  wp theme mod set above-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
+  wp theme mod set below-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
+  wp theme mod set header-above-header-display 0 --path=/var/www/html --allow-root 2>/dev/null || true
+  wp theme mod set header-below-header-display 0 --path=/var/www/html --allow-root 2>/dev/null || true
+
   echo "=== Setting Default Contact Options ==="
   wp option update birdnet_phone "0629964994" --path=/var/www/html --allow-root
   wp option update birdnet_line_id "oil_phanu" --path=/var/www/html --allow-root
