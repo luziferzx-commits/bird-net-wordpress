@@ -1190,34 +1190,60 @@ $about_content = '
 <p class="has-text-align-center">ช่างทุกคนผ่านอบรมการทำงานบนที่สูง พร้อมอุปกรณ์ความปลอดภัยมาตรฐาน ลูกค้ากลุ่มโรงงานและอาคารสำนักงานวางใจได้</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:columns -->
-<div class="wp-block-columns">
-<!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;">
-<!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['team'] . '" alt="ทีมช่างติดตั้งตาข่ายกันนก พร้อมชุดฟอร์มและอุปกรณ์ Safety" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>ทีมช่างมืออาชีพ</strong><br>ชุดฟอร์มพร้อมอุปกรณ์ Safety ครบชุด</p>
+<!-- wp:html -->
+<div style="max-width:900px;margin:0 auto;padding:0 1rem;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-briefing.webp" alt="ทีมช่าง Birds Go Away ประชุมก่อนปฏิบัติงาน สวมหมวกนิรภัย สายรัดนิรภัยครบ" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">Safety Briefing ก่อนปฏิบัติงาน</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;">
-<!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['safety'] . '" alt="อุปกรณ์ Safety โรยตัว หมวกนิรภัย สายรัดนิรภัย ทีมงาน Birds Go Away" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>อุปกรณ์ Safety มาตรฐาน</strong><br>หมวกนิรภัย สายรัด เชือกโรยตัว</p>
 </div>
-<!-- /wp:column -->
-<!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;">
-<!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['work1'] . '" alt="ทีมงานกำลังติดตั้งตาข่ายกันนก บนอาคารสูง โรยตัว" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<p style="font-size:0.85rem;color:#555;margin-top:8px;"><strong>ปฏิบัติงานจริง</strong><br>โรยตัวติดตั้งตาข่ายอาคารสูง</p>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-scaffold.webp" alt="ช่างติดตั้งตาข่ายกันนก ขึ้นนั่งร้าน สวมสายรัดนิรภัย โรงงาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">นั่งร้าน — สายรัดนิรภัย</p>
 </div>
-<!-- /wp:column -->
 </div>
-<!-- /wp:columns -->
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-boom-lift.webp" alt="รถกระเช้า Boom Lift ติดตั้งตาข่ายกันนก โรงงานอุตสาหกรรม" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">Boom Lift — งานอาคารสูง</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-balcony-net.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงคอนโด เสื้อ Recheck Building" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ตาข่าย — ระเบียงคอนโด</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-townhouse.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงทาวน์โฮม สายรัดนิรภัย" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ตาข่าย — ทาวน์โฮม</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-highrise.webp" alt="ช่างติดตั้งตาข่ายกันนก คอนโดสูง สายรัดนิรภัย ทำงานบนที่สูง" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">คอนโดชั้นสูง — สายรัดนิรภัย</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-townhouse2.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงอาคาร ทำงานบนบันได" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ตาข่าย — อาคารพาณิชย์</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-drill.webp" alt="ช่างใช้สว่านติดตั้งตาข่ายกันนก ทำงานบนที่สูง อุปกรณ์มาตรฐาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">สว่านยึดตาข่าย — อุปกรณ์มาตรฐาน</p>
+</div>
+</div>
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
