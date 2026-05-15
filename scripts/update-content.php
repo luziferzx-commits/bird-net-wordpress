@@ -800,6 +800,36 @@ $home_content = '
 </div>
 </div>
 
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E5;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"โรงพยาบาลเราจ้างติดตาข่ายรอบอาคารผู้ป่วย นกพิราบหายไปเลย ผู้ป่วยไม่ต้องทนกับขี้นกและเชื้อโรคอีกแล้ว ขอบคุณทีมงานมากครับ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">ฝ่ายอาคารสถานที่</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">โรงพยาบาลรัฐ, นครราชสีมา</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x2600;&#xFE0F;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ติดแผงกันนกโซลาร์เซลล์ที่โรงงาน นกเคยทำรังใต้แผงจนสายไฟเสียหาย ตอนนี้สะอาดมาก โซลาร์ทำงานเต็มประสิทธิภาพ คุ้มค่ามากครับ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณธนา</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">โรงงาน, มหาสารคาม</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3EB;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ติดตาข่ายรอบอาคารเรียน 3 หลัง นกไม่มาทำรังอีกเลย นักเรียนไม่ต้องเดินหลบขี้นก ผู้ปกครองก็ชม ขอบคุณมากค่ะ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณครูสุภา</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">โรงเรียนเอกชน, ขอนแก่น</p>
+</div>
+</div>
+
 </div>
 <div style="display:flex;justify-content:center;gap:8px;margin-top:16px;">
 <button onclick="moveTestimonial(-1)" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276E;</button>

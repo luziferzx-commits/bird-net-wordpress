@@ -45,6 +45,16 @@ function birdnet_hide_front_page_title() {
 }
 add_action('wp_head', 'birdnet_hide_front_page_title');
 
+// Set --vw CSS variable to actual visible width (excludes scrollbar)
+function birdnet_vw_fix() {
+    ?>
+    <script>
+    (function(){function s(){document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px')}s();window.addEventListener('resize',s)})();
+    </script>
+    <?php
+}
+add_action('wp_head', 'birdnet_vw_fix');
+
 // Language detection helper
 function birdnet_is_english() {
     $uri = $_SERVER['REQUEST_URI'] ?? '';
