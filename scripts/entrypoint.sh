@@ -1614,6 +1614,10 @@ else
   # Update page content with proper images/videos via PHP
   echo "=== Updating page content ==="
   php /tmp/update-content.php 2>/dev/null || echo "Content update had errors, continuing..."
+
+  # Update English content
+  echo "=== Updating English content ==="
+  php /tmp/update-content-en.php 2>/dev/null || echo "EN content update had errors, continuing..."
 fi
 
 # Ensure proper permissions

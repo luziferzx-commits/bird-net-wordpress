@@ -59,6 +59,7 @@ RUN { \
 # Copy scripts
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY scripts/update-content.php /tmp/update-content.php
+COPY scripts/update-content-en.php /tmp/update-content-en.php
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Copy custom theme child

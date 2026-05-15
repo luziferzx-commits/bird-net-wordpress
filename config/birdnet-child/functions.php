@@ -40,22 +40,80 @@ function birdnet_hide_front_page_title() {
 }
 add_action('wp_head', 'birdnet_hide_front_page_title');
 
+// Language detection helper
+function birdnet_is_english() {
+    $uri = $_SERVER['REQUEST_URI'] ?? '';
+    return (strpos($uri, '/en/') === 0 || $uri === '/en');
+}
+
+// Language page mapping
+function birdnet_get_lang_urls() {
+    $uri = $_SERVER['REQUEST_URI'] ?? '';
+    $is_en = birdnet_is_english();
+    $map = array(
+        '/'           => '/en/home',
+        '/services/'  => '/en/services',
+        '/portfolio/' => '/en/portfolio',
+        '/about/'     => '/en/about',
+        '/contact/'   => '/en/contact',
+        '/faq/'       => '/en/faq',
+        '/en/home'    => '/',
+        '/en/services' => '/services/',
+        '/en/portfolio' => '/portfolio/',
+        '/en/about'   => '/about/',
+        '/en/contact' => '/contact/',
+        '/en/faq'     => '/faq/',
+    );
+    $clean = rtrim(strtok($uri, '?'), '/');
+    if ($clean === '') $clean = '/';
+    else $clean .= '/';
+    $clean_no_slash = rtrim($clean, '/');
+    $th_url = $is_en ? ($map[$clean_no_slash] ?? '/') : $uri;
+    $en_url = $is_en ? $uri : ($map[$clean] ?? ($map[$clean_no_slash] ?? '/en/home'));
+    return array('th' => $th_url, 'en' => $en_url, 'is_en' => $is_en);
+}
+
+// Language switcher UI
+function birdnet_lang_switcher() {
+    $lang = birdnet_get_lang_urls();
+    $is_en = $lang['is_en'];
+    ?>
+    <div class="lang-switcher">
+        <a href="<?php echo esc_url($lang['th']); ?>" class="lang-btn<?php echo $is_en ? '' : ' active'; ?>" title="ภาษาไทย">TH</a>
+        <span class="lang-sep">|</span>
+        <a href="<?php echo esc_url($lang['en']); ?>" class="lang-btn<?php echo $is_en ? ' active' : ''; ?>" title="English">EN</a>
+    </div>
+    <?php
+}
+
+// Add hreflang tags for SEO
+function birdnet_hreflang_tags() {
+    $lang = birdnet_get_lang_urls();
+    $base = 'https://birdsgoaway.com';
+    echo '<link rel="alternate" hreflang="th" href="' . esc_url($base . $lang['th']) . '" />' . "\n";
+    echo '<link rel="alternate" hreflang="en" href="' . esc_url($base . $lang['en']) . '" />' . "\n";
+    echo '<link rel="alternate" hreflang="x-default" href="' . esc_url($base . $lang['th']) . '" />' . "\n";
+}
+add_action('wp_head', 'birdnet_hreflang_tags', 1);
+
 // Top Contact Bar above header
 function birdnet_top_contact_bar() {
+    $is_en = birdnet_is_english();
     ?>
     <div class="birdnet-top-bar">
         <div class="top-bar-inner">
             <div class="top-bar-left">
                 <a href="tel:0629964994" class="top-bar-item"><span class="top-bar-icon">📞</span> 062-996-4994</a>
                 <a href="mailto:birdsgoaway.th@gmail.com" class="top-bar-item"><span class="top-bar-icon">📧</span> birdsgoaway.th@gmail.com</a>
-                <span class="top-bar-item top-bar-hours"><span class="top-bar-icon">🕐</span> จ-ส 08:00-17:00</span>
+                <span class="top-bar-item top-bar-hours"><span class="top-bar-icon">🕐</span> <?php echo $is_en ? 'Mon-Sat 08:00-17:00' : 'จ-ส 08:00-17:00'; ?></span>
             </div>
             <div class="top-bar-right">
                 <div class="top-bar-social">
                     <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">📘</a>
                     <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" title="LINE">💬</a>
                 </div>
-                <a href="/contact" class="top-bar-cta">ปรึกษาฟรี!</a>
+                <a href="<?php echo $is_en ? '/en/contact' : '/contact'; ?>" class="top-bar-cta"><?php echo $is_en ? 'Free Consult!' : 'ปรึกษาฟรี!'; ?></a>
+                <?php birdnet_lang_switcher(); ?>
             </div>
         </div>
     </div>
@@ -583,7 +641,12 @@ add_action('wp_head', 'birdnet_fallback_meta_description', 2);
 // Add CTA button to nav menu
 function birdnet_nav_cta_button($items, $args) {
     if ($args->theme_location === 'primary' || $args->menu === 'Main Menu') {
-        $items .= '<li class="menu-item birdnet-nav-cta"><a href="/contact" class="nav-cta-btn">ขอใบเสนอราคา</a></li>';
+        $is_en = birdnet_is_english();
+        if ($is_en) {
+            $items .= '<li class="menu-item birdnet-nav-cta"><a href="/en/contact" class="nav-cta-btn">Get Quote</a></li>';
+        } else {
+            $items .= '<li class="menu-item birdnet-nav-cta"><a href="/contact" class="nav-cta-btn">ขอใบเสนอราคา</a></li>';
+        }
     }
     return $items;
 }

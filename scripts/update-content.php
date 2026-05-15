@@ -248,22 +248,22 @@ $home_content = '
 <div style="background:linear-gradient(135deg,#1B4D5C,#2a6a7c);padding:3rem 1rem;text-align:center;" data-aos="fade-up">
 <div style="max-width:900px;margin:0 auto;">
 <h2 style="color:#fff;font-size:1.8rem;margin:0 0 0.5rem;">&#x26A0;&#xFE0F; งานเสี่ยง ยกให้เรา</h2>
-<p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0 0 2rem;">งานติดตั้งตาข่ายกันนก เป็นงานที่ต้องการความเชี่ยวชาญ ความปลอดภัย และประสบการณ์ — อย่าเสี่ยงทำเอง</p>
+<p style="color:#e0e0e0;font-size:0.95rem;margin:0 0 2rem;">งานติดตั้งตาข่ายกันนก เป็นงานที่ต้องการความเชี่ยวชาญ ความปลอดภัย และประสบการณ์ — อย่าเสี่ยงทำเอง</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;text-align:left;">
 <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
 <div style="font-size:2rem;margin-bottom:8px;">&#x1F6A8;</div>
 <h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">ทำงานบนที่สูง อันตรายถึงชีวิต</h3>
-<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">การติดตั้งตาข่ายบนอาคารสูง คอนโด โรงงาน ต้องใช้อุปกรณ์ Safety ครบชุด — สายรัดนิรภัย นั่งร้าน รถกระเช้า ทีมเราผ่านอบรมทุกคน มีใบรับรองโรยตัว SAFESIRI</p>
+<p style="margin:0;font-size:0.85rem;color:#d0d0d0;line-height:1.6;">การติดตั้งตาข่ายบนอาคารสูง คอนโด โรงงาน ต้องใช้อุปกรณ์ Safety ครบชุด — สายรัดนิรภัย นั่งร้าน รถกระเช้า ทีมเราผ่านอบรมทุกคน มีใบรับรองโรยตัว SAFESIRI</p>
 </div>
 <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
 <div style="font-size:2rem;margin-bottom:8px;">&#x1F9F0;</div>
 <h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">ซื้อมาติดเอง ไม่ได้ผล</h3>
-<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">ตาข่ายที่ไม่ได้ขึงตึงพอ นกยังเข้าได้ หนามที่ระยะห่างไม่ถูก นกยังเกาะ — ต้องใช้เทคนิคเฉพาะทาง วิศวกรออกแบบ วัดพื้นที่อย่างละเอียด จึงได้ผล 100%</p>
+<p style="margin:0;font-size:0.85rem;color:#d0d0d0;line-height:1.6;">ตาข่ายที่ไม่ได้ขึงตึงพอ นกยังเข้าได้ หนามที่ระยะห่างไม่ถูก นกยังเกาะ — ต้องใช้เทคนิคเฉพาะทาง วิศวกรออกแบบ วัดพื้นที่อย่างละเอียด จึงได้ผล 100%</p>
 </div>
 <div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
 <div style="font-size:2rem;margin-bottom:8px;">&#x1F4B0;</div>
 <h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">จ้างช่างทั่วไป เสียเงินซ้ำ</h3>
-<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">ช่างไม่มีประสบการณ์ ใช้วัสดุถูก ติดตั้งผิดวิธี → ตาข่ายหลุด นกกลับมาใหม่ ต้องจ้างซ่อมซ้ำ — จ้างมืออาชีพครั้งเดียว ประหยัดกว่า รับประกันผลงาน 3 ปี</p>
+<p style="margin:0;font-size:0.85rem;color:#d0d0d0;line-height:1.6;">ช่างไม่มีประสบการณ์ ใช้วัสดุถูก ติดตั้งผิดวิธี → ตาข่ายหลุด นกกลับมาใหม่ ต้องจ้างซ่อมซ้ำ — จ้างมืออาชีพครั้งเดียว ประหยัดกว่า รับประกันผลงาน 3 ปี</p>
 </div>
 </div>
 <div style="margin-top:2rem;">
@@ -932,7 +932,7 @@ $services_content = '
 <!-- wp:html -->
 <div style="max-width:600px;margin:1.5rem auto;background:linear-gradient(135deg,#1B4D5C,#2a6a7c);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;color:white;">
 <p style="margin:0;font-size:1.3rem;font-weight:700;">💰 ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</p>
-<p style="margin:6px 0 0;font-size:0.95rem;opacity:0.9;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี — ไม่มีค่าใช้จ่าย</p>
+<p style="margin:6px 0 0;font-size:0.95rem;color:#e0e0e0;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี — ไม่มีค่าใช้จ่าย</p>
 </div>
 <!-- /wp:html -->
 

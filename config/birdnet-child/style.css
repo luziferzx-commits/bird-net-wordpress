@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      12.0.0
+ Version:      12.2.0
  Text Domain:  birdnet-child
 */
 
@@ -169,10 +169,39 @@ a:hover { color: var(--bn-orange-dark); }
   background: var(--bn-orange-dark) !important;
   color: #fff !important;
 }
+/* Language Switcher */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 10px;
+}
+.lang-btn {
+  color: rgba(255,255,255,0.7) !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding: 2px 6px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+.lang-btn.active {
+  color: #fff !important;
+  background: rgba(255,255,255,0.2);
+}
+.lang-btn:hover {
+  color: #fff !important;
+  background: rgba(255,255,255,0.15);
+}
+.lang-sep {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.7rem;
+}
 @media (max-width: 768px) {
   .top-bar-inner { justify-content: center; text-align: center; }
   .top-bar-left { justify-content: center; }
   .top-bar-hours { display: none; }
+  .lang-switcher { margin-left: 6px; }
 }
 
 /* ===== Nav CTA Button ===== */
@@ -181,8 +210,9 @@ a:hover { color: var(--bn-orange-dark); }
   align-items: center !important;
 }
 .main-header-menu > .menu-item > a {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  font-size: 0.85rem !important;
 }
 .birdnet-nav-cta {
   list-style: none !important;
@@ -242,9 +272,10 @@ a:hover { color: var(--bn-orange-dark); }
   color: var(--bn-orange) !important;
   font-family: var(--font-heading) !important;
   font-weight: 700 !important;
-  font-size: 1.1rem !important;
-  letter-spacing: 0.05em;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* Custom Logo */
