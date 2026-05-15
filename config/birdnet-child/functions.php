@@ -369,7 +369,7 @@ function birdnet_fallback_meta_description() {
     $desc = '';
     if (is_front_page()) {
         $desc = 'บริการติดตั้งตาข่ายกันนก หนามกันนก มาตรฐานอุตสาหกรรม แก้ปัญหานกพิราบถาวร รับประกันงาน 3 ปี ประเมินหน้างานฟรีทั่วขอนแก่นและภาคอีสาน โทร 062-996-4994';
-    } elseif (is_page()) {
+    } elseif (is_page() || is_single()) {
         $desc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true);
         if (!$desc) $desc = wp_trim_words(get_the_excerpt(), 25, '...');
     }
