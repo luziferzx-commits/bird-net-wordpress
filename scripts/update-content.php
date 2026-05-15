@@ -840,7 +840,31 @@ $home_content = '
 
 <!-- /wp:html -->
 
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">ข้อมูลเพิ่มเติม</h2>
+<!-- /wp:heading -->
 
+<!-- wp:html -->
+<div style="max-width:1000px;margin:0 auto;padding:0 1rem;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-review-line.jpg?v=newF" alt="รวมรีวิวจากผู้ใช้จริง กว่า 300 หลังใน ขอนแก่น-เชียงใหม่" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-before-after.jpg?v=newF" alt="จบวงจรมูลนกกวนใจ คืนความสะอาดให้พื้นที่ by BIRDS GO AWAY" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-hdpe-warehouse.jpg?v=newF" alt="จากโกดังเสี่ยงปนเปื้อน สู่พื้นที่ควบคุมคุณภาพ ตาข่ายกันนก Netting HDPE" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-full-service.jpg?v=newF" alt="ไม่ใช่แค่ติดตั้ง แต่ดูแลความสะอาดให้ครบ ติดตั้งตาข่ายกันนก Netting HDPE" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-expert-team.jpg?v=newF" alt="ติดตั้งตาข่ายกันนก เลือกทีมที่เข้าใจโครงสร้าง รับประกัน 3 ปี" style="width:100%;height:auto;" loading="lazy">
+</div>
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
