@@ -483,28 +483,38 @@ function birdnet_flipbook_init() {
         var el = document.getElementById("flipbook-container");
         if (!el || typeof St === "undefined" || typeof St.PageFlip === "undefined") return;
 
-        var isMobile = window.innerWidth <= 768;
-        var isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+        var vw = window.innerWidth;
+        var isMobile = vw <= 768;
         var w, h;
-        if (isMobile) { w = Math.min(window.innerWidth - 32, 380); h = Math.round(w * 1.4); }
-        else if (isTablet) { w = 360; h = 500; }
-        else { w = 460; h = 620; }
+        if (isMobile) {
+            w = Math.min(vw - 24, 400);
+            h = Math.round(w * 1.45);
+        } else if (vw <= 1024) {
+            w = 380;
+            h = 540;
+        } else {
+            w = 460;
+            h = 620;
+        }
 
         var pageFlip = new St.PageFlip(el, {
-            width: w, height: h,
-            size: "stretch",
-            minWidth: 280, maxWidth: 560,
-            minHeight: 400, maxHeight: 780,
+            width: w,
+            height: h,
+            size: isMobile ? "fixed" : "stretch",
+            minWidth: isMobile ? w : 300,
+            maxWidth: isMobile ? w : 560,
+            minHeight: isMobile ? h : 420,
+            maxHeight: isMobile ? h : 780,
             showCover: true,
             mobileScrollSupport: true,
-            maxShadowOpacity: 0.4,
-            drawShadow: true,
-            flippingTime: 800,
+            maxShadowOpacity: isMobile ? 0.2 : 0.4,
+            drawShadow: !isMobile,
+            flippingTime: 700,
             usePortrait: isMobile,
             startZIndex: 0,
-            autoSize: true,
+            autoSize: !isMobile,
             clickEventForward: true,
-            swipeDistance: 30
+            swipeDistance: 20
         });
 
         var pages = el.querySelectorAll(".fb-page");
@@ -523,7 +533,6 @@ function birdnet_flipbook_init() {
         if (prevBtn) prevBtn.addEventListener("click", function() { pageFlip.flipPrev(); });
         if (nextBtn) nextBtn.addEventListener("click", function() { pageFlip.flipNext(); });
 
-        // Category jump buttons
         var jumpBtns = document.querySelectorAll("[data-fb-page]");
         jumpBtns.forEach(function(btn) {
             btn.addEventListener("click", function() {
