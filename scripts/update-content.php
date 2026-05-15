@@ -519,9 +519,6 @@ $home_content = '
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
-<!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
-<!-- /wp:image -->
 <h3 class="wp-block-heading">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
 </div>
