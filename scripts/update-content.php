@@ -41,7 +41,7 @@ function project_img($page, $num = 1) {
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
     'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
-    'solar'   => $assets_base . '/new-solar-netting-2.jpg?v=newE',
+    'solar'   => $assets_base . '/solar-netting-new.jpg?v=newF',
     'spikes'  => $assets_base . '/new-spikes-gable.jpg?v=newE',
     'gel'     => $assets_base . '/new-gel-pestman.jpg',
     'team'    => img(6),
@@ -519,6 +519,9 @@ $home_content = '
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
+<!-- /wp:image -->
 <h3 class="wp-block-heading">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
 </div>
@@ -1040,9 +1043,6 @@ $services_content = '
 <!-- wp:image -->
 <figure class="wp-block-image"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส"/></figure>
 <!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work3'] . '" alt="หนามกันนก ติดตั้ง"/></figure>
-<!-- /wp:image -->
 </div>
 <!-- /wp:column -->
 </div>
@@ -1075,9 +1075,6 @@ $services_content = '
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
 <figure class="wp-block-image"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['work4'] . '" alt="เจลไล่นก ใช้งาน"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->

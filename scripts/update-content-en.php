@@ -39,7 +39,7 @@ function en_project_img($page, $num = 1) {
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
     'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
-    'solar'   => $assets_base . '/new-solar-netting-2.jpg?v=newE',
+    'solar'   => $assets_base . '/solar-netting-new.jpg?v=newF',
     'spikes'  => $assets_base . '/new-spikes-gable.jpg?v=newE',
     'gel'     => $assets_base . '/new-gel-pestman.jpg',
 );
@@ -326,6 +326,9 @@ $en_home_content = '
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
+<!-- wp:image {"sizeSlug":"medium"} -->
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Net" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
+<!-- /wp:image -->
 <h3 class="wp-block-heading">Solar Panel Bird Net</h3>
 <p>No-drill clip system extends solar panel lifespan. Eliminates bird nesting, dirt buildup under panels, and wire damage.</p>
 </div>
@@ -585,6 +588,9 @@ $en_services_content = '
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">4. Solar Panel Bird Net</h2>
 <!-- /wp:heading -->
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Protect your solar investment from bird damage. Our clip-on guard system requires no drilling into panels. Key features:</p>
 <!-- /wp:paragraph -->
