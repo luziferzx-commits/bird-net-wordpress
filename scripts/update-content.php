@@ -323,6 +323,73 @@ $home_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">👷 ทีมช่างมืออาชีพ อุปกรณ์มาตรฐาน</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">ทีมงาน BIRDS GO AWAY ผ่านการอบรมความปลอดภัย สวมชุดเซฟตี้ครบ ใช้อุปกรณ์มาตรฐานอุตสาหกรรม</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:900px;margin:0 auto;padding:0 1rem;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-briefing.webp" alt="ทีมช่าง Birds Go Away ประชุมก่อนปฏิบัติงาน สวมหมวกนิรภัย สายรัดนิรภัยครบ" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ประชุมก่อนปฏิบัติงาน — Safety Briefing</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-scaffold.webp" alt="ช่างติดตั้งตาข่ายกันนก ขึ้นนั่งร้าน สวมสายรัดนิรภัย โรงงาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ปฏิบัติงานบนนั่งร้าน — ใช้สายรัดนิรภัย</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-boom-lift.webp" alt="รถกระเช้า Boom Lift ติดตั้งตาข่ายกันนก โรงงานอุตสาหกรรม" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">รถกระเช้า Boom Lift — งานอาคารสูง</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-balcony-net.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงคอนโด เสื้อ Recheck Building" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ติดตั้งตาข่าย — ระเบียงคอนโด</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-townhouse.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงทาวน์โฮม สายรัดนิรภัย" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ติดตั้งตาข่าย — ทาวน์โฮม</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-highrise.webp" alt="ช่างติดตั้งตาข่ายกันนก คอนโดสูง สายรัดนิรภัย ทำงานบนที่สูง" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ติดตั้ง — คอนโดชั้นสูง</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-townhouse2.webp" alt="ช่างติดตั้งตาข่ายกันนก ระเบียงอาคาร ทำงานบนบันได" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">ติดตั้งตาข่าย — อาคารพาณิชย์</p>
+</div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . $assets_base . '/team-drill.webp" alt="ช่างใช้สว่านติดตั้งตาข่ายกันนก ทำงานบนที่สูง อุปกรณ์มาตรฐาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;">
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">สว่านยึดตาข่าย — อุปกรณ์มาตรฐาน</p>
+</div>
+</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
 <h2 class="has-text-align-center wp-block-heading">&#x1F4F8; ส่งภาพหน้างาน ประเมินราคาฟรี!</h2>
 <!-- /wp:heading -->
 
