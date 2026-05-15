@@ -1584,6 +1584,9 @@ $blog_posts = array(
 <!-- /wp:list -->
 <!-- wp:paragraph -->
 <p><strong>วิธีป้องกัน:</strong> ติดตั้งตาข่ายกันนก HDPE หรือหนามกันนกสแตนเลส เป็นวิธีที่ปลอดภัยและได้ผลถาวร ไม่ทำร้ายนก แต่ป้องกันไม่ให้นกเข้ามาทำรังในพื้นที่ หากคุณอยู่ในพื้นที่<strong>ขอนแก่น เชียงใหม่ ชลบุรี หรือภาคอีสาน</strong> สามารถติดต่อ BIRDS GO AWAY เพื่อขอคำปรึกษาฟรีได้เลย โทร 062-996-4994</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>👉 <a href="/services/"><strong>ดูบริการทั้งหมดของเรา</strong></a> | <a href="/contact/"><strong>ติดต่อประเมินราคาฟรี</strong></a></p>
 <!-- /wp:paragraph -->',
     ),
     'how-to-get-rid-of-pigeons' => array(
@@ -1604,6 +1607,9 @@ $blog_posts = array(
 <!-- /wp:list -->
 <!-- wp:paragraph -->
 <p>หากต้องการคำปรึกษาจากผู้เชี่ยวชาญ บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น</strong> <strong>เชียงใหม่</strong> <strong>ชลบุรี</strong> และ<strong>ทั่วภาคอีสาน</strong> โดย BIRDS GO AWAY ปรึกษาฟรี โทร 062-996-4994</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>👉 <a href="/services/"><strong>ดูบริการป้องกันนกทั้งหมด</strong></a> | <a href="/contact/"><strong>ติดต่อประเมินราคาฟรี</strong></a></p>
 <!-- /wp:paragraph -->',
     ),
     'bird-net-pricing-guide' => array(
@@ -1621,6 +1627,9 @@ $blog_posts = array(
 <!-- /wp:list -->
 <!-- wp:paragraph -->
 <p><strong>ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</strong> (ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี) ส่งรูปหน้างานทาง LINE: oil_phanu หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>👉 <a href="/services/"><strong>ดูบริการและวัสดุทั้งหมด</strong></a> | <a href="/contact/"><strong>ติดต่อขอใบเสนอราคาฟรี</strong></a></p>
 <!-- /wp:paragraph -->',
     ),
 );
