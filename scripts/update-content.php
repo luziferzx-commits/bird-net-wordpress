@@ -276,15 +276,17 @@ $home_content = '
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:1.5rem;">
 <div style="text-align:center;">
-<div style="background:#fef2f2;border-radius:12px;padding:0.8rem;border:2px solid #ef4444;">
-<h4 style="color:#dc2626;margin:0 0 8px;font-size:0.95rem;">❌ ก่อนติดตั้ง</h4>
-<p style="font-size:0.8rem;color:#555;margin:0;">ขี้นกเต็มระเบียง ราวกันตก ส่งกลิ่นเหม็น เชื้อโรคสะสม</p>
+<div style="background:#fef2f2;border-radius:12px;overflow:hidden;border:2px solid #ef4444;">
+<h4 style="color:#dc2626;margin:0;padding:8px;font-size:0.95rem;background:#fef2f2;">❌ ก่อนติดตั้ง</h4>
+<img src="' . $assets_base . '/before-install.webp" alt="ระเบียงคอนโดก่อนติดตั้งตาข่ายกันนก ขี้นกเต็มพื้น สกปรก" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+<p style="font-size:0.8rem;color:#555;margin:0;padding:8px;">ขี้นกเต็มระเบียง ราวกันตก ส่งกลิ่นเหม็น เชื้อโรคสะสม</p>
 </div>
 </div>
 <div style="text-align:center;">
-<div style="background:#f0fdf4;border-radius:12px;padding:0.8rem;border:2px solid #22c55e;">
-<h4 style="color:#16a34a;margin:0 0 8px;font-size:0.95rem;">✅ หลังติดตั้ง</h4>
-<p style="font-size:0.8rem;color:#555;margin:0;">สะอาดเรียบร้อย ไร้นก ปลอดเชื้อ ผ่าน 3 ปี นกไม่กลับมา</p>
+<div style="background:#f0fdf4;border-radius:12px;overflow:hidden;border:2px solid #22c55e;">
+<h4 style="color:#16a34a;margin:0;padding:8px;font-size:0.95rem;background:#f0fdf4;">✅ หลังติดตั้ง</h4>
+<img src="' . $assets_base . '/after-install.webp" alt="ระเบียงคอนโดหลังติดตั้งตาข่ายกันนก สะอาดเรียบร้อย ไม่มีขี้นก" style="width:100%;height:220px;object-fit:cover;" loading="lazy">
+<p style="font-size:0.8rem;color:#555;margin:0;padding:8px;">สะอาดเรียบร้อย ไร้นก ปลอดเชื้อ ผ่าน 3 ปี นกไม่กลับมา</p>
 </div>
 </div>
 </div>
