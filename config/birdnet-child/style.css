@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      13.7.0
+ Version:      13.8.0
  Text Domain:  birdnet-child
 */
 
@@ -409,6 +409,7 @@ a:hover { color: var(--bn-orange-dark); }
 .entry-content {
   max-width: 100%;
   padding: 0;
+  overflow-x: clip;
 }
 
 /* Page background */
@@ -592,9 +593,6 @@ button[type="submit"]:hover {
 }
 
 /* Hero image */
-.entry-content > .wp-block-columns:first-of-type {
-  overflow: hidden;
-}
 .entry-content > .wp-block-columns:first-of-type .wp-block-column {
   overflow: hidden;
   min-width: 0;
@@ -629,6 +627,7 @@ button[type="submit"]:hover {
 .entry-content > .wp-block-columns {
   margin-bottom: 2rem;
   gap: 1.5rem;
+  max-width: 100% !important;
 }
 
 .wp-block-columns:not(:first-of-type) .wp-block-column:hover {

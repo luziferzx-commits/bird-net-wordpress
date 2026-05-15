@@ -851,28 +851,24 @@ $home_content = '
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ขอนแก่น</h3>
 <p><a href="tel:0629964994"><strong>062-996-4994</strong></a> — คุณออย</p>
-<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ส่วนกลาง</h3>
 <p><a href="tel:0889514924"><strong>088-951-4924</strong></a> — คุณวีวี่</p>
-<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">เชียงใหม่</h3>
 <p><a href="tel:0936415623"><strong>093-641-5623</strong></a> — คุณต๊ะ</p>
-<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ชลบุรี</h3>
 <p><a href="tel:0956292488"><strong>095-629-2488</strong></a> — คุณแม็ก</p>
-<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 </div>
