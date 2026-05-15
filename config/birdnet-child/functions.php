@@ -363,6 +363,30 @@ function birdnet_preload_assets() {
 }
 add_action('wp_head', 'birdnet_preload_assets', 1);
 
+// SEO: Override WordPress title tag when Yoast is not active
+function birdnet_override_title($title_parts) {
+    if (defined('WPSEO_VERSION')) return $title_parts;
+
+    $custom_title = '';
+    if (is_front_page()) {
+        $custom_title = 'ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี | Birds Go Away';
+    } elseif (is_page() || is_single()) {
+        $custom_title = get_post_meta(get_the_ID(), '_yoast_wpseo_title', true);
+    }
+
+    if ($custom_title) {
+        $title_parts['title'] = $custom_title;
+        unset($title_parts['site']);
+        unset($title_parts['tagline']);
+    } else {
+        $title_parts['site'] = 'Birds Go Away';
+        unset($title_parts['tagline']);
+    }
+
+    return $title_parts;
+}
+add_filter('document_title_parts', 'birdnet_override_title', 99);
+
 // SEO: Fallback meta description if Yoast is not active
 function birdnet_fallback_meta_description() {
     if (defined('WPSEO_VERSION')) return;
@@ -383,12 +407,11 @@ add_action('wp_head', 'birdnet_fallback_meta_description', 2);
 
 // Force all nav menus (including mobile hamburger) to use "Main Menu"
 function birdnet_fix_mobile_menu($args) {
+    $args['menu'] = 'Main Menu';
     if (!empty($args['theme_location']) && $args['theme_location'] !== 'primary') {
-        $args['menu'] = 'Main Menu';
         $args['theme_location'] = '';
-    } elseif (empty($args['menu']) && empty($args['theme_location'])) {
-        $args['menu'] = 'Main Menu';
     }
+    $args['fallback_cb'] = false;
     return $args;
 }
 add_filter('wp_nav_menu_args', 'birdnet_fix_mobile_menu');

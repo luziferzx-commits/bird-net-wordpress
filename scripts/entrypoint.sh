@@ -100,7 +100,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
   wp core install \
     --url="${PROTOCOL}://${SITE_URL}" \
-    --title="ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี by Birds Go Away" \
+    --title="Birds Go Away — ตาข่ายกันนก" \
     --admin_user="${WP_ADMIN_USER:-admin}" \
     --admin_password="${WP_ADMIN_PASSWORD:-admin123}" \
     --admin_email="${WP_ADMIN_EMAIL:-admin@birdnet.local}" \
@@ -1552,10 +1552,19 @@ ${FORM_SHORTCODE}
   wp menu location assign "Main Menu" mobile_menu --path=/var/www/html --allow-root 2>/dev/null || true
 
   echo "=== Configuring Astra Theme ==="
-  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ มืออาชีพ ครบวงจร ขอนแก่น เชียงใหม่ ชลบุรี | BIRDS GO AWAY" --path=/var/www/html --allow-root
+  wp option update blogname "Birds Go Away — ตาข่ายกันนก" --path=/var/www/html --allow-root
+  wp option update blogdescription "บริการติดตั้งตาข่ายกันนก ครบวงจร รับประกัน 3 ปี" --path=/var/www/html --allow-root
 
-  # Disable Astra above/below header sections (fix double navigation)
-  echo "=== Fixing Double Navigation ==="
+  # Fix navigation: assign Main Menu to all Astra Header Builder locations
+  echo "=== Fixing Navigation ==="
+  wp menu location assign "Main Menu" primary --path=/var/www/html --allow-root 2>/dev/null || true
+  wp menu location assign "Main Menu" mobile_menu --path=/var/www/html --allow-root 2>/dev/null || true
+  wp menu location assign "Main Menu" menu-1 --path=/var/www/html --allow-root 2>/dev/null || true
+
+  # Astra Header Builder: set mobile menu to use Menu 1 (custom menu, not fallback page list)
+  wp theme mod set header-mobile-menu-source menu-1 --path=/var/www/html --allow-root 2>/dev/null || true
+
+  # Disable Astra above/below header sections
   wp theme mod set above-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
   wp theme mod set below-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
   wp theme mod set header-above-header-display 0 --path=/var/www/html --allow-root 2>/dev/null || true
