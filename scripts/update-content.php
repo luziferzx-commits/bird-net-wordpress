@@ -1255,7 +1255,7 @@ $portfolio_content .= '
 // Page 0: Cover
 $portfolio_content .= '
 <div class="fb-page fb-cover" data-density="hard">
-  <img src="' . $assets_base . '/logo-dark-transparent.png?v=newF" alt="Birds Go Away Logo" style="width:120px;height:auto;margin:0 auto 12px;display:block;">
+  <img src="' . $assets_base . '/logo-new-transparent.png?v=newG" alt="Birds Go Away Logo" style="width:120px;height:auto;margin:0 auto 12px;display:block;">
   <div class="fb-cover-logo">BIRDS GO AWAY</div>
   <div class="fb-cover-divider"></div>
   <h2>E-Brochure ผลงานของเรา</h2>
@@ -2672,7 +2672,10 @@ echo "SEO configuration complete!\n";
 // ===== UPLOAD LOGO AND SET AS CUSTOM LOGO =====
 echo "\n=== Setting up logo ===\n";
 
-$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-dark.jpg';
+$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-new.jpg';
+if (!file_exists($logo_file)) {
+    $logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-dark.jpg';
+}
 if (file_exists($logo_file)) {
     // Check if logo already uploaded
     $existing_logo = get_posts(array(
