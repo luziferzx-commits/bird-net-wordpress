@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      14.2.0
+ Version:      14.3.0
  Text Domain:  birdnet-child
 */
 
@@ -320,6 +320,15 @@ a:hover { color: var(--bn-orange-dark); }
   }
   .ast-site-identity .site-title {
     display: none !important;
+  }
+  .ast-site-identity::after {
+    content: 'ตาข่ายกันนก BY BIRDS GO AWAY';
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--bn-orange);
+    white-space: nowrap;
+    line-height: 1.2;
   }
   .site-header .ast-site-identity {
     max-width: calc(100vw - 80px);
