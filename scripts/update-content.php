@@ -299,13 +299,13 @@ $home_content = '
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(10) . '" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . img(18) . '" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง อาคารราชการ" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามสแตนเลส — ราวระเบียง</p>
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(15) . '" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . img(27) . '" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p>
 </div>
@@ -1044,7 +1044,7 @@ foreach ($projects as $project) {
 foreach ($categories as $cat_name => $cat_projects) {
     $portfolio_content .= '
 <!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">' . $cat_name . ' (' . count($cat_projects) . ' โปรเจกต์)</h3>
+<h3 class="wp-block-heading">' . $cat_name . '</h3>
 <!-- /wp:heading -->';
 
     $count = 0;
@@ -1080,12 +1080,6 @@ foreach ($categories as $cat_name => $cat_projects) {
 </div>
 <!-- /wp:column -->';
         if ($count % 3 == 0 || $count == $total) {
-            if ($count == $total && $count % 3 != 0) {
-                $remaining = 3 - ($count % 3);
-                for ($r = 0; $r < $remaining; $r++) {
-                    $portfolio_content .= "\n<!-- wp:column -->\n<div class=\"wp-block-column\"></div>\n<!-- /wp:column -->";
-                }
-            }
             $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
         }
     }
@@ -1617,7 +1611,7 @@ $khonkaen_content = '
 <div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่าย HDPE — คอนโด ขอนแก่น</p></div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(10) . '" alt="ติดตั้งหนามกันนกสแตนเลส ราวระเบียง ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . img(18) . '" alt="ติดตั้งหนามกันนกสแตนเลส ราวระเบียง ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามสแตนเลส — ราวระเบียง</p></div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
@@ -1715,7 +1709,7 @@ $chiangmai_content = '
 <p style="color:#555;text-align:center;">ผลงานจริงจากลูกค้าในจังหวัดเชียงใหม่ — คอนโด อาคารพาณิชย์ โรงงาน และโกดังสินค้า</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0;">
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(15) . '" alt="ติดตั้งตาข่ายกันนก อาคารพาณิชย์ เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . img(27) . '" alt="ติดตั้งตาข่ายกันนก อาคารพาณิชย์ เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p></div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
