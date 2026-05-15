@@ -113,8 +113,8 @@ $home_content = '
 <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:0 1rem;">
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
-<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🔩 วัสดุสแตนเลส 304 ไม่เป็นสนิม</h3>
-<p style="margin:0;font-size:0.88rem;color:#555;">หนามกันนกผลิตจากสแตนเลส SUS304 ไม่เป็นสนิมตลอดอายุการใช้งาน ทนทานต่อทุกสภาพอากาศ ทั้งแดด ฝน ลม</p>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🛡️ HDPE เกรดพรีเมียม</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;">วัสดุมาตรฐาน ทนทานทุกสภาพอากาศ ป้องกัน UV</p>
 </div>
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
