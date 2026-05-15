@@ -29,7 +29,7 @@ function img($num) {
 function vid($num) {
     global $assets_base;
     $padded = str_pad($num, 2, '0', STR_PAD_LEFT);
-    return $assets_base . '/reel-' . $padded . '.mp4';
+    return $assets_base . '/reel-' . $padded . '.mp4?v=h264';
 }
 
 function project_img($page, $num = 1) {
