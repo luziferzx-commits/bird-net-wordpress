@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      12.2.0
+ Version:      12.3.0
  Text Domain:  birdnet-child
 */
 
@@ -1392,6 +1392,23 @@ video {
   background: var(--bn-orange-dark) !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(232,121,46,0.4);
+}
+
+/* ===== EN Pages — Font Size Balance ===== */
+body.birdnet-en h1 { font-size: 2.2rem; }
+body.birdnet-en h2 { font-size: 1.6rem; }
+body.birdnet-en h3 { font-size: 1rem; }
+body.birdnet-en .has-large-font-size { font-size: 0.95rem !important; }
+body.birdnet-en .has-medium-font-size { font-size: 0.88rem !important; }
+body.birdnet-en .entry-content p,
+body.birdnet-en .entry-content li { font-size: 0.92rem; }
+body.birdnet-en .birdnet-footer-content { font-size: 0.88rem; }
+body.birdnet-en .birdnet-top-bar { font-size: 0.78rem; }
+
+@media (max-width: 768px) {
+  body.birdnet-en h1 { font-size: 1.5rem !important; }
+  body.birdnet-en h2 { font-size: 1.2rem !important; }
+  body.birdnet-en h3 { font-size: 0.92rem !important; }
 }
 
 /* ===== Print Styles ===== */
