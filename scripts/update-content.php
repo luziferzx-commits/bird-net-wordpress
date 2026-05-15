@@ -41,8 +41,8 @@ function project_img($page, $num = 1) {
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
     'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
-    'solar'   => $assets_base . '/new-solar-netting-2.jpg',
-    'spikes'  => $assets_base . '/new-spikes-gable.jpg',
+    'solar'   => $assets_base . '/new-solar-netting-2.jpg?v=newE',
+    'spikes'  => $assets_base . '/new-spikes-gable.jpg?v=newE',
     'gel'     => $assets_base . '/new-gel-pestman.jpg',
     'team'    => img(6),
     'safety'  => img(7),
@@ -2270,7 +2270,7 @@ $service_spikes_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-spikes-closeup.jpg" alt="หนามกันนก สแตนเลส SUS304 ติดตั้งขอบหน้าต่าง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-spikes-closeup.jpg?v=newE" alt="หนามกันนก สแตนเลส SUS304 ติดตั้งขอบหน้าต่าง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->
@@ -2386,7 +2386,7 @@ $service_solar_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg?v=newE" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->

@@ -39,8 +39,8 @@ function en_project_img($page, $num = 1) {
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
     'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
-    'solar'   => $assets_base . '/new-solar-netting-2.jpg',
-    'spikes'  => $assets_base . '/new-spikes-gable.jpg',
+    'solar'   => $assets_base . '/new-solar-netting-2.jpg?v=newE',
+    'spikes'  => $assets_base . '/new-spikes-gable.jpg?v=newE',
     'gel'     => $assets_base . '/new-gel-pestman.jpg',
 );
 
