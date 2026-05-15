@@ -77,13 +77,17 @@ $home_content = '
 <!-- wp:buttons -->
 <div class="wp-block-buttons">
 <!-- wp:button {"backgroundColor":"vivid-green-cyan","className":"hero-cta-primary"} -->
-<div class="wp-block-button hero-cta-primary"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">ประเมินราคาฟรี</a></div>
+<div class="wp-block-button hero-cta-primary"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/contact">📋 ขอใบเสนอราคาฟรี</a></div>
 <!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline hero-cta-secondary"} -->
-<div class="wp-block-button is-style-outline hero-cta-secondary"><a class="wp-block-button__link" href="https://line.me/ti/p/~oil_phanu">ปรึกษาเราทาง Line</a></div>
+<!-- wp:button {"className":"hero-cta-phone"} -->
+<div class="wp-block-button hero-cta-phone"><a class="wp-block-button__link" href="tel:0629964994">📞 โทรเลย 062-996-4994</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
+
+<!-- wp:html -->
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">✅ ประเมินหน้างานฟรี — ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
+<!-- /wp:html -->
 
 </div>
 <!-- /wp:column -->
@@ -1396,6 +1400,12 @@ th3-ta006-2</a>
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center">สำนักงาน: จันทร์ - เสาร์ 08:00 - 17:00 น.<br>ปรึกษาฟรี (LINE/โทร): ทุกวัน 08:00 - 20:00 น.</p>
 <!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="background:#f0f7f0;border-radius:8px;padding:12px 16px;margin-top:1.5rem;border-left:3px solid #4CAF50;">
+<p style="margin:0;font-size:0.78rem;color:#555;">🔒 <strong>นโยบายความเป็นส่วนตัว:</strong> ข้อมูลที่ท่านให้ไว้จะใช้เพื่อการติดต่อและเสนอราคาเท่านั้น เราจะไม่แชร์หรือขายข้อมูลส่วนบุคคลของท่านให้บุคคลที่สาม ตาม พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล (PDPA) พ.ศ.2562</p>
+</div>
+<!-- /wp:html -->
 ';
 
 // ===== FAQ PAGE =====
