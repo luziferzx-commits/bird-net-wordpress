@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      13.3.0
+ Version:      13.4.0
  Text Domain:  birdnet-child
 */
 
@@ -53,6 +53,16 @@ body.flavor-flavor {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bn-bg) !important;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw;
+}
+
+#page, .site, .ast-container {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 /* ===== Typography ===== */
@@ -287,6 +297,8 @@ a:hover { color: var(--bn-orange-dark); }
 .custom-logo {
   max-height: 55px !important;
   width: auto !important;
+  height: 55px !important;
+  min-width: 40px;
   object-fit: contain;
 }
 
@@ -300,7 +312,9 @@ a:hover { color: var(--bn-orange-dark); }
 @media (max-width: 921px) {
   .custom-logo {
     max-height: 40px !important;
+    height: 40px !important;
     width: auto !important;
+    min-width: 35px;
   }
   .ast-site-identity .site-title {
     font-size: 0.75rem !important;
@@ -314,6 +328,8 @@ a:hover { color: var(--bn-orange-dark); }
 @media (max-width: 480px) {
   .custom-logo {
     max-height: 35px !important;
+    height: 35px !important;
+    min-width: 30px;
   }
   .ast-site-identity .site-title {
     font-size: 0.7rem !important;
@@ -1246,10 +1262,14 @@ video {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 10px 16px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
   gap: 10px;
   align-items: center;
   justify-content: center;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .birdnet-sticky-mobile a {
@@ -1384,6 +1404,20 @@ video {
 
 .faq-item .work-process p {
   padding: 0.3rem 0;
+}
+
+/* ===== Testimonial Carousel Overflow Fix ===== */
+.testimonial-carousel {
+  overflow: hidden !important;
+  max-width: 100% !important;
+}
+
+.testimonial-track {
+  overflow: hidden;
+}
+
+.testimonial-slide {
+  max-width: 100vw;
 }
 
 /* ===== Testimonial Cards ===== */
@@ -1712,6 +1746,41 @@ body.birdnet-en .birdnet-top-bar { font-size: 0.78rem; }
     width: 100% !important;
   }
   .entry-content { overflow-x: hidden; }
+
+  /* Force all elements within viewport */
+  .ast-builder-grid-row,
+  .ast-builder-grid-row-has-side,
+  .site-header .ast-builder-grid-row {
+    max-width: 100vw !important;
+    overflow: hidden;
+  }
+
+  /* Testimonial carousel mobile fix */
+  .testimonial-carousel {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .testimonial-slide {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* All inline-styled elements constrain */
+  [style*="min-width"],
+  [style*="max-width"] {
+    max-width: 100% !important;
+  }
+
+  /* Footer and content sections */
+  .site-footer, footer, .ast-footer-overlay {
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+
+  /* Sticky bar bottom safe area for iOS */
+  .birdnet-sticky-mobile {
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)) !important;
+  }
 }
 
 /* ===== Print Styles ===== */

@@ -300,7 +300,7 @@ function birdnet_schema_jsonld() {
                 'url' => $site_url . '/',
                 'logo' => array(
                     '@type' => 'ImageObject',
-                    'url' => $site_url . '/wp-content/uploads/birdnet-assets/logo-white.jpg',
+                    'url' => $site_url . '/wp-content/uploads/birdnet-assets/logo-dark.jpg',
                     'width' => 240,
                     'height' => 80,
                 ),
@@ -883,11 +883,14 @@ add_filter('body_class', 'birdnet_en_body_class');
 
 // Ensure logo displays — JS fallback for broken image (ephemeral Docker uploads)
 function birdnet_logo_fallback() {
-    $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-white.jpg');
+    $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-dark.jpg');
     echo '<script>
     document.addEventListener("DOMContentLoaded", function() {
         var logos = document.querySelectorAll(".custom-logo, .ast-site-identity img");
         logos.forEach(function(img) {
+            // Remove srcset to prevent browser picking broken WP-generated URLs
+            if (img.getAttribute("srcset")) img.removeAttribute("srcset");
+            if (img.getAttribute("sizes")) img.removeAttribute("sizes");
             img.onerror = function() {
                 this.onerror = null;
                 this.src = "' . esc_url($fallback_url) . '";
@@ -895,8 +898,21 @@ function birdnet_logo_fallback() {
             if (img.complete && img.naturalWidth === 0) {
                 img.src = "' . esc_url($fallback_url) . '";
             }
+            // Force dark logo for visibility on white header
+            if (img.src.indexOf("logo-white") !== -1) {
+                img.src = img.src.replace("logo-white", "logo-dark");
+            }
         });
     });
     </script>';
 }
 add_action('wp_head', 'birdnet_logo_fallback');
+
+// Remove srcset from logo to prevent broken WP-generated URLs on ephemeral containers
+function birdnet_remove_logo_srcset($sources, $size_array, $image_src) {
+    if (strpos($image_src, 'logo') !== false) {
+        return array();
+    }
+    return $sources;
+}
+add_filter('wp_calculate_image_srcset', 'birdnet_remove_logo_srcset', 10, 3);

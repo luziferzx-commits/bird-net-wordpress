@@ -2640,7 +2640,7 @@ echo "SEO configuration complete!\n";
 // ===== UPLOAD LOGO AND SET AS CUSTOM LOGO =====
 echo "\n=== Setting up logo ===\n";
 
-$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-white.jpg';
+$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-dark.jpg';
 if (file_exists($logo_file)) {
     // Check if logo already uploaded
     $existing_logo = get_posts(array(
