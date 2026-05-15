@@ -993,7 +993,6 @@ $services_content = '
 <li><strong>ขนาดตา:</strong> 18 mm. x 18 mm. (Knitting net)</li>
 <li><strong>แรงดึงขาดจุดปม:</strong> 13 kg.</li>
 <li><strong>แรงดึงขาดเส้นด้าย:</strong> 7 kg.</li>
-<li><strong>ขนาดม้วน:</strong> 6 m. (กว้าง) x 50 m. (ยาว)</li>
 <li><strong>อายุการใช้งาน:</strong> 6-7 ปี</li>
 <li><strong>การใช้งาน:</strong> อาคาร คอนโด โรงงาน โครงการต่างๆ</li>
 </ul>
@@ -2233,7 +2232,6 @@ $service_hdpe_content = '
 <li><strong>ขนาดตา:</strong> 18 mm. x 18 mm. (Knitting net)</li>
 <li><strong>แรงดึงขาดจุดปม:</strong> 13 kg.</li>
 <li><strong>แรงดึงขาดเส้นด้าย:</strong> 7 kg.</li>
-<li><strong>ขนาดม้วน:</strong> 6 m. (กว้าง) x 50 m. (ยาว)</li>
 <li><strong>อายุการใช้งาน:</strong> 6-7 ปี</li>
 </ul>
 
