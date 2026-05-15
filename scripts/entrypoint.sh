@@ -40,6 +40,17 @@ until php -r "new mysqli('$DB_HOST', '$DB_USER', '$DB_PASS', '$DB_NAME');" 2>/de
 done
 echo "Database connected!"
 
+# Enable WP_DEBUG for troubleshooting (display errors on blank pages)
+echo "=== Enabling WP_DEBUG ==="
+if [ -f /var/www/html/wp-config.php ]; then
+  sed -i "s/define( *'WP_DEBUG'.*/define('WP_DEBUG', true);/" /var/www/html/wp-config.php 2>/dev/null || true
+  # Add WP_DEBUG_DISPLAY if not present
+  if ! grep -q 'WP_DEBUG_DISPLAY' /var/www/html/wp-config.php; then
+    sed -i "/define('WP_DEBUG'/a define('WP_DEBUG_DISPLAY', true);" /var/www/html/wp-config.php 2>/dev/null || true
+    sed -i "/define('WP_DEBUG'/a define('WP_DEBUG_LOG', true);" /var/www/html/wp-config.php 2>/dev/null || true
+  fi
+fi
+
 # Always copy child theme (container is ephemeral, but DB remembers theme choice)
 if [ -d /tmp/birdnet-child ]; then
   echo "=== Copying child theme ==="
