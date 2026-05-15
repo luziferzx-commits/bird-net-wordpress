@@ -29,6 +29,11 @@ function birdnet_enqueue_styles() {
     // AOS - Animate on Scroll library
     wp_enqueue_style('aos-css', 'https://unpkg.com/aos@2.3.4/dist/aos.css', array(), '2.3.4');
     wp_enqueue_script('aos-js', 'https://unpkg.com/aos@2.3.4/dist/aos.js', array(), '2.3.4', true);
+
+    // Page-flip library for portfolio flipbook (only on portfolio pages)
+    if (is_page('portfolio') || is_page('en/portfolio') || is_page(array('portfolio')) ) {
+        wp_enqueue_script('page-flip-js', 'https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js', array(), '2.0.7', true);
+    }
 }
 add_action('wp_enqueue_scripts', 'birdnet_enqueue_styles');
 
@@ -467,6 +472,70 @@ function birdnet_aos_init() {
     echo '<script>document.addEventListener("DOMContentLoaded", function() { if (typeof AOS !== "undefined") { AOS.init({ duration: 800, easing: "ease-out-cubic", once: true, offset: 80 }); } });</script>' . "\n";
 }
 add_action('wp_footer', 'birdnet_aos_init', 99);
+
+// Flipbook initialization for portfolio page
+function birdnet_flipbook_init() {
+    if (!is_page('portfolio')) return;
+    $is_en = birdnet_is_english();
+    ?>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var el = document.getElementById("flipbook-container");
+        if (!el || typeof St === "undefined" || typeof St.PageFlip === "undefined") return;
+
+        var isMobile = window.innerWidth <= 768;
+        var isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+        var w, h;
+        if (isMobile) { w = Math.min(window.innerWidth - 32, 380); h = Math.round(w * 1.4); }
+        else if (isTablet) { w = 360; h = 500; }
+        else { w = 460; h = 620; }
+
+        var pageFlip = new St.PageFlip(el, {
+            width: w, height: h,
+            size: "stretch",
+            minWidth: 280, maxWidth: 560,
+            minHeight: 400, maxHeight: 780,
+            showCover: true,
+            mobileScrollSupport: true,
+            maxShadowOpacity: 0.4,
+            drawShadow: true,
+            flippingTime: 800,
+            usePortrait: isMobile,
+            startZIndex: 0,
+            autoSize: true,
+            clickEventForward: true,
+            swipeDistance: 30
+        });
+
+        var pages = el.querySelectorAll(".fb-page");
+        if (pages.length === 0) return;
+        pageFlip.loadFromHTML(pages);
+
+        var pageNum = document.getElementById("fb-page-num");
+        var pageTotal = document.getElementById("fb-page-total");
+        if (pageTotal) pageTotal.textContent = pageFlip.getPageCount();
+        pageFlip.on("flip", function(e) {
+            if (pageNum) pageNum.textContent = e.data + 1;
+        });
+
+        var prevBtn = document.getElementById("fb-prev");
+        var nextBtn = document.getElementById("fb-next");
+        if (prevBtn) prevBtn.addEventListener("click", function() { pageFlip.flipPrev(); });
+        if (nextBtn) nextBtn.addEventListener("click", function() { pageFlip.flipNext(); });
+
+        // Category jump buttons
+        var jumpBtns = document.querySelectorAll("[data-fb-page]");
+        jumpBtns.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var pg = parseInt(this.getAttribute("data-fb-page"));
+                pageFlip.flip(pg);
+            });
+        });
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'birdnet_flipbook_init', 100);
 
 // Custom Footer Content
 function birdnet_custom_footer() {

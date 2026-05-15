@@ -1175,19 +1175,6 @@ $projects = array(
     array('name' => 'คลินิกกายภาพ รีเฟรชชี่', 'location' => 'จังหวัดขอนแก่น', 'page' => 29, 'cat' => 'อาคารพาณิชย์', 'desc' => 'ติดตั้งตาข่ายกันนก คลินิก ป้องกันมูลนกในพื้นที่สุขอนามัย'),
 );
 
-$portfolio_content = '
-<!-- wp:heading {"textAlign":"center","level":2} -->
-<h2 class="has-text-align-center wp-block-heading">ผลงานของเรา</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">ผลงานติดตั้งตาข่ายกันนกจริงกว่า <strong>40+ โปรเจกต์</strong> ทั้งอาคารราชการ คอนโด โรงพยาบาล มหาวิทยาลัย โรงงาน และบ้านพักอาศัย<br>ให้บริการ<strong>ติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ภาคอีสาน</strong></p>
-<!-- /wp:paragraph -->
-
-<!-- wp:separator {"className":"is-style-wide"} -->
-<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
-<!-- /wp:separator -->';
-
 // Projects with multiple photos (top featured projects)
 $multi_photo_pages = array(7, 9, 10, 13, 20, 22, 35, 45);
 
@@ -1201,54 +1188,110 @@ foreach ($projects as $project) {
     $categories[$cat][] = $project;
 }
 
-// Generate portfolio grid grouped by category
-foreach ($categories as $cat_name => $cat_projects) {
-    $portfolio_content .= '
-<!-- wp:heading {"level":3} -->
-<h3 class="wp-block-heading">' . $cat_name . '</h3>
-<!-- /wp:heading -->';
+// Category icons map
+$cat_icons = array(
+    'อาคารราชการ' => '🏛️',
+    'โรงงาน' => '🏭',
+    'คอนโด' => '🏢',
+    'บ้านพักอาศัย' => '🏠',
+    'อาคารพาณิชย์' => '🏪',
+);
 
-    $count = 0;
-    $total = count($cat_projects);
-    foreach ($cat_projects as $project) {
-        $count++;
-        if ($count % 3 == 1) {
-            $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
-        }
-        
-        $has_multi = in_array($project['page'], $multi_photo_pages);
-        $gallery_html = '';
-        if ($has_multi) {
-            $gallery_html = '<div class="project-gallery" style="display:flex;gap:4px;margin-top:6px;">
-<img src="' . project_img($project['page'], 2) . '" alt="' . $project['name'] . ' #2" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
-<img src="' . project_img($project['page'], 3) . '" alt="' . $project['name'] . ' #3" style="width:48%;border-radius:8px;aspect-ratio:4/3;object-fit:cover;" loading="lazy"/>
-</div>';
-        }
-        
-        $alt_text = isset($project['desc']) ? 'ติดตั้งตาข่ายกันนก ' . $project['name'] . ' ' . $project['location'] : $project['name'];
-        $desc_html = isset($project['desc']) ? '<p style="color:#555;font-size:0.82em;margin:4px 0 0;line-height:1.4;">' . $project['desc'] . '</p>' : '';
-        
-        $portfolio_content .= '
-<!-- wp:column -->
-<div class="wp-block-column" style="text-align:center;">
-<!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . project_img($project['page']) . '" alt="' . $alt_text . '" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-' . $gallery_html . '
-<h4 class="wp-block-heading">' . $project['name'] . '</h4>
-<p style="color:#666;font-size:0.9em;margin:0;">' . $project['location'] . '</p>
-' . $desc_html . '
-</div>
-<!-- /wp:column -->';
-        if ($count % 3 == 0 || $count == $total) {
-            $portfolio_content .= "\n</div>\n<!-- /wp:columns -->";
-        }
-    }
-    
-    $portfolio_content .= "\n<!-- wp:separator {\"className\":\"is-style-wide\"} -->\n<hr class=\"wp-block-separator has-alpha-channel-opacity is-style-wide\"/>\n<!-- /wp:separator -->";
+// ===== Generate Flipbook HTML =====
+$portfolio_content = '
+<!-- wp:html -->
+<div class="flipbook-wrapper">
+
+<div class="flipbook-toc">';
+
+// Build TOC buttons — track page numbers for each category
+$page_num = 1; // page 0 = cover, page 1+ = content
+$cat_page_map = array();
+foreach ($categories as $cat_name => $cat_projects) {
+    $cat_page_map[$cat_name] = $page_num;
+    $page_num++; // category divider page
+    $page_num += count($cat_projects); // project pages
+}
+
+foreach ($cat_page_map as $cat_name => $pg) {
+    $icon = isset($cat_icons[$cat_name]) ? $cat_icons[$cat_name] . ' ' : '';
+    $portfolio_content .= '<button data-fb-page="' . $pg . '">' . $icon . $cat_name . '</button>';
 }
 
 $portfolio_content .= '
+</div>
+
+<div id="flipbook-container">';
+
+// Page 0: Cover
+$portfolio_content .= '
+<div class="fb-page fb-cover" data-density="hard">
+  <div class="fb-cover-logo">BIRDS GO AWAY</div>
+  <div class="fb-cover-divider"></div>
+  <h2>E-Brochure ผลงานของเรา</h2>
+  <p>ผลงานติดตั้งตาข่ายกันนกจริงกว่า <strong>40+ โปรเจกต์</strong></p>
+  <p>อาคารราชการ · คอนโด · โรงงาน · บ้านพักอาศัย</p>
+  <p style="margin-top:12px;font-size:0.75rem;opacity:0.6;">พลิกหน้าเพื่อดูผลงาน →</p>
+</div>';
+
+// Generate pages per category
+foreach ($categories as $cat_name => $cat_projects) {
+    $icon = isset($cat_icons[$cat_name]) ? $cat_icons[$cat_name] : '📋';
+    $count = count($cat_projects);
+
+    // Category divider page
+    $portfolio_content .= '
+<div class="fb-page fb-cat-divider">
+  <div class="fb-cat-icon">' . $icon . '</div>
+  <h3>' . $cat_name . '</h3>
+  <div class="fb-cat-count">' . $count . ' โปรเจกต์</div>
+</div>';
+
+    // Project pages — one per project
+    foreach ($cat_projects as $project) {
+        $has_multi = in_array($project['page'], $multi_photo_pages);
+        $alt_text = 'ติดตั้งตาข่ายกันนก ' . $project['name'] . ' ' . $project['location'];
+        $gallery_html = '';
+        if ($has_multi) {
+            $gallery_html = '<div class="fb-proj-gallery">
+<img src="' . project_img($project['page'], 2) . '" alt="' . $project['name'] . ' #2" loading="lazy"/>
+<img src="' . project_img($project['page'], 3) . '" alt="' . $project['name'] . ' #3" loading="lazy"/>
+</div>';
+        }
+
+        $portfolio_content .= '
+<div class="fb-page fb-project">
+  <img src="' . project_img($project['page']) . '" alt="' . $alt_text . '" loading="lazy"/>
+  <div class="fb-proj-name">' . $project['name'] . '</div>
+  <div class="fb-proj-loc">' . $project['location'] . '</div>
+  <div class="fb-proj-desc">' . $project['desc'] . '</div>
+  ' . $gallery_html . '
+</div>';
+    }
+}
+
+// Back cover page
+$portfolio_content .= '
+<div class="fb-page fb-back" data-density="hard">
+  <h3>สนใจติดตั้ง?</h3>
+  <p>ประเมินหน้างานฟรี — ไม่มีค่าใช้จ่าย</p>
+  <p>📞 062-996-4994</p>
+  <p>💬 LINE: oil_phanu</p>
+  <a href="/contact" class="fb-back-cta">ขอใบเสนอราคาฟรี</a>
+</div>';
+
+$portfolio_content .= '
+</div>
+
+<div class="fb-nav">
+  <button id="fb-prev" aria-label="หน้าก่อน">&#9664;</button>
+  <span class="fb-page-info"><span id="fb-page-num">1</span> / <span id="fb-page-total"></span></span>
+  <button id="fb-next" aria-label="หน้าถัดไป">&#9654;</button>
+</div>
+<p class="fb-hint">ปัดหรือคลิกที่ขอบหน้าเพื่อพลิก</p>
+
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>

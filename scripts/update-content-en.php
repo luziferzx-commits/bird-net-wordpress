@@ -825,71 +825,148 @@ $en_faq_content = '
 <!-- /wp:buttons -->
 ';
 
-// ===== ENGLISH PORTFOLIO PAGE =====
+// ===== ENGLISH PORTFOLIO PAGE (Flipbook) =====
+$en_projects = array(
+    // Government Buildings
+    array('name' => 'NACC Region 4 Office', 'location' => 'Khon Kaen', 'page' => 7, 'cat' => 'Government', 'desc' => 'HDPE bird net installation on 5-story government building — solved pigeon droppings on balconies'),
+    array('name' => 'Royal Thai Navy Dockyard', 'location' => 'Chonburi', 'page' => 9, 'cat' => 'Government', 'desc' => 'Bird net for military building — rope access team with full safety equipment'),
+    array('name' => 'KKU Male Dormitory 7', 'location' => 'Khon Kaen', 'page' => 10, 'cat' => 'Government', 'desc' => 'HDPE bird net on 6-story dormitory balconies — permanent nesting prevention'),
+    array('name' => 'KKU Male Dormitory 8', 'location' => 'Khon Kaen', 'page' => 11, 'cat' => 'Government', 'desc' => 'Bird net on balconies and light wells — blocked bird entry points'),
+    array('name' => 'KKU Dormitory 21-23', 'location' => 'Khon Kaen', 'page' => 12, 'cat' => 'Government', 'desc' => 'Bird net across 3 buildings — over 300 sqm total coverage'),
+    array('name' => 'Sirindhorn College (10 floors)', 'location' => 'Khon Kaen', 'page' => 13, 'cat' => 'Government', 'desc' => 'Bird net on 10-story building — professional rope access team'),
+    array('name' => 'Khon Kaen Hospital Staff Housing', 'location' => 'Khon Kaen', 'page' => 16, 'cat' => 'Government', 'desc' => 'HDPE bird net on medical staff dormitory — hygiene & sanitation priority'),
+    array('name' => 'Siripak Building, Treasury Office', 'location' => 'Khon Kaen', 'page' => 18, 'cat' => 'Government', 'desc' => 'Stainless steel 304 bird spikes on window ledges'),
+    array('name' => 'Khon Kaen Hospital Nurse Dorm', 'location' => 'Khon Kaen', 'page' => 19, 'cat' => 'Government', 'desc' => 'Bird net on balconies — protecting healthcare facility hygiene'),
+    array('name' => 'Sirindhorn Hospital Nurse Dorm', 'location' => 'Khon Kaen', 'page' => 20, 'cat' => 'Government', 'desc' => 'Full-coverage HDPE bird net — 100% bird prevention'),
+    array('name' => 'KKU Medical Staff Housing', 'location' => 'Khon Kaen', 'page' => 21, 'cat' => 'Government', 'desc' => 'Bird net on high-rise balconies — engineer-supervised installation'),
+    // Factories & Warehouses
+    array('name' => 'DOS Factory', 'location' => 'Khon Kaen', 'page' => 15, 'cat' => 'Factory', 'desc' => 'Industrial bird net for large factory — high ceiling, wide coverage area'),
+    array('name' => 'Inventivo Cosmetic Warehouse', 'location' => 'Maha Sarakham', 'page' => 24, 'cat' => 'Factory', 'desc' => 'Warehouse bird net — preventing droppings on stored products'),
+    array('name' => 'Warehouse A6', 'location' => 'Chiang Mai', 'page' => 25, 'cat' => 'Factory', 'desc' => 'Rental warehouse bird net — stopped nesting under roof'),
+    array('name' => 'Saraphi Warehouse', 'location' => 'Chiang Mai', 'page' => 28, 'cat' => 'Factory', 'desc' => 'Large warehouse bird net — completed in 2 days'),
+    // Condominiums
+    array('name' => 'Triple T Residence KKU', 'location' => 'Khon Kaen', 'page' => 30, 'cat' => 'Condo', 'desc' => 'HDPE bird net on student housing balconies — multiple rooms'),
+    array('name' => 'Chatpetch Condo, Non Muang', 'location' => 'Khon Kaen', 'page' => 34, 'cat' => 'Condo', 'desc' => 'Nearly invisible condo balcony bird net — clean finish'),
+    array('name' => 'Metro Condo', 'location' => 'Khon Kaen', 'page' => 35, 'cat' => 'Condo', 'desc' => 'Condo bird net — blocks balcony & bedroom entry'),
+    array('name' => 'X10 Condo Srinakarin', 'location' => 'Khon Kaen', 'page' => 40, 'cat' => 'Condo', 'desc' => 'Premium HDPE bird net — completed in 3 hours'),
+    array('name' => 'The Destiny Exclusive Condo', 'location' => 'Khon Kaen', 'page' => 42, 'cat' => 'Condo', 'desc' => 'Luxury condo bird net — precision detail work'),
+    array('name' => 'Chalisa Condo', 'location' => 'Khon Kaen', 'page' => 43, 'cat' => 'Condo', 'desc' => 'Virtually invisible condo balcony bird net'),
+    array('name' => 'ESCENT Condo', 'location' => 'Khon Kaen', 'page' => 45, 'cat' => 'Condo', 'desc' => 'High-rise HDPE bird net — professional rope access'),
+    array('name' => 'AP Boulevard Condo', 'location' => 'Khon Kaen', 'page' => 46, 'cat' => 'Condo', 'desc' => 'Condo balcony bird net — 100% pigeon solution'),
+    array('name' => 'The Base Heights Mittraphap', 'location' => 'Khon Kaen', 'page' => 49, 'cat' => 'Condo', 'desc' => 'High-rise condo bird net on Mittraphap Road'),
+    array('name' => 'Kanlapaphruek Lakeview Condo', 'location' => 'Khon Kaen', 'page' => 50, 'cat' => 'Condo', 'desc' => 'Lake-view balcony bird net — unobstructed view'),
+    // Residential
+    array('name' => 'Chief Prosecutor Residence', 'location' => 'Khon Kaen', 'page' => 22, 'cat' => 'Residential', 'desc' => 'Executive home bird net — under roof & eaves'),
+    array('name' => 'Sivalee Village', 'location' => 'Khon Kaen', 'page' => 33, 'cat' => 'Residential', 'desc' => 'Housing estate bird net — stopped nesting under roof'),
+    array('name' => 'Urban Nara Airport Bypass', 'location' => 'Khon Kaen', 'page' => 36, 'cat' => 'Residential', 'desc' => 'Residential bird net — protected laundry area'),
+    array('name' => 'Klever Tyme Village', 'location' => 'Khon Kaen', 'page' => 39, 'cat' => 'Residential', 'desc' => 'Housing estate bird net — eaves protection'),
+    // Commercial
+    array('name' => 'Tang Hong Lee Commercial Bldg', 'location' => 'Khon Kaen', 'page' => 27, 'cat' => 'Commercial', 'desc' => '4-story commercial building bird net — storefront protection'),
+    array('name' => 'Refreshy Physiotherapy Clinic', 'location' => 'Khon Kaen', 'page' => 29, 'cat' => 'Commercial', 'desc' => 'Clinic bird net — healthcare sanitation area'),
+);
+
+$en_multi_photo_pages = array(7, 9, 10, 13, 20, 22, 35, 45);
+
+$en_categories = array();
+foreach ($en_projects as $p) {
+    $c = $p['cat'];
+    if (!isset($en_categories[$c])) $en_categories[$c] = array();
+    $en_categories[$c][] = $p;
+}
+
+$en_cat_icons = array(
+    'Government' => '🏛️', 'Factory' => '🏭', 'Condo' => '🏢',
+    'Residential' => '🏠', 'Commercial' => '🏪',
+);
+
+// Build EN flipbook
 $en_portfolio_content = '
-<!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">Our Portfolio</h1>
-<!-- /wp:heading -->
+<!-- wp:html -->
+<div class="flipbook-wrapper">
 
-<!-- wp:paragraph -->
-<p>Over 31 completed projects across Thailand — government buildings, universities, hospitals, condominiums, factories, and private residences. Below is a selection of our work.</p>
-<!-- /wp:paragraph -->
+<div class="flipbook-toc">';
 
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Government Buildings</h2>
-<!-- /wp:heading -->
+$en_page_num = 1;
+$en_cat_page_map = array();
+foreach ($en_categories as $cn => $cp) {
+    $en_cat_page_map[$cn] = $en_page_num;
+    $en_page_num++;
+    $en_page_num += count($cp);
+}
+foreach ($en_cat_page_map as $cn => $pg) {
+    $ic = isset($en_cat_icons[$cn]) ? $en_cat_icons[$cn] . ' ' : '';
+    $en_portfolio_content .= '<button data-fb-page="' . $pg . '">' . $ic . $cn . '</button>';
+}
 
-<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
-<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(7) . '" alt="Bird net installation at NACC Region 4, Khon Kaen"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(13) . '" alt="Bird net installation at Sirindhorn College, Khon Kaen"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(20) . '" alt="Bird net installation at Sirindhorn Hospital, Khon Kaen"/></figure>
-<!-- /wp:image -->
-</figure>
-<!-- /wp:gallery -->
-
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Universities &amp; Educational</h2>
-<!-- /wp:heading -->
-
-<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
-<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(10) . '" alt="Bird net installation at Khon Kaen University dormitory"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(11) . '" alt="Bird net at educational facility"/></figure>
-<!-- /wp:image -->
-</figure>
-<!-- /wp:gallery -->
-
-<!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">Condominiums</h2>
-<!-- /wp:heading -->
-
-<!-- wp:gallery {"columns":3,"linkTo":"none"} -->
-<figure class="wp-block-gallery has-nested-images columns-3 is-cropped">
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(35) . '" alt="Bird net at Metro Condo, Khon Kaen"/></figure>
-<!-- /wp:image -->
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . en_project_img(45) . '" alt="Bird net at ESCENT Condo, Khon Kaen"/></figure>
-<!-- /wp:image -->
-</figure>
-<!-- /wp:gallery -->
-
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons">
-<!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link" href="/en/contact">Get a Free Quote for Your Project &rarr;</a></div>
-<!-- /wp:button -->
+$en_portfolio_content .= '
 </div>
-<!-- /wp:buttons -->
+
+<div id="flipbook-container">';
+
+// Cover
+$en_portfolio_content .= '
+<div class="fb-page fb-cover" data-density="hard">
+  <div class="fb-cover-logo">BIRDS GO AWAY</div>
+  <div class="fb-cover-divider"></div>
+  <h2>E-Brochure Portfolio</h2>
+  <p>Over <strong>40+ completed projects</strong> across Thailand</p>
+  <p>Government · Condos · Factories · Residences</p>
+  <p style="margin-top:12px;font-size:0.75rem;opacity:0.6;">Swipe or click to flip pages →</p>
+</div>';
+
+foreach ($en_categories as $cn => $cp) {
+    $ic = isset($en_cat_icons[$cn]) ? $en_cat_icons[$cn] : '📋';
+    $cnt = count($cp);
+    $en_portfolio_content .= '
+<div class="fb-page fb-cat-divider">
+  <div class="fb-cat-icon">' . $ic . '</div>
+  <h3>' . $cn . '</h3>
+  <div class="fb-cat-count">' . $cnt . ' projects</div>
+</div>';
+
+    foreach ($cp as $p) {
+        $hm = in_array($p['page'], $en_multi_photo_pages);
+        $alt = 'Bird net installation at ' . $p['name'] . ', ' . $p['location'];
+        $gal = '';
+        if ($hm) {
+            $gal = '<div class="fb-proj-gallery">
+<img src="' . en_project_img($p['page'], 2) . '" alt="' . $p['name'] . ' #2" loading="lazy"/>
+<img src="' . en_project_img($p['page'], 3) . '" alt="' . $p['name'] . ' #3" loading="lazy"/>
+</div>';
+        }
+        $en_portfolio_content .= '
+<div class="fb-page fb-project">
+  <img src="' . en_project_img($p['page']) . '" alt="' . $alt . '" loading="lazy"/>
+  <div class="fb-proj-name">' . $p['name'] . '</div>
+  <div class="fb-proj-loc">' . $p['location'] . '</div>
+  <div class="fb-proj-desc">' . $p['desc'] . '</div>
+  ' . $gal . '
+</div>';
+    }
+}
+
+// Back cover
+$en_portfolio_content .= '
+<div class="fb-page fb-back" data-density="hard">
+  <h3>Interested in Our Service?</h3>
+  <p>Free on-site assessment — no obligation</p>
+  <p>📞 062-996-4994</p>
+  <p>💬 LINE: oil_phanu</p>
+  <a href="/en/contact" class="fb-back-cta">Get a Free Quote</a>
+</div>';
+
+$en_portfolio_content .= '
+</div>
+
+<div class="fb-nav">
+  <button id="fb-prev" aria-label="Previous page">&#9664;</button>
+  <span class="fb-page-info"><span id="fb-page-num">1</span> / <span id="fb-page-total"></span></span>
+  <button id="fb-next" aria-label="Next page">&#9654;</button>
+</div>
+<p class="fb-hint">Swipe or click the page edge to flip</p>
+
+</div>
+<!-- /wp:html -->
 ';
 
 
