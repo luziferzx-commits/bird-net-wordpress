@@ -136,7 +136,7 @@ add_action('wp_head', 'birdnet_preconnect_fonts', 0);
 // Add Line Chat floating button
 function birdnet_floating_buttons() {
     $is_en = birdnet_is_english();
-    $line_id = get_option('birdnet_line_id', 'phanupong_oil');
+    $line_id = 'phanupong_oil';
     $phone = get_option('birdnet_phone', '0629964994');
     ?>
     <style>
