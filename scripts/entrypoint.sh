@@ -1563,6 +1563,9 @@ ${FORM_SHORTCODE}
     echo "Assigned Main Menu to location: $LOC"
   done
 
+  # Astra Header Builder: set mobile menu to use Menu 1 (custom menu, not fallback page list)
+  wp theme mod set header-mobile-menu-source menu-1 --path=/var/www/html --allow-root 2>/dev/null || true
+
   # Disable Astra above/below header sections
   wp theme mod set above-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
   wp theme mod set below-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
