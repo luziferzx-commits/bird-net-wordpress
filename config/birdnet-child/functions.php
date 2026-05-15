@@ -416,23 +416,16 @@ function birdnet_fix_mobile_menu($args) {
 }
 add_filter('wp_nav_menu_args', 'birdnet_fix_mobile_menu');
 
-// JS fallback: sync mobile menu with desktop primary nav
+// JS: sync mobile menu with desktop primary nav (runs immediately in footer, DOM already loaded)
 function birdnet_mobile_menu_sync_js() {
     echo '<script>
-    document.addEventListener("DOMContentLoaded", function() {
+    (function() {
         var primary = document.querySelector("nav[aria-label=\'Primary Site Navigation\'] ul");
         var mobile = document.querySelector("nav[aria-label=\'Site Navigation\'] ul");
-        if (primary && mobile && mobile.children.length !== primary.children.length) {
+        if (primary && mobile) {
             mobile.innerHTML = primary.innerHTML;
         }
-        var observer = new MutationObserver(function() {
-            var m = document.querySelector("nav[aria-label=\'Site Navigation\'] ul");
-            var p = document.querySelector("nav[aria-label=\'Primary Site Navigation\'] ul");
-            if (p && m && m.children.length !== p.children.length) m.innerHTML = p.innerHTML;
-        });
-        observer.observe(document.body, {childList:true, subtree:true});
-        setTimeout(function(){observer.disconnect();}, 5000);
-    });
+    })();
     </script>';
 }
 add_action('wp_footer', 'birdnet_mobile_menu_sync_js');

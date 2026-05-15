@@ -1555,14 +1555,13 @@ ${FORM_SHORTCODE}
   wp option update blogname "Birds Go Away — ตาข่ายกันนก" --path=/var/www/html --allow-root
   wp option update blogdescription "บริการติดตั้งตาข่ายกันนก ครบวงจร รับประกัน 3 ปี" --path=/var/www/html --allow-root
 
-  # Fix navigation: assign Main Menu to all Astra Header Builder locations
+  # Fix navigation: assign Main Menu to ALL registered menu locations
   echo "=== Fixing Navigation ==="
-  wp menu location assign "Main Menu" primary --path=/var/www/html --allow-root 2>/dev/null || true
-  wp menu location assign "Main Menu" mobile_menu --path=/var/www/html --allow-root 2>/dev/null || true
-  wp menu location assign "Main Menu" menu-1 --path=/var/www/html --allow-root 2>/dev/null || true
-
-  # Astra Header Builder: set mobile menu to use Menu 1 (custom menu, not fallback page list)
-  wp theme mod set header-mobile-menu-source menu-1 --path=/var/www/html --allow-root 2>/dev/null || true
+  MENU_LOCATIONS=$(wp menu location list --format=csv --path=/var/www/html --allow-root 2>/dev/null | tail -n +2 | cut -d',' -f1)
+  for LOC in $MENU_LOCATIONS; do
+    wp menu location assign "Main Menu" "$LOC" --path=/var/www/html --allow-root 2>/dev/null || true
+    echo "Assigned Main Menu to location: $LOC"
+  done
 
   # Disable Astra above/below header sections
   wp theme mod set above-header-layout disabled --path=/var/www/html --allow-root 2>/dev/null || true
