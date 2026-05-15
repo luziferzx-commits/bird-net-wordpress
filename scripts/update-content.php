@@ -89,6 +89,23 @@ $home_content = '
 <p style="font-size:0.8rem;color:#888;margin-top:8px;">✅ ประเมินหน้างานฟรี — ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
 <!-- /wp:html -->
 
+<!-- wp:html -->
+<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;">
+<div style="display:flex;align-items:center;gap:6px;background:#f0f7fa;padding:6px 14px;border-radius:20px;">
+<span style="font-size:1.2rem;">&#x1F3E0;</span><span style="font-size:0.8rem;color:#1B4D5C;font-weight:600;">บ้านพักอาศัย</span>
+</div>
+<div style="display:flex;align-items:center;gap:6px;background:#f0f7fa;padding:6px 14px;border-radius:20px;">
+<span style="font-size:1.2rem;">&#x1F3E2;</span><span style="font-size:0.8rem;color:#1B4D5C;font-weight:600;">คอนโด/อาคาร</span>
+</div>
+<div style="display:flex;align-items:center;gap:6px;background:#f0f7fa;padding:6px 14px;border-radius:20px;">
+<span style="font-size:1.2rem;">&#x1F3ED;</span><span style="font-size:0.8rem;color:#1B4D5C;font-weight:600;">โรงงาน/โกดัง</span>
+</div>
+<div style="display:flex;align-items:center;gap:6px;background:#f0f7fa;padding:6px 14px;border-radius:20px;">
+<span style="font-size:1.2rem;">&#x2600;&#xFE0F;</span><span style="font-size:0.8rem;color:#1B4D5C;font-weight:600;">โซลาร์เซลล์</span>
+</div>
+</div>
+<!-- /wp:html -->
+
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
@@ -219,6 +236,39 @@ $home_content = '
 <div style="font-size:2.5rem;margin-bottom:4px;">&#x1F3D7;&#xFE0F;</div>
 <p style="font-weight:700;color:#1B4D5C;margin:0;font-size:0.95rem;">วิศวกร กว.</p>
 <p style="color:#666;font-size:0.78rem;margin:2px 0 0;">สภาวิศวกรคุมงานทุกไซต์</p>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:html -->
+<div style="background:linear-gradient(135deg,#1B4D5C,#2a6a7c);padding:3rem 1rem;text-align:center;" data-aos="fade-up">
+<div style="max-width:900px;margin:0 auto;">
+<h2 style="color:#fff;font-size:1.8rem;margin:0 0 0.5rem;">&#x26A0;&#xFE0F; งานเสี่ยง ยกให้เรา</h2>
+<p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0 0 2rem;">งานติดตั้งตาข่ายกันนก เป็นงานที่ต้องการความเชี่ยวชาญ ความปลอดภัย และประสบการณ์ — อย่าเสี่ยงทำเอง</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;text-align:left;">
+<div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F6A8;</div>
+<h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">ทำงานบนที่สูง อันตรายถึงชีวิต</h3>
+<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">การติดตั้งตาข่ายบนอาคารสูง คอนโด โรงงาน ต้องใช้อุปกรณ์ Safety ครบชุด — สายรัดนิรภัย นั่งร้าน รถกระเช้า ทีมเราผ่านอบรมทุกคน มีใบรับรองโรยตัว SAFESIRI</p>
+</div>
+<div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F9F0;</div>
+<h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">ซื้อมาติดเอง ไม่ได้ผล</h3>
+<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">ตาข่ายที่ไม่ได้ขึงตึงพอ นกยังเข้าได้ หนามที่ระยะห่างไม่ถูก นกยังเกาะ — ต้องใช้เทคนิคเฉพาะทาง วิศวกรออกแบบ วัดพื้นที่อย่างละเอียด จึงได้ผล 100%</p>
+</div>
+<div style="background:rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;border:1px solid rgba(255,255,255,0.15);">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F4B0;</div>
+<h3 style="color:#fff;margin:0 0 8px;font-size:1rem;">จ้างช่างทั่วไป เสียเงินซ้ำ</h3>
+<p style="margin:0;font-size:0.85rem;color:rgba(255,255,255,0.75);line-height:1.6;">ช่างไม่มีประสบการณ์ ใช้วัสดุถูก ติดตั้งผิดวิธี → ตาข่ายหลุด นกกลับมาใหม่ ต้องจ้างซ่อมซ้ำ — จ้างมืออาชีพครั้งเดียว ประหยัดกว่า รับประกันผลงาน 3 ปี</p>
+</div>
+</div>
+<div style="margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;box-shadow:0 4px 15px rgba(232,121,46,0.4);">&#x1F4DE; ปรึกษาฟรี — ให้มืออาชีพดูแล</a>
+</div>
 </div>
 </div>
 <!-- /wp:html -->
@@ -693,37 +743,76 @@ $home_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
-<div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:0 1rem;">
+<div class="testimonial-carousel" style="max-width:800px;margin:0 auto;padding:0 1rem;position:relative;overflow:hidden;">
+<div class="testimonial-track" style="display:flex;transition:transform 0.5s ease;">
 
-<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
-<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏢 คอนโดมิเนียม</p>
-<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ทีมงานมืออาชีพมาก ติดตั้งเรียบร้อย สะอาด ตาข่ายแทบมองไม่เห็น แต่นกไม่มาอีกเลย รับประกันงานด้วย ประทับใจมากครับ"</p>
-<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณสมชาย</strong> | คอนโด X10 ศรีนครินทร์, ขอนแก่น</p>
-<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E2;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ทีมงานมืออาชีพมาก ติดตั้งเรียบร้อย สะอาด ตาข่ายแทบมองไม่เห็น แต่นกไม่มาอีกเลย รับประกันงานด้วย ประทับใจมากครับ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณสมชาย</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">คอนโด X10 ศรีนครินทร์, ขอนแก่น</p>
+</div>
 </div>
 
-<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
-<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏠 บ้านพักอาศัย</p>
-<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ปัญหานกพิราบมานานหลายปี ลองหลายวิธีไม่ได้ผล พอติดตาข่ายกับ Birds Go Away จบเลย ราคาสมเหตุสมผล แนะนำเลยค่ะ"</p>
-<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณนิดา</strong> | หมู่บ้านสีวลี, ขอนแก่น</p>
-<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E0;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ปัญหานกพิราบมานานหลายปี ลองหลายวิธีไม่ได้ผล พอติดตาข่ายกับ Birds Go Away จบเลย ราคาสมเหตุสมผล แนะนำเลยค่ะ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณนิดา</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">หมู่บ้านสีวลี, ขอนแก่น</p>
+</div>
 </div>
 
-<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
-<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">🏭 โรงงาน / โกดัง</p>
-<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"ใช้บริการติดตั้งที่โกดังสินค้า พื้นที่กว้างมาก แต่ทีมจัดการได้เรียบร้อยภายใน 2 วัน มีวิศวกรมาคุมงานด้วย วางใจได้"</p>
-<p style="color:#666;font-size:0.85em;margin:0;"><strong>— คุณวิชัย</strong> | โกดังสินค้า, เชียงใหม่</p>
-<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3ED;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ใช้บริการติดตั้งที่โกดังสินค้า พื้นที่กว้างมาก แต่ทีมจัดการได้เรียบร้อยภายใน 2 วัน มีวิศวกรมาคุมงานด้วย วางใจได้"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณวิชัย</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">โกดังสินค้า, เชียงใหม่</p>
+</div>
 </div>
 
-<div style="background:#f9f9f9;padding:1.5rem;border-radius:12px;border-left:4px solid #E8792E;">
-<p style="font-size:0.8rem;color:#E8792E;margin:0 0 8px;font-weight:600;">⛽ ปั๊มน้ำมัน / โชว์รูม</p>
-<p style="font-style:italic;margin:0 0 8px;font-size:0.9rem;">"นกทำรังใต้หลังคาปั๊มจนสกปรก ลูกค้าร้องเรียนตลอด ติดตาข่ายแล้วสะอาดมาก ดูดีขึ้นเยอะ ขอบคุณทีมงานครับ"</p>
-<p style="color:#666;font-size:0.85em;margin:0;"><strong>— ผู้จัดการสาขา</strong> | ปั๊มน้ำมัน, ชลบุรี</p>
-<p style="color:#E8792E;margin:4px 0 0;">⭐⭐⭐⭐⭐</p>
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x26FD;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"นกทำรังใต้หลังคาปั๊มจนสกปรก ลูกค้าร้องเรียนตลอด ติดตาข่ายแล้วสะอาดมาก ดูดีขึ้นเยอะ ขอบคุณทีมงานครับ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">ผู้จัดการสาขา</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">ปั๊มน้ำมัน, ชลบุรี</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3D7;&#xFE0F;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ติดตาข่ายอาคาร 4 ชั้น ทีมงานมาพร้อมนั่งร้านเต็มรูปแบบ ทำงานเร็ว เรียบร้อย ใช้เวลาแค่ 2 วัน ตอนนี้นกไม่มีเลย ดีใจมากครับ"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณประเสริฐ</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">อาคารพาณิชย์, อุดรธานี</p>
+</div>
 </div>
 
 </div>
+<div style="display:flex;justify-content:center;gap:8px;margin-top:16px;">
+<button onclick="moveTestimonial(-1)" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276E;</button>
+<button onclick="moveTestimonial(1)" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276F;</button>
+</div>
+<div class="testimonial-dots" style="display:flex;justify-content:center;gap:8px;margin-top:12px;"></div>
+</div>
+<script>
+(function(){
+var idx=0,track=document.querySelector(".testimonial-track"),slides=document.querySelectorAll(".testimonial-slide"),total=slides.length;
+var dotsC=document.querySelector(".testimonial-dots");
+for(var i=0;i<total;i++){var d=document.createElement("span");d.className="t-dot";d.setAttribute("data-i",i);d.style.cssText="width:10px;height:10px;border-radius:50%;background:"+(i===0?"#E8792E":"#ddd")+";cursor:pointer;transition:background 0.3s;";d.onclick=function(){idx=parseInt(this.getAttribute("data-i"));go()};dotsC.appendChild(d)}
+function go(){track.style.transform="translateX(-"+idx*100+"%)";var dots=dotsC.querySelectorAll(".t-dot");for(var j=0;j<dots.length;j++)dots[j].style.background=j===idx?"#E8792E":"#ddd"}
+window.moveTestimonial=function(dir){idx=(idx+dir+total)%total;go()};
+setInterval(function(){idx=(idx+1)%total;go()},5000);
+})();
+</script>
 <!-- /wp:html -->
 
 <!-- wp:heading {"textAlign":"center","level":3} -->
@@ -881,6 +970,7 @@ $services_content = '
 <li><strong>อายุการใช้งาน:</strong> 6-7 ปี</li>
 <li><strong>การใช้งาน:</strong> อาคาร คอนโด โรงงาน โครงการต่างๆ</li>
 </ul>
+<p><a href="/service-hdpe/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดตาข่าย HDPE เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"50%"} -->
@@ -913,6 +1003,7 @@ $services_content = '
 <li>ลดความเสี่ยงสายไฟเสียหายจากนกกัดแทะ</li>
 <li>ไม่มีผลกระทบต่อประสิทธิภาพการผลิตไฟฟ้า</li>
 </ul>
+<p><a href="/service-solar/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดแผงกันนกโซลาร์ เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"50%"} -->
@@ -948,6 +1039,7 @@ $services_content = '
 <li><strong>อายุการใช้งาน:</strong> ยาวนาน ไม่เป็นสนิมตลอดอายุการใช้งาน (Corrosion Resistant)</li>
 <li><strong>เหมาะกับ:</strong> ขอบหน้าต่าง ราวกันตก ป้ายอาคาร ชายคา งานภายนอกอาคาร</li>
 </ul>
+<p><a href="/service-spikes/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดหนามกันนก เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"50%"} -->
@@ -983,6 +1075,7 @@ $services_content = '
 <li>ไม่ทิ้งคราบ ไม่เสียหาย มองไม่เห็นจากภายนอก</li>
 <li>เหมาะกับ: ขอบระเบียง ราวกันตก ขอบหน้าต่าง พื้นที่แคบ</li>
 </ul>
+<p><a href="/service-gel/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดเจลไล่นก เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column {"width":"50%"} -->
@@ -2029,6 +2122,242 @@ foreach ($blog_posts as $slug => $post_data) {
     }
 }
 
+// ===== SERVICE DETAIL PAGES =====
+$service_hdpe_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">ตาข่าย HDPE กันนก — Bird Netting</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">วิธีป้องกันนกที่ได้ผลที่สุด ครอบคลุมพื้นที่กว้าง ป้องกันนกเข้า 100% เหมาะกับระเบียงคอนโด โรงงาน อาคารพาณิชย์ หอพัก — มองแทบไม่เห็นจากภายนอก</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก ติดตั้งระเบียงคอนโด" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F6E1;&#xFE0F;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">ป้องกันนก 100%</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">ครอบคลุมพื้นที่ทั้งหมด นกไม่สามารถเข้ามาได้เลย ไม่เหมือนหนามหรือเจลที่ป้องกันเฉพาะจุด</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F441;&#xFE0F;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">แทบมองไม่เห็น</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">สี Transparent Black โปร่งแสง กลมกลืนกับตัวอาคาร ไม่ทำลายทัศนียภาพ สวยเรียบร้อย</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F4AA;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">ทนทาน 6-7 ปี</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">HDPE 2500D/1ply UV-Stabilized ทนแดดจัด ทนฝนกรด แรงดึงขาดจุดปม 13 kg. เหมาะกับสภาพอากาศไทย</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">สเปคสินค้า</h2>
+<ul>
+<li><strong>วัสดุ:</strong> HDPE 2500D/1 ply (High-Density Polyethylene เกรดส่งออก)</li>
+<li><strong>สี:</strong> Transparent Black (UV-Stabilized Treatment ทนรังสียูวี)</li>
+<li><strong>ขนาดตา:</strong> 18 mm. x 18 mm. (Knitting net)</li>
+<li><strong>แรงดึงขาดจุดปม:</strong> 13 kg.</li>
+<li><strong>แรงดึงขาดเส้นด้าย:</strong> 7 kg.</li>
+<li><strong>ขนาดม้วน:</strong> 6 m. (กว้าง) x 50 m. (ยาว)</li>
+<li><strong>อายุการใช้งาน:</strong> 6-7 ปี</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">เหมาะกับพื้นที่ใดบ้าง?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ระเบียงคอนโด</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3ED;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">โรงงาน / โกดัง</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E0;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">บ้านพักอาศัย</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">อาคารราชการ</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; ขอใบเสนอราคาฟรี</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">ประเมินหน้างานฟรี ไม่มีค่าใช้จ่าย</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$service_spikes_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">หนามกันนก สแตนเลส SUS304</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">หนามกันนกสแตนเลสเกรด 304 ป้องกันนกเกาะบนขอบหน้าต่าง ราวกันตก ชายคา — ทนทานตลอดอายุการใช้งาน ไม่เป็นสนิม ราคาประหยัด</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส SUS304 ติดตั้งขอบหน้าต่าง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F4B0;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">ราคาประหยัด</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">ต้นทุนต่อเมตรถูกที่สุดในบรรดาวิธีป้องกันนก เหมาะกับงบจำกัดแต่ต้องการผลจริง</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F527;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">ไม่เป็นสนิม 10+ ปี</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">สแตนเลส SUS304 เกรดส่งออก ทนแดด ทนฝน ทนกรด-ด่าง ทนทานตลอดอายุการใช้งาน</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2699;&#xFE0F;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">ปรับองศาได้</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">90 ขาต่อ 1 เมตร ปรับเปลี่ยนองศาปลายหนามตามรูปทรงพื้นที่ได้อย่างอิสระ</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">สเปคสินค้า</h2>
+<ul>
+<li><strong>วัสดุ:</strong> Stainless Steel Spring SUS304 ไม่เป็นสนิมตลอดอายุการใช้งาน</li>
+<li><strong>จำนวนหนาม:</strong> 90 ขาต่อ 1 เมตร (ถี่กว่ามาตรฐาน)</li>
+<li><strong>คุณสมบัติ:</strong> ปรับเปลี่ยนองศาปลายหนามตามพื้นที่ได้</li>
+<li><strong>ทนทาน:</strong> ทนแดด ทนฝน ทนกรด-ด่าง</li>
+<li><strong>อายุการใช้งาน:</strong> 10+ ปี (Corrosion Resistant)</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">เหมาะกับพื้นที่ใดบ้าง?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1FA9F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ขอบหน้าต่าง</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3D7;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ราวกันตก</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ชายคา / ป้าย</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E0;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">บ้าน / ทาวน์โฮม</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; ขอใบเสนอราคาฟรี</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">ประเมินหน้างานฟรี ไม่มีค่าใช้จ่าย</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$service_gel_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">เจลไล่นก — Bird Repellent Gel</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">เจลไล่นกสูตร Non-toxic ปลอดภัย มองไม่เห็นจากภายนอก ไม่ทำลายทัศนียภาพ เหมาะกับพื้นที่เน้นความสวยงาม โรงแรม อาคารหรู</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['gel'] . '" alt="เจลไล่นก ติดตั้งขอบระเบียง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2728;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">มองไม่เห็นจากภายนอก</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">เจลใส ไม่ทิ้งคราบ ไม่ทำลายทัศนียภาพอาคาร เหมาะกับอาคารที่เน้นความสวยงาม</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F49A;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">ปลอดภัย 100%</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">สูตร Non-toxic ไม่มีสารพิษ ปลอดภัยต่อคน สัตว์เลี้ยง และนก ได้รับการรับรอง</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F9F4;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">ใช้ได้ทุกพื้นผิว</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Polycarbonate-based gel UV-Resistant ไม่ละลายในแสงแดด ทาได้ทั้งปูน เหล็ก ไม้ กระจก</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">คุณสมบัติ</h2>
+<ul>
+<li><strong>วัสดุ:</strong> Polycarbonate-based gel สูตรไม่มีสารพิษ (Non-toxic)</li>
+<li>ทนรังสียูวี (UV-Resistant) ไม่ละลายในแสงแดด</li>
+<li>ปลอดภัยต่อคนและสัตว์ ใช้ได้กับทุกพื้นผิว</li>
+<li>ไม่ทิ้งคราบ ไม่เสียหาย มองไม่เห็นจากภายนอก</li>
+<li><strong>อายุการใช้งาน:</strong> 1-2 ปี ขึ้นอยู่กับสภาพอากาศ</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">เหมาะกับพื้นที่ใดบ้าง?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E8;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">โรงแรม / รีสอร์ท</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ขอบระเบียง</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1FA9F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">ขอบหน้าต่าง</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">อาคารหรู / โชว์รูม</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; ขอใบเสนอราคาฟรี</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">ประเมินหน้างานฟรี ไม่มีค่าใช้จ่าย</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$service_solar_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">แผงกันนกโซลาร์เซลล์ — Solar Panel Bird Guard</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">ป้องกันนกทำรังใต้แผงโซลาร์เซลล์ ระบบคลิปไม่ต้องเจาะแผง ไม่เสียประกัน ยืดอายุการใช้งาน ลดความเสี่ยงไฟฟ้าลัดวงจร</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"large"} -->
+<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F50C;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">ไม่เจาะแผง ไม่เสียประกัน</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">ระบบคลิปยึดขอบแผงโซลาร์โดยเฉพาะ ไม่ต้องเจาะรู ไม่กระทบประกันแผง</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x26A1;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">ลดเสี่ยงไฟฟ้าลัดวงจร</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">นกทำรังใต้แผงอาจกัดสายไฟ เสี่ยงไฟฟ้าลัดวงจร ติดตั้งแผงกัน ป้องกันปัญหาร้ายแรง</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2600;&#xFE0F;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">ไม่กระทบประสิทธิภาพ</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">แผงกันนกไม่บังแสง ไม่ลดประสิทธิภาพการผลิตไฟฟ้า โซลาร์ทำงานเต็มกำลังเหมือนเดิม</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">คุณสมบัติ</h2>
+<ul>
+<li>ระบบคลิปไม่ต้องเจาะแผง ไม่เสียประกัน</li>
+<li>ยืดอายุการใช้งานแผงโซลาร์เซลล์</li>
+<li>ป้องกันนกทำรัง ขับถ่ายมูลใต้แผง</li>
+<li>ลดความเสี่ยงสายไฟเสียหายจากนกกัดแทะ</li>
+<li>ไม่มีผลกระทบต่อประสิทธิภาพการผลิตไฟฟ้า</li>
+<li>วัสดุทนทาน ทนแดดทนฝน อายุ 5+ ปี</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">เหมาะกับพื้นที่ใดบ้าง?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E0;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">หลังคาบ้าน</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3ED;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">โรงงาน / โกดัง</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">อาคารพาณิชย์</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">อาคารราชการ</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; ขอใบเสนอราคาฟรี</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">ประเมินหน้างานฟรี ไม่มีค่าใช้จ่าย</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
 // ===== UPDATE PAGES =====
 $pages = array(
     'home'       => array('title' => 'หน้าแรก',      'content' => $home_content),
@@ -2041,6 +2370,10 @@ $pages = array(
     'khon-kaen'  => array('title' => 'ตาข่ายกันนก ขอนแก่น', 'content' => $khonkaen_content),
     'chiang-mai' => array('title' => 'ตาข่ายกันนก เชียงใหม่', 'content' => $chiangmai_content),
     'chonburi'   => array('title' => 'ตาข่ายกันนก ชลบุรี', 'content' => $chonburi_content),
+    'service-hdpe'   => array('title' => 'ตาข่าย HDPE กันนก', 'content' => $service_hdpe_content),
+    'service-spikes' => array('title' => 'หนามกันนก สแตนเลส', 'content' => $service_spikes_content),
+    'service-gel'    => array('title' => 'เจลไล่นก', 'content' => $service_gel_content),
+    'service-solar'  => array('title' => 'แผงกันนกโซลาร์เซลล์', 'content' => $service_solar_content),
 );
 
 foreach ($pages as $slug => $page_data) {
@@ -2125,6 +2458,26 @@ $seo_data = array(
         'title' => 'ตาข่ายกันนก ชลบุรี รับประกัน 3 ปี | Birds Go Away',
         'desc'  => 'บริการติดตั้งตาข่ายกันนก ชลบุรี พัทยา ศรีราชา โดยทีมช่างมืออาชีพ รับประกัน 3 ปี ประเมินหน้างานฟรี โทร 095-629-2488',
         'focus' => 'ตาข่ายกันนก ชลบุรี',
+    ),
+    'service-hdpe' => array(
+        'title' => 'ตาข่าย HDPE กันนก ราคา สเปค | Birds Go Away',
+        'desc'  => 'ตาข่าย HDPE 2500D เกรดส่งออก ป้องกันนก 100% มองแทบไม่เห็น อายุ 6-7 ปี รับประกัน 3 ปี เหมาะคอนโด โรงงาน อาคาร ราคาเริ่มต้น 350 บาท/ตร.ม.',
+        'focus' => 'ตาข่าย HDPE กันนก',
+    ),
+    'service-spikes' => array(
+        'title' => 'หนามกันนก สแตนเลส 304 ราคา | Birds Go Away',
+        'desc'  => 'หนามกันนกสแตนเลส SUS304 90 ขา/เมตร ไม่เป็นสนิม 10+ ปี ราคาประหยัด เหมาะขอบหน้าต่าง ราวกันตก ชายคา ติดตั้งโดยทีมมืออาชีพ',
+        'focus' => 'หนามกันนก สแตนเลส',
+    ),
+    'service-gel' => array(
+        'title' => 'เจลไล่นก Non-toxic ราคา | Birds Go Away',
+        'desc'  => 'เจลไล่นก Polycarbonate-based ปลอดสารพิษ มองไม่เห็น ใช้ได้ทุกพื้นผิว เหมาะโรงแรม อาคารหรู ขอบระเบียง ขอบหน้าต่าง UV-Resistant',
+        'focus' => 'เจลไล่นก',
+    ),
+    'service-solar' => array(
+        'title' => 'แผงกันนกโซลาร์เซลล์ ไม่เจาะแผง | Birds Go Away',
+        'desc'  => 'แผงกันนกโซลาร์เซลล์ ระบบคลิปไม่เจาะแผง ไม่เสียประกัน ป้องกันนกทำรังใต้แผง ลดเสี่ยงไฟลัดวงจร ไม่กระทบประสิทธิภาพ ติดตั้งมืออาชีพ',
+        'focus' => 'แผงกันนกโซลาร์เซลล์',
     ),
 );
 
