@@ -1031,13 +1031,6 @@ $services_content = '
 <p><a href="/service-solar/" style="color:#E8792E;font-weight:600;">&#x1F449; ดูรายละเอียดแผงกันนกโซลาร์ เพิ่มเติม →</a></p>
 </div>
 <!-- /wp:column -->
-<!-- wp:column {"width":"50%"} -->
-<div class="wp-block-column" style="flex-basis:50%;">
-<!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-</div>
-<!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 
@@ -2382,9 +2375,7 @@ $service_solar_content = '
 <p class="has-medium-font-size">ป้องกันนกทำรังใต้แผงโซลาร์เซลล์ ระบบคลิปไม่ต้องเจาะแผง ไม่เสียประกัน ยืดอายุการใช้งาน ลดความเสี่ยงไฟฟ้าลัดวงจร</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg?v=newE" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
-<!-- /wp:image -->
+
 
 <!-- wp:html -->
 <div style="max-width:800px;margin:2rem auto;">
