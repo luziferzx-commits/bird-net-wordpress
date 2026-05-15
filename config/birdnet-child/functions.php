@@ -49,7 +49,7 @@ add_action('wp_head', 'birdnet_hide_front_page_title');
 function birdnet_vw_fix() {
     ?>
     <script>
-    (function(){function s(){document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px')}s();window.addEventListener('resize',s)})();
+    (function(){function s(){document.documentElement.style.setProperty('--vw',document.documentElement.clientWidth+'px')}s();window.addEventListener('resize',s);window.addEventListener('load',s);document.addEventListener('DOMContentLoaded',s)})();
     </script>
     <?php
 }
