@@ -199,6 +199,43 @@ function birdnet_schema_jsonld() {
         ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         echo '<script type="application/ld+json">' . $faq_schema . '</script>' . "\n";
     }
+    // ImageObject schema on portfolio page
+    if (is_page('portfolio')) {
+        $site_url = get_site_url();
+        $assets = $site_url . '/wp-content/uploads/birdnet-assets';
+        $portfolio_images = array();
+        $descriptions = array(
+            '01' => 'ติดตั้งตาข่ายกันนก HDPE ระเบียงคอนโด ขอนแก่น',
+            '03' => 'ติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น',
+            '05' => 'ติดตั้งตาข่ายกันนก คอนโดมิเนียม เชียงใหม่',
+            '07' => 'ติดตั้งตาข่าย HDPE กันนก คอนโด ขอนแก่น',
+            '08' => 'ติดตั้งตาข่ายกันนก คอนโดริมหาด ชลบุรี พัทยา',
+            '10' => 'ติดตั้งหนามกันนกสแตนเลส SUS304 ราวระเบียง',
+            '12' => 'ติดตั้งหนามกันนก ปั๊มน้ำมัน ชลบุรี',
+            '15' => 'ติดตั้งตาข่ายกันนก อาคารพาณิชย์ เชียงใหม่',
+            '18' => 'ติดตั้งตาข่ายกันนก โรงงาน นิคมอุตสาหกรรม',
+            '20' => 'ติดตั้งตาข่ายกันนก โรงงาน ขอนแก่น',
+            '22' => 'ติดตั้งตาข่ายกันนก โกดังสินค้า เชียงใหม่',
+        );
+        foreach ($descriptions as $num => $desc) {
+            $portfolio_images[] = array(
+                '@type' => 'ImageObject',
+                'contentUrl' => $assets . '/birdnet-' . $num . '.webp',
+                'name' => $desc,
+                'description' => $desc . ' โดย Birds Go Away บริษัท รีเช็ค บิ้วดิ้ง จำกัด',
+                'author' => array('@type' => 'Organization', 'name' => 'Birds Go Away'),
+            );
+        }
+        $portfolio_schema = json_encode(array(
+            '@context' => 'https://schema.org',
+            '@type' => 'ImageGallery',
+            'name' => 'ผลงานติดตั้งตาข่ายกันนก — Birds Go Away',
+            'description' => 'รวมผลงานติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก 31+ โปรเจกต์ ทั้งคอนโด บ้าน อาคารพาณิชย์ โรงงาน',
+            'url' => $site_url . '/portfolio/',
+            'image' => $portfolio_images,
+        ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        echo '<script type="application/ld+json">' . $portfolio_schema . '</script>' . "\n";
+    }
 }
 add_action('wp_head', 'birdnet_schema_jsonld', 1);
 

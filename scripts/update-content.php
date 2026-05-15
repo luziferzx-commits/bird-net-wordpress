@@ -1452,40 +1452,101 @@ $blog_content = '
 // ===== LANDING PAGES PER PROVINCE =====
 $khonkaen_content = '
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ขอนแก่น — บริการติดตั้งมืออาชีพ</h1>
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ขอนแก่น — บริการติดตั้งมืออาชีพ รับประกัน 3 ปี</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก ขอนแก่น โดยทีมช่างมืออาชีพ วิศวกร กว. คุมงานทุกไซต์ รับประกัน 3 ปี นัดสำรวจหน้างานได้ภายใน 24 ชม.</p>
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก ในจังหวัดขอนแก่นและภาคอีสาน โดยทีมช่างมืออาชีพ วิศวกร กว. สภาวิศวกรคุมงานทุกไซต์ รับประกันงานติดตั้ง 3 ปี นัดสำรวจหน้างานได้ภายใน 24 ชม. ไม่มีค่าใช้จ่าย</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
-<div style="max-width:700px;margin:2rem auto;text-align:center;">
-<h2 style="color:#1B4D5C;">ทำไมลูกค้าขอนแก่นเลือกเรา?</h2>
+<div style="max-width:800px;margin:2rem auto;">
+<h2 style="color:#1B4D5C;text-align:center;">ทำไมลูกค้าขอนแก่นเลือก Birds Go Away?</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
-<h4 style="margin:0 0 8px;color:#1B4D5C;">🚀 เข้าถึงเร็ว</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">สำนักงานใหญ่อยู่ขอนแก่น นัดสำรวจได้ภายใน 24 ชม.</p>
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🚀 สำนักงานใหญ่อยู่ขอนแก่น</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">เข้าถึงเร็ว นัดสำรวจหน้างานได้ภายใน 24 ชม. ไม่ต้องรอทีมจากกรุงเทพ</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
-<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี ซ่อมฟรี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี ไม่มีค่าใช้จ่ายเพิ่ม</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
 <h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี ไม่มีค่าใช้จ่ายแอบแฝง</p>
 </div>
+</div>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">บริการของเราในขอนแก่น</h2>
+<p style="color:#555;">เราให้บริการป้องกันนกครบวงจรในจังหวัดขอนแก่น ครอบคลุมทั้งบ้านพักอาศัย คอนโดมิเนียม อาคารพาณิชย์ โรงงาน และสถานที่ราชการ โดยมีบริการหลัก 4 ประเภท:</p>
+<ul style="color:#555;line-height:1.8;">
+<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียงคอนโด ช่องเปิดใต้หลังคา พื้นที่กว้าง อายุ 5-7 ปี</li>
+<li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
+<li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่เน้นความสวยงาม มองไม่เห็นจากภายนอก</li>
+<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผงโซลาร์</li>
+</ul>
+<p style="color:#555;">ทุกบริการมีวิศวกรเข้าสำรวจหน้างานก่อนติดตั้ง พร้อมเสนอวิธีที่เหมาะสมที่สุดสำหรับปัญหาของคุณ <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">ผลงานติดตั้งในขอนแก่น</h2>
+<p style="color:#555;text-align:center;">ผลงานจริงจากลูกค้าในจังหวัดขอนแก่น — ทั้งคอนโด บ้านพัก อาคารพาณิชย์ และหน่วยงานราชการ</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(7) . '" alt="ติดตั้งตาข่ายกันนก HDPE คอนโด ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่าย HDPE — คอนโด ขอนแก่น</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(10) . '" alt="ติดตั้งหนามกันนกสแตนเลส ราวระเบียง ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามสแตนเลส — ราวระเบียง</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(3) . '" alt="ติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(20) . '" alt="ติดตั้งตาข่ายกันนก โรงงาน นิคมอุตสาหกรรม ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — โรงงาน</p></div>
+</div>
+</div>
+<p style="text-align:center;"><a href="/portfolio/" style="color:#E8792E;font-weight:600;">ดูผลงานทั้งหมด 31+ โปรเจกต์ →</a></p>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">ลูกค้าองค์กรในขอนแก่นที่ไว้วางใจเรา</h2>
+<div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px 24px;margin:1rem 0;">
+<span style="font-size:0.85rem;color:#555;font-weight:600;">🏛️ สำนักงาน ป.ป.ช. ภาค 4</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;">🎓 มหาวิทยาลัยขอนแก่น</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;">🏥 วิทยาลัยสาธารณสุขสิรินธร</span>
+<span style="font-size:0.85rem;color:#555;font-weight:600;">🏢 เมโทรคอนโด ขอนแก่น</span>
 </div>
 
 <h3 style="color:#1B4D5C;">พื้นที่ให้บริการในขอนแก่น</h3>
-<p style="color:#555;">เมืองขอนแก่น, บ้านเป็ด, ศิลา, สำราญ, บ้านค้อ, เมืองเก่า, พระลับ, ท่าพระ และจังหวัดใกล้เคียง: อุดรธานี, มหาสารคาม, นครราชสีมา, กาฬสินธุ์, ร้อยเอ็ด</p>
+<p style="color:#555;"><strong>ในเขตเมือง:</strong> เมืองขอนแก่น, บ้านเป็ด, ศิลา, สำราญ, บ้านค้อ, เมืองเก่า, พระลับ, ท่าพระ, แดงใหญ่, หนองตูม</p>
+<p style="color:#555;"><strong>อำเภอใกล้เคียง:</strong> น้ำพอง, บ้านไผ่, ชุมแพ, หนองเรือ, มัญจาคีรี, พล, สีชมพู, ภูเวียง</p>
+<p style="color:#555;"><strong>จังหวัดใกล้เคียง:</strong> อุดรธานี, มหาสารคาม, นครราชสีมา, กาฬสินธุ์, ร้อยเอ็ด, ชัยภูมิ, หนองคาย, สกลนคร</p>
 
-<h3 style="color:#1B4D5C;">ผลงานในขอนแก่น</h3>
-<p style="color:#555;">ติดตั้งตาข่ายกันนกให้คอนโด X10 ศรีนครินทร์, หมู่บ้านสีวลี, โรงงานในนิคมอุตสาหกรรม, ปั๊มน้ำมัน และอาคารพาณิชย์ทั่วขอนแก่น รวม 32+ โปรเจกต์</p>
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">คำถามที่พบบ่อย — ตาข่ายกันนก ขอนแก่น</h2>
+<div style="text-align:left;max-width:650px;margin:0 auto;">
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ราคาติดตั้งตาข่ายกันนก ขอนแก่น เริ่มต้นเท่าไหร่?</summary>
+<p style="margin:8px 0 0;color:#555;">ราคาเริ่มต้นเพียง 350 บาท/ตร.ม. ขึ้นอยู่กับขนาดพื้นที่ ความสูง และความซับซ้อนของงาน สามารถส่งรูปหน้างานมาประเมินราคาฟรีทาง LINE</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ใช้เวลาติดตั้งกี่วัน?</summary>
+<p style="margin:8px 0 0;color:#555;">ระเบียงคอนโด 1 ห้อง ใช้เวลา 2-4 ชั่วโมง อาคารพาณิชย์หรือโรงงาน 1-3 วัน ขึ้นอยู่กับขนาดพื้นที่</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">รับประกันงานติดตั้งกี่ปี?</summary>
+<p style="margin:8px 0 0;color:#555;">รับประกัน 3 ปี หากพบปัญหา ตาข่ายหลุด ขาด หรือนกกลับมา เข้าแก้ไขฟรีไม่มีค่าใช้จ่าย</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ไปติดตั้งนอกเขตเมืองขอนแก่นได้ไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">ได้ครับ เราให้บริการทั่วจังหวัดขอนแก่นและจังหวัดใกล้เคียงในภาคอีสาน ไม่มีค่าเดินทางเพิ่มในเขตขอนแก่น</p>
+</details>
+</div>
 
-<div style="margin:2rem 0;">
+<div style="margin:2.5rem 0;text-align:center;background:#1B4D5C;padding:2rem;border-radius:12px;">
+<h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาภายใน 24 ชม.</h3>
+<p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0629964994" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 062-996-4994</a>
-<p style="margin-top:8px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;">💬 แอดไลน์ oil_phanu</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ oil_phanu</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -1493,37 +1554,89 @@ $khonkaen_content = '
 
 $chiangmai_content = '
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก เชียงใหม่ — บริการติดตั้งมืออาชีพ</h1>
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก เชียงใหม่ — บริการติดตั้งมืออาชีพ รับประกัน 3 ปี</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก เชียงใหม่ โดยทีมช่างมืออาชีพ ผ่านอบรม Safety ครบ รับประกัน 3 ปี</p>
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก ในจังหวัดเชียงใหม่และภาคเหนือ โดยทีมช่างประจำพื้นที่เชียงใหม่ ผ่านอบรม Safety ครบ รับประกันงานติดตั้ง 3 ปี ประเมินหน้างานฟรี</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
-<div style="max-width:700px;margin:2rem auto;text-align:center;">
-<h2 style="color:#1B4D5C;">บริการตาข่ายกันนก เชียงใหม่</h2>
+<div style="max-width:800px;margin:2rem auto;">
+<h2 style="color:#1B4D5C;text-align:center;">ทำไมลูกค้าเชียงใหม่เลือก Birds Go Away?</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
 <h4 style="margin:0 0 8px;color:#1B4D5C;">🏗️ ทีมช่างประจำเชียงใหม่</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">ทีมงานประจำพื้นที่เชียงใหม่ พร้อมเข้างานทันที</p>
+<p style="margin:0;font-size:0.9rem;color:#555;">ทีมงานประจำพื้นที่เชียงใหม่ พร้อมเข้างานทันที ไม่ต้องรอทีมจากต่างจังหวัด</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
-<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี ซ่อมฟรี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี ไม่มีค่าใช้จ่ายเพิ่ม</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
 <h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี ไม่มีค่าใช้จ่ายแอบแฝง</p>
 </div>
 </div>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">บริการของเราในเชียงใหม่</h2>
+<p style="color:#555;">เชียงใหม่เป็นเมืองที่มีนกพิราบจำนวนมาก โดยเฉพาะในย่านเมืองเก่า คอนโดริมถนนนิมมานเหมินท์ และอาคารพาณิชย์ในตัวเมือง เราให้บริการป้องกันนกครบวงจร:</p>
+<ul style="color:#555;line-height:1.8;">
+<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับคอนโด หอพัก อพาร์ทเมนท์ในเชียงใหม่ อายุ 5-7 ปี</li>
+<li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับร้านค้า อาคารพาณิชย์ หน้าต่าง ชายคา อายุ 10+ ปี</li>
+<li><strong>เจลไล่นก</strong> — เหมาะกับอาคารที่เน้นความสวยงาม เช่น โรงแรม รีสอร์ท ร้านกาแฟ</li>
+<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
+</ul>
+<p style="color:#555;">ทุกบริการมีช่างผ่านอบรมความปลอดภัยเข้าสำรวจหน้างานก่อนเสนอราคา <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">ผลงานติดตั้งในเชียงใหม่</h2>
+<p style="color:#555;text-align:center;">ผลงานจริงจากลูกค้าในจังหวัดเชียงใหม่ — คอนโด อาคารพาณิชย์ โรงงาน และโกดังสินค้า</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(15) . '" alt="ติดตั้งตาข่ายกันนก อาคารพาณิชย์ เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(5) . '" alt="ติดตั้งตาข่ายกันนก คอนโด เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — คอนโด</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(22) . '" alt="ติดตั้งตาข่ายกันนก โกดังสินค้า เชียงใหม่" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — โกดังสินค้า</p></div>
+</div>
+</div>
+<p style="text-align:center;"><a href="/portfolio/" style="color:#E8792E;font-weight:600;">ดูผลงานทั้งหมด 31+ โปรเจกต์ →</a></p>
 
 <h3 style="color:#1B4D5C;">พื้นที่ให้บริการในเชียงใหม่</h3>
-<p style="color:#555;">เมืองเชียงใหม่, หางดง, สันทราย, สันกำแพง, แม่ริม, ดอยสะเก็ด, สารภี และจังหวัดใกล้เคียง: ลำพูน, ลำปาง, เชียงราย</p>
+<p style="color:#555;"><strong>ในเขตเมือง:</strong> เมืองเชียงใหม่, หางดง, สันทราย, สันกำแพง, แม่ริม, ดอยสะเก็ด, สารภี, สันป่าตอง</p>
+<p style="color:#555;"><strong>ย่านสำคัญ:</strong> นิมมานเหมินท์, ช้างเผือก, ช้างคลาน, วัดเกต, สันติธรรม, ถนนมหิดล, ไนท์บาซาร์</p>
+<p style="color:#555;"><strong>จังหวัดใกล้เคียง:</strong> ลำพูน, ลำปาง, เชียงราย, แม่ฮ่องสอน, พะเยา</p>
 
-<div style="margin:2rem 0;">
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">คำถามที่พบบ่อย — ตาข่ายกันนก เชียงใหม่</h2>
+<div style="text-align:left;max-width:650px;margin:0 auto;">
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ราคาติดตั้งตาข่ายกันนก เชียงใหม่ เริ่มต้นเท่าไหร่?</summary>
+<p style="margin:8px 0 0;color:#555;">ราคาเริ่มต้นเพียง 350 บาท/ตร.ม. ขึ้นอยู่กับขนาดพื้นที่และความสูง ส่งรูปหน้างานมาประเมินราคาฟรีทาง LINE</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ทีมงานประจำเชียงใหม่เข้างานเร็วแค่ไหน?</summary>
+<p style="margin:8px 0 0;color:#555;">มีทีมช่างประจำพื้นที่เชียงใหม่ สามารถนัดสำรวจหน้างานได้ภายใน 2-3 วัน และเริ่มติดตั้งได้ทันทีหลังตกลงราคา</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ติดตาข่ายกันนกในคอนโดย่านนิมมานได้ไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">ได้ครับ เรามีประสบการณ์ติดตั้งในคอนโดหลายโครงการในเชียงใหม่ ทั้งระเบียง หน้าต่าง และพื้นที่ส่วนกลาง</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">รับงานนอกเมืองเชียงใหม่ไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">รับครับ ทั้งลำพูน ลำปาง เชียงราย และจังหวัดใกล้เคียงในภาคเหนือ</p>
+</details>
+</div>
+
+<div style="margin:2.5rem 0;text-align:center;background:#1B4D5C;padding:2rem;border-radius:12px;">
+<h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาตาข่ายกันนก เชียงใหม่</h3>
+<p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0936415623" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 093-641-5623</a>
-<p style="margin-top:8px;"><a href="https://line.me/ti/p/~th3-ta006-2" style="color:#06C755;font-weight:600;">💬 แอดไลน์ th3-ta006-2</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~th3-ta006-2" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ th3-ta006-2</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -1531,37 +1644,89 @@ $chiangmai_content = '
 
 $chonburi_content = '
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ชลบุรี — บริการติดตั้งมืออาชีพ</h1>
+<h1 class="has-text-align-center wp-block-heading">ตาข่ายกันนก ชลบุรี พัทยา ศรีราชา — บริการติดตั้งมืออาชีพ รับประกัน 3 ปี</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก ชลบุรี พัทยา ศรีราชา โดยทีมช่างมืออาชีพ รับประกัน 3 ปี</p>
+<p class="has-text-align-center">บริการรับติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก ในจังหวัดชลบุรี พัทยา ศรีราชา แหลมฉบัง และพื้นที่ EEC โดยทีมช่างมืออาชีพ รับประกันงานติดตั้ง 3 ปี ประเมินหน้างานฟรี</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
-<div style="max-width:700px;margin:2rem auto;text-align:center;">
-<h2 style="color:#1B4D5C;">บริการตาข่ายกันนก ชลบุรี</h2>
+<div style="max-width:800px;margin:2rem auto;">
+<h2 style="color:#1B4D5C;text-align:center;">ทำไมลูกค้าชลบุรีเลือก Birds Go Away?</h2>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:1.5rem 0;">
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
-<h4 style="margin:0 0 8px;color:#1B4D5C;">🏗️ ครอบคลุม EEC</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">ชลบุรี พัทยา ศรีราชา บางแสน แหลมฉบัง ระยอง</p>
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🏗️ ครอบคลุมพื้นที่ EEC ทั้งหมด</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">ชลบุรี พัทยา ศรีราชา บางแสน แหลมฉบัง บ่อวิน ระยอง</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
-<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี</p>
+<h4 style="margin:0 0 8px;color:#1B4D5C;">🛡️ รับประกัน 3 ปี ซ่อมฟรี</h4>
+<p style="margin:0;font-size:0.9rem;color:#555;">นกกลับมาในระยะรับประกัน เข้าดูแลฟรี ไม่มีค่าใช้จ่ายเพิ่ม</p>
 </div>
 <div style="background:#f8f9fa;padding:1.2rem;border-radius:12px;border-left:4px solid #E8792E;">
 <h4 style="margin:0 0 8px;color:#1B4D5C;">💰 ราคาเริ่มต้น 350 บาท/ตร.ม.</h4>
-<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี</p>
+<p style="margin:0;font-size:0.9rem;color:#555;">ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี ไม่มีค่าใช้จ่ายแอบแฝง</p>
 </div>
 </div>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">บริการของเราในชลบุรี</h2>
+<p style="color:#555;">ชลบุรีและพัทยาเป็นพื้นที่ที่มีคอนโดมิเนียมจำนวนมาก รวมถึงโรงแรม โรงงานในนิคมอุตสาหกรรม และอาคารพาณิชย์ เราเข้าใจปัญหานกในพื้นที่ชายทะเลและให้บริการครบวงจร:</p>
+<ul style="color:#555;line-height:1.8;">
+<li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับคอนโดริมหาด หอพัก อพาร์ทเมนท์ อายุ 5-7 ปี ทนต่อลมทะเลและความชื้น</li>
+<li><strong>หนามกันนก สแตนเลส SUS304</strong> — ทนเกลือทะเล เหมาะกับอาคารพาณิชย์ ชายคา ราวกันตก อายุ 10+ ปี</li>
+<li><strong>เจลไล่นก</strong> — เหมาะกับโรงแรม รีสอร์ท สถานที่ท่องเที่ยวที่เน้นความสวยงาม</li>
+<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
+</ul>
+<p style="color:#555;">ทุกบริการมีทีมช่างมืออาชีพเข้าสำรวจหน้างานก่อนเสนอราคา <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
+
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">ผลงานติดตั้งในชลบุรี</h2>
+<p style="color:#555;text-align:center;">ผลงานจริงจากลูกค้าในจังหวัดชลบุรี — คอนโดริมหาด โรงงาน อาคารพาณิชย์ และปั๊มน้ำมัน</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:1rem 0;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(8) . '" alt="ติดตั้งตาข่ายกันนก คอนโด ชลบุรี พัทยา" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — คอนโด</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(12) . '" alt="ติดตั้งหนามกันนก ปั๊มน้ำมัน ชลบุรี" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามกันนก — ปั๊มน้ำมัน</p></div>
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+<img src="' . img(18) . '" alt="ติดตั้งตาข่ายกันนก โรงงาน นิคมอุตสาหกรรม ชลบุรี" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<div style="padding:8px;background:#f8f9fa;text-align:center;"><p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — โรงงาน</p></div>
+</div>
+</div>
+<p style="text-align:center;"><a href="/portfolio/" style="color:#E8792E;font-weight:600;">ดูผลงานทั้งหมด 31+ โปรเจกต์ →</a></p>
 
 <h3 style="color:#1B4D5C;">พื้นที่ให้บริการในชลบุรี</h3>
-<p style="color:#555;">เมืองชลบุรี, พัทยา, ศรีราชา, บางแสน, แหลมฉบัง, บ่อวิน, สัตหีบ และจังหวัดใกล้เคียง: ระยอง, ฉะเชิงเทรา, ปราจีนบุรี</p>
+<p style="color:#555;"><strong>ในเขตเมือง:</strong> เมืองชลบุรี, พัทยา, ศรีราชา, บางแสน, แหลมฉบัง, บ่อวิน, สัตหีบ, บางละมุง</p>
+<p style="color:#555;"><strong>ย่านสำคัญ:</strong> พัทยาเหนือ, พัทยาใต้, จอมเทียน, นาเกลือ, นิคมอมตะนคร, นิคมปิ่นทอง, อีสเทิร์นซีบอร์ด</p>
+<p style="color:#555;"><strong>จังหวัดใกล้เคียง:</strong> ระยอง, ฉะเชิงเทรา, ปราจีนบุรี, สมุทรปราการ, กรุงเทพฯ ฝั่งตะวันออก</p>
 
-<div style="margin:2rem 0;">
+<h2 style="color:#1B4D5C;text-align:center;margin-top:2.5rem;">คำถามที่พบบ่อย — ตาข่ายกันนก ชลบุรี</h2>
+<div style="text-align:left;max-width:650px;margin:0 auto;">
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ราคาติดตั้งตาข่ายกันนก ชลบุรี เริ่มต้นเท่าไหร่?</summary>
+<p style="margin:8px 0 0;color:#555;">ราคาเริ่มต้นเพียง 350 บาท/ตร.ม. ขึ้นอยู่กับขนาดพื้นที่และความสูง ส่งรูปหน้างานมาประเมินราคาฟรีทาง LINE</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ตาข่ายทนลมทะเลและความชื้นไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">ทนครับ วัสดุ HDPE ทนต่อรังสี UV ลมทะเล และความชื้น อายุ 5-7 ปี หนามสแตนเลส SUS304 ไม่เป็นสนิมแม้อยู่ริมทะเล</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">ติดตั้งในคอนโดพัทยาได้ไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">ได้ครับ เราติดตั้งในคอนโดทุกโครงการในพัทยา ทั้งพัทยาเหนือ พัทยาใต้ จอมเทียน รวมถึงคอนโดริมหาดทุกแบบ</p>
+</details>
+<details style="margin-bottom:12px;background:#f8f9fa;padding:12px 16px;border-radius:8px;">
+<summary style="font-weight:600;color:#1B4D5C;cursor:pointer;">รับงานโรงงานในนิคมอุตสาหกรรมไหม?</summary>
+<p style="margin:8px 0 0;color:#555;">รับครับ เรามีประสบการณ์ติดตั้งในโรงงานพื้นที่ใหญ่ ทั้งนิคมอมตะนคร ปิ่นทอง อีสเทิร์นซีบอร์ด ทีม Safety ครบชุด ไม่กระทบสายการผลิต</p>
+</details>
+</div>
+
+<div style="margin:2.5rem 0;text-align:center;background:#1B4D5C;padding:2rem;border-radius:12px;">
+<h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาตาข่ายกันนก ชลบุรี</h3>
+<p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0956292488" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 095-629-2488</a>
-<p style="margin-top:8px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;">💬 แอดไลน์ oil_phanu</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ oil_phanu</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -1587,6 +1752,9 @@ $blog_posts = array(
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>👉 <a href="/services/"><strong>ดูบริการทั้งหมดของเรา</strong></a> | <a href="/contact/"><strong>ติดต่อประเมินราคาฟรี</strong></a></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>📍 บริการตามพื้นที่: <a href="/khon-kaen/">ตาข่ายกันนก ขอนแก่น</a> | <a href="/chiang-mai/">ตาข่ายกันนก เชียงใหม่</a> | <a href="/chonburi/">ตาข่ายกันนก ชลบุรี</a></p>
 <!-- /wp:paragraph -->',
     ),
     'how-to-get-rid-of-pigeons' => array(
@@ -1610,6 +1778,9 @@ $blog_posts = array(
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>👉 <a href="/services/"><strong>ดูบริการป้องกันนกทั้งหมด</strong></a> | <a href="/contact/"><strong>ติดต่อประเมินราคาฟรี</strong></a></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>📍 บริการตามพื้นที่: <a href="/khon-kaen/">ตาข่ายกันนก ขอนแก่น</a> | <a href="/chiang-mai/">ตาข่ายกันนก เชียงใหม่</a> | <a href="/chonburi/">ตาข่ายกันนก ชลบุรี</a></p>
 <!-- /wp:paragraph -->',
     ),
     'bird-net-pricing-guide' => array(
@@ -1630,6 +1801,9 @@ $blog_posts = array(
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>👉 <a href="/services/"><strong>ดูบริการและวัสดุทั้งหมด</strong></a> | <a href="/contact/"><strong>ติดต่อขอใบเสนอราคาฟรี</strong></a></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>📍 บริการตามพื้นที่: <a href="/khon-kaen/">ตาข่ายกันนก ขอนแก่น</a> | <a href="/chiang-mai/">ตาข่ายกันนก เชียงใหม่</a> | <a href="/chonburi/">ตาข่ายกันนก ชลบุรี</a></p>
 <!-- /wp:paragraph -->',
     ),
 );
