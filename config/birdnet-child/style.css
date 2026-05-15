@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      13.2.0
+ Version:      13.3.0
  Text Domain:  birdnet-child
 */
 
@@ -337,46 +337,42 @@ a:hover { color: var(--bn-orange-dark); }
   background: transparent !important;
 }
 
-/* Mobile menu */
-.ast-mobile-popup-drawer .ast-mobile-popup-inner {
-  background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(20px) !important;
-}
+/* Mobile menu — Astra dropdown type (#ast-hf-mobile-menu) */
 .ast-header-break-point .main-header-menu,
-.ast-header-break-point .ast-mobile-popup-drawer .main-header-menu,
-.ast-mobile-popup-drawer .main-navigation ul,
-.ast-mobile-popup-drawer nav ul,
-.ast-header-break-point nav ul {
+.ast-header-break-point #ast-hf-mobile-menu .main-header-menu,
+#ast-hf-mobile-menu .main-header-menu,
+.ast-header-break-point .main-navigation ul,
+.ast-header-break-point #ast-mobile-site-navigation ul {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
+  flex-wrap: nowrap !important;
 }
 .ast-header-break-point .main-header-menu > li,
-.ast-mobile-popup-drawer .main-header-menu > li,
-.ast-mobile-popup-drawer nav ul > li,
-.ast-header-break-point nav ul > li {
+#ast-hf-mobile-menu .main-header-menu > li,
+.ast-header-break-point #ast-mobile-site-navigation ul > li {
   width: 100% !important;
   display: block !important;
+  float: none !important;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 .ast-header-break-point .main-header-menu > li > a,
-.ast-mobile-popup-drawer .main-header-menu > li > a,
-.ast-mobile-popup-drawer nav ul > li > a,
-.ast-header-break-point nav ul > li > a {
+#ast-hf-mobile-menu .main-header-menu > li > a,
+.ast-header-break-point #ast-mobile-site-navigation ul > li > a {
   display: block !important;
   padding: 14px 20px !important;
   font-size: 0.95rem !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  white-space: normal !important;
 }
-.ast-header-break-point .birdnet-nav-cta,
-.ast-mobile-popup-drawer .birdnet-nav-cta {
+.ast-header-break-point .birdnet-nav-cta {
   margin-left: 0 !important;
   margin-top: 4px !important;
   padding: 8px 16px !important;
+  width: 100% !important;
 }
-.ast-header-break-point .birdnet-nav-cta .nav-cta-btn,
-.ast-mobile-popup-drawer .birdnet-nav-cta .nav-cta-btn {
+.ast-header-break-point .birdnet-nav-cta .nav-cta-btn {
   display: block !important;
   text-align: center !important;
   width: 100% !important;

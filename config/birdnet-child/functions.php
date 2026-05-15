@@ -533,11 +533,24 @@ function birdnet_flipbook_init() {
         if (prevBtn) prevBtn.addEventListener("click", function() { pageFlip.flipPrev(); });
         if (nextBtn) nextBtn.addEventListener("click", function() { pageFlip.flipNext(); });
 
-        var jumpBtns = document.querySelectorAll("[data-fb-page]");
-        jumpBtns.forEach(function(btn) {
+        // WP strips data-fb-page attrs, so auto-detect from category divider pages
+        var catPages = {};
+        pages.forEach(function(p, i) {
+            if (p.classList.contains("fb-cat-divider")) {
+                var h3 = p.querySelector("h3");
+                if (h3) catPages[h3.textContent.trim()] = i;
+            }
+        });
+        var tocBtns = document.querySelectorAll(".flipbook-toc button");
+        tocBtns.forEach(function(btn) {
             btn.addEventListener("click", function() {
-                var pg = parseInt(this.getAttribute("data-fb-page"));
-                pageFlip.flip(pg);
+                var txt = this.textContent.trim();
+                for (var cat in catPages) {
+                    if (txt.indexOf(cat) !== -1 || cat.indexOf(txt.replace(/[^\u0E00-\u0E7Fa-zA-Z]/g, "")) !== -1) {
+                        pageFlip.flip(catPages[cat]);
+                        return;
+                    }
+                }
             });
         });
     });
