@@ -116,6 +116,40 @@ $home_content = '
 </div>
 <!-- /wp:html -->
 
+<!-- wp:html -->
+<div style="background:#fff;padding:3rem 1rem;" data-aos="fade-up">
+<div style="max-width:900px;margin:0 auto;text-align:center;">
+<h2 style="color:#1B4D5C;font-size:1.8rem;margin:0 0 0.5rem;">ปัญหาที่ลูกค้ามักเจอ</h2>
+<p style="color:#888;font-size:0.9rem;margin:0 0 2rem;">คุณเจอปัญหาเหล่านี้อยู่ไหม? เราช่วยแก้ได้ครับ</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;text-align:left;">
+
+<div style="background:#fef2f2;border-radius:12px;padding:1.5rem;border-left:5px solid #dc2626;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F4A9;</div>
+<h3 style="color:#dc2626;margin:0 0 8px;font-size:1rem;">ขี้นกเกาะเต็มระเบียง</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;line-height:1.6;">ระเบียงคอนโด บ้าน หรืออาคารพาณิชย์เต็มไปด้วยขี้นก ส่งกลิ่นเหม็น เป็นแหล่งเชื้อโรค ทำความสะอาดเท่าไหร่ก็กลับมาใหม่</p>
+</div>
+
+<div style="background:#fffbeb;border-radius:12px;padding:1.5rem;border-left:5px solid #d97706;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F3DA;&#xFE0F;</div>
+<h3 style="color:#d97706;margin:0 0 8px;font-size:1rem;">นกทำรังใต้หลังคา/ช่องแอร์</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;line-height:1.6;">นกพิราบทำรังในช่องหลังคา ช่องแอร์ ช่องว่างอาคาร ทำให้มีเสียงรบกวน ขนนกลอยฟุ้ง ท่อระบายน้ำอุดตัน</p>
+</div>
+
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;border-left:5px solid #16a34a;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F3ED;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">มูลนกปนเปื้อนสินค้า/เครื่องจักร</h3>
+<p style="margin:0;font-size:0.88rem;color:#555;line-height:1.6;">โรงงาน โกดัง คลังสินค้า มูลนกตกใส่สินค้าและเครื่องจักร ไม่ผ่าน QC มาตรฐาน GMP/HACCP ลูกค้าร้องเรียน</p>
+</div>
+
+</div>
+<div style="margin-top:2rem;">
+<a href="/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:600;text-decoration:none;font-size:0.95rem;box-shadow:0 4px 15px rgba(232,121,46,0.3);">&#x1F4F8; ส่งรูปปรึกษาฟรี</a>
+<p style="font-size:0.78rem;color:#999;margin-top:8px;">ส่งรูปหน้างานมาทาง LINE — ประเมินราคาเบื้องต้นได้ทันที</p>
+</div>
+</div>
+</div>
+<!-- /wp:html -->
+
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
 <!-- /wp:separator -->
@@ -752,6 +786,45 @@ $home_content = '
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
+
+<!-- wp:html -->
+<div style="background:linear-gradient(135deg,#1B4D5C 0%,#2a6a7c 100%);padding:3rem 1rem;margin:2rem calc(-50vw + 50%);width:100vw;" data-aos="fade-up">
+<div style="max-width:600px;margin:0 auto;text-align:center;">
+<h2 style="color:#fff;font-size:1.8rem;margin:0 0 0.5rem;">ขอใบเสนอราคาฟรี</h2>
+<p style="color:rgba(255,255,255,0.8);font-size:0.9rem;margin:0 0 1.5rem;">กรอกข้อมูลด้านล่าง — เราจะติดต่อกลับภายใน 24 ชม.</p>
+<form action="https://formsubmit.co/birdsgoaway.th@gmail.com" method="POST" style="text-align:left;">
+<input type="hidden" name="_subject" value="ขอใบเสนอราคา — จากเว็บ Birds Go Away">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://birdsgoaway.com/contact/">
+<div style="margin-bottom:12px;">
+<label style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;display:block;margin-bottom:4px;">ชื่อ-นามสกุล *</label>
+<input type="text" name="name" required placeholder="ชื่อ-นามสกุล" style="width:100%;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;font-size:0.95rem;background:rgba(255,255,255,0.1);color:#fff;outline:none;">
+</div>
+<div style="margin-bottom:12px;">
+<label style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;display:block;margin-bottom:4px;">เบอร์โทรศัพท์ *</label>
+<input type="tel" name="phone" required placeholder="0XX-XXX-XXXX" style="width:100%;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;font-size:0.95rem;background:rgba(255,255,255,0.1);color:#fff;outline:none;">
+</div>
+<div style="margin-bottom:12px;">
+<label style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;display:block;margin-bottom:4px;">บริการที่สนใจ</label>
+<select name="service" style="width:100%;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;font-size:0.95rem;background:rgba(255,255,255,0.1);color:#fff;outline:none;">
+<option value="" style="color:#333;">-- เลือกบริการ --</option>
+<option value="ตาข่ายกันนก HDPE" style="color:#333;">ตาข่ายกันนก HDPE</option>
+<option value="หนามกันนก สแตนเลส" style="color:#333;">หนามกันนก สแตนเลส</option>
+<option value="เจลไล่นก" style="color:#333;">เจลไล่นก</option>
+<option value="แผงกันนกโซลาร์เซลล์" style="color:#333;">แผงกันนกโซลาร์เซลล์</option>
+<option value="ไม่แน่ใจ ต้องการคำแนะนำ" style="color:#333;">ไม่แน่ใจ ต้องการคำแนะนำ</option>
+</select>
+</div>
+<div style="margin-bottom:16px;">
+<label style="color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500;display:block;margin-bottom:4px;">รายละเอียดเพิ่มเติม</label>
+<textarea name="message" rows="3" placeholder="อธิบายปัญหาหรือพื้นที่ที่ต้องการติดตั้ง..." style="width:100%;padding:12px 16px;border:2px solid rgba(255,255,255,0.2);border-radius:8px;font-size:0.95rem;background:rgba(255,255,255,0.1);color:#fff;outline:none;resize:vertical;"></textarea>
+</div>
+<button type="submit" style="width:100%;padding:14px;background:#E8792E;color:#fff;border:none;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;transition:background 0.2s;">&#x1F4E9; ส่งข้อมูล — รับใบเสนอราคาฟรี</button>
+<p style="font-size:0.72rem;color:rgba(255,255,255,0.5);margin:10px 0 0;text-align:center;">&#x1F512; ข้อมูลของท่านจะถูกเก็บเป็นความลับ ตาม พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล (PDPA) พ.ศ.2562 ไม่แชร์หรือขายต่อให้บุคคลที่สาม</p>
+</form>
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"large"} -->
 <p class="has-text-align-center has-large-font-size"><strong>ปรึกษาฟรี! ติดต่อเราวันนี้เพื่อรับใบเสนอราคา</strong></p>

@@ -5,7 +5,7 @@
  Author:       Birds Go Away Team
  Author URI:   https://birdsgoaway.com
  Template:     astra
- Version:      10.2.0
+ Version:      11.0.0
  Text Domain:  birdnet-child
 */
 
@@ -95,6 +95,114 @@ a:hover { color: var(--bn-orange-dark); }
 [data-aos] {
   transition-duration: 0.8s !important;
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* ===== Top Contact Bar ===== */
+.birdnet-top-bar {
+  background: var(--bn-teal);
+  color: #fff;
+  font-size: 0.78rem;
+  line-height: 1;
+  padding: 6px 0;
+}
+.top-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.top-bar-item {
+  color: rgba(255,255,255,0.9) !important;
+  text-decoration: none !important;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+.top-bar-item:hover {
+  color: #fff !important;
+}
+.top-bar-icon {
+  font-size: 0.85rem;
+}
+.top-bar-social {
+  display: flex;
+  gap: 8px;
+}
+.top-bar-social a {
+  color: rgba(255,255,255,0.8) !important;
+  text-decoration: none !important;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.top-bar-social a:hover {
+  opacity: 1;
+  color: #fff !important;
+}
+.top-bar-cta {
+  background: var(--bn-orange) !important;
+  color: #fff !important;
+  padding: 4px 14px !important;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-decoration: none !important;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.top-bar-cta:hover {
+  background: var(--bn-orange-dark) !important;
+  color: #fff !important;
+}
+@media (max-width: 768px) {
+  .top-bar-inner { justify-content: center; text-align: center; }
+  .top-bar-left { justify-content: center; }
+  .top-bar-hours { display: none; }
+}
+
+/* ===== Nav CTA Button ===== */
+.birdnet-nav-cta {
+  list-style: none !important;
+}
+.birdnet-nav-cta .nav-cta-btn {
+  background: var(--bn-orange) !important;
+  color: #fff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 0.85rem !important;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.2s !important;
+  display: inline-block;
+  white-space: nowrap;
+}
+.birdnet-nav-cta .nav-cta-btn:hover {
+  background: var(--bn-orange-dark) !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+@media (max-width: 921px) {
+  .birdnet-nav-cta .nav-cta-btn {
+    display: block;
+    text-align: center;
+    margin: 8px 16px;
+    padding: 12px 20px !important;
+  }
 }
 
 /* ===== Header / Navbar ===== */
@@ -1219,7 +1327,24 @@ video {
   border-radius: 12px;
 }
 
+/* ===== Homepage Contact Form ===== */
+.entry-content form input::placeholder,
+.entry-content form textarea::placeholder {
+  color: rgba(255,255,255,0.5);
+}
+.entry-content form input:focus,
+.entry-content form textarea:focus,
+.entry-content form select:focus {
+  border-color: var(--bn-orange) !important;
+  box-shadow: 0 0 0 3px rgba(232,121,46,0.2);
+}
+.entry-content form button[type="submit"]:hover {
+  background: var(--bn-orange-dark) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232,121,46,0.4);
+}
+
 /* ===== Print Styles ===== */
 @media print {
-  .birdnet-floating, .site-header, .site-footer { display: none !important; }
+  .birdnet-floating, .site-header, .site-footer, .birdnet-top-bar { display: none !important; }
 }

@@ -40,6 +40,29 @@ function birdnet_hide_front_page_title() {
 }
 add_action('wp_head', 'birdnet_hide_front_page_title');
 
+// Top Contact Bar above header
+function birdnet_top_contact_bar() {
+    ?>
+    <div class="birdnet-top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-left">
+                <a href="tel:0629964994" class="top-bar-item"><span class="top-bar-icon">📞</span> 062-996-4994</a>
+                <a href="mailto:birdsgoaway.th@gmail.com" class="top-bar-item"><span class="top-bar-icon">📧</span> birdsgoaway.th@gmail.com</a>
+                <span class="top-bar-item top-bar-hours"><span class="top-bar-icon">🕐</span> จ-ส 08:00-17:00</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="top-bar-social">
+                    <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">📘</a>
+                    <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" title="LINE">💬</a>
+                </div>
+                <a href="/contact" class="top-bar-cta">ปรึกษาฟรี!</a>
+            </div>
+        </div>
+    </div>
+    <?php
+}
+add_action('astra_header_before', 'birdnet_top_contact_bar');
+
 // Add preconnect for faster font loading
 function birdnet_preconnect_fonts() {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
@@ -177,6 +200,72 @@ function birdnet_settings_page() {
 
 // Output schema.org JSON-LD on front page
 function birdnet_schema_jsonld() {
+    $site_url = get_site_url();
+    $site_url = str_replace('http://', 'https://', $site_url);
+
+    // Organization + WebSite + BreadcrumbList schema on ALL pages
+    $org_schema = json_encode(array(
+        '@context' => 'https://schema.org',
+        '@graph' => array(
+            array(
+                '@type' => 'Organization',
+                '@id' => $site_url . '/#organization',
+                'name' => 'Birds Go Away — บริษัท รีเช็ค บิ้วดิ้ง จำกัด',
+                'url' => $site_url . '/',
+                'logo' => array(
+                    '@type' => 'ImageObject',
+                    'url' => $site_url . '/wp-content/uploads/birdnet-assets/logo-white.jpg',
+                    'width' => 240,
+                    'height' => 80,
+                ),
+                'telephone' => '0629964994',
+                'email' => 'birdsgoaway.th@gmail.com',
+                'address' => array(
+                    '@type' => 'PostalAddress',
+                    'streetAddress' => '88/38 หมู่บ้าน Klever ซอย5 ต.บ้านเป็ด',
+                    'addressLocality' => 'ขอนแก่น',
+                    'addressRegion' => 'ขอนแก่น',
+                    'postalCode' => '40000',
+                    'addressCountry' => 'TH',
+                ),
+                'sameAs' => array(
+                    'https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr',
+                    'https://line.me/ti/p/~oil_phanu',
+                ),
+                'areaServed' => array(
+                    array('@type' => 'City', 'name' => 'ขอนแก่น'),
+                    array('@type' => 'City', 'name' => 'เชียงใหม่'),
+                    array('@type' => 'City', 'name' => 'ชลบุรี'),
+                ),
+            ),
+            array(
+                '@type' => 'WebSite',
+                '@id' => $site_url . '/#website',
+                'url' => $site_url . '/',
+                'name' => 'Birds Go Away',
+                'publisher' => array('@id' => $site_url . '/#organization'),
+                'inLanguage' => 'th',
+            ),
+        ),
+    ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    echo '<script type="application/ld+json">' . $org_schema . '</script>' . "\n";
+
+    // Breadcrumb schema
+    $breadcrumb_items = array(
+        array('@type' => 'ListItem', 'position' => 1, 'name' => 'หน้าแรก', 'item' => $site_url . '/'),
+    );
+    if (!is_front_page()) {
+        $page_title = get_the_title();
+        $page_url = get_permalink();
+        $breadcrumb_items[] = array('@type' => 'ListItem', 'position' => 2, 'name' => $page_title, 'item' => $page_url);
+    }
+    $breadcrumb_schema = json_encode(array(
+        '@context' => 'https://schema.org',
+        '@type' => 'BreadcrumbList',
+        'itemListElement' => $breadcrumb_items,
+    ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+    echo '<script type="application/ld+json">' . $breadcrumb_schema . '</script>' . "\n";
+
     if (is_front_page()) {
         $schema = get_post_meta(get_the_ID(), '_schema_json_ld', true);
         if ($schema) {
@@ -378,6 +467,31 @@ function birdnet_allow_iframes_svg($tags, $context) {
             'fill' => true, 'xmlns' => true, 'class' => true,
         );
         $tags['path'] = array('d' => true, 'fill' => true);
+        $tags['form'] = array(
+            'action' => true, 'method' => true, 'style' => true,
+            'class' => true, 'id' => true, 'enctype' => true,
+        );
+        $tags['input'] = array(
+            'type' => true, 'name' => true, 'value' => true,
+            'placeholder' => true, 'required' => true, 'style' => true,
+            'class' => true, 'id' => true,
+        );
+        $tags['select'] = array(
+            'name' => true, 'style' => true, 'class' => true, 'id' => true,
+        );
+        $tags['option'] = array(
+            'value' => true, 'style' => true, 'selected' => true,
+        );
+        $tags['textarea'] = array(
+            'name' => true, 'rows' => true, 'cols' => true,
+            'placeholder' => true, 'style' => true, 'class' => true,
+        );
+        $tags['button'] = array(
+            'type' => true, 'style' => true, 'class' => true, 'id' => true,
+        );
+        $tags['label'] = array(
+            'for' => true, 'style' => true, 'class' => true,
+        );
     }
     return $tags;
 }
@@ -445,7 +559,14 @@ function birdnet_fallback_meta_description() {
 }
 add_action('wp_head', 'birdnet_fallback_meta_description', 2);
 
-// FAQ removed from nav — causes overflow on desktop. Accessible via /faq/ URL and footer link.
+// Add CTA button to nav menu
+function birdnet_nav_cta_button($items, $args) {
+    if ($args->theme_location === 'primary' || $args->menu === 'Main Menu') {
+        $items .= '<li class="menu-item birdnet-nav-cta"><a href="/contact" class="nav-cta-btn">ขอใบเสนอราคา</a></li>';
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'birdnet_nav_cta_button', 10, 2);
 
 // Force all nav menus (including mobile hamburger) to use "Main Menu"
 function birdnet_fix_mobile_menu($args) {
