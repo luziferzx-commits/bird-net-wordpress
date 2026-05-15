@@ -40,10 +40,10 @@ function project_img($page, $num = 1) {
 // Real project images from assets (replaces stock photos)
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
-    'hdpe'    => project_img(10),
-    'solar'   => project_img(14),
-    'spikes'  => project_img(18),
-    'gel'     => project_img(29),
+    'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
+    'solar'   => $assets_base . '/new-solar-netting-2.jpg',
+    'spikes'  => $assets_base . '/new-spikes-gable.jpg',
+    'gel'     => $assets_base . '/new-gel-pestman.jpg',
     'team'    => img(6),
     'safety'  => img(7),
     'work1'   => img(8),
@@ -67,7 +67,7 @@ $home_content = '
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">รับติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี ทั่วประเทศ — หนามสแตนเลส เจลไล่นก ครบวงจร วิศวกรคุมงานทุกไซต์ ทีมช่างผ่านอบรมโรยตัวมีใบ Certificate</p>
+<p class="has-medium-font-size">รับติดตั้งตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี และใกล้เคียง ทั่วประเทศ — หนามสแตนเลส เจลไล่นก ครบวงจร วิศวกรคุมงานทุกไซต์ ทีมช่างผ่านอบรมโรยตัวมีใบ Certificate</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"medium"} -->
@@ -179,12 +179,16 @@ $home_content = '
 <p class="has-text-align-center">บริษัท รีเช็ค บิ้วดิ้ง จำกัด — ผู้เชี่ยวชาญด้านการป้องกันนก ครบวงจร | วิธีไล่นกพิราบถาวร ภาคอีสาน ทั่วประเทศ</p>
 <!-- /wp:paragraph -->
 
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center" style="font-weight:600;color:#1B4D5C;font-size:1.1rem;">ในพื้นที่จังหวัดขอนแก่น เชียงใหม่ ชลบุรี และใกล้เคียง</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:html -->
 <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;padding:0 1rem;">
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
 <h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">🛡️ HDPE เกรดพรีเมียม</h3>
-<p style="margin:0;font-size:0.88rem;color:#555;">วัสดุมาตรฐาน ทนทานทุกสภาพอากาศ ป้องกัน UV</p>
+<p style="margin:0;font-size:0.88rem;color:#555;">วัสดุมาตรฐาน ทนทานทุกสภาพอากาศ ป้องกัน UV ทนสารเคมี</p>
 </div>
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.2rem;border-left:4px solid #E8792E;">
@@ -381,19 +385,19 @@ $home_content = '
 
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(7) . '" alt="ผลงานติดตั้งตาข่ายกันนก HDPE ระเบียงคอนโด ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-netting-condo.jpg" alt="ผลงานติดตั้งตาข่ายกันนก HDPE ระเบียงคอนโด ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ติดตั้งตาข่าย HDPE — คอนโด</p>
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(18) . '" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง อาคารราชการ" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-spikes-building.jpg" alt="ผลงานติดตั้งหนามกันนกสแตนเลส ราวระเบียง อาคารราชการ" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">หนามสแตนเลส — ราวระเบียง</p>
 </div>
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-<img src="' . img(27) . '" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
+<img src="' . $assets_base . '/new-netting-commercial.jpg" alt="ผลงานติดตั้งตาข่ายกันนก อาคารพาณิชย์ ขอนแก่น" style="width:100%;height:180px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
 <p style="margin:0;font-size:0.8rem;color:#555;font-weight:600;">ตาข่ายกันนก — อาคารพาณิชย์</p>
 </div>
@@ -466,7 +470,7 @@ $home_content = '
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 <img src="' . $assets_base . '/team-drill.webp" alt="ช่างใช้สว่านติดตั้งตาข่ายกันนก ทำงานบนที่สูง อุปกรณ์มาตรฐาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
-<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">สว่านยึดตาข่าย — อุปกรณ์มาตรฐาน</p>
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">อุปกรณ์มาตรฐาน</p>
 </div>
 </div>
 </div>
@@ -485,7 +489,7 @@ $home_content = '
 <div style="max-width:600px;margin:0 auto;background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border-radius:16px;padding:2rem;text-align:center;border:2px solid #06C755;">
 <p style="font-size:1.1rem;color:#1B4D5C;margin:0 0 8px;font-weight:600;">แค่ถ่ายรูปส่งมา — รู้ราคาทันที!</p>
 <p style="font-size:0.9rem;color:#555;margin:0 0 16px;">ถ่ายรูปจุดที่นกเกาะ/ทำรัง ส่งให้เราทาง LINE<br>ทีมงานประเมินราคาให้ฟรี ไม่มีค่าใช้จ่าย ไม่มีข้อผูกมัด</p>
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="display:inline-block;background:#06C755;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 12px rgba(6,199,85,0.3);">💬 ส่งภาพหน้างานทาง LINE</a>
+<a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" style="display:inline-block;background:#06C755;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 12px rgba(6,199,85,0.3);">💬 ส่งภาพหน้างานทาง LINE</a>
 <p style="font-size:0.75rem;color:#888;margin:12px 0 0;">ตอบกลับภายใน 30 นาที ทุกวัน 08:00-20:00</p>
 </div>
 <!-- /wp:html -->
@@ -655,7 +659,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(2) . '"></video><figcaption>นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(2) . '"></video><figcaption>นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: phanupong_oil</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -674,7 +678,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(4) . '"></video><figcaption>ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(4) . '"></video><figcaption>ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: phanupong_oil</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -688,7 +692,7 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:video -->
-<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(6) . '"></video><figcaption>นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu</figcaption></figure>
+<figure class="wp-block-video"><video controls playsinline webkit-playsinline preload="metadata" src="' . vid(6) . '"></video><figcaption>นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: phanupong_oil</figcaption></figure>
 <!-- /wp:video -->
 </div>
 <!-- /wp:column -->
@@ -818,7 +822,7 @@ $home_content = '
 <div style="max-width:900px;margin:0 auto;padding:0 1rem;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
-<img src="' . $assets_base . '/review-team-promo.webp" alt="รวมรีวิวจากผู้ใช้จริง Birds Go Away กว่า 300 หลัง ขอนแก่น เชียงใหม่" style="width:100%;height:auto;" loading="lazy">
+<img src="' . $assets_base . '/review-promo-new.jpg" alt="รวมรีวิวจากผู้ใช้จริง Birds Go Away กว่า 300 หลัง ขอนแก่น เชียงใหม่" style="width:100%;height:auto;" loading="lazy">
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
 <img src="' . $assets_base . '/review-line-chat.webp" alt="รีวิวแชท LINE จากลูกค้าจริง ประทับใจมาก ช่างทำดีงเนียน สวยมาก" style="width:100%;height:auto;" loading="lazy">
@@ -846,22 +850,29 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ขอนแก่น</h3>
-<p><a href="tel:0629964994"><strong>062-996-4994</strong></a></p>
-<p>LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
+<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> — คุณออย</p>
+<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ส่วนกลาง</h3>
+<p><a href="tel:0889514924"><strong>088-951-4924</strong></a> — คุณวีวี่</p>
+<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">เชียงใหม่</h3>
-<p><a href="tel:0936415623"><strong>093-641-5623</strong></a></p>
-<p>LINE: <a href="https://line.me/ti/p/~th3-ta006-2">th3-ta006-2</a></p>
+<p><a href="tel:0936415623"><strong>093-641-5623</strong></a> — คุณต๊ะ</p>
+<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ชลบุรี</h3>
-<p><a href="tel:0956292488"><strong>095-629-2488</strong></a></p>
-<p>LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
+<p><a href="tel:0956292488"><strong>095-629-2488</strong></a> — คุณแม็ก</p>
+<p>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 </div>
@@ -1226,6 +1237,7 @@ $portfolio_content .= '
 // Page 0: Cover
 $portfolio_content .= '
 <div class="fb-page fb-cover" data-density="hard">
+  <img src="' . $assets_base . '/logo-dark.webp" alt="Birds Go Away Logo" style="width:120px;height:auto;margin:0 auto 12px;display:block;">
   <div class="fb-cover-logo">BIRDS GO AWAY</div>
   <div class="fb-cover-divider"></div>
   <h2>E-Brochure ผลงานของเรา</h2>
@@ -1276,7 +1288,7 @@ $portfolio_content .= '
   <h3>สนใจติดตั้ง?</h3>
   <p>ประเมินหน้างานฟรี — ไม่มีค่าใช้จ่าย</p>
   <p>📞 062-996-4994</p>
-  <p>💬 LINE: oil_phanu</p>
+  <p>💬 LINE: phanupong_oil</p>
   <a href="/contact" class="fb-back-cta">ขอใบเสนอราคาฟรี</a>
 </div>';
 
@@ -1307,11 +1319,11 @@ $portfolio_content .= '
 
 $video_captions = array(
     1 => 'เบื่อไหม? ขี้นกเต็มระเบียงคอนโด ล้างเท่าไหร่ก็ไม่หมด... เราช่วยได้! ติดตั้งตาข่าย HDPE เกรดส่งออก กลมกลืนกับตัวอาคาร นกหายขาด 100% 📞 ประเมินฟรี โทร 062-996-4994',
-    2 => 'นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: oil_phanu',
+    2 => 'นกพิราบเกาะราวระเบียงทุกวัน? จบปัญหาด้วยหนามกันนกสแตนเลส SUS304 ไม่เป็นสนิม ทนแดดทนฝน 5+ ปี งานเนี๊ยบ กลมกลืนกับตัวบ้าน 💬 สนใจทัก LINE: phanupong_oil',
     3 => 'นกทำรังใต้หลังคาร้าน ขี้นกหล่นใส่สินค้า? ดูคลิปนี้! ปิดช่องเปิดด้วยตาข่ายกันนก แข็งแรง ทนทาน กันนกเข้า 100% รับประกันงาน 3 ปี 📞 โทร 062-996-4994',
-    4 => 'ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: oil_phanu',
+    4 => 'ยกระดับมาตรฐานความสะอาดให้โรงงานของคุณ ด้วยตาข่ายกันนกแบบมืออาชีพ ทีมงาน Safety ครบชุด งานไว ไม่กระทบการผลิต 💬 ติดต่อได้ทันที LINE: phanupong_oil',
     5 => 'อาคารสวยแต่นกเกาะเต็ม? เจลไล่นกคือคำตอบ! วัสดุใสมองไม่เห็น ไม่ทำลายทัศนียภาพ นกไม่กล้าเกาะอีกเลย ผ่านมา 3 ปียังใช้ได้ดี 📞 ประเมินฟรี โทร 062-996-4994',
-    6 => 'นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: oil_phanu',
+    6 => 'นกทำรังใต้แผงโซลาร์เซลล์? เสี่ยงไฟฟ้าลัดวงจร! ติดตั้งแผงกันนกโซลาร์ ปกป้องแผงโซลาร์ ไม่กระทบประสิทธิภาพ ปลอดภัย 100% 💬 ทัก LINE: phanupong_oil',
 );
 for ($i = 1; $i <= 6; $i++) {
     if ($i % 3 == 1) $portfolio_content .= "\n<!-- wp:columns -->\n<div class=\"wp-block-columns\">";
@@ -1436,7 +1448,7 @@ $about_content = '
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
 <img src="' . $assets_base . '/team-drill.webp" alt="ช่างใช้สว่านติดตั้งตาข่ายกันนก ทำงานบนที่สูง อุปกรณ์มาตรฐาน" style="width:100%;height:200px;object-fit:cover;" loading="lazy">
 <div style="padding:8px;background:#f8f9fa;text-align:center;">
-<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">สว่านยึดตาข่าย — อุปกรณ์มาตรฐาน</p>
+<p style="margin:0;font-size:0.75rem;color:#555;font-weight:600;">อุปกรณ์มาตรฐาน</p>
 </div>
 </div>
 </div>
@@ -1489,19 +1501,25 @@ $about_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ขอนแก่น</h3>
-<p><a href="tel:0629964994"><strong>062-996-4994</strong></a><br>LINE: oil_phanu</p>
+<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> — คุณออย<br>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">ส่วนกลาง</h3>
+<p><a href="tel:0889514924"><strong>088-951-4924</strong></a> — คุณวีวี่<br>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">เชียงใหม่</h3>
-<p><a href="tel:0936415623"><strong>093-641-5623</strong></a><br>LINE: th3-ta006-2</p>
+<p><a href="tel:0936415623"><strong>093-641-5623</strong></a> — คุณต๊ะ<br>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
 <h3 class="wp-block-heading">ชลบุรี</h3>
-<p><a href="tel:0956292488"><strong>095-629-2488</strong></a><br>LINE: oil_phanu</p>
+<p><a href="tel:0956292488"><strong>095-629-2488</strong></a> — คุณแม็ก<br>LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
 </div>
 <!-- /wp:column -->
 </div>
@@ -1549,21 +1567,20 @@ $contact_content = '
 <a href="tel:0629964994" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
 <strong style="font-size:1rem;color:#E8792E;">062-996-4994</strong> <span style="color:#888;font-size:0.8rem;">— คุณออย (ขอนแก่น)</span></a>
 <a href="tel:0889514924" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
-<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong> <span style="color:#888;font-size:0.8rem;">— คุณวีวี่ (ฝ่ายประเมินราคา)</span></a>
+<strong style="font-size:1rem;color:#E8792E;">088-951-4924</strong> <span style="color:#888;font-size:0.8rem;">— คุณวีวี่ (ส่วนกลาง)</span></a>
 <a href="tel:0936415623" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
-<strong style="font-size:1rem;color:#E8792E;">093-641-5623</strong> <span style="color:#888;font-size:0.8rem;">— เชียงใหม่</span></a>
+<strong style="font-size:1rem;color:#E8792E;">093-641-5623</strong> <span style="color:#888;font-size:0.8rem;">— คุณต๊ะ (เชียงใหม่)</span></a>
 <a href="tel:0956292488" style="display:block;text-decoration:none;color:#1B4D5C;background:#fff;padding:12px 16px;border-radius:10px;border:1px solid #e2e8f0;">
-<strong style="font-size:1rem;color:#E8792E;">095-629-2488</strong> <span style="color:#888;font-size:0.8rem;">— ชลบุรี</span></a>
+<strong style="font-size:1rem;color:#E8792E;">095-629-2488</strong> <span style="color:#888;font-size:0.8rem;">— คุณแม็ก (ชลบุรี)</span></a>
 </div>
 </div>
 
 <div style="background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;">
 <h3 style="color:#1B4D5C;margin:0 0 1rem;font-size:1.1rem;">LINE — ส่งรูปหน้างานประเมินราคาฟรี</h3>
-<div style="display:flex;flex-direction:column;gap:8px;">
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" style="display:block;background:#06C755;color:#fff;padding:12px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;text-align:center;">
-oil_phanu (ขอนแก่น)</a>
-<a href="https://line.me/ti/p/~th3-ta006-2" target="_blank" style="display:block;background:#06C755;color:#fff;padding:12px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;text-align:center;">
-th3-ta006-2</a>
+<div style="display:flex;flex-direction:column;gap:8px;align-items:center;">
+<a href="https://line.me/ti/p/~phanupong_oil" target="_blank" style="display:block;background:#06C755;color:#fff;padding:12px 16px;border-radius:8px;font-weight:500;text-decoration:none;font-size:0.9rem;text-align:center;">
+LINE ID: phanupong_oil</a>
+<img src="' . $assets_base . '/line-qr-code.jpg" alt="QR Code LINE phanupong_oil" style="width:180px;height:180px;border-radius:12px;margin-top:8px;" loading="lazy">
 </div>
 </div>
 
@@ -1872,7 +1889,7 @@ $khonkaen_content = '
 <h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาภายใน 24 ชม.</h3>
 <p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0629964994" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 062-996-4994</a>
-<p style="margin-top:12px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ oil_phanu</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~phanupong_oil" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ phanupong_oil</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -1962,7 +1979,7 @@ $chiangmai_content = '
 <h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาตาข่ายกันนก เชียงใหม่</h3>
 <p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0936415623" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 093-641-5623</a>
-<p style="margin-top:12px;"><a href="https://line.me/ti/p/~th3-ta006-2" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ th3-ta006-2</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~phanupong_oil" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ phanupong_oil</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -2052,7 +2069,7 @@ $chonburi_content = '
 <h3 style="color:white;margin:0 0 8px;">ปรึกษาฟรี! ประเมินราคาตาข่ายกันนก ชลบุรี</h3>
 <p style="color:#ccc;margin:0 0 16px;font-size:0.9rem;">ส่งรูปหน้างานมาทาง LINE หรือโทรหาเราได้เลย</p>
 <a href="tel:0956292488" style="display:inline-block;background:#E8792E;color:white;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1.1rem;">📞 โทรเลย 095-629-2488</a>
-<p style="margin-top:12px;"><a href="https://line.me/ti/p/~oil_phanu" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ oil_phanu</a></p>
+<p style="margin-top:12px;"><a href="https://line.me/ti/p/~phanupong_oil" style="color:#06C755;font-weight:600;font-size:1rem;">💬 แอดไลน์ phanupong_oil</a></p>
 </div>
 </div>
 <!-- /wp:html -->
@@ -2123,7 +2140,7 @@ $blog_posts = array(
 </ul>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
-<p><strong>ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</strong> (ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี) ส่งรูปหน้างานทาง LINE: oil_phanu หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย</p>
+<p><strong>ราคาเริ่มต้นเพียง 350 บาท/ตร.ม.</strong> (ประเมินหน้างานและคำนวณราคาที่คุ้มค่าที่สุดให้ฟรี) ส่งรูปหน้างานทาง LINE: phanupong_oil หรือโทร 062-996-4994 ทีมวิศวกรจะเข้าสำรวจพื้นที่ วัดขนาด และเสนอราคาให้ฟรี ไม่มีค่าใช้จ่าย</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>👉 <a href="/services/"><strong>ดูบริการและวัสดุทั้งหมด</strong></a> | <a href="/contact/"><strong>ติดต่อขอใบเสนอราคาฟรี</strong></a></p>
@@ -2167,7 +2184,7 @@ $service_hdpe_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['hdpe'] . '" alt="ตาข่าย HDPE กันนก ติดตั้งระเบียงคอนโด" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-netting-corner.jpg" alt="ตาข่าย HDPE กันนก ติดตั้งระเบียงคอนโด" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->
@@ -2227,7 +2244,7 @@ $service_spikes_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['spikes'] . '" alt="หนามกันนก สแตนเลส SUS304 ติดตั้งขอบหน้าต่าง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-spikes-closeup.jpg" alt="หนามกันนก สแตนเลส SUS304 ติดตั้งขอบหน้าต่าง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->
@@ -2343,7 +2360,7 @@ $service_solar_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="แผงกันนกโซลาร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->
@@ -2465,7 +2482,7 @@ $seo_data = array(
     ),
     'contact' => array(
         'title' => 'ติดต่อเรา ปรึกษาฟรี ประเมินราคา | Birds Go Away',
-        'desc'  => 'ติดต่อ Birds Go Away ปรึกษาฟรี ประเมินหน้างานภายใน 24 ชม. โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) LINE: oil_phanu',
+        'desc'  => 'ติดต่อ Birds Go Away ปรึกษาฟรี ประเมินหน้างานภายใน 24 ชม. โทร 062-996-4994 (ขอนแก่น) 093-641-5623 (เชียงใหม่) LINE: phanupong_oil',
         'focus' => 'ติดต่อตาข่ายกันนก',
     ),
     'faq' => array(

@@ -1396,7 +1396,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">พื้นที่ให้บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ขอนแก่น, เชียงใหม่, ชลบุรี (และพื้นที่ใกล้เคียง)</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">ที่อยู่</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">88/38, ขอนแก่น, ประเทศไทย</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">โทรศัพท์</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">062-996-4994 / 093-641-5623 / 095-629-2488</td></tr>
-<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">LINE</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">oil_phanu / th3-ta006-2</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">LINE</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">phanupong_oil / phanupong_oil</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">อีเมล</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">admin@birdsgoaway.com</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">Facebook</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ตาข่ายกันนก by Birds Go Away (3,000+ Followers)</td></tr>
 </table>
@@ -1460,7 +1460,7 @@ ${FORM_SHORTCODE}
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>📱 <strong>Line:</strong> <a href=\"https://line.me/ti/p/~oil_phanu\" target=\"_blank\" rel=\"noreferrer noopener\">oil_phanu</a> / <a href=\"https://line.me/ti/p/~th3-ta006-2\" target=\"_blank\" rel=\"noreferrer noopener\">th3-ta006-2</a></p>
+<p>📱 <strong>Line:</strong> <a href=\"https://line.me/ti/p/~phanupong_oil\" target=\"_blank\" rel=\"noreferrer noopener\">phanupong_oil</a> / <a href=\"https://line.me/ti/p/~phanupong_oil\" target=\"_blank\" rel=\"noreferrer noopener\">phanupong_oil</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -1477,7 +1477,7 @@ ${FORM_SHORTCODE}
 <div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"tel:0629964994\">📞 โทรเลย (ขอนแก่น)</a></div>
 <!-- /wp:button -->
 <!-- wp:button {\"backgroundColor\":\"vivid-green-cyan\"} -->
-<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"https://line.me/ti/p/~oil_phanu\" target=\"_blank\" rel=\"noreferrer noopener\">💬 แชท Line</a></div>
+<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-vivid-green-cyan-background-color has-background\" href=\"https://line.me/ti/p/~phanupong_oil\" target=\"_blank\" rel=\"noreferrer noopener\">💬 แชท Line</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -1574,7 +1574,7 @@ ${FORM_SHORTCODE}
 
   echo "=== Setting Default Contact Options ==="
   wp option update birdnet_phone "0629964994" --path=/var/www/html --allow-root
-  wp option update birdnet_line_id "oil_phanu" --path=/var/www/html --allow-root
+  wp option update birdnet_line_id "phanupong_oil" --path=/var/www/html --allow-root
   wp option update birdnet_email "admin@birdsgoaway.com" --path=/var/www/html --allow-root
 
   echo "=== Setting Favicon ==="

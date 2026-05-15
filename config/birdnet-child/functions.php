@@ -115,7 +115,7 @@ function birdnet_top_contact_bar() {
             <div class="top-bar-right">
                 <div class="top-bar-social">
                     <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">📘</a>
-                    <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" title="LINE">💬</a>
+                    <a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" title="LINE">💬</a>
                 </div>
                 <a href="<?php echo $is_en ? '/en/contact' : '/contact'; ?>" class="top-bar-cta"><?php echo $is_en ? 'Free Consult!' : 'ปรึกษาฟรี!'; ?></a>
                 <?php birdnet_lang_switcher(); ?>
@@ -136,7 +136,7 @@ add_action('wp_head', 'birdnet_preconnect_fonts', 0);
 // Add Line Chat floating button
 function birdnet_floating_buttons() {
     $is_en = birdnet_is_english();
-    $line_id = get_option('birdnet_line_id', 'oil_phanu');
+    $line_id = get_option('birdnet_line_id', 'phanupong_oil');
     $phone = get_option('birdnet_phone', '0629964994');
     ?>
     <style>
@@ -254,7 +254,7 @@ function birdnet_settings_page() {
     }
 
     $phone = get_option('birdnet_phone', '0629964994');
-    $line_id = get_option('birdnet_line_id', 'oil_phanu');
+    $line_id = get_option('birdnet_line_id', 'phanupong_oil');
     $email = get_option('birdnet_email', 'admin@birdsgoaway.com');
     ?>
     <div class="wrap">
@@ -316,7 +316,7 @@ function birdnet_schema_jsonld() {
                 ),
                 'sameAs' => array(
                     'https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr',
-                    'https://line.me/ti/p/~oil_phanu',
+                    'https://line.me/ti/p/~phanupong_oil',
                 ),
                 'areaServed' => array(
                     array('@type' => 'City', 'name' => $is_en ? 'Khon Kaen' : 'ขอนแก่น'),
@@ -587,10 +587,10 @@ function birdnet_custom_footer() {
                 <strong><?php echo $is_en ? 'Wiwi (Quotation):' : 'วีวี่ (ฝ่ายประเมินราคา):'; ?></strong> 088-951-4924<br>
                 <strong><?php echo $is_en ? 'Chiang Mai:' : 'เชียงใหม่:'; ?></strong> 093-641-5623<br>
                 <strong><?php echo $is_en ? 'Chonburi:' : 'ชลบุรี:'; ?></strong> 095-629-2488</p>
-                <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~oil_phanu">oil_phanu</a></p>
+                <p style="margin-top:8px;">LINE: <a href="https://line.me/ti/p/~phanupong_oil">phanupong_oil</a></p>
                 <div style="margin-top:12px;display:flex;gap:10px;">
                     <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" style="color:#fff;text-decoration:none;font-size:1.2rem;" aria-label="Facebook" title="Facebook">📘</a>
-                    <a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="color:#06C755;text-decoration:none;font-size:1.2rem;" aria-label="LINE" title="LINE">💬</a>
+                    <a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" style="color:#06C755;text-decoration:none;font-size:1.2rem;" aria-label="LINE" title="LINE">💬</a>
                     <a href="tel:062-996-4994" style="color:#E8792E;text-decoration:none;font-size:1.2rem;" aria-label="<?php echo $is_en ? 'Phone' : 'โทรศัพท์'; ?>" title="<?php echo $is_en ? 'Call Now' : 'โทรเลย'; ?>">📞</a>
                 </div>
                 <p><?php echo $is_en ? 'Office: Mon-Sat 08:00-17:00<br>Free Consult (LINE/Call): Daily 08:00-20:00' : 'สำนักงาน: จ-ส 08:00-17:00<br>ปรึกษาฟรี (LINE/โทร): ทุกวัน 08:00-20:00'; ?></p>
@@ -644,7 +644,7 @@ function birdnet_custom_footer() {
             <p style="margin:0 0 8px;font-size:1.2rem;font-weight:700;color:white;"><?php echo $is_en ? 'Free Assessment Within 24 Hrs — Contact Us Now' : '🚀 ประเมินฟรีภายใน 24 ชม. — กดเลย'; ?></p>
             <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
                 <a href="tel:0629964994" style="background:white;color:#E8792E;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;"><?php echo $is_en ? '📞 Call 062-996-4994' : '📞 โทรเลย 062-996-4994'; ?></a>
-                <a href="https://line.me/ti/p/~oil_phanu" style="background:#06C755;color:white;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;"><?php echo $is_en ? '💬 LINE for Free Quote' : '💬 แอดไลน์ประเมินราคา'; ?></a>
+                <a href="https://line.me/ti/p/~phanupong_oil" style="background:#06C755;color:white;padding:10px 24px;border-radius:8px;text-decoration:none;font-weight:600;"><?php echo $is_en ? '💬 LINE for Free Quote' : '💬 แอดไลน์ประเมินราคา'; ?></a>
             </div>
         </div>
         <div class="footer-bottom">

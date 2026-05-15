@@ -535,7 +535,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">1. HDPE Bird Net</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['hdpe'] . '" alt="HDPE Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-netting-corner.jpg" alt="HDPE Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Our premium HDPE (High-Density Polyethylene) netting is the most popular solution for large areas. Key features:</p>
@@ -555,7 +555,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">2. Stainless Steel Bird Spikes</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['spikes'] . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-spikes-closeup.jpg" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Stainless steel bird spikes are ideal for ledges, railings, and narrow surfaces where birds perch. Key features:</p>
@@ -589,7 +589,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">4. Solar Panel Bird Guard</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Guard Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="Solar Panel Bird Guard Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Protect your solar investment from bird damage. Our clip-on guard system requires no drilling into panels. Key features:</p>
@@ -725,7 +725,7 @@ $en_contact_content = '
 
 <!-- wp:html -->
 <div style="max-width:400px;margin:1rem auto;display:flex;flex-direction:column;gap:12px;text-align:center;">
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="display:block;background:#06C755;color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">LINE: @oil_phanu</a>
+<a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" style="display:block;background:#06C755;color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">LINE: @phanupong_oil</a>
 <a href="mailto:birdsgoaway.th@gmail.com" style="display:block;background:#E8792E;color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">Email: birdsgoaway.th@gmail.com</a>
 <a href="https://www.facebook.com/birdsgoaway" target="_blank" rel="noopener" style="display:block;background:#1877f2;color:#fff;padding:14px 20px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">Facebook: Birds Go Away</a>
 </div>
@@ -739,7 +739,7 @@ $en_contact_content = '
 <div style="max-width:500px;margin:0 auto;background:#f8f9fa;border-radius:12px;padding:2rem;text-align:center;">
 <p style="font-size:1.1rem;color:#1B4D5C;font-weight:600;margin:0 0 8px;">Send us photos of your site</p>
 <p style="font-size:0.9rem;color:#555;margin:0 0 16px;">Take a photo of the bird problem area and send it via LINE. We will provide a preliminary quote within 30 minutes.</p>
-<a href="https://line.me/ti/p/~oil_phanu" target="_blank" rel="noopener" style="display:inline-block;background:#06C755;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">Send Photos via LINE</a>
+<a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" style="display:inline-block;background:#06C755;color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;">Send Photos via LINE</a>
 <p style="font-size:0.75rem;color:#888;margin:12px 0 0;">Response within 30 minutes, daily 08:00-20:00</p>
 </div>
 <!-- /wp:html -->
@@ -951,7 +951,7 @@ $en_portfolio_content .= '
   <h3>Interested in Our Service?</h3>
   <p>Free on-site assessment — no obligation</p>
   <p>📞 062-996-4994</p>
-  <p>💬 LINE: oil_phanu</p>
+  <p>💬 LINE: phanupong_oil</p>
   <a href="/en/contact" class="fb-back-cta">Get a Free Quote</a>
 </div>';
 
