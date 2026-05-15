@@ -852,9 +852,6 @@ $home_content = '
 <div style="max-width:900px;margin:0 auto;padding:0 1rem;">
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
-<img src="' . $assets_base . '/review-promo-new.jpg" alt="รวมรีวิวจากผู้ใช้จริง Birds Go Away กว่า 300 หลัง ขอนแก่น เชียงใหม่" style="width:100%;height:auto;" loading="lazy">
-</div>
-<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
 <img src="' . $assets_base . '/review-line-chat.webp" alt="รีวิวแชท LINE จากลูกค้าจริง ประทับใจมาก ช่างทำดีงเนียน สวยมาก" style="width:100%;height:auto;" loading="lazy">
 </div>
 <div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.12);">
