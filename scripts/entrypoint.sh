@@ -170,7 +170,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 </div>
 <div class="cf7-field">
 <label>บริการที่สนใจ</label>
-[select your-service "ตาข่าย HDPE กันนก" "แผงกันนกโซลาร์เซลล์" "หนามกันนก" "เจลไล่นก" "อื่นๆ"]
+[select your-service "ตาข่าย HDPE กันนก" "ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" "หนามกันนก" "เจลไล่นก" "อื่นๆ"]
 </div>
 <div class="cf7-field cf7-full">
 <label>ข้อความ</label>
@@ -387,7 +387,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <div class="wp-block-columns">
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
-<h3>แผงกันนกโซลาร์เซลล์</h3>
+<h3>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</h3>
 <p>ระบบป้องกันนกสำหรับแผงโซลาร์เซลล์โดยเฉพาะ ใช้ระบบคลิปยึดพิเศษ ไม่ต้องเจาะแผง ไม่เสียการรับประกัน ป้องกันนกทำรังใต้แผง ยืดอายุการใช้งาน</p>
 <p><a href="/services">รายละเอียดเพิ่มเติม →</a></p>
 </div>
@@ -757,7 +757,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2>3. แผงกันนกโซลาร์เซลล์ (Solar Panel Bird Guard)</h2>
+<h2>3. ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ (Solar Panel Bird Net)</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -800,7 +800,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_4" alt="แผงกันนกโซลาร์เซลล์ Birds Go Away"/></figure>
+<figure class="wp-block-image"><img src="PLACEHOLDER_IMG_4" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ Birds Go Away"/></figure>
 <!-- /wp:image -->
 <!-- wp:image -->
 <figure class="wp-block-image"><img src="PLACEHOLDER_IMG_6" alt="ระบบคลิปกันนกโซลาร์เซลล์"/></figure>
@@ -1233,7 +1233,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>เราให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ครอบคลุมพื้นที่ <strong>ขอนแก่น เชียงใหม่ และชลบุรี</strong> พร้อมขยายบริการทั่วประเทศ</p>
+<p>เราให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ครอบคลุมพื้นที่ <strong>ขอนแก่น เชียงใหม่ และชลบุรี</strong> พร้อมขยายบริการทั่วประเทศ</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -1392,7 +1392,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 <table style="width:100%;border-collapse:collapse;margin:0 auto;max-width:700px;">
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;width:40%;">ชื่อบริษัท</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co., Ltd.)</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">แบรนด์</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">BIRDS GO AWAY</td></tr>
-<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ตาข่ายกันนก, หนามกันนก, เจลไล่นก, แผงกันนกโซลาร์เซลล์</td></tr>
+<tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ตาข่ายกันนก, หนามกันนก, เจลไล่นก, ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">พื้นที่ให้บริการ</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">ขอนแก่น, เชียงใหม่, ชลบุรี (และพื้นที่ใกล้เคียง)</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">ที่อยู่</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">88/38, ขอนแก่น, ประเทศไทย</td></tr>
 <tr><td style="padding:12px;border-bottom:1px solid #e2e8f0;font-weight:600;">โทรศัพท์</td><td style="padding:12px;border-bottom:1px solid #e2e8f0;">062-996-4994 / 093-641-5623 / 095-629-2488</td></tr>

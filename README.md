@@ -5,7 +5,7 @@
 ## บริการ
 
 - ตาข่าย HDPE กันนก (HDPE Bird Netting)
-- แผงกันนกโซลาร์เซลล์ (Solar Panel Bird Guard)
+- ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ (Solar Panel Bird Net)
 - หนามกันนก (Bird Spikes)
 - เจลไล่นก (Bird Repellent Gel)
 

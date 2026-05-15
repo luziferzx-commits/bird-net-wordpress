@@ -633,12 +633,12 @@ function birdnet_custom_footer() {
                     <li>HDPE Bird Netting</li>
                     <li>Stainless Steel Bird Spikes</li>
                     <li>Bird Repellent Gel</li>
-                    <li>Solar Panel Bird Guards</li>
+                    <li>Solar Panel Bird Nets</li>
                     <?php else : ?>
                     <li>ตาข่ายกันนก HDPE</li>
                     <li>หนามกันนก สแตนเลส</li>
                     <li>เจลไล่นก</li>
-                    <li>แผงกันนกโซลาร์เซลล์</li>
+                    <li>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</li>
                     <?php endif; ?>
                 </ul>
                 <?php if ($is_en) : ?>

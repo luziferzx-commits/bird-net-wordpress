@@ -520,9 +520,9 @@ $home_content = '
 <!-- wp:column -->
 <div class="wp-block-column" style="text-align:center;">
 <!-- wp:image {"sizeSlug":"medium"} -->
-<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
+<figure class="wp-block-image size-medium"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;height:200px;" loading="lazy"/></figure>
 <!-- /wp:image -->
-<h3 class="wp-block-heading">แผงกันนกโซลาร์เซลล์</h3>
+<h3 class="wp-block-heading">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</h3>
 <p>ระบบคลิปไม่เจาะแผง ยืดอายุการใช้งานโซลาร์เซลล์ หมดปัญหานกทำรัง ใต้แผงสกปรก สายไฟเสียหาย</p>
 </div>
 <!-- /wp:column -->
@@ -814,7 +814,7 @@ $home_content = '
 <div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
 <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x2600;&#xFE0F;</div>
 <p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
-<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ติดแผงกันนกโซลาร์เซลล์ที่โรงงาน นกเคยทำรังใต้แผงจนสายไฟเสียหาย ตอนนี้สะอาดมาก โซลาร์ทำงานเต็มประสิทธิภาพ คุ้มค่ามากครับ"</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"ติดตาข่ายกันนกใต้แผงโซล่าร์เซลล์ที่โรงงาน นกเคยทำรังใต้แผงจนสายไฟเสียหาย ตอนนี้สะอาดมาก โซลาร์ทำงานเต็มประสิทธิภาพ คุ้มค่ามากครับ"</p>
 <p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">คุณธนา</p>
 <p style="color:#888;font-size:0.8rem;margin:4px 0 0;">โรงงาน, มหาสารคาม</p>
 </div>
@@ -928,7 +928,7 @@ $home_content = '
 <option value="ตาข่ายกันนก HDPE">ตาข่ายกันนก HDPE</option>
 <option value="หนามกันนก สแตนเลส">หนามกันนก สแตนเลส</option>
 <option value="เจลไล่นก">เจลไล่นก</option>
-<option value="แผงกันนกโซลาร์เซลล์">แผงกันนกโซลาร์เซลล์</option>
+<option value="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</option>
 <option value="ไม่แน่ใจ ต้องการคำแนะนำ">ไม่แน่ใจ ต้องการคำแนะนำ</option>
 </select>
 </div>
@@ -1016,7 +1016,7 @@ $services_content = '
 <!-- /wp:separator -->
 
 <!-- wp:heading {"level":2} -->
-<h2 class="wp-block-heading">แผงกันนกโซลาร์เซลล์</h2>
+<h2 class="wp-block-heading">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</h2>
 <!-- /wp:heading -->
 
 <!-- wp:columns -->
@@ -1037,7 +1037,7 @@ $services_content = '
 <!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%;">
 <!-- wp:image -->
-<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="แผงกันนกโซลาร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image"><img src="' . $unsplash['solar'] . '" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์" style="border-radius:12px;object-fit:cover;aspect-ratio:4/3;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -1385,7 +1385,7 @@ $about_content = '
 <div class="wp-block-columns">
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%;">
-<p><strong>บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co.,Ltd.)</strong> ดำเนินธุรกิจภายใต้แบรนด์ <strong>BIRDS GO AWAY</strong> ให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และแผงกันนกโซลาร์เซลล์ ครบวงจร</p>
+<p><strong>บริษัท รีเช็ค บิ้วดิ้ง จำกัด (Recheck Building Co.,Ltd.)</strong> ดำเนินธุรกิจภายใต้แบรนด์ <strong>BIRDS GO AWAY</strong> ให้บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก และตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ครบวงจร</p>
 
 <h3 class="wp-block-heading">ข้อมูลบริษัท</h3>
 <ul>
@@ -1852,7 +1852,7 @@ $khonkaen_content = '
 <li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียงคอนโด ช่องเปิดใต้หลังคา พื้นที่กว้าง อายุ 5-7 ปี</li>
 <li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
 <li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่เน้นความสวยงาม มองไม่เห็นจากภายนอก</li>
-<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผงโซลาร์</li>
+<li><strong>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผงโซลาร์</li>
 </ul>
 <p style="color:#555;">ทุกบริการมีวิศวกรเข้าสำรวจหน้างานก่อนติดตั้ง พร้อมเสนอวิธีที่เหมาะสมที่สุดสำหรับปัญหาของคุณ <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
 
@@ -1954,7 +1954,7 @@ $chiangmai_content = '
 <li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับคอนโด หอพัก อพาร์ทเมนท์ในเชียงใหม่ อายุ 5-7 ปี</li>
 <li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับร้านค้า อาคารพาณิชย์ หน้าต่าง ชายคา อายุ 10+ ปี</li>
 <li><strong>เจลไล่นก</strong> — เหมาะกับอาคารที่เน้นความสวยงาม เช่น โรงแรม รีสอร์ท ร้านกาแฟ</li>
-<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
+<li><strong>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
 </ul>
 <p style="color:#555;">ทุกบริการมีช่างผ่านอบรมความปลอดภัยเข้าสำรวจหน้างานก่อนเสนอราคา <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
 
@@ -2044,7 +2044,7 @@ $chonburi_content = '
 <li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับคอนโดริมหาด หอพัก อพาร์ทเมนท์ อายุ 5-7 ปี ทนต่อลมทะเลและความชื้น</li>
 <li><strong>หนามกันนก สแตนเลส SUS304</strong> — ทนเกลือทะเล เหมาะกับอาคารพาณิชย์ ชายคา ราวกันตก อายุ 10+ ปี</li>
 <li><strong>เจลไล่นก</strong> — เหมาะกับโรงแรม รีสอร์ท สถานที่ท่องเที่ยวที่เน้นความสวยงาม</li>
-<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
+<li><strong>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</strong> — ป้องกันนกทำรังใต้แผงโซลาร์ ระบบคลิปไม่เจาะแผง</li>
 </ul>
 <p style="color:#555;">ทุกบริการมีทีมช่างมืออาชีพเข้าสำรวจหน้างานก่อนเสนอราคา <a href="/services/" style="color:#E8792E;font-weight:600;">ดูรายละเอียดบริการทั้งหมด →</a></p>
 
@@ -2139,7 +2139,7 @@ $blog_posts = array(
 <li><strong>ตาข่ายกันนก HDPE</strong> — เหมาะกับระเบียง ช่องเปิด พื้นที่กว้าง อายุการใช้งาน 6-7 ปี เริ่มต้น 350 บาท/ตร.ม.</li>
 <li><strong>หนามกันนก สแตนเลส SUS304</strong> — เหมาะกับขอบหน้าต่าง ราวกันตก ชายคา อายุ 10+ ปี</li>
 <li><strong>เจลไล่นก</strong> — เหมาะกับพื้นที่แคบ ติดตั้งง่าย แต่ต้องเปลี่ยนทุก 1-2 ปี</li>
-<li><strong>แผงกันนกโซลาร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผง</li>
+<li><strong>ตาข่ายกันนกใต้แผงโซล่าร์เซลล์</strong> — ระบบคลิปไม่เจาะแผง ป้องกันนกทำรังใต้แผง</li>
 </ol>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
@@ -2378,7 +2378,7 @@ $service_gel_content = '
 
 $service_solar_content = '
 <!-- wp:heading {"level":1} -->
-<h1 class="wp-block-heading">แผงกันนกโซลาร์เซลล์ — Solar Panel Bird Guard</h1>
+<h1 class="wp-block-heading">ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ — Solar Panel Bird Net</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -2386,7 +2386,7 @@ $service_solar_content = '
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="แผงกันนกโซลาร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ติดตั้ง" style="border-radius:12px;width:100%;max-height:400px;object-fit:cover;" loading="lazy"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:html -->
@@ -2450,7 +2450,7 @@ $pages = array(
     'service-hdpe'   => array('title' => 'ตาข่าย HDPE กันนก', 'content' => $service_hdpe_content),
     'service-spikes' => array('title' => 'หนามกันนก สแตนเลส', 'content' => $service_spikes_content),
     'service-gel'    => array('title' => 'เจลไล่นก', 'content' => $service_gel_content),
-    'service-solar'  => array('title' => 'แผงกันนกโซลาร์เซลล์', 'content' => $service_solar_content),
+    'service-solar'  => array('title' => 'ตาข่ายกันนกใต้แผงโซล่าร์เซลล์', 'content' => $service_solar_content),
 );
 
 foreach ($pages as $slug => $page_data) {
@@ -2552,9 +2552,9 @@ $seo_data = array(
         'focus' => 'เจลไล่นก',
     ),
     'service-solar' => array(
-        'title' => 'แผงกันนกโซลาร์เซลล์ ไม่เจาะแผง | Birds Go Away',
-        'desc'  => 'แผงกันนกโซลาร์เซลล์ ระบบคลิปไม่เจาะแผง ไม่เสียประกัน ป้องกันนกทำรังใต้แผง ลดเสี่ยงไฟลัดวงจร ไม่กระทบประสิทธิภาพ ติดตั้งมืออาชีพ',
-        'focus' => 'แผงกันนกโซลาร์เซลล์',
+        'title' => 'ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ไม่เจาะแผง | Birds Go Away',
+        'desc'  => 'ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ ระบบคลิปไม่เจาะแผง ไม่เสียประกัน ป้องกันนกทำรังใต้แผง ลดเสี่ยงไฟลัดวงจร ไม่กระทบประสิทธิภาพ ติดตั้งมืออาชีพ',
+        'focus' => 'ตาข่ายกันนกใต้แผงโซล่าร์เซลล์',
     ),
 );
 
@@ -2623,7 +2623,7 @@ update_option('wpseo_titles', array_merge(
         'title-home-wpseo' => 'ตาข่ายกันนก ขอนแก่น เชียงใหม่ ชลบุรี | Birds Go Away',
         'metadesc-home-wpseo' => 'บริการติดตั้งตาข่ายกันนก หนามกันนก มาตรฐานอุตสาหกรรม แก้ปัญหานกพิราบถาวร รับประกันงาน 3 ปี ประเมินหน้างานฟรี โทร 062-996-4994',
         'open_graph_frontpage_title' => 'BIRDS GO AWAY — บริการติดตั้งตาข่ายกันนก มืออาชีพ',
-        'open_graph_frontpage_desc' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี',
+        'open_graph_frontpage_desc' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก ตาข่ายกันนกใต้แผงโซล่าร์เซลล์ รับประกัน 3 ปี ปรึกษาฟรี',
         'open_graph_frontpage_image' => img(12),
     )
 ));
@@ -2662,7 +2662,7 @@ if ($home_page) {
         '@context' => 'https://schema.org',
         '@type' => 'LocalBusiness',
         'name' => 'BIRDS GO AWAY — ตาข่ายกันนก',
-        'description' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก แผงกันนกโซลาร์เซลล์',
+        'description' => 'บริการติดตั้งตาข่ายกันนก HDPE หนามกันนก เจลไล่นก ตาข่ายกันนกใต้แผงโซล่าร์เซลล์',
         'url' => $site_url,
         'telephone' => ['+66629964994', '+66936415623', '+66956292488'],
         'address' => array(
