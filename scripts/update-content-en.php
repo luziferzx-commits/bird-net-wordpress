@@ -47,7 +47,7 @@ $unsplash = array(
 // ===== ENGLISH HOME PAGE =====
 $en_home_content = '
 <!-- wp:columns -->
-<div class="wp-block-columns">
+<div class="wp-block-columns hero-section">
 <!-- wp:column -->
 <div class="wp-block-column" style="background:transparent !important;border:none !important;">
 
