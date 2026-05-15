@@ -23,7 +23,7 @@ $assets_base = $site_url . '/wp-content/uploads/birdnet-assets';
 function img($num) {
     global $assets_base;
     $padded = str_pad($num, 2, '0', STR_PAD_LEFT);
-    return $assets_base . '/birdnet-' . $padded . '.webp';
+    return $assets_base . '/birdnet-' . $padded . '.webp?v=20260515';
 }
 
 function vid($num) {
