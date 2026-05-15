@@ -38,10 +38,10 @@ function en_project_img($page, $num = 1) {
 
 $unsplash = array(
     'hero'    => $assets_base . '/fb-cover.webp',
-    'hdpe'    => en_project_img(10),
-    'solar'   => en_project_img(14),
-    'spikes'  => en_project_img(18),
-    'gel'     => en_project_img(29),
+    'hdpe'    => $assets_base . '/new-netting-balcony.jpg',
+    'solar'   => $assets_base . '/new-solar-netting-2.jpg',
+    'spikes'  => $assets_base . '/new-spikes-gable.jpg',
+    'gel'     => $assets_base . '/new-gel-pestman.jpg',
 );
 
 // ===== ENGLISH HOME PAGE =====
@@ -535,7 +535,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">1. HDPE Bird Net</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-netting-corner.jpg" alt="HDPE Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['hdpe'] . '" alt="HDPE Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Our premium HDPE (High-Density Polyethylene) netting is the most popular solution for large areas. Key features:</p>
@@ -555,7 +555,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">2. Stainless Steel Bird Spikes</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-spikes-closeup.jpg" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['spikes'] . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Stainless steel bird spikes are ideal for ledges, railings, and narrow surfaces where birds perch. Key features:</p>
@@ -589,7 +589,7 @@ $en_services_content = '
 <h2 class="wp-block-heading">4. Solar Panel Bird Guard</h2>
 <!-- /wp:heading -->
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $assets_base . '/new-solar-netting-1.jpg" alt="Solar Panel Bird Guard Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
+<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Guard Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph -->
 <p>Protect your solar investment from bird damage. Our clip-on guard system requires no drilling into panels. Key features:</p>
