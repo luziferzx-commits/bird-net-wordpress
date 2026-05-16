@@ -505,6 +505,214 @@ $en_home_content = '
 </div>
 <!-- /wp:html -->
 
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">Customer Reviews</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">Thank you to all our valued customers who trust Birds Go Away</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div class="testimonial-carousel" style="max-width:800px;margin:0 auto;padding:0 1rem;position:relative;overflow:hidden;">
+<div class="testimonial-track" style="display:flex;transition:transform 0.5s ease;">
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E2;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Very professional team. Clean and neat installation. The net is nearly invisible but birds never came back. Warranty included. Very impressed!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Mr. Somchai</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">X10 Condo Srinakarin, Khon Kaen</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E0;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Had pigeon problems for years. Tried many methods with no success. After Birds Go Away installed the net, problem solved permanently. Reasonable price. Highly recommended!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Ms. Nida</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Sivalee Village, Khon Kaen</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3ED;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Hired them for our warehouse — huge area. Team completed everything neatly in 2 days. Engineer supervised the work. Very reliable."</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Mr. Wichai</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Warehouse, Chiang Mai</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x26FD;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Birds were nesting under the gas station roof, making it filthy. Customers complained constantly. After installing the net, it looks so much better. Thank you team!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Branch Manager</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Gas Station, Chonburi</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3D7;&#xFE0F;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Bird net on a 4-story building. Team came with full scaffolding equipment. Fast work, neat finish, done in just 2 days. No more birds at all. Very happy!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Mr. Prasert</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Commercial Building, Udon Thani</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3E5;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"We hired them to install bird nets around the patient building. Pigeons completely gone. Patients no longer deal with droppings and germs. Thank you so much!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Facilities Department</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Government Hospital, Nakhon Ratchasima</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x2600;&#xFE0F;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Installed bird net under solar panels at our factory. Birds used to nest there and damage wires. Now it is perfectly clean and solar panels run at full efficiency. Great value!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Mr. Thana</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Factory, Maha Sarakham</p>
+</div>
+</div>
+
+<div class="testimonial-slide" style="min-width:100%;padding:0 8px;">
+<div style="background:#fff;padding:2rem;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;max-width:600px;margin:0 auto;">
+<div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#E8792E,#F4944E);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:1.8rem;color:#fff;">&#x1F3EB;</div>
+<p style="color:#E8792E;margin:0 0 12px;font-size:1.1rem;">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</p>
+<p style="font-style:italic;margin:0 0 16px;font-size:1rem;color:#333;line-height:1.7;">"Installed bird nets on 3 school buildings. No more birds nesting. Students don\'t have to dodge droppings anymore. Parents praised the improvement. Thank you!"</p>
+<p style="color:#1B4D5C;font-weight:700;margin:0;font-size:0.95rem;">Teacher Supha</p>
+<p style="color:#888;font-size:0.8rem;margin:4px 0 0;">Private School, Khon Kaen</p>
+</div>
+</div>
+
+</div>
+<div style="display:flex;justify-content:center;gap:8px;margin-top:16px;">
+<button onclick="moveTestimonial(-1)" aria-label="Previous review" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276E;</button>
+<button onclick="moveTestimonial(1)" aria-label="Next review" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276F;</button>
+</div>
+<div class="testimonial-dots" style="display:flex;justify-content:center;gap:8px;margin-top:12px;"></div>
+</div>
+
+<!-- /wp:html -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">Additional Information</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div style="max-width:1000px;margin:0 auto;padding:0 1rem;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-review-line.jpg?v=newF" alt="Real customer reviews — over 300 projects in Khon Kaen and Chiang Mai" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-before-after.jpg?v=newF" alt="End bird nuisance permanently — clean spaces by BIRDS GO AWAY" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-hdpe-warehouse.jpg?v=newF" alt="From contaminated warehouse to quality-controlled space — HDPE Netting" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-full-service.jpg?v=newF" alt="Not just installation — full cleaning service included" style="width:100%;height:auto;" loading="lazy">
+</div>
+<div style="border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+<img src="' . $assets_base . '/promo-expert-team.jpg?v=newF" alt="Choose a team that understands building structures — 3-year warranty" style="width:100%;height:auto;" loading="lazy">
+</div>
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">Service Areas</h2>
+<!-- /wp:heading -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns">
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">Khon Kaen (HQ)</h3>
+<p><a href="tel:0629964994"><strong>062-996-4994</strong></a> — K. Oil</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">Central Region</h3>
+<p><a href="tel:0889514924"><strong>088-951-4924</strong></a> — K. Vivi</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">Chiang Mai</h3>
+<p><a href="tel:0936415623"><strong>093-641-5623</strong></a> — K. Ta</p>
+</div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column" style="text-align:center;border:1px solid rgba(255,255,255,0.06);">
+<h3 class="wp-block-heading">Chonburi</h3>
+<p><a href="tel:0956292488"><strong>095-629-2488</strong></a> — K. Mac</p>
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+
+<!-- wp:html -->
+<div style="background:#f5f5f5;padding:2.5rem 1rem;" data-aos="fade-up">
+<div style="max-width:500px;margin:0 auto;text-align:center;">
+<h2 style="color:#1B4D5C;font-size:1.5rem;margin:0 0 0.3rem;">Get a Free Quote</h2>
+<p style="color:#888;font-size:0.85rem;margin:0 0 1.2rem;">Fill out the form below — we will get back to you within 24 hours.</p>
+<form action="https://formsubmit.co/birdsgoaway.th@gmail.com" method="POST" style="text-align:left;background:#fff;padding:1.5rem;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+<input type="hidden" name="_subject" value="Quote Request — from Birds Go Away EN">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_next" value="https://birdsgoaway.com/en/contact/">
+<div style="margin-bottom:12px;">
+<label style="color:#333;font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px;">Full Name *</label>
+<input type="text" name="name" required placeholder="Your full name" style="width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;background:#fff;color:#333;outline:none;">
+</div>
+<div style="margin-bottom:12px;">
+<label style="color:#333;font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px;">Phone Number *</label>
+<input type="tel" name="phone" required placeholder="0XX-XXX-XXXX" style="width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;background:#fff;color:#333;outline:none;">
+</div>
+<div style="margin-bottom:12px;">
+<label style="color:#333;font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px;">Service Interested In</label>
+<select name="service" style="width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;background:#fff;color:#333;outline:none;">
+<option value="">-- Select Service --</option>
+<option value="HDPE Bird Net">HDPE Bird Net</option>
+<option value="Stainless Steel Spikes">Stainless Steel Spikes</option>
+<option value="Bird Repellent Gel">Bird Repellent Gel</option>
+<option value="Solar Panel Bird Net">Solar Panel Bird Net</option>
+<option value="Not Sure - Need Advice">Not Sure — Need Advice</option>
+</select>
+</div>
+<div style="margin-bottom:14px;">
+<label style="color:#333;font-size:0.85rem;font-weight:600;display:block;margin-bottom:4px;">Additional Details</label>
+<textarea name="message" rows="3" placeholder="Describe the problem or area for installation..." style="width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:8px;font-size:0.9rem;background:#fff;color:#333;outline:none;resize:vertical;"></textarea>
+</div>
+<button type="submit" style="width:100%;padding:12px;background:#E8792E;color:#fff;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background 0.2s;">&#x1F4E9; Submit — Get a Free Quote</button>
+<p style="font-size:0.72rem;color:#999;margin:10px 0 0;text-align:center;">&#x1F512; Your information is protected under Thailand\'s Personal Data Protection Act (PDPA) B.E. 2562</p>
+</form>
+</div>
+</div>
+<!-- /wp:html -->
+
 <!-- wp:html -->
 <div style="max-width:600px;margin:1.5rem auto;background:linear-gradient(135deg,#1B4D5C,#2a6a7c);border-radius:12px;padding:1.2rem 1.5rem;text-align:center;color:white;">
 <p style="margin:0;font-size:1.3rem;font-weight:700;">&#x1F4B0; Starting from just 350 THB/sq.m.</p>
@@ -512,10 +720,14 @@ $en_home_content = '
 </div>
 <!-- /wp:html -->
 
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"><strong>Free consultation! Contact us today for a quote</strong></p>
+<!-- /wp:paragraph -->
+
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"backgroundColor":"vivid-green-cyan","className":"hero-cta-primary"} -->
-<div class="wp-block-button hero-cta-primary"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/en/contact">Get a Free Quote Today</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/en/contact">&#x1F680; Free Assessment Within 24 Hours — Click Now</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -534,18 +746,27 @@ $en_services_content = '
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">1. HDPE Bird Net</h2>
 <!-- /wp:heading -->
-<!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['hdpe'] . '" alt="HDPE Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<!-- wp:paragraph -->
-<p>Our premium HDPE (High-Density Polyethylene) netting is the most popular solution for large areas. Key features:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul><li><strong>Material:</strong> UV-stabilized HDPE, export-grade quality</li><li><strong>Lifespan:</strong> 5-7 years depending on conditions</li><li><strong>Visibility:</strong> Nearly invisible from a distance — blends with the building</li><li><strong>Applications:</strong> Balconies, parking structures, warehouses, factories, building facades</li><li><strong>Strength:</strong> Resistant to pulling force, impact, and chemicals</li></ul>
-<!-- /wp:list -->
-<!-- wp:paragraph -->
-<p><strong>Starting from 350 THB/sq.m.</strong> — includes materials, installation, and 3-year warranty.</p>
-<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:2rem;">
+<div>
+<p>Our premium HDPE (High-Density Polyethylene) netting is the most popular solution for large areas — balconies, parking structures, warehouses, and building facades. Nearly invisible from a distance.</p>
+<h4 style="color:#1B4D5C;">Specifications</h4>
+<ul>
+<li><strong>Material:</strong> UV-stabilized HDPE, export-grade quality</li>
+<li><strong>Lifespan:</strong> 5-7 years depending on conditions</li>
+<li><strong>Visibility:</strong> Nearly invisible — blends with the building</li>
+<li><strong>Applications:</strong> Balconies, parking, warehouses, factories, facades</li>
+<li><strong>Strength:</strong> Resistant to pulling force, impact, and chemicals</li>
+</ul>
+<p><strong>Starting from 350 THB/sq.m.</strong> — incl. materials, installation, and 3-year warranty.</p>
+<p><a href="/en/service-hdpe/" style="color:#E8792E;font-weight:700;">&#x2192; View HDPE Details</a></p>
+</div>
+<div>
+<img src="' . en_img("set-b-hdpe.jpg") . '" alt="HDPE Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -554,15 +775,26 @@ $en_services_content = '
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">2. Stainless Steel Bird Spikes</h2>
 <!-- /wp:heading -->
-<!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['spikes'] . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<!-- wp:paragraph -->
-<p>Stainless steel bird spikes are ideal for ledges, railings, and narrow surfaces where birds perch. Key features:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul><li><strong>Material:</strong> SUS304 Stainless Steel — rust-proof</li><li><strong>Lifespan:</strong> 5+ years, weather-resistant</li><li><strong>Installation:</strong> Quick and easy, minimal disruption</li><li><strong>Applications:</strong> Window ledges, railings, signage, AC units, building edges</li><li><strong>Humane:</strong> Birds simply avoid the area — no harm caused</li></ul>
-<!-- /wp:list -->
+
+<!-- wp:html -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:2rem;">
+<div>
+<p>Stainless steel bird spikes are ideal for ledges, railings, and narrow surfaces where birds perch. Quick installation with minimal disruption. Humane — birds simply avoid the area.</p>
+<h4 style="color:#1B4D5C;">Specifications</h4>
+<ul>
+<li><strong>Material:</strong> SUS304 Stainless Steel — rust-proof</li>
+<li><strong>Lifespan:</strong> 5+ years, weather-resistant</li>
+<li><strong>Installation:</strong> Quick and easy, minimal disruption</li>
+<li><strong>Applications:</strong> Window ledges, railings, signage, AC units, edges</li>
+<li><strong>Humane:</strong> Birds simply avoid the area — no harm caused</li>
+</ul>
+<p><a href="/en/service-spikes/" style="color:#E8792E;font-weight:700;">&#x2192; View Bird Spikes Details</a></p>
+</div>
+<div>
+<img src="' . en_img("spikes-new.jpg") . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -571,15 +803,26 @@ $en_services_content = '
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">3. Bird Repellent Gel</h2>
 <!-- /wp:heading -->
-<!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['gel'] . '" alt="Bird Repellent Gel Application" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<!-- wp:paragraph -->
-<p>Invisible bird repellent gel is perfect for areas where aesthetics matter most. Key features:</p>
-<!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul><li><strong>Visibility:</strong> Completely invisible — preserves building aesthetics</li><li><strong>Safety:</strong> Non-toxic formula, safe for humans and pets</li><li><strong>Applications:</strong> Heritage buildings, luxury condos, shopfronts, signage</li><li><strong>Effectiveness:</strong> Creates an uncomfortable surface for birds without harm</li></ul>
-<!-- /wp:list -->
+
+<!-- wp:html -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:2rem;">
+<div>
+<p>Invisible bird repellent gel is perfect for areas where aesthetics matter most — luxury condos, heritage buildings, shopfronts. Completely invisible, non-toxic, safe for humans and pets.</p>
+<h4 style="color:#1B4D5C;">Specifications</h4>
+<ul>
+<li><strong>Material:</strong> Polycarbonate-based gel, non-toxic formula</li>
+<li><strong>Visibility:</strong> Completely invisible — preserves aesthetics</li>
+<li><strong>Lifespan:</strong> 1-2 years depending on weather conditions</li>
+<li><strong>Applications:</strong> Heritage buildings, luxury condos, shopfronts, signage</li>
+<li><strong>Safety:</strong> Safe for humans, pets, and birds</li>
+</ul>
+<p><a href="/en/service-gel/" style="color:#E8792E;font-weight:700;">&#x2192; View Bird Gel Details</a></p>
+</div>
+<div>
+<img src="' . en_img("set-b-gel.jpg") . '" alt="Bird Repellent Gel Application" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+</div>
+</div>
+<!-- /wp:html -->
 
 <!-- wp:separator {"className":"is-style-wide"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
@@ -588,20 +831,100 @@ $en_services_content = '
 <!-- wp:heading {"level":2} -->
 <h2 class="wp-block-heading">4. Solar Panel Bird Net</h2>
 <!-- /wp:heading -->
-<!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Net Installation" style="border-radius:12px;max-height:400px;object-fit:cover;width:100%;" loading="lazy"/></figure>
-<!-- /wp:image -->
-<!-- wp:paragraph -->
-<p>Protect your solar investment from bird damage. Our clip-on guard system requires no drilling into panels. Key features:</p>
+
+<!-- wp:html -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-bottom:2rem;">
+<div>
+<p>Protect your solar investment from bird damage. Our clip-on guard system requires no drilling into panels — no warranty voiding. Prevents nesting, droppings, and wire chewing.</p>
+<h4 style="color:#1B4D5C;">Specifications</h4>
+<ul>
+<li><strong>System:</strong> Clip-on design — no drilling, no warranty void</li>
+<li><strong>Protection:</strong> Prevents nesting, droppings, wire damage</li>
+<li><strong>Performance:</strong> Does not affect solar panel efficiency</li>
+<li><strong>Lifespan:</strong> Durable materials, 5+ years</li>
+<li><strong>Safety:</strong> Prevents fire hazards from nesting materials</li>
+</ul>
+<p><a href="/en/service-solar/" style="color:#E8792E;font-weight:700;">&#x2192; View Solar Panel Net Details</a></p>
+</div>
+<div>
+<img src="' . en_img("solar-panel-new.jpg") . '" alt="Solar Panel Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+</div>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:heading {"textAlign":"center","level":2} -->
+<h2 class="has-text-align-center wp-block-heading">Service Comparison</h2>
+<!-- /wp:heading -->
+
+<!-- wp:html -->
+<div style="overflow-x:auto;margin:1rem 0 2rem;">
+<table style="width:100%;border-collapse:collapse;text-align:center;font-size:0.9rem;">
+<thead>
+<tr style="background:#1B4D5C;color:#fff;">
+<th style="padding:10px 12px;text-align:left;">Feature</th>
+<th style="padding:10px 12px;">HDPE Net</th>
+<th style="padding:10px 12px;">Spikes</th>
+<th style="padding:10px 12px;">Gel</th>
+<th style="padding:10px 12px;">Solar Net</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background:#f9f9f9;">
+<td style="padding:8px 12px;text-align:left;font-weight:600;">Coverage area</td>
+<td style="padding:8px 12px;">Large</td>
+<td style="padding:8px 12px;">Narrow ledges</td>
+<td style="padding:8px 12px;">Small spots</td>
+<td style="padding:8px 12px;">Under panels</td>
+</tr>
+<tr>
+<td style="padding:8px 12px;text-align:left;font-weight:600;">Lifespan</td>
+<td style="padding:8px 12px;">5-7 years</td>
+<td style="padding:8px 12px;">5+ years</td>
+<td style="padding:8px 12px;">1-2 years</td>
+<td style="padding:8px 12px;">5+ years</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:8px 12px;text-align:left;font-weight:600;">Visibility</td>
+<td style="padding:8px 12px;">Nearly invisible</td>
+<td style="padding:8px 12px;">Visible</td>
+<td style="padding:8px 12px;">Invisible</td>
+<td style="padding:8px 12px;">Minimal</td>
+</tr>
+<tr>
+<td style="padding:8px 12px;text-align:left;font-weight:600;">Best for</td>
+<td style="padding:8px 12px;">Buildings, factories</td>
+<td style="padding:8px 12px;">Ledges, edges</td>
+<td style="padding:8px 12px;">Luxury buildings</td>
+<td style="padding:8px 12px;">Solar installations</td>
+</tr>
+<tr style="background:#f9f9f9;">
+<td style="padding:8px 12px;text-align:left;font-weight:600;">Warranty</td>
+<td style="padding:8px 12px;">3 years</td>
+<td style="padding:8px 12px;">3 years</td>
+<td style="padding:8px 12px;">1 year</td>
+<td style="padding:8px 12px;">3 years</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- /wp:html -->
+
+<!-- wp:separator {"className":"is-style-wide"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+<!-- /wp:separator -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"large"} -->
+<p class="has-text-align-center has-large-font-size"><strong>Interested? Get a free consultation!</strong></p>
 <!-- /wp:paragraph -->
-<!-- wp:list -->
-<ul><li><strong>No-Drill System:</strong> Clip-on design — no panel warranty voiding</li><li><strong>Protection:</strong> Prevents nesting, droppings, and wire chewing under panels</li><li><strong>Performance:</strong> Does not affect solar panel efficiency</li><li><strong>Safety:</strong> Prevents fire hazards from nesting materials near electrical components</li></ul>
-<!-- /wp:list -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link" href="/en/contact">Get a Free Quote &rarr;</a></div>
+<!-- wp:button {"backgroundColor":"vivid-green-cyan"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-vivid-green-cyan-background-color has-background" href="/en/contact">Get a Free Quote</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -970,6 +1293,226 @@ $en_portfolio_content .= '
 ';
 
 
+// ===== ENGLISH SERVICE DETAIL PAGES =====
+$en_service_hdpe_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">HDPE Bird Net — Premium Bird Netting Solution</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">The most popular and effective bird control solution for large areas. Our premium HDPE (High-Density Polyethylene) netting is UV-stabilized, nearly invisible, and built to last 5-7 years.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F9F5;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">UV-Stabilized HDPE</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Export-grade quality, withstands intense sunlight and tropical weather conditions year after year.</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F441;&#xFE0F;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">Nearly Invisible</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Blends seamlessly with building facades. Visible only at close range — preserves building aesthetics.</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F4AA;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">High Tensile Strength</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Resistant to pulling, impact, and chemicals. Withstands strong winds and harsh weather.</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">Specifications</h2>
+<ul>
+<li><strong>Material:</strong> HDPE (High-Density Polyethylene), UV-stabilized, export-grade</li>
+<li><strong>Color:</strong> Black (nearly invisible at distance)</li>
+<li><strong>Lifespan:</strong> 5-7 years depending on environment</li>
+<li><strong>Tensile Strength:</strong> High resistance to pulling, impact, and chemicals</li>
+<li><strong>Installation:</strong> Stainless steel frame + professional rope access</li>
+<li><strong>Warranty:</strong> 3 years on materials and installation</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">Ideal Applications</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Condominiums</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3ED;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Factories / Warehouses</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Government Buildings</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x26FD;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Gas Stations</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/en/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; Get a Free Quote</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">Free on-site assessment — no charges</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$en_service_spikes_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Stainless Steel Bird Spikes — Durable Perch Prevention</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">SUS304 stainless steel bird spikes are the ideal solution for ledges, window sills, railings, and narrow surfaces where birds love to perch. Rust-proof, humane, and long-lasting.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F9F1;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">SUS304 Stainless Steel</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Premium rust-proof stainless steel. Withstands rain, sun, and coastal salt air without corroding.</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F54A;&#xFE0F;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">100% Humane</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Birds simply avoid the area. No harm, no trapping, no killing. Safe for all bird species.</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x26A1;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">Quick Installation</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Fast and easy to install with minimal disruption to your building or business operations.</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">Specifications</h2>
+<ul>
+<li><strong>Material:</strong> SUS304 Stainless Steel — rust-proof</li>
+<li><strong>Lifespan:</strong> 5+ years, weather and UV resistant</li>
+<li><strong>Installation:</strong> Adhesive or screw-mount on any surface</li>
+<li><strong>Coverage:</strong> Multiple row configurations available</li>
+<li><strong>Safety:</strong> Humane — birds avoid the area naturally</li>
+<li><strong>Warranty:</strong> 3 years on materials and installation</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">Ideal Applications</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1FA9F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Window Ledges</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Building Edges</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F4A8;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">AC Units / Signage</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E8;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Hotels / Resorts</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/en/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; Get a Free Quote</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">Free on-site assessment — no charges</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$en_service_gel_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Bird Repellent Gel — Invisible Bird Deterrent</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">The invisible solution for areas where aesthetics matter most. Our non-toxic polycarbonate-based gel creates an uncomfortable surface that birds avoid — completely invisible from the outside.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F441;&#xFE0F;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">Completely Invisible</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Cannot be seen from the outside. Perfect for luxury buildings, heritage structures, and shopfronts.</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2705;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">Non-Toxic Formula</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Safe for humans, pets, and birds. No harmful chemicals. UV-resistant — does not melt in sunlight.</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F3E8;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">Preserves Aesthetics</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">No stains, no damage, not visible from outside. Ideal for buildings where appearance is everything.</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">Specifications</h2>
+<ul>
+<li><strong>Material:</strong> Polycarbonate-based gel, non-toxic formula</li>
+<li>UV-resistant — does not melt in sunlight</li>
+<li>Safe for humans, pets, and all surfaces</li>
+<li>No stains, no residue, invisible from outside</li>
+<li><strong>Lifespan:</strong> 1-2 years depending on weather conditions</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">Ideal Applications</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E8;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Hotels / Resorts</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Balcony Edges</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1FA9F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Window Sills</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Luxury Buildings / Showrooms</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/en/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; Get a Free Quote</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">Free on-site assessment — no charges</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
+$en_service_solar_content = '
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Solar Panel Bird Net — Protect Your Solar Investment</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p class="has-medium-font-size">Prevent birds from nesting under your solar panels. Our clip-on guard system requires no drilling — no warranty voiding. Extends panel lifespan, reduces fire risk from nesting materials.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:html -->
+<div style="max-width:800px;margin:2rem auto;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:2rem;">
+<div style="background:#f0f7fa;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #1B4D5C;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x1F50C;</div>
+<h3 style="color:#1B4D5C;margin:0 0 8px;font-size:1rem;">No-Drill System</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Clip-on design for solar panel edges. No drilling needed — your panel warranty stays intact.</p>
+</div>
+<div style="background:#fff8f3;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #E8792E;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x26A1;</div>
+<h3 style="color:#E8792E;margin:0 0 8px;font-size:1rem;">Prevents Fire Risk</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Birds nesting under panels can chew wires causing short circuits. Our guards prevent this serious hazard.</p>
+</div>
+<div style="background:#f0fdf4;border-radius:12px;padding:1.5rem;text-align:center;border-top:4px solid #22c55e;">
+<div style="font-size:2rem;margin-bottom:8px;">&#x2600;&#xFE0F;</div>
+<h3 style="color:#16a34a;margin:0 0 8px;font-size:1rem;">Full Solar Efficiency</h3>
+<p style="margin:0;font-size:0.85rem;color:#555;">Our guards do not block sunlight. Solar panels continue to operate at full capacity after installation.</p>
+</div>
+</div>
+
+<h2 style="color:#1B4D5C;">Specifications</h2>
+<ul>
+<li>Clip-on system — no drilling, no warranty void</li>
+<li>Extends solar panel lifespan</li>
+<li>Prevents birds from nesting and leaving droppings</li>
+<li>Reduces fire risk from wire damage</li>
+<li>No impact on solar panel efficiency</li>
+<li>Durable materials — 5+ years lifespan</li>
+</ul>
+
+<h2 style="color:#1B4D5C;">Ideal Applications</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E0;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Residential Rooftops</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3ED;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Factories / Warehouses</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3E2;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Commercial Buildings</p></div>
+<div style="background:#f8f9fa;padding:1rem;border-radius:8px;text-align:center;"><span style="font-size:1.5rem;">&#x1F3DB;&#xFE0F;</span><p style="margin:8px 0 0;font-weight:600;color:#1B4D5C;">Government Buildings</p></div>
+</div>
+
+<div style="text-align:center;margin-top:2rem;">
+<a href="/en/contact" style="display:inline-block;background:#E8792E;color:#fff;padding:14px 36px;border-radius:8px;font-weight:700;text-decoration:none;font-size:1rem;">&#x1F4CB; Get a Free Quote</a>
+<p style="font-size:0.8rem;color:#888;margin-top:8px;">Free on-site assessment — no charges</p>
+</div>
+</div>
+<!-- /wp:html -->
+';
+
 // ===== CREATE/UPDATE ENGLISH PAGES =====
 echo "=== Creating English Pages ===\n";
 
@@ -998,6 +1541,10 @@ $en_pages = array(
     'about'      => array('title' => 'About Us',         'content' => $en_about_content),
     'contact'    => array('title' => 'Contact Us',        'content' => $en_contact_content),
     'faq'        => array('title' => 'FAQ',               'content' => $en_faq_content),
+    'service-hdpe'   => array('title' => 'HDPE Bird Net',             'content' => $en_service_hdpe_content),
+    'service-spikes' => array('title' => 'Stainless Steel Bird Spikes', 'content' => $en_service_spikes_content),
+    'service-gel'    => array('title' => 'Bird Repellent Gel',        'content' => $en_service_gel_content),
+    'service-solar'  => array('title' => 'Solar Panel Bird Net',      'content' => $en_service_solar_content),
 );
 
 foreach ($en_pages as $slug => $page_data) {
@@ -1051,6 +1598,22 @@ $en_seo = array(
     'en/faq' => array(
         'title' => 'FAQ — Bird Net Installation | Birds Go Away',
         'desc'  => 'Frequently asked questions about bird net installation, pricing, warranty, and service areas. Starting from 350 THB/sq.m.',
+    ),
+    'en/service-hdpe' => array(
+        'title' => 'HDPE Bird Net — Premium Netting Solution | Birds Go Away',
+        'desc'  => 'UV-stabilized HDPE bird netting for condos, factories, warehouses. Nearly invisible, 5-7 year lifespan. 3-year warranty. Free assessment.',
+    ),
+    'en/service-spikes' => array(
+        'title' => 'Stainless Steel Bird Spikes | Birds Go Away Thailand',
+        'desc'  => 'SUS304 stainless steel bird spikes for ledges, railings, signage. Rust-proof, humane, 5+ year lifespan. Professional installation with warranty.',
+    ),
+    'en/service-gel' => array(
+        'title' => 'Bird Repellent Gel — Invisible Deterrent | Birds Go Away',
+        'desc'  => 'Invisible bird repellent gel for luxury buildings, heritage sites, shopfronts. Non-toxic, UV-resistant. Preserves building aesthetics.',
+    ),
+    'en/service-solar' => array(
+        'title' => 'Solar Panel Bird Net — Protect Solar Panels | Birds Go Away',
+        'desc'  => 'Clip-on bird guard for solar panels. No drilling, no warranty void. Prevents nesting, wire damage, and fire risk. 5+ year durability.',
     ),
 );
 
