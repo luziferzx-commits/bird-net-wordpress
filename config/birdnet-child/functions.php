@@ -124,8 +124,8 @@ function birdnet_top_contact_bar() {
             </div>
             <div class="top-bar-right">
                 <div class="top-bar-social">
-                    <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">📘</a>
-                    <a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" title="LINE">💬</a>
+                    <a href="https://www.facebook.com/share/1ZAXHsxCft/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">📘</a>
+                    <a href="https://line.me/ti/p/~phanupong_oil" target="_blank" rel="noopener" title="LINE" aria-label="LINE">💬</a>
                 </div>
                 <a href="<?php echo $is_en ? '/en/contact' : '/contact'; ?>" class="top-bar-cta"><?php echo $is_en ? 'Free Consult!' : 'ปรึกษาฟรี!'; ?></a>
                 <?php birdnet_lang_switcher(); ?>
@@ -215,7 +215,7 @@ function birdnet_floating_buttons() {
     </div>
     <div class="birdnet-sticky-mobile">
         <a href="tel:<?php echo esc_attr($phone); ?>" class="sticky-cta-call"><?php echo $is_en ? '📞 Call Now' : '📞 โทรเลย'; ?></a>
-        <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="sticky-cta-line" target="_blank" rel="noopener">💬 Line</a>
+        <a href="https://line.me/ti/p/~<?php echo esc_attr($line_id); ?>" class="sticky-cta-line" target="_blank" rel="noopener" aria-label="LINE Chat">💬 Line</a>
         <a href="<?php echo $is_en ? '/en/contact' : '/contact'; ?>" class="sticky-cta-quote"><?php echo $is_en ? '📋 Free Quote' : '📋 ประเมินฟรี'; ?></a>
     </div>
     <?php
@@ -810,6 +810,94 @@ function birdnet_fallback_meta_description() {
 }
 add_action('wp_head', 'birdnet_fallback_meta_description', 2);
 
+// SEO: Open Graph + Twitter Card meta tags
+function birdnet_og_meta_tags() {
+    $is_en = birdnet_is_english();
+    $site_url = str_replace('http://', 'https://', get_site_url());
+    $page_url = str_replace('http://', 'https://', get_permalink());
+    $site_name = 'Birds Go Away — ' . ($is_en ? 'Professional Bird Net Installation' : 'ตาข่ายกันนก');
+    $og_image = $site_url . '/wp-content/uploads/birdnet-assets/fb-cover.webp';
+    $locale = $is_en ? 'en_US' : 'th_TH';
+
+    // Title
+    $og_title = wp_get_document_title();
+
+    // Description
+    $og_desc = '';
+    if (is_front_page()) {
+        $og_desc = $is_en ? 'Professional bird net installation across Thailand. HDPE nets, stainless steel spikes, bird gel. Free assessment. 3-year warranty.' : 'บริการติดตั้งตาข่ายกันนก หนามกันนก เจลไล่นก รับประกัน 3 ปี ประเมินหน้างานฟรี โทร 062-996-4994';
+    } elseif (is_page() || is_single()) {
+        $og_desc = wp_trim_words(get_the_excerpt(), 25, '...');
+    }
+    if (!$og_desc) $og_desc = get_bloginfo('description');
+
+    echo '<meta property="og:type" content="website">' . "\n";
+    echo '<meta property="og:url" content="' . esc_url($page_url) . '">' . "\n";
+    echo '<meta property="og:title" content="' . esc_attr($og_title) . '">' . "\n";
+    echo '<meta property="og:description" content="' . esc_attr($og_desc) . '">' . "\n";
+    echo '<meta property="og:image" content="' . esc_url($og_image) . '">' . "\n";
+    echo '<meta property="og:image:width" content="1200">' . "\n";
+    echo '<meta property="og:image:height" content="630">' . "\n";
+    echo '<meta property="og:site_name" content="' . esc_attr($site_name) . '">' . "\n";
+    echo '<meta property="og:locale" content="' . $locale . '">' . "\n";
+    echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+    echo '<meta name="twitter:title" content="' . esc_attr($og_title) . '">' . "\n";
+    echo '<meta name="twitter:description" content="' . esc_attr($og_desc) . '">' . "\n";
+    echo '<meta name="twitter:image" content="' . esc_url($og_image) . '">' . "\n";
+}
+add_action('wp_head', 'birdnet_og_meta_tags', 3);
+
+// SEO: Generate sitemap.xml if no SEO plugin handles it
+function birdnet_custom_sitemap() {
+    if (!isset($_SERVER['REQUEST_URI'])) return;
+    $uri = rtrim(strtok($_SERVER['REQUEST_URI'], '?'), '/');
+    if ($uri !== '/sitemap.xml' && $uri !== '/sitemap_index.xml') return;
+    // If Yoast/Rank Math handles it, let them
+    if (defined('WPSEO_VERSION') || defined('STARTER_TEMPLATES_VERSION')) return;
+
+    header('Content-Type: application/xml; charset=utf-8');
+    header('X-Robots-Tag: noindex');
+    $site_url = str_replace('http://', 'https://', get_site_url());
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
+    echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+
+    // Front page
+    echo '<url><loc>' . $site_url . '/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>' . "\n";
+
+    // All published pages
+    $pages = get_pages(array('status' => 'publish'));
+    foreach ($pages as $page) {
+        $url = get_permalink($page->ID);
+        $url = str_replace('http://', 'https://', $url);
+        $mod = get_the_modified_date('Y-m-d', $page->ID);
+        echo '<url><loc>' . esc_url($url) . '</loc><lastmod>' . $mod . '</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>' . "\n";
+    }
+
+    // All published posts
+    $posts = get_posts(array('numberposts' => -1, 'post_status' => 'publish'));
+    foreach ($posts as $post) {
+        $url = get_permalink($post->ID);
+        $url = str_replace('http://', 'https://', $url);
+        $mod = get_the_modified_date('Y-m-d', $post->ID);
+        echo '<url><loc>' . esc_url($url) . '</loc><lastmod>' . $mod . '</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>' . "\n";
+    }
+
+    echo '</urlset>';
+    exit;
+}
+add_action('template_redirect', 'birdnet_custom_sitemap', 1);
+
+// SEO: Custom robots.txt with correct sitemap URL
+function birdnet_custom_robots_txt($output, $public) {
+    $site_url = str_replace('http://', 'https://', get_site_url());
+    $output = "User-agent: *\n";
+    $output .= "Disallow: /wp-admin/\n";
+    $output .= "Allow: /wp-admin/admin-ajax.php\n\n";
+    $output .= "Sitemap: " . $site_url . "/sitemap.xml\n";
+    return $output;
+}
+add_filter('robots_txt', 'birdnet_custom_robots_txt', 99, 2);
+
 // Rewrite nav menu item URLs and labels when on EN pages
 function birdnet_nav_menu_en_rewrite($items, $args) {
     $is_en = birdnet_is_english();
@@ -944,3 +1032,23 @@ function birdnet_topbar_height_js() {
     </script>';
 }
 add_action('wp_head', 'birdnet_topbar_height_js');
+
+// SEO: Remove duplicate H1 from Astra page title (keep only content H1)
+function birdnet_remove_page_title_h1() {
+    if (is_page()) {
+        // Disable Astra's page title to avoid duplicate H1
+        add_filter('astra_the_title_enabled', '__return_false');
+    }
+}
+add_action('wp', 'birdnet_remove_page_title_h1');
+
+// Performance: Add cache headers for static assets served by WP
+function birdnet_cache_headers() {
+    if (is_admin()) return;
+    // For front-end pages, allow browser caching for 5 minutes
+    if (!is_user_logged_in()) {
+        header('Cache-Control: public, max-age=300, s-maxage=600');
+        header_remove('Pragma');
+    }
+}
+add_action('send_headers', 'birdnet_cache_headers');

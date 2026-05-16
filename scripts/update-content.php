@@ -832,8 +832,8 @@ $home_content = '
 
 </div>
 <div style="display:flex;justify-content:center;gap:8px;margin-top:16px;">
-<button onclick="moveTestimonial(-1)" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276E;</button>
-<button onclick="moveTestimonial(1)" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276F;</button>
+<button onclick="moveTestimonial(-1)" aria-label="รีวิวก่อนหน้า" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276E;</button>
+<button onclick="moveTestimonial(1)" aria-label="รีวิวถัดไป" style="width:40px;height:40px;border-radius:50%;border:2px solid #E8792E;background:#fff;color:#E8792E;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.2s;">&#x276F;</button>
 </div>
 <div class="testimonial-dots" style="display:flex;justify-content:center;gap:8px;margin-top:12px;"></div>
 </div>
@@ -2656,8 +2656,10 @@ if ($home_page) {
         'telephone' => ['+66629964994', '+66936415623', '+66956292488'],
         'address' => array(
             '@type' => 'PostalAddress',
-            'streetAddress' => '88/38',
-            'addressLocality' => 'Khon Kaen',
+            'streetAddress' => '88/38 หมู่บ้าน Klever ซอย5 ต.บ้านเป็ด',
+            'addressLocality' => 'ขอนแก่น',
+            'addressRegion' => 'ขอนแก่น',
+            'postalCode' => '40000',
             'addressCountry' => 'TH',
         ),
         'areaServed' => ['ขอนแก่น', 'เชียงใหม่', 'ชลบุรี'],
