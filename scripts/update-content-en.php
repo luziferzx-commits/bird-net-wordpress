@@ -763,7 +763,7 @@ $en_services_content = '
 <p><a href="/en/service-hdpe/" style="color:#E8792E;font-weight:700;">&#x2192; View HDPE Details</a></p>
 </div>
 <div>
-<img src="' . en_img("set-b-hdpe.jpg") . '" alt="HDPE Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+<img src="' . $unsplash['hdpe'] . '" alt="HDPE Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
 </div>
 </div>
 <!-- /wp:html -->
@@ -791,7 +791,7 @@ $en_services_content = '
 <p><a href="/en/service-spikes/" style="color:#E8792E;font-weight:700;">&#x2192; View Bird Spikes Details</a></p>
 </div>
 <div>
-<img src="' . en_img("spikes-new.jpg") . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+<img src="' . $unsplash['spikes'] . '" alt="Stainless Steel Bird Spikes Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
 </div>
 </div>
 <!-- /wp:html -->
@@ -819,7 +819,7 @@ $en_services_content = '
 <p><a href="/en/service-gel/" style="color:#E8792E;font-weight:700;">&#x2192; View Bird Gel Details</a></p>
 </div>
 <div>
-<img src="' . en_img("set-b-gel.jpg") . '" alt="Bird Repellent Gel Application" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+<img src="' . $unsplash['gel'] . '" alt="Bird Repellent Gel Application" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
 </div>
 </div>
 <!-- /wp:html -->
@@ -847,7 +847,7 @@ $en_services_content = '
 <p><a href="/en/service-solar/" style="color:#E8792E;font-weight:700;">&#x2192; View Solar Panel Net Details</a></p>
 </div>
 <div>
-<img src="' . en_img("solar-panel-new.jpg") . '" alt="Solar Panel Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
+<img src="' . $unsplash['solar'] . '" alt="Solar Panel Bird Net Installation" style="border-radius:12px;width:100%;height:auto;object-fit:cover;" loading="lazy">
 </div>
 </div>
 <!-- /wp:html -->
