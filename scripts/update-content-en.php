@@ -1551,11 +1551,7 @@ foreach ($en_pages as $slug => $page_data) {
     $full_path = 'en/' . $slug;
     $existing = get_page_by_path($full_path);
     if ($existing) {
-        wp_update_post(array(
-            'ID' => $existing->ID,
-            'post_content' => $page_data['content'],
-        ));
-        echo "Updated EN page: {$page_data['title']} (ID: {$existing->ID})\n";
+        echo "Skipped (already exists): {$page_data['title']} (ID: {$existing->ID}) — edit via wp-admin\n";
     } else {
         $id = wp_insert_post(array(
             'post_title'   => $page_data['title'],

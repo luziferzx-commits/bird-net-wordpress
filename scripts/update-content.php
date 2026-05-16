@@ -2174,11 +2174,7 @@ echo "=== Creating Blog Posts ===\n";
 foreach ($blog_posts as $slug => $post_data) {
     $existing = get_page_by_path($slug, OBJECT, 'post');
     if ($existing) {
-        wp_update_post(array(
-            'ID' => $existing->ID,
-            'post_content' => $post_data['content'],
-        ));
-        echo "Updated post: {$post_data['title']} (ID: {$existing->ID})\n";
+        echo "Skipped (already exists): {$post_data['title']} (ID: {$existing->ID}) — edit via wp-admin\n";
     } else {
         $id = wp_insert_post(array(
             'post_title'   => $post_data['title'],
@@ -2445,11 +2441,7 @@ $pages = array(
 foreach ($pages as $slug => $page_data) {
     $existing = get_page_by_path($slug);
     if ($existing) {
-        wp_update_post(array(
-            'ID' => $existing->ID,
-            'post_content' => $page_data['content'],
-        ));
-        echo "Updated page: {$page_data['title']} (ID: {$existing->ID})\n";
+        echo "Skipped (already exists): {$page_data['title']} (ID: {$existing->ID}) — edit via wp-admin\n";
     } else {
         $id = wp_insert_post(array(
             'post_title'   => $page_data['title'],
