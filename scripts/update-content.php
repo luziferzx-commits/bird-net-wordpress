@@ -2672,7 +2672,10 @@ echo "SEO configuration complete!\n";
 // ===== UPLOAD LOGO AND SET AS CUSTOM LOGO =====
 echo "\n=== Setting up logo ===\n";
 
-$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-new.jpg';
+$logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-new-transparent.png';
+if (!file_exists($logo_file)) {
+    $logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-new.jpg';
+}
 if (!file_exists($logo_file)) {
     $logo_file = '/var/www/html/wp-content/uploads/birdnet-assets/logo-dark.jpg';
 }
@@ -2692,15 +2695,17 @@ if (file_exists($logo_file)) {
         require_once ABSPATH . 'wp-admin/includes/media.php';
 
         $upload_dir = wp_upload_dir();
-        $logo_dest = $upload_dir['path'] . '/birds-go-away-logo.jpg';
+        $logo_ext = pathinfo($logo_file, PATHINFO_EXTENSION);
+        $logo_mime = ($logo_ext === 'png') ? 'image/png' : 'image/jpeg';
+        $logo_dest = $upload_dir['path'] . '/birds-go-away-logo.' . $logo_ext;
         copy($logo_file, $logo_dest);
 
         $attachment = array(
-            'post_mime_type' => 'image/jpeg',
+            'post_mime_type' => $logo_mime,
             'post_title'     => 'Birds Go Away Logo',
             'post_content'   => '',
             'post_status'    => 'inherit',
-            'guid'           => $upload_dir['url'] . '/birds-go-away-logo.jpg',
+            'guid'           => $upload_dir['url'] . '/birds-go-away-logo.' . $logo_ext,
         );
 
         $attach_id = wp_insert_attachment($attachment, $logo_dest);

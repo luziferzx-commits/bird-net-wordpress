@@ -310,7 +310,7 @@ function birdnet_schema_jsonld() {
                 'url' => $site_url . '/',
                 'logo' => array(
                     '@type' => 'ImageObject',
-                    'url' => $site_url . '/wp-content/uploads/birdnet-assets/logo-dark.jpg',
+                    'url' => $site_url . '/wp-content/uploads/birdnet-assets/logo-new-transparent.png',
                     'width' => 240,
                     'height' => 80,
                 ),
@@ -893,7 +893,7 @@ add_filter('body_class', 'birdnet_en_body_class');
 
 // Ensure logo displays — JS fallback for broken image (ephemeral Docker uploads)
 function birdnet_logo_fallback() {
-    $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-dark.jpg');
+    $fallback_url = home_url('/wp-content/uploads/birdnet-assets/logo-new-transparent.png');
     echo '<script>
     document.addEventListener("DOMContentLoaded", function() {
         var logos = document.querySelectorAll(".custom-logo, .ast-site-identity img");
@@ -908,9 +908,9 @@ function birdnet_logo_fallback() {
             if (img.complete && img.naturalWidth === 0) {
                 img.src = "' . esc_url($fallback_url) . '";
             }
-            // Force dark logo for visibility on white header
-            if (img.src.indexOf("logo-white") !== -1) {
-                img.src = img.src.replace("logo-white", "logo-dark");
+            // Force transparent logo for visibility on white header
+            if (img.src.indexOf("logo-white") !== -1 || img.src.indexOf("logo-dark.jpg") !== -1) {
+                img.src = img.src.replace(/logo-white\.[a-z]+/, "logo-new-transparent.png").replace(/logo-dark\.[a-z]+/, "logo-new-transparent.png");
             }
         });
     });
