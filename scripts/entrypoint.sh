@@ -70,6 +70,9 @@ if [ ! -d /var/www/html/wp-content/themes/astra ]; then
   wp theme install astra --path=/var/www/html --allow-root 2>/dev/null || true
 fi
 
+# Remove .htaccess files inside Astra theme configs that get parsed as PHP output
+find /var/www/html/wp-content/themes/astra -name '.htaccess' -delete 2>/dev/null || true
+
 # Always copy media assets (container is ephemeral, uploads dir is lost on redeploy)
 ASSETS_DIR="/var/www/html/wp-content/uploads/birdnet-assets"
 mkdir -p "$ASSETS_DIR"
@@ -119,6 +122,7 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
 
   echo "=== Installing Astra Theme ==="
   wp theme install astra --activate --path=/var/www/html --allow-root
+  find /var/www/html/wp-content/themes/astra -name '.htaccess' -delete 2>/dev/null || true
 
   # Install child theme
   if [ -d /tmp/birdnet-child ]; then

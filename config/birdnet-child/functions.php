@@ -1045,8 +1045,7 @@ add_action('wp', 'birdnet_remove_page_title_h1');
 // Performance: Add cache headers for static assets served by WP
 function birdnet_cache_headers() {
     if (is_admin()) return;
-    // For front-end pages, allow browser caching for 5 minutes
-    if (!is_user_logged_in()) {
+    if (!is_user_logged_in() && !headers_sent()) {
         header('Cache-Control: public, max-age=300, s-maxage=600');
         header_remove('Pragma');
     }
