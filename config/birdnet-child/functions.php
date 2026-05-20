@@ -3,6 +3,18 @@
  * Bird Net - Astra Child Theme Functions
  */
 
+// Start output buffering to capture stray output from Astra .htaccess files
+// that get incorrectly parsed as PHP text
+if (!defined('BIRDNET_OB_STARTED')) {
+    define('BIRDNET_OB_STARTED', true);
+    ob_start(function($buffer) {
+        // Remove Apache directive text that leaks from .htaccess files
+        $buffer = preg_replace('/<FilesMatch[^>]*>\s*Order\s+allow,deny\s*Deny\s+from\s+all\s*<\/FilesMatch>/is', '', $buffer);
+        $buffer = preg_replace('/^\s*Order\s+allow,deny\s*\n?\s*Deny\s+from\s+all\s*/mi', '', $buffer);
+        return $buffer;
+    });
+}
+
 // Allow display/flex CSS properties in wp_kses inline styles
 function birdnet_allow_css_properties($styles) {
     $styles[] = 'display';
