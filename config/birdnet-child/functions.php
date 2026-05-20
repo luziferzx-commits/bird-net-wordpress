@@ -11,7 +11,9 @@ if (!defined('BIRDNET_OB_STARTED')) {
         // Remove Apache directive text that leaks from .htaccess files
         $buffer = preg_replace('/<FilesMatch[^>]*>\s*Order\s+allow,deny\s*Deny\s+from\s+all\s*<\/FilesMatch>/is', '', $buffer);
         $buffer = preg_replace('/^\s*Order\s+allow,deny\s*\n?\s*Deny\s+from\s+all\s*/mi', '', $buffer);
-        return $buffer;
+        // Remove PHP warnings about headers already sent (caused by .htaccess output)
+        $buffer = preg_replace('/\n?Warning:\s*Cannot modify header information[^\n]*\n?/i', '', $buffer);
+        return ltrim($buffer);
     });
 }
 
