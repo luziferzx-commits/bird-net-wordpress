@@ -14,11 +14,11 @@ if [ -f /etc/apache2/mods-enabled/mpm_event.load ]; then
   a2enmod mpm_prefork 2>/dev/null || true
 fi
 
-# Configure Apache to ALSO listen on $PORT (Railway healthcheck uses $PORT,
-# but edge proxy routes to port 80 based on Dockerfile EXPOSE)
+# Configure Apache to listen on $PORT (Railway healthcheck uses $PORT)
 if [ -n "$PORT" ] && [ "$PORT" != "80" ]; then
-  echo "Configuring Apache to also listen on port $PORT (healthcheck port)"
-  echo "Listen $PORT" >> /etc/apache2/ports.conf
+  echo "Configuring Apache to listen on port $PORT"
+  sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf
+  sed -i "s/<VirtualHost \*:80>/<VirtualHost \*:$PORT>/g" /etc/apache2/sites-available/000-default.conf
 fi
 
 # Run WordPress setup in background (after Apache starts)
@@ -30,11 +30,20 @@ until [ -f /var/www/html/wp-includes/version.php ]; do
 done
 
 echo "=== Waiting for database connection ==="
-DB_HOST="${WORDPRESS_DB_HOST:-db}"
-DB_USER="${WORDPRESS_DB_USER:-wordpress}"
-DB_PASS="${WORDPRESS_DB_PASSWORD:-wordpress}"
-DB_NAME="${WORDPRESS_DB_NAME:-wordpress}"
-until php -r "new mysqli('$DB_HOST', '$DB_USER', '$DB_PASS', '$DB_NAME');" 2>/dev/null; do
+DB_HOST="${WORDPRESS_DB_HOST:-${MYSQLHOST:-db}}"
+# Add port if MYSQLPORT is provided and DB_HOST doesn't have a port yet
+if [ -n "$MYSQLPORT" ] && [[ "$DB_HOST" != *":"* ]]; then
+  DB_HOST="${DB_HOST}:${MYSQLPORT}"
+fi
+DB_USER="${WORDPRESS_DB_USER:-${MYSQLUSER:-wordpress}}"
+DB_PASS="${WORDPRESS_DB_PASSWORD:-${MYSQLPASSWORD:-wordpress}}"
+DB_NAME="${WORDPRESS_DB_NAME:-${MYSQLDATABASE:-wordpress}}"
+DB_HOST_ONLY="${DB_HOST%%:*}"
+DB_PORT="${DB_HOST##*:}"
+if [ "$DB_HOST_ONLY" = "$DB_PORT" ]; then
+  DB_PORT=3306
+fi
+until php -r "\$c = @new mysqli('$DB_HOST_ONLY', '$DB_USER', '$DB_PASS', '$DB_NAME', $DB_PORT); if (\$c->connect_error) exit(1);" 2>/dev/null; do
   echo "Waiting for database..."
   sleep 3
 done
