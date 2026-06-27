@@ -26,13 +26,6 @@ function birdnet_fb_poster_settings_page() {
     <div class="wrap">
         <h1>ตั้งค่าระบบดึงข้อมูลจาก Facebook (Facebook Auto Poster)</h1>
         
-        <?php
-        if (isset($_POST['sync_now']) && check_admin_referer('birdnet_fb_sync_now')) {
-            $result = birdnet_sync_facebook_posts();
-            echo '<div class="notice notice-success is-dismissible"><p><strong>ซิงค์ข้อมูลสำเร็จ:</strong> ดึงมาได้ ' . intval($result['imported']) . ' โพสต์ใหม่ (ข้ามโพสต์ซ้ำ ' . intval($result['skipped']) . ' โพสต์)</p></div>';
-        }
-        ?>
-
         <form method="post" action="options.php">
             <?php settings_fields('birdnet_fb_settings'); ?>
             <table class="form-table">
@@ -46,14 +39,6 @@ function birdnet_fb_poster_settings_page() {
                 </tr>
             </table>
             <?php submit_button('บันทึกการตั้งค่า'); ?>
-        </form>
-
-        <hr>
-        <h2>ทดสอบดึงข้อมูล (Manual Sync)</h2>
-        <p>คุณสามารถกดปุ่มนี้เพื่อดึงโพสต์ล่าสุดจากเฟสบุ๊คเข้ามาทันที โดยไม่ต้องรอรอบอัตโนมัติ (รอบอัตโนมัติคือ 1 ชั่วโมง)</p>
-        <form method="post" action="">
-            <?php wp_nonce_field('birdnet_fb_sync_now'); ?>
-            <input type="submit" name="sync_now" class="button button-primary" value="ดึงข้อมูลจาก Facebook ทันที">
         </form>
     </div>
     <?php
