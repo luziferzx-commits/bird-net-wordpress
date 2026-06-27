@@ -14,11 +14,12 @@ if [ -f /etc/apache2/mods-enabled/mpm_event.load ]; then
   a2enmod mpm_prefork 2>/dev/null || true
 fi
 
-# Configure Apache to listen on $PORT (Railway healthcheck uses $PORT)
+# Configure Apache to ALSO listen on $PORT (Railway healthcheck uses $PORT,
+# but edge proxy routes to port 80 based on Dockerfile EXPOSE)
 if [ -n "$PORT" ] && [ "$PORT" != "80" ]; then
-  echo "Configuring Apache to listen on port $PORT"
-  sed -i "s/Listen 80/Listen $PORT/g" /etc/apache2/ports.conf
-  sed -i "s/<VirtualHost \*:80>/<VirtualHost \*:$PORT>/g" /etc/apache2/sites-available/000-default.conf
+  echo "Configuring Apache to also listen on port $PORT"
+  echo "Listen $PORT" >> /etc/apache2/ports.conf
+  sed -i "s/<VirtualHost \*:80>/<VirtualHost \*:\*>/g" /etc/apache2/sites-available/000-default.conf
 fi
 
 # Run WordPress setup in background (after Apache starts)
