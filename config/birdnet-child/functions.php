@@ -1065,3 +1065,7 @@ function birdnet_cache_headers() {
     }
 }
 add_action('send_headers', 'birdnet_cache_headers');
+
+// Facebook Auto Poster
+require_once get_stylesheet_directory() . '/facebook-auto-poster.php';
+
