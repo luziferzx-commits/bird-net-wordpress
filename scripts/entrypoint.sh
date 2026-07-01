@@ -181,6 +181,10 @@ if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
   wp plugin install wp-super-cache --activate --path=/var/www/html --allow-root || true
   wp plugin install addon-starter-templates --activate --path=/var/www/html --allow-root 2>/dev/null || true
 
+  echo "=== Enabling WP Super Cache ==="
+  wp eval-file /tmp/enable-wp-super-cache.php --path=/var/www/html --allow-root 2>/dev/null || \
+    echo "Warning: could not enable WP Super Cache automatically - enable it manually via Settings > WP Super Cache"
+
   echo "=== Configuring Permalinks ==="
   wp rewrite structure '/%postname%/' --path=/var/www/html --allow-root
   wp rewrite flush --path=/var/www/html --allow-root

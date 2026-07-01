@@ -52,6 +52,7 @@ RUN { \
     echo '  Header set X-Content-Type-Options "nosniff"'; \
     echo '  Header set X-Frame-Options "SAMEORIGIN"'; \
     echo '  Header set X-XSS-Protection "1; mode=block"'; \
+    echo '  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"'; \
     echo '</IfModule>'; \
 } > /etc/apache2/conf-available/optimization.conf \
     && a2enconf optimization
@@ -60,6 +61,7 @@ RUN { \
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 COPY scripts/update-content.php /tmp/update-content.php
 COPY scripts/update-content-en.php /tmp/update-content-en.php
+COPY scripts/enable-wp-super-cache.php /tmp/enable-wp-super-cache.php
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Copy custom theme child
