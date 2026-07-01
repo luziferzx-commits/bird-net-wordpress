@@ -8,6 +8,11 @@
 if (!defined('BIRDNET_OB_STARTED')) {
     define('BIRDNET_OB_STARTED', true);
     ob_start(function($buffer) {
+        // Only needed for actual front-end HTML page loads; skip the regex work
+        // (and any risk of mangling JSON/API payloads) for admin/ajax/REST/cron.
+        if (is_admin() || (defined('DOING_AJAX') && DOING_AJAX) || (defined('REST_REQUEST') && REST_REQUEST) || (defined('DOING_CRON') && DOING_CRON)) {
+            return $buffer;
+        }
         // Remove Apache directive text that leaks from .htaccess files
         $buffer = preg_replace('/<FilesMatch[^>]*>\s*Order\s+allow,deny\s*Deny\s+from\s+all\s*<\/FilesMatch>/is', '', $buffer);
         $buffer = preg_replace('/^\s*Order\s+allow,deny\s*\n?\s*Deny\s+from\s+all\s*/mi', '', $buffer);
@@ -871,6 +876,14 @@ function birdnet_custom_sitemap() {
 
     header('Content-Type: application/xml; charset=utf-8');
     header('X-Robots-Tag: noindex');
+
+    $cached = get_transient('birdnet_sitemap_xml');
+    if ($cached !== false) {
+        echo $cached;
+        exit;
+    }
+
+    ob_start();
     $site_url = str_replace('http://', 'https://', get_site_url());
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
@@ -897,6 +910,10 @@ function birdnet_custom_sitemap() {
     }
 
     echo '</urlset>';
+
+    $xml = ob_get_clean();
+    set_transient('birdnet_sitemap_xml', $xml, HOUR_IN_SECONDS);
+    echo $xml;
     exit;
 }
 add_action('template_redirect', 'birdnet_custom_sitemap', 1);

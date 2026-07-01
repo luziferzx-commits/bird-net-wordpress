@@ -11,7 +11,7 @@
 
 ## Tech Stack
 
-- **CMS**: WordPress 6.7 + PHP 8.2
+- **CMS**: WordPress 7.0 + PHP 8.2
 - **Theme**: Astra + Custom Child Theme (Bird Net)
 - **Page Builder**: Elementor
 - **Plugins**: Contact Form 7, Yoast SEO, Wordfence, WP Super Cache
@@ -54,6 +54,13 @@ docker compose up -d --build
 | `WP_ADMIN_PASSWORD` | WordPress admin password |
 | `WP_ADMIN_EMAIL` | Admin email for notifications |
 
+### Environment Variables (Optional)
+
+| Variable | Description |
+|----------|-------------|
+| `WP_DEBUG` | Set to `true` to log PHP errors to `wp-content/debug.log` for troubleshooting. Errors are never displayed to visitors regardless of this setting. Default: `false`. |
+| `WP_REAL_CRON` | Set to `true` **only** if you've set up an external service (Railway Cron Job, cron-job.org, etc.) hitting `https://<your-domain>/wp-cron.php` every 15-60 min. Disables WordPress's visitor-triggered pseudo-cron, which can otherwise delay the hourly Facebook sync on a low-traffic site. Default: `false` (pseudo-cron). |
+
 ### Deploy Steps
 
 1. Create a new project on Railway
@@ -88,3 +95,9 @@ docker compose up -d --build
 1. ไปที่ Posts → Add New
 2. เขียนเนื้อหาและเพิ่มรูปภาพ
 3. กด Publish
+
+### Facebook Auto Poster
+1. ไปที่ Settings → Facebook Sync
+2. กรอก Facebook Page ID และ Page Access Token (long-lived)
+3. ระบบจะดึงโพสต์ใหม่จาก Facebook มาสร้างเป็นบล็อกให้อัตโนมัติทุกชั่วโมง
+4. ถ้าเห็นข้อความแจ้งเตือนสีแดงใน wp-admin ว่าซิงค์ล้มเหลวติดต่อกันหลายครั้ง ให้ตรวจสอบว่า Access Token หมดอายุหรือยัง

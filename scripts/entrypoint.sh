@@ -50,14 +50,39 @@ until php -r "\$c = @new mysqli('$DB_HOST_ONLY', '$DB_USER', '$DB_PASS', '$DB_NA
 done
 echo "Database connected!"
 
-# Enable WP_DEBUG for troubleshooting (display errors on blank pages)
-echo "=== Enabling WP_DEBUG ==="
+# Configure WP_DEBUG. Errors are always logged to wp-content/debug.log for
+# troubleshooting, but WP_DEBUG_DISPLAY is always false so PHP errors/warnings
+# are never rendered to site visitors. Set WP_DEBUG=true to enable logging.
+echo "=== Configuring WP_DEBUG (display always off) ==="
 if [ -f /var/www/html/wp-config.php ]; then
-  sed -i "s/define( *'WP_DEBUG'.*/define('WP_DEBUG', true);/" /var/www/html/wp-config.php 2>/dev/null || true
-  # Add WP_DEBUG_DISPLAY if not present
+  if [ "${WP_DEBUG:-false}" = "true" ]; then
+    sed -i "s/define( *'WP_DEBUG'.*/define('WP_DEBUG', true);/" /var/www/html/wp-config.php 2>/dev/null || true
+  else
+    sed -i "s/define( *'WP_DEBUG'.*/define('WP_DEBUG', false);/" /var/www/html/wp-config.php 2>/dev/null || true
+  fi
   if ! grep -q 'WP_DEBUG_DISPLAY' /var/www/html/wp-config.php; then
-    sed -i "/define('WP_DEBUG'/a define('WP_DEBUG_DISPLAY', true);" /var/www/html/wp-config.php 2>/dev/null || true
+    sed -i "/define('WP_DEBUG'/a define('WP_DEBUG_DISPLAY', false);" /var/www/html/wp-config.php 2>/dev/null || true
     sed -i "/define('WP_DEBUG'/a define('WP_DEBUG_LOG', true);" /var/www/html/wp-config.php 2>/dev/null || true
+  else
+    sed -i "s/define( *'WP_DEBUG_DISPLAY'.*/define('WP_DEBUG_DISPLAY', false);/" /var/www/html/wp-config.php 2>/dev/null || true
+  fi
+fi
+
+# WP-Cron normally fires on visitor traffic ("pseudo-cron"), which can be
+# unreliable on a low-traffic site and delay the hourly Facebook sync.
+# Set WP_REAL_CRON=true only if you've configured an external pinger (e.g. a
+# Railway Cron Job or cron-job.org hitting https://yoursite/wp-cron.php every
+# 15-60 min) - otherwise scheduled tasks will stop firing entirely.
+if [ -f /var/www/html/wp-config.php ]; then
+  if [ "${WP_REAL_CRON:-false}" = "true" ]; then
+    echo "=== WP_REAL_CRON enabled: disabling pseudo-cron (make sure an external cron hits wp-cron.php!) ==="
+    if ! grep -q 'DISABLE_WP_CRON' /var/www/html/wp-config.php; then
+      sed -i "/define('WP_DEBUG'/a define('DISABLE_WP_CRON', true);" /var/www/html/wp-config.php 2>/dev/null || true
+    else
+      sed -i "s/define( *'DISABLE_WP_CRON'.*/define('DISABLE_WP_CRON', true);/" /var/www/html/wp-config.php 2>/dev/null || true
+    fi
+  elif grep -q 'DISABLE_WP_CRON' /var/www/html/wp-config.php; then
+    sed -i "s/define( *'DISABLE_WP_CRON'.*/define('DISABLE_WP_CRON', false);/" /var/www/html/wp-config.php 2>/dev/null || true
   fi
 fi
 
@@ -104,6 +129,10 @@ echo "Assets copied to $ASSETS_DIR"
 # Check if WordPress is already installed
 if ! wp core is-installed --path=/var/www/html --allow-root 2>/dev/null; then
   echo "=== Installing WordPress Core ==="
+
+  if [ -z "$WP_ADMIN_PASSWORD" ]; then
+    echo "WARNING: WP_ADMIN_PASSWORD is not set - falling back to the insecure default 'admin123'. Set WP_ADMIN_PASSWORD in your environment before deploying to production."
+  fi
 
   SITE_URL="${RAILWAY_PUBLIC_DOMAIN:-localhost:8080}"
   PROTOCOL="https"
