@@ -1,4 +1,4 @@
-FROM wordpress:6.7-php8.2-apache
+FROM wordpress:7.0-php8.2-apache
 
 # Install WP-CLI
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
@@ -24,15 +24,15 @@ RUN { \
     echo 'opcache.max_accelerated_files=4000'; \
     echo 'opcache.revalidate_freq=2'; \
     echo 'opcache.fast_shutdown=1'; \
-    echo 'upload_max_filesize=64M'; \
-    echo 'post_max_size=64M'; \
-    echo 'memory_limit=256M'; \
+    echo 'upload_max_filesize=128M'; \
+    echo 'post_max_size=128M'; \
+    echo 'memory_limit=512M'; \
     echo 'max_execution_time=300'; \
     echo 'max_input_time=300'; \
 } > /usr/local/etc/php/conf.d/custom.ini
 
-# Enable Apache mod_rewrite and mod_headers
-RUN a2enmod rewrite headers expires
+# Fix MPM conflict and enable Apache modules
+RUN a2dismod mpm_event 2>/dev/null; a2enmod mpm_prefork 2>/dev/null; a2enmod rewrite headers expires
 
 # Apache optimization
 RUN { \
@@ -43,6 +43,7 @@ RUN { \
     echo '  ExpiresByType image/gif "access plus 1 year"'; \
     echo '  ExpiresByType image/png "access plus 1 year"'; \
     echo '  ExpiresByType image/webp "access plus 1 year"'; \
+    echo '  ExpiresByType video/mp4 "access plus 1 year"'; \
     echo '  ExpiresByType text/css "access plus 1 month"'; \
     echo '  ExpiresByType application/javascript "access plus 1 month"'; \
     echo '  ExpiresByType application/x-javascript "access plus 1 month"'; \
@@ -51,18 +52,24 @@ RUN { \
     echo '  Header set X-Content-Type-Options "nosniff"'; \
     echo '  Header set X-Frame-Options "SAMEORIGIN"'; \
     echo '  Header set X-XSS-Protection "1; mode=block"'; \
+    echo '  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"'; \
     echo '</IfModule>'; \
 } > /etc/apache2/conf-available/optimization.conf \
     && a2enconf optimization
 
-# Copy startup script
+# Copy scripts
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY scripts/update-content.php /tmp/update-content.php
+COPY scripts/update-content-en.php /tmp/update-content-en.php
+COPY scripts/enable-wp-super-cache.php /tmp/enable-wp-super-cache.php
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Copy custom theme child
 COPY config/birdnet-child /tmp/birdnet-child
 
-EXPOSE 80
+# Copy assets (images and videos from Facebook page)
+COPY assets/images /tmp/birdnet-assets/images
+COPY assets/videos /tmp/birdnet-assets/videos
 
 ENTRYPOINT ["entrypoint.sh"]
 CMD ["apache2-foreground"]

@@ -9,6 +9,8 @@ wp-content/uploads/*
 # Docker
 db_data/
 
+# Note: videos are included in the repo for Docker/Railway deployment
+
 # OS files
 .DS_Store
 Thumbs.db
